@@ -1,0 +1,131 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title>chapman bootstrap</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- TypeKit For Fonts -->
+        <script type="text/javascript" src="//use.typekit.net/nqy1aog.js"></script>
+        <script>try{Typekit.load();}catch(e){}</script>
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <!-- build:css styles/vendor.css -->
+        <!-- bower:css -->
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:css styles/main.css -->
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
+
+        <!-- build:js scripts/vendor/modernizr.js -->
+        <script src="bower_components/modernizr/modernizr.js"></script>
+        <!-- endbuild -->
+    </head>
+    <body>
+        <!--[if lt IE 10]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- fileincludes -->
+        <h2>.nav-vertical</h1>
+        <div class="row">
+            <div class="column-5">
+                <nav class="nav-vertical nav-line">
+  <ul>
+    <li><a href="#1">First item</a></li>
+    <li><a href="#2">Second item</a></li>
+    <li class="nav-item-parent expanded">
+      <a href="#3">Third item which has children and is expanded</a>
+      <ul>
+        <li>
+          <a href="#3-1">This is the first child</a>
+        </li>
+        <li>
+          <a href="#3-2">This is the second child</a>
+        </li>
+        <li>
+          <a href="#3-3">And this is the last child</a>
+        </li>
+      </ul>
+    </li>
+    <li class="nav-item-parent">
+      <a href="#4">Fourth item which has children</a>
+      <ul>
+        <li>
+          <a href="#4-1">This is the first child</a>
+        </li>
+        <li>
+          <a href="#4-2">And this is the last child</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+            </div>
+        </div>
+
+        <h2>Breadcrumb</h2>
+        <p>When using the breadcrumbs. be sure to write <code> awesome.sauce();</code></p>
+        <ul class="breadcrumbs well">
+  <li><a href="//www.chapman.edu"><span class="home"></span></a></li>
+  <li><a href="#path/to/page">Page</a></li>
+  <li><a href="#path/to/page/subpage">Subpage</a></li>
+</ul>
+
+        <h2>Masthead</h2>
+        <!-- Masthead -->
+<!-- data-shape defines the aspect ratio -->
+<!-- Swap out path/to/image.jpg with the path of your image -->
+<div id="masthead" class="masthead" data-img data-shape="4:1" data-src="path/to/image.jpg"></div>
+
+
+        <h2>Two or ThreeColumn</h2>
+        <!-- Body -->
+<div id="body" class="body section">
+  <div class="inset">
+    <div data-span>
+      <!-- Masting -->
+      <div class="section" data-pane>
+        <!-- CONTENT GOES HERE -->
+      </div>
+
+      <!-- Breadcrumb -->
+      <div class="section" data-pane>
+        <nav id="breadcrumb" class="breadcrumb">
+          <!-- CONTENT GOES HERE -->
+        </nav>
+      </div>
+
+      <!-- Aside (25%) -->
+      <div class="section" data-pane="25">
+        <aside id="aside" class="main" role="complementary">
+          <!-- CONTENT GOES HERE -->
+        </aside>
+      </div>
+
+      <!-- Main (75%) -->
+      <div class="section" data-pane="55">
+        <main id="main" class="main" role="main">
+          <!-- CONTENT GOES HERE -->
+        </main>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+        <!-- endfileincludes -->
+
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:js scripts/main.js -->
+        <script src="scripts/main.js"></script>
+        <!-- endbuild -->
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "name": "chapman-bootstrap",
+  "private": true,
+  "dependencies": {
+    "modernizr": "~2.6.2",
+    "jquery": "~1.11.0",
+    "concise": "~1.1.1"
+  },
+  "devDependencies": {}
+}

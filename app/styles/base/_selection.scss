@@ -1,0 +1,24 @@
+@if $use-selection == true {
+  //------------------------------------
+  //  SELECTION
+  //------------------------------------
+  * {
+    &::-webkit-selection {
+      background-color: $selection-background;
+      color: $selection-color;
+      text-shadow: none;
+    }
+
+    &::-moz-selection {
+      background-color: $selection-background;
+      color: $selection-color;
+      text-shadow: none;
+    }
+
+    &::selection {
+      background-color: $selection-background;
+      color: $selection-color;
+      text-shadow: none;
+    }
+  }
+}
