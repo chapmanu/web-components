@@ -5,30 +5,6 @@
 
 
 //------------------------------------
-//  BASE
-//------------------------------------
-
-// Base font sizes and colors
-$base-font-size:    16px !default;
-$base-line-height:  24px !default;
-$base-font-color:   #353430 !default;
-$base-link-color:   #a82439 !default;
-
-
-// Base font-family
-$base-font-family: "proxima-nova-soft", "Helvetica Neue", "Microsoft Sans Serif", sans-serif;
-$base-headings-font-family: "proxima-nova", "Helvetica Neue", "Microsoft Sans Serif", sans-serif;
-$base-navigation-font-family: "futura-pt", "Helvetica Neue", "Microsoft Sans Serif", sans-serif;
-
-// Element spacing and line-height ratio
-$base-spacing-unit: $base-line-height !default;
-$half-spacing-unit: $base-spacing-unit / 2 !default;
-$line-height-ratio: $base-line-height / $base-font-size;
-
-
-
-
-//------------------------------------
 //  RESPONSIVE
 //------------------------------------
 
@@ -68,7 +44,13 @@ $micro-size: 12px !default;
 //  COLORS
 //------------------------------------
 
+
+// ChapmanU Colors
+$color-chapman-red:  #a82439 !default;
+
+
 // Background colors
+$bg-body-color:      #ecebe5 !default;
 $bg-white:           #ffffff !default;
 $bg-off-white:       #f2f2f0 !default;
 $bg-light-off-white: #f7f6f0 !default;
@@ -86,26 +68,39 @@ $bg-red:             #d9534f !default;
 
 
 // Type colors
-$color-white:  #ffffff !default;
-$color-black:  #353430 !default;
-$color-gray:   #999999 !default;
-$color-green:  #468847 !default;
-$color-blue:   #3a87ad !default;
-$color-red:    #a9233a !default;
-$color-yellow: #c09853 !default;
+$color-white:        #ffffff !default;
+$color-black:        #353430 !default;
+$color-gray:         #999999 !default;
+$color-green:        #468847 !default;
+$color-blue:         #3a87ad !default;
+$color-red:          #a9233a !default;
+$color-yellow:       #c09853 !default;
 
 
 // Selection colors
 $selection-background: rgba(168,36,57,0.875) !default;
-$selection-color:      #ffffff !default;
+$selection-color:    #ffffff !default;
 
 
 // Form placeholder colors
-$placeholder-color: #bbbbbb !default;
+$placeholder-color:  #bbbbbb !default;
 
 
 // Colors used for our objects' borders, etc
-$object-ui-color: #ededed !default;
+$object-ui-color:    #ededed !default;
+
+
+// Social Network colors
+$color-facebook:     #38659f !default;
+$color-twitter:      #3aa8dd !default;
+$color-instagram:    #333333 !default;
+$color-pinterest:    #cb2027 !default;
+
+
+// Element Rows
+$color-row-bg:       #FAFAFA !default;
+$color-row-bg-hover: #FFFDF0 !default;
+$color-row-border:   #CCCCCC !default;
 
 
 
@@ -130,6 +125,31 @@ $column-number:  16 !default;
 
 // Border radius value for `.border-radius` class
 $border-radius: 4px !default;
+
+
+
+
+//------------------------------------
+//  BASE
+//------------------------------------
+
+// Base font sizes and colors
+$base-font-size:    16px !default;
+$base-line-height:  24px !default;
+$base-font-color:   #353430 !default;
+$base-link-color:   $color-chapman-red !default;
+
+
+// Base font-family
+$base-font-family: "proxima-nova-soft", "Helvetica Neue", "Microsoft Sans Serif", sans-serif;
+$base-headings-font-family: "proxima-nova", "Helvetica Neue", "Microsoft Sans Serif", sans-serif;
+$base-navigation-font-family: "futura-pt", "Helvetica Neue", "Microsoft Sans Serif", sans-serif;
+
+
+// Element spacing and line-height ratio
+$base-spacing-unit: $base-line-height !default;
+$half-spacing-unit: $base-spacing-unit / 2 !default;
+$line-height-ratio: $base-line-height / $base-font-size;
 
 
 
