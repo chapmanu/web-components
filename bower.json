@@ -2,7 +2,22 @@
   "name": "chapman-web-components",
   "version": "0.0.1",
   "keywords": ["Chapman University", "Chapman", "Web", "Components"],
-  "main": "dist",
+  "ignore": [
+    "app",
+    "test",
+    ".bower.json",
+    ".bowerrc",
+    ".editorconfig",
+    ".gitattributes",
+    ".gitignore",
+    ".jshintrc",
+    ".yo-rc.json",
+    "README.md",
+    "app",
+    "bower.json",
+    "gulpfile.js",
+    "package.json"
+  ],
   "dependencies": {
     "modernizr": "~2.6.2",
     "jquery": "~1.11.0"
