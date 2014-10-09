@@ -2,6 +2,10 @@
   "name": "chapman-web-components",
   "version": "0.0.1",
   "keywords": ["Chapman University", "Chapman", "Web", "Components"],
+  "main": [
+    "dist/styles/chapman.css",
+    "dist/styles/chapman.js"
+  ],
   "ignore": [
     "app",
     "test",
