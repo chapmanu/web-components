@@ -1,10 +1,11 @@
 {
-  "name": "chapman-bootstrap",
-  "private": true,
+  "name": "chapman-web-components",
+  "version": "0.0.1",
+  "keywords": ["Chapman University", "Chapman", "Web", "Components"],
+  "main": "dist",
   "dependencies": {
     "modernizr": "~2.6.2",
-    "jquery": "~1.11.0",
-    "concise": "~1.1.1"
+    "jquery": "~1.11.0"
   },
   "devDependencies": {}
 }

@@ -7,14 +7,14 @@ var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 
 gulp.task('styles', function () {
-    return gulp.src('app/styles/main.scss')
+    return gulp.src('app/styles/chapman.scss')
         .pipe($.compass({
             css: 'app/styles',
             sass: 'app/styles',
             image: 'app/images'
         }))
         .pipe($.autoprefixer('last 1 version'))
-        .pipe(gulp.dest('.tmp/styles'))
+        .pipe(gulp.dest('dist/styles'))
         .pipe($.size());
 });
 
@@ -22,8 +22,8 @@ gulp.task('scripts', function () {
     return gulp.src('app/scripts/**/*.js')
         .pipe($.jshint())
         .pipe($.jshint.reporter(require('jshint-stylish')))
-        .pipe($.concat('main.js'))
-        .pipe(gulp.dest('.tmp/scripts'))
+        .pipe($.concat('chapman.js'))
+        .pipe(gulp.dest('dist/scripts'))
         .pipe($.size());
 });
 
@@ -81,7 +81,7 @@ gulp.task('clean', function () {
     return gulp.src(['.tmp', 'dist'], { read: false }).pipe($.clean());
 });
 
-gulp.task('build', ['html', 'images', 'fonts', 'extras']);
+gulp.task('build', ['images', 'styles', 'scripts']);
 
 gulp.task('default', ['clean'], function () {
     gulp.start('build');
