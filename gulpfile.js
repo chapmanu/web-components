@@ -40,7 +40,7 @@ gulp.task('html', ['fileinclude', 'styles', 'scripts'], function () {
     var cssFilter = $.filter('**/*.css');
 
     return gulp.src('app/*.html')
-        .pipe($.useref.assets({searchPath: '{.tmp,app}'}))
+        .pipe($.useref.assets({searchPath: '{dist, app}'}))
         .pipe(jsFilter)
         .pipe($.uglify())
         .pipe(jsFilter.restore())
@@ -92,7 +92,7 @@ gulp.task('connect', function () {
     var app = connect()
         .use(require('connect-livereload')({ port: 35729 }))
         .use(connect.static('app'))
-        .use(connect.static('.tmp'))
+        .use(connect.static('dist'))
         .use(connect.directory('app'));
 
     require('http').createServer(app)
@@ -130,7 +130,7 @@ gulp.task('watch', ['connect', 'serve'], function () {
 
     gulp.watch([
         'app/*.html',
-        '.tmp/styles/**/*.css',
+        'dist/styles/**/*.css',
         'app/scripts/**/*.js',
         'app/images/**/*'
     ]).on('change', function (file) {
