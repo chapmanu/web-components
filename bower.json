@@ -13,7 +13,6 @@
     ".jshintrc",
     ".yo-rc.json",
     "README.md",
-    "app",
     "bower.json",
     "gulpfile.js",
     "package.json"
