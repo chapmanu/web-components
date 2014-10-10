@@ -29,7 +29,7 @@ gulp.task('scripts', function () {
 
 gulp.task('fileinclude', function() {
     var fileinclude = require('gulp-file-include');
-    return gulp.src(['app/pages/index.html'])
+    return gulp.src(['app/pages/*.html'])
         .pipe(fileinclude())
         .pipe(gulp.dest('./app'))
         .pipe($.size());
@@ -78,7 +78,7 @@ gulp.task('extras', function () {
 });
 
 gulp.task('clean', function () {
-    return gulp.src(['.tmp', 'dist'], { read: false }).pipe($.clean());
+    return gulp.src(['dist'], { read: false }).pipe($.clean());
 });
 
 gulp.task('build', ['images', 'styles', 'scripts']);

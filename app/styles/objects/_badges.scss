@@ -2,11 +2,11 @@
   //------------------------------------
   //  BADGES
   //------------------------------------
-  .label, 
+  .label,
   .badge {
     background-color: #b5b5b5;
     color: #fff;
-    @include font-size(12px); 
+    @include font-size(12px);
     font-weight: bold;
     padding: 3px 7px;
     text-align: center;
@@ -22,7 +22,7 @@
   .badge {
     border-radius: 10px;
     display: inline-block;
-    padding: 1px 7px; 
+    padding: 1px 7px;
   }
 
   .label[href] {
@@ -41,13 +41,13 @@
     }
   }
 
-  .label a, 
+  .label a,
   .badge a {
     color: #fff;
     cursor: pointer;
     text-decoration: none;
   }
 
-  .label:empty, 
+  .label:empty,
   .badge:empty { display: none; }
 }

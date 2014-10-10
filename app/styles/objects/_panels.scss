@@ -1,0 +1,34 @@
+@if $use-panels == true {
+
+  .panel {
+    background-color: $bg-off-white;
+    box-shadow: 0 2px 1px 0 rgba(0,0,0,0.13);
+    border-radius: $border-radius;
+  }
+
+  .wizard-step {
+    padding: 38px 64px;
+    position: relative;
+
+    .step-number {
+      position: absolute;
+      left: -10px;
+      top: 40px;
+      display: block;
+      text-align: center;
+      font-weight: bold;
+      padding: 0;
+      width: 40px;
+      height: 40px;
+      line-height: 38px;
+      border-radius: 100%;
+      background-color: $bg-red;
+      color: $color-white;
+      font-size: $h3-size;
+    }
+
+    .form-card {
+      padding: 14px 18px;
+    }
+  }
+}

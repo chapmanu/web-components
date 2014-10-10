@@ -41,21 +41,31 @@ $micro-size: 12px !default;
 
 
 //------------------------------------
-//  COLORS
+//  OFFICIAL CHAPMAN COLORS
 //------------------------------------
 
+// Background colors
+$bg-light-gray:      #ecebe5 !default;
+$bg-off-white:       #f2f2f0 !default;
+$bg-red:             #a82439 !default;
 
-// ChapmanU Colors
+// Type colors
+$color-dark-gray:    #353430 !default;
 $color-chapman-red:  #a82439 !default;
 
+
+//------------------------------------
+//  CONCISE DEFAULTS...not approved yet
+//------------------------------------
+// NOTE: When changing any of the colors below, please
+//       move them up to the OFFICIAL CHAPMAN COLORS
+//       section above.  Just to start off.
 
 // Background colors
 $bg-body-color:      #ecebe5 !default;
 $bg-white:           #ffffff !default;
-$bg-off-white:       #f2f2f0 !default;
 $bg-light-off-white: #f7f6f0 !default;
 $bg-black:           #222222 !default;
-$bg-light-gray:      #ecebe5 !default;
 $bg-gray:            #999999 !default;
 $bg-light-green:     #dff0d8 !default;
 $bg-green:           #5cb85c !default;
@@ -69,7 +79,7 @@ $bg-red:             #d9534f !default;
 
 // Type colors
 $color-white:        #ffffff !default;
-$color-black:        #353430 !default;
+$color-black:        #000000 !default;
 $color-gray:         #999999 !default;
 $color-green:        #468847 !default;
 $color-blue:         #3a87ad !default;
@@ -124,7 +134,7 @@ $column-number:  16 !default;
 
 
 // Border radius value for `.border-radius` class
-$border-radius: 4px !default;
+$border-radius: 3px !default;
 
 
 
@@ -136,7 +146,7 @@ $border-radius: 4px !default;
 // Base font sizes and colors
 $base-font-size:    16px !default;
 $base-line-height:  24px !default;
-$base-font-color:   #353430 !default;
+$base-font-color:   $color-dark-gray !default;
 $base-link-color:   $color-chapman-red !default;
 
 
@@ -186,8 +196,8 @@ $use-tables:         true !default;
 $use-forms:          true !default;
   $use-form-styles:  true !default;
 $use-grid:           true !default;
-  $use-push:	       false !default;
-  $use-pull:	       false !default;
+  $use-push:	       true !default;
+  $use-pull:	       true !default;
 
 
 // Objects
@@ -203,6 +213,7 @@ $use-wells:                   true !default;
 $use-badges:                  true !default;
 $use-progress:                true !default;
 $use-story:                   true !default;
+$use-panels:                  true !default;
 
 
 // Helpers
