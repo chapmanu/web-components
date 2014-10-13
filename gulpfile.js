@@ -13,6 +13,7 @@ gulp.task('styles', function () {
             sass: 'app/styles',
             image: 'app/images'
         }))
+        .on('error', handleError)
         .pipe($.autoprefixer('last 1 version'))
         .pipe(gulp.dest('dist/styles'))
         .pipe($.size());
@@ -23,6 +24,7 @@ gulp.task('scripts', function () {
         .pipe($.jshint())
         .pipe($.jshint.reporter(require('jshint-stylish')))
         .pipe($.concat('chapman.js'))
+        .on('error', handleError)
         .pipe(gulp.dest('dist/scripts'))
         .pipe($.size());
 });
@@ -31,6 +33,7 @@ gulp.task('fileinclude', function() {
     var fileinclude = require('gulp-file-include');
     return gulp.src(['app/pages/*.html'])
         .pipe(fileinclude())
+        .on('error', handleError)
         .pipe(gulp.dest('./app'))
         .pipe($.size());
 });
@@ -60,6 +63,7 @@ gulp.task('images', function () {
             progressive: true,
             interlaced: true
         })))
+        .on('error', handleError)
         .pipe(gulp.dest('dist/images'))
         .pipe($.size());
 });
@@ -68,6 +72,7 @@ gulp.task('fonts', function () {
     return $.bowerFiles()
         .pipe($.filter('**/*.{eot,svg,ttf,woff}'))
         .pipe($.flatten())
+        .on('error', handleError)
         .pipe(gulp.dest('dist/fonts'))
         .pipe($.size());
 });
@@ -144,3 +149,9 @@ gulp.task('watch', ['connect', 'serve'], function () {
     gulp.watch('app/images/**/*', ['images']);
     gulp.watch('bower.json', ['wiredep']);
 });
+
+// Eat up all the errors
+function handleError(error) {
+    console.log(error.toString());
+    this.emit('end');
+}
