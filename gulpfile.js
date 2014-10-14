@@ -12,14 +12,14 @@ function handleError(e) {
 }
 
 gulp.task('styles', function () {
-	return gulp.src('src/styles/style.scss')
+	return gulp.src('src/styles/cu_components.scss')
 		.pipe($.compass({
 			css: 'src/styles',
 			sass: 'src/styles',
 			image: 'src/images'
 		})).on('error', handleError)
 		.pipe($.autoprefixer('last 1 version')).on('error', handleError)
-		.pipe(gulp.dest('dist/styles')).on('error', handleError)
+		.pipe(gulp.dest('dist')).on('error', handleError)
 		.pipe($.size());
 });
 
