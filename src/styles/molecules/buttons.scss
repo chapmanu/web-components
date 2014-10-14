@@ -1,0 +1,36 @@
+.button,
+a.button {
+	background: #dad8cf;
+	border: none;
+	border-radius: 3px;
+	color: #353430;
+	display: block;
+	width: 100%;
+	font-size: 16px;
+	text-align: center;
+	line-height: 16px;
+	padding: 15px 25px;
+	margin: 6px 0;
+
+	@include breakpoint(small) {
+		display: inline-block;
+		width: auto;
+		margin: 0;
+		text-align: inherit;
+	}
+
+	&:hover {
+		color: #000;
+		opacity: 0.9;
+		text-decoration: none;
+	}
+
+	&.red {
+		background: $color-chapman-red;
+		color: #FFF;
+
+		&:hover {
+			color: #FFF;
+		}
+	}
+}

@@ -1,46 +1,56 @@
 
-/* Font stacks
-   ========================================================================== */
+/***************************************************
+* Font stacks
+***************************************************/
 
 $font-stack-body: "proxima-nova-soft", "Helvetica Neue", "Microsoft Sans Serif", sans-serif;
 $font-stack-heading: "proxima-nova", "Helvetica Neue", "Microsoft Sans Serif", sans-serif;
 
 
-/* Links
-   ========================================================================== */
+/***************************************************
+* Links
+***************************************************/
 
-a, a:link {
+a, a:link, a:visited {
 	text-decoration: none;
 	color: $color-chapman-red;
 	cursor: pointer;
 }
 
-a:focus, a:hover {
+a:focus, a:hover, a:active {
 	color: lighten($color-chapman-red, 10%);
 }
 
+p {
+	a, a:link { border-bottom: 1px dotted #C0C0C0; }
+}
 
-/* Headings and Content
-   ========================================================================== */
+
+/***************************************************
+* Headers and Content
+***************************************************/
 
 html {
 	box-sizing: border-box;
 	font: 100%/1 $font-stack-body;
 	‑webkit‑text‑size‑adjust: 100%;
-	vertical-align: top;
 
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 }
 
-body {
+p {
 	color: #383838;
-	padding-bottom: 4em;
+	font-size: .875em; /* 14px */
+	line-height: 1.42857142857143;
+	line-height: 1.25rem; /* 20px */
 }
 
 article, blockquote, h1, h2, h3, h4, h5, h6, p, pre, section, .section {
 	margin-top: 20px;
 	margin-top: 1.25rem;
+	margin-bottom: 20px;
+	margin-bottom: 1.25rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -67,19 +77,10 @@ h4, h5, h6 {
 	line-height: 1.5rem; /* 24px */
 }
 
-p {
-	font-size: .875em; /* 14px */
-	line-height: 1.42857142857143;
-	line-height: 1.25rem; /* 20px */
-}
 
-*:first-child {
-	margin-top: 0;
-}
-
-
-/* Headings and content ≥ 1472 (extra large desktop)
-   ========================================================================== */
+/***************************************************
+* Headings and content ≥ 1472 (extra large desktop)
+***************************************************/
 
 @media (min-width: 1472px) {
 	p {

@@ -1,0 +1,10 @@
+#pagination { text-align:center; overflow:visible;  margin-top:10px; clear:both; }
+#pagination ul { list-style-type:none; overflow:visible; display:inline-block; margin:0; padding:0; }
+#pagination ul li { float:left; }
+#pagination ul li a.page-numbers,
+#pagination ul li .page-numbers { display:block; padding:10px 15px; margin:0 5px; text-decoration:none; color:#22211f; border:1px solid #eaeaea; background:#eaeaea; border-radius: 4px; }
+#pagination ul li .page-numbers.dots { background:none; border:none; padding:5px; color:#666666; }
+#pagination ul li .page-numbers.prev,
+#pagination ul li .page-numbers.next { background:#a82439; color:#FFFFFF; border:none; }
+#pagination ul li a:hover { background:#FFFFFF; }
+#pagination ul li .page-numbers.current { background:#FFFFFF; color:#a82439; }
