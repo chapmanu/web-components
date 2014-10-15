@@ -18,7 +18,7 @@ gulp.task('styles', function () {
 			sass: 'src/styles',
 			image: 'src/images'
 		})).on('error', handleError)
-		.pipe($.autoprefixer('last 1 version')).on('error', handleError)
+		.pipe($.autoprefixer('> 5%')).on('error', handleError)
 		.pipe(gulp.dest('dist')).on('error', handleError)
 		.pipe($.size());
 });
@@ -27,8 +27,9 @@ gulp.task('scripts', function () {
 	return gulp.src('src/scripts/**/*.js')
 		.pipe($.jshint()).on('error', handleError)
 		.pipe($.jshint.reporter(require('jshint-stylish')))
-		.pipe($.concat('chapman.js'))
-		.pipe(gulp.dest('dist/scripts'))
+		.pipe($.concat('cu_components.js'))
+		.pipe(gulp.dest('dist'))
+		.pipe(gulp.dest('src/scripts'))
 		.pipe($.size());
 });
 

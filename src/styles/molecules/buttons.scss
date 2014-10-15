@@ -6,13 +6,14 @@ a.button {
 	color: #353430;
 	display: block;
 	width: 100%;
+	box-sizing: border-box;
 	font-size: 16px;
 	text-align: center;
 	line-height: 16px;
 	padding: 15px 25px;
 	margin: 6px 0;
 
-	@include breakpoint(small) {
+	@include breakpoint(s) {
 		display: inline-block;
 		width: auto;
 		margin: 0;

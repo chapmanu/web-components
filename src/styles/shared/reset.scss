@@ -47,3 +47,10 @@ blockquote {
    ::-moz-selection { background: #a82439; color: #fff; text-shadow: none; }
         ::selection { background: #a82439; color: #fff; text-shadow: none; }
 
+.clearfix {
+   &:after{
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
