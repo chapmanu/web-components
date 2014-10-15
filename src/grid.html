@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Chapman Web Components</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<script type="text/javascript" src="//use.typekit.net/nqy1aog.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+	<link rel="stylesheet" href="styles/cu_components.css">
+	<script src="dist/cu_components.js"></script>
+
+	<style>
+	body {
+		padding:100px 0;
+	}
+
+	.component-heading {
+		color: #BBB;
+		font-size: 52px;
+		margin-top:100px;
+		margin-bottom:50px;
+		padding-bottom: 20px;
+		border-bottom: 1px dashed #BBB;
+
+		text-shadow: 1px 1px 1px rgba(255,255,255,0.8);
+	}
+	</style>
+
+</head>
+<body class="container">
+
+	<nav>
+		<a href="index.html">"Atoms"</a> |
+		<a href="molecules.html">Molecules</a> |
+		<a href="organisms.html">Organisms</a> |
+		<a href="omni-nav.html">Omni-Nav</a> |
+		<a href="javascripts.html">Javascripts</a> |
+		<a href="layout.html">Grid</a>
+	</nav>
+
+
+
+	<style>
+	.row {
+		margin-bottom:20px;
+	}
+	[class^=column] {
+		outline: 1px dashed #999;
+		background: #EEE;
+		height: 40px;
+	}
+	</style>
+
+
+	<h2 class="component-heading">Grid System</h2>
+
+	<p>This grid system was borrowed from the <b>concise</b> framework. Please <a href="http://concisecss.com/documentation/layout/grid/">read the full documentation</a> on how to use the grid system. </p>
+
+	<p>Some responsive breakpoints are also provided. You can use the following: </p>
+
+	<ul>
+		<li>FOo </li>
+	</ul>
+
+	<div class="row gutters">
+	  <div class="column-16"></div>
+	</div>
+
+	<div class="row gutters">
+	  <div class="column-1"></div>
+	  <div class="column-15"></div>
+	</div>
+
+	<div class="row gutters">
+	  <div class="column-2"></div>
+	  <div class="column-14"></div>
+	</div>
+
+	<div class="row gutters">
+	  <div class="column-3"></div>
+	  <div class="column-13"></div>
+	</div>
+
+	<div class="row gutters">
+	  <div class="column-4"></div>
+	  <div class="column-12"></div>
+	</div>
+
+	<div class="row gutters">
+	  <div class="column-5"></div>
+	  <div class="column-11"></div>
+	</div>
+
+	<div class="row gutters">
+	  <div class="column-6"></div>
+	  <div class="column-10"></div>
+	</div>
+
+	<div class="row gutters">
+	  <div class="column-7"></div>
+	  <div class="column-9"></div>
+	</div>
+
+	<div class="row gutters">
+	  <div class="column-8"></div>
+	  <div class="column-8"></div>
+	</div>
+
+	<div class="row gutters">
+	  <div class="column-4"></div>
+	  <div class="column-4"></div>
+	  <div class="column-4"></div>
+	  <div class="column-4"></div>
+	</div>
+
+	<div class="row gutters">
+	  <div class="column-2"></div>
+	  <div class="column-2"></div>
+	  <div class="column-2"></div>
+	  <div class="column-2"></div>
+	  <div class="column-2"></div>
+	  <div class="column-2"></div>
+	  <div class="column-2"></div>
+	  <div class="column-2"></div>
+	</div>
+
+	<p>Concise comes with a fluid, mobile-first grid system. Once the viewport of a device is larger than 768px, the rows of the grid display with 16 columns. Getting started with the grid system is as easy as wrapping any of the .column-* classes inside of a .row class.</p>
+
+	<p>By default, no gutters are added onto any of the grid columns. However, simply adding the class .gutters to your .row class provides a 2% gutter to each of the columns, except for the first one.</p>
+
+	<p>You also can nest grids inside of each other by nesting a .row class inside of a column.</p>
+
+
+
+	<!-- endfileincludes -->
+
+	<!-- build:js scripts/vendor.js -->
+	<!-- bower:js -->
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<!-- endbower -->
+	<!-- endbuild -->
+
+	<!-- build:js scripts/chapman.js -->
+	<script src="scripts/chapman.js"></script>
+	<!-- endbuild -->
+</body>
+</html>

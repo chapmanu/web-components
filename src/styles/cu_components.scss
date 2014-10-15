@@ -1,12 +1,19 @@
 
-// Base
+// Reset things
 @import "shared/normalize.css";
 @import "shared/reset";
+
+// Layout-ify things
+@import "shared/breakpoints";
+@import "shared/grid";
+
+// Make things look pretty
 @import "shared/colors";
 @import "shared/typography";
-@import "shared/grid";
-@import "shared/tables";
 
+// Make more things look pretty
+@import "shared/tables";
+@import "shared/jquery_image_quickview.css";
 
 // Molecules
 @import "molecules/buttons";
