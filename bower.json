@@ -7,7 +7,7 @@
     "dist/styles/chapman.js"
   ],
   "ignore": [
-    "app",
+    "src",
     "test",
     ".bower.json",
     ".bowerrc",

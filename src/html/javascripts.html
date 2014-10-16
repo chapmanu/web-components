@@ -1,0 +1,43 @@
+@@include('_header.html')
+
+
+	<style>
+	.box {
+		display: block;
+		float: left;
+		margin-right: 20px;
+		margin-bottom: 20px;
+		width:100px;
+		height: 100px;
+		background-size: cover;
+		opacity: 0.8;
+		border-radius: 6px;
+	}
+
+	.box:hover {
+		opacity: 1;
+	}
+	</style>
+
+	<h2 class="component-heading">Image Quickview</h2>
+
+	<p>Just link to a <b>.jpg, .gif,</b> or <b>.png</b> image. <a href="images/placeholders/argyros_forum.jpg">It's really that simple!</a></p>
+
+	<div class="row">
+		<a href="images/placeholders/chapman_radio.jpg" class="box" style="background-image:url(images/placeholders/chapman_radio.jpg);"></a>
+		<a href="images/placeholders/irvine_lecture_hall.jpg" class="box" style="background-image:url(images/placeholders/irvine_lecture_hall.jpg);"></a>
+		<a href="images/placeholders/lecture_hall.jpg" class="box" style="background-image:url(images/placeholders/lecture_hall.jpg);"></a>
+		<a href="images/placeholders/memorial_lawn.jpg" class="box" style="background-image:url(images/placeholders/memorial_lawn.jpg);"></a>
+		<a href="images/placeholders/piazza.jpg" class="box" style="background-image:url(images/placeholders/piazza.jpg);"></a>
+	</div>
+
+	<h2 class="component-heading">Call to Action Tracking</h2>
+
+	<p>Just add an HTML attribute to your link like this:</p>
+
+	<p><b>&lt;a href=&quot;#&quot; data-analytics-event=&quot;Big Red Button,Request Information,Page Footer&quot;&gt;</b>Click here<b>&lt;/a&gt;</b></p>
+
+	<a href="#" class="button red" data-analytics-event="Big Red Button,Request Information,Page Footer">This button will track a Google Analytics custom event!</a>
+
+
+@@include('_footer.html')

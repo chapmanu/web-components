@@ -1,0 +1,171 @@
+
+
+/***************************************************
+* Responsive Breakpoints
+***************************************************/
+$xs: 30em; /* 480px  */
+$s:  48em; /* 768px  */
+$m:  60em; /* 960px  */
+$l:  70em; /* 1120px */
+$xl: 80em; /* 1280px */
+
+
+/***************************************************
+* SASS Mixin for Breakpoints
+***************************************************/
+@mixin breakpoint($point) {
+	@if to_lower_case($point) == xs {
+		@media (min-width: $xs)  { @content; }
+	}
+	@else if to_lower_case($point) == s {
+		@media (min-width: $s)  { @content; }
+	}
+	@else if to_lower_case($point) == m {
+		@media (min-width: $m) { @content; }
+	}
+	@else if to_lower_case($point) == l {
+		@media (min-width: $l) { @content; }
+	}
+	@else if to_lower_case($point) == xl {
+		@media (min-width: $xl) { @content; }
+	}
+	@else if to_lower_case($point) == hdpi {
+		@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+					 only screen and (min--moz-device-pixel-ratio: 1.5),
+					 only screen and (-o-min-device-pixel-ratio: 3/2),
+					 only screen and (min-device-pixel-ratio: 1.5) { @content; }
+	}
+}
+
+
+/***************************************************
+* Page Container
+***************************************************/
+.container { width: 90%; margin:0 auto; }
+
+@include breakpoint(s)  { .container { width: 620px;  } }
+@include breakpoint(m)  { .container { width: 768px;  } }
+@include breakpoint(l)  { .container { width: 960px;  } }
+@include breakpoint(xl) { .container { width: 1140px; } }
+
+
+/***************************************************
+* Responsive Helper Classes
+***************************************************/
+.show-xs,
+.hide-s,
+.hide-m,
+.hide-l,
+.hide-xl,
+.hide-print,
+.hide-hd {
+  display: block;
+  visibility: visible;
+}
+
+.hide-xs,
+.show-s,
+.show-m,
+.show-l,
+.show-xl,
+.show-print,
+.show-hd {
+  display: none;
+  visibility: hidden;
+}
+
+@include breakpoint(s) {
+  .show-s,
+  .hide-xs,
+  .hide-m,
+  .hide-l,
+  .hide-xl {
+    display: block;
+    visibility: visible;
+  }
+
+  .hide-s,
+  .show-xs,
+  .show-m,
+  .show-l,
+  .show-xl {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@include breakpoint(m) {
+  .show-m,
+  .hide-s,
+  .hide-xs,
+  .hide-l,
+  .hide-xl {
+    display: block;
+    visibility: visible;
+  }
+
+  .hide-m,
+  .show-s,
+  .show-xs,
+  .show-l,
+  .show-xl {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@include breakpoint(l) {
+  .show-l,
+  .hide-xs,
+  .hide-s,
+  .hide-m,
+  .hide-xl {
+    display: block;
+    visibility: visible;
+  }
+
+  .hide-l,
+  .show-xs,
+  .show-s,
+  .show-m,
+  .show-xl {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@include breakpoint(xl) {
+  .show-xl,
+  .hide-xs,
+  .hide-s,
+  .hide-m,
+  .hide-l {
+    display: block;
+    visibility: visible;
+  }
+
+  .hide-xl,
+  .show-xs,
+  .show-s,
+  .show-m,
+  .show-l {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+// HiDPI and retina
+@media only screen and (-moz-min-device-pixel-ratio: 1.5),
+     only screen and (-o-min-device-pixel-ratio: 3 / 2),
+     only screen and (-webkit-min-device-pixel-ratio: 1.5),
+     only screen and (min-device-pixel-ratio: 1.5) {
+  .show-hd {
+    display: block;
+    visibility: visible;
+  }
+
+  .hide-hd {
+    display: none;
+    visibility: hidden;
+  }
+}

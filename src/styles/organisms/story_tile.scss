@@ -1,0 +1,160 @@
+// TO DO: Optimize file for SASS
+
+/***************************************************
+* Story Block
+***************************************************/
+
+.story {
+	width: 100%; margin-bottom: 15px;
+
+	&.big { clear: both; }
+
+	@media only screen and (min-width: 960px) {
+		&.small { width: 262px; float: left; }
+		&.small.left { margin-right: 16px; }
+	}
+
+	@media only screen and (min-width: 1200px) {
+		& { margin-bottom: 20px; }
+		&.small {
+			width: 315px;
+			&.left { margin-right: 20px; }
+		}
+	}
+}
+
+
+
+/***************************************************
+* Story styles
+***************************************************/
+
+.story {
+	color: #A82439; background: #FFF; box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.1); border-radius: 3px;
+
+	&.footer,
+	&.footer .meta { border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; }
+
+	a { color: #A82439; text-decoration: none; }
+	p { margin: 0; }
+	img { max-width: 100%;}
+
+	.title { margin: 0 20px 0 20px; font-size: 24px; line-height: 24px; }
+	.date { margin: 5px 0 40px 24px; font-size: 12px; clear: both; color: #62605A; }
+
+	a.permalink { display: block; overflow: hidden; }
+	&.big a.permalink   { max-height: 483px; }
+	&.small a.permalink { max-height: 365px; }
+
+	/* Truncate long titles */
+	.title .beginning:after { content: "…"; }
+	.title .end { display: none; }
+
+	/* Expand long titles */
+	a.permalink:hover {
+		.title {
+			color: #C92741;
+			.beginning:after { content: ""; }
+			.end { display: inline; }
+		}
+	}
+
+	.tag {
+		display: inline-block;
+		padding: 5px 10px 5px 20px;
+		background: #f7f6f0;
+		border-left: 5px solid #a82439;
+		margin: 20px 0 20px -5px;
+		color: #62605a;
+		text-decoration: none;
+		font-size: 12px;
+		border-radius: 3px;
+
+		-webkit-transition: all 0.1s ease-out;
+			 -moz-transition: all 0.1s ease-out;
+				 -o-transition: all 0.1s ease-out;
+						transition: all 0.1s ease-out;
+
+		&:hover { background: #eceadf; color: #a82439; padding-left: 25px; }
+	}
+
+
+}
+
+
+
+.story-bg { background-size: cover; background-repeat: no-repeat; background-position: center; background-color: #f7f6f0; min-height: 200px; }
+.story-bg img { display: none; }
+
+@media only screen and (min-width: 960px) {
+	.story.big .title { font-size: 32px; line-height: 32px; }
+	.story.big .story-bg { min-height: 350px; }
+}
+
+/***************************************************
+* Story Footer Elements
+***************************************************/
+.story {
+	.footer { position: relative; background: #F7F6F0; overflow: visible; min-height: 40px; font-size: 12px; line-height: 20px; }
+	.footer p { margin: 0; }
+
+	.footer a,
+	.footer .meta a:hover { opacity: 1; }
+
+	.footer .source { position: absolute; top: 0; left: 0; background: #F7F6F0; }
+
+	.footer .source:hover a { z-index: 2; opacity: 1; color: #A82439; }
+	.footer .source a { padding: 13px 50px 10px 24px; display: block; color: #000; opacity: 0.6; text-decoration: none; line-height: 11px; overflow: hidden; }
+
+	.footer .source.facebook:before { content: ""; display: block; width: 15px; height: 15px; background: url('../images/icons/facebook.svg') no-repeat center left; background-size: contain; position: absolute; top: 10px; left: 10px; opacity: 0.8; -webkit-filter: grayscale(1); }
+	.footer .source.instagram:before { content: ""; display: block; width: 15px; height: 15px; background: url('../images/icons/svg/instagram.svg') no-repeat center left; background-size: contain; position: absolute; top: 10px; left: 10px; opacity: 0.8; -webkit-filter: grayscale(1); }
+	.footer .source.twitter:before { content: ""; display: block; width: 15px; height: 15px; background: url('../images/icons/twitter.svg') no-repeat center left; background-size: contain; position: absolute; top: 12px; left: 11px; opacity: 0.8; -webkit-filter: grayscale(1); }
+	.footer .source.blogs:before { content: ""; display: block; width: 20px; height: 20px; background: url('../images/icons/cu_monogram.svg') no-repeat center left; background-size: contain; position: absolute; top: 10px; left: 8px; opacity: 0.8; -webkit-filter: grayscale(1); }
+
+	.footer .source:hover:before { -webkit-filter: grayscale(0); }
+
+	.footer .source.facebook a,
+	.footer .source.instagram a,
+	.footer .source.twitter a,
+	.footer .source.blogs a { padding-left: 30px !important; border:none; }
+
+	.footer .meta { position: absolute; top: 0; right: 0; background: #F7F6F0;  font-size: 12px; line-height: 16px; }
+	.footer .meta .icon { display: block; color: #000; opacity: 0.6; text-decoration: none; padding: 10px 20px 10px 10px; float: left; }
+
+	.footer .meta .action { display: block; color: #000; opacity: 1; text-decoration: none; float: left; }
+	.footer .meta .action:hover { opacity: 0.8; }
+}
+
+/***************************************************
+* Story Icon Elements
+***************************************************/
+
+.story {
+	.icon,
+	a.icon { color:#FFF; text-decoration: none; border:none; }
+	a.icon:hover { opacity:0.75; }
+
+	.icon { background-size:14px; background-repeat: no-repeat; background-position: center right; padding-right:20px; min-height:14px; margin-right:10px; }
+
+	.icon.comments  { background-image: url('../images/icons/bubble-dots3.svg'); }
+	.icon.shares    { background-image: url('../images/icons/share.svg'); }
+	.icon.views     { background-image: url('../images/icons/eye2.svg'); }
+
+	.action { display: inline-block; background-size:14px; background-repeat: no-repeat; background-position: center; height:40px; text-indent: -9999px; width:0; position: relative; border:none;
+
+		-webkit-transition: all 0.1s ease-out;
+			 -moz-transition: all 0.1s ease-out;
+				 -o-transition: all 0.1s ease-out;
+						transition: all 0.1s ease-out;
+	}
+
+	.action.facebook { background-image:url('../images/icons/facebook.svg'); background-color: #38659f; }
+	.action.twitter  { background-image:url('../images/icons/twitter.svg');  background-color: #3aa8dd; }
+
+	.meta.share_action .action { width:40px; }
+
+	.meta.share_action .icon.comments,
+	.meta.share_action .icon.views  { display: none; }
+	.meta.share_action .icon.shares { opacity:0.2 !important; cursor: default; }
+
+}
