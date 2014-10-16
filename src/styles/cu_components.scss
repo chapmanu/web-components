@@ -1,6 +1,6 @@
 
 // Reset things
-@import "shared/normalize.css";
+@import "shared/normalize";
 @import "shared/reset";
 
 // Layout-ify things
@@ -13,7 +13,7 @@
 
 // Make more things look pretty
 @import "shared/tables";
-@import "shared/jquery_image_quickview.css";
+@import "shared/jquery_image_quickview";
 
 // Molecules
 @import "molecules/buttons";
