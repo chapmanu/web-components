@@ -8,10 +8,11 @@
     "Components"
   ],
   "main": [
-    "dist/styles/cu_components.css",
-    "dist/scripts/cu_components.js"
+    "dist/cu_components.css",
+    "dist/cu_components.js"
   ],
   "ignore": [
+    "app",
     "src",
     "test",
     ".bower.json",

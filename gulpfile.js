@@ -5,6 +5,7 @@ var gulp = require('gulp');
 
 // load plugins
 var $ = require('gulp-load-plugins')();
+var tag_version = require('gulp-tag-version');
 
 gulp.task('styles', function () {
 	return gulp.src('src/styles/cu_components.scss')
@@ -71,12 +72,6 @@ gulp.task('clean', function () {
 	return gulp.src(['dist'], { read: false }).pipe($.clean());
 });
 
-gulp.task('build', ['images', 'styles', 'scripts']);
-
-gulp.task('default', ['clean'], function () {
-	gulp.start('build');
-});
-
 gulp.task('connect', function () {
 	var connect = require('connect');
 	var app = connect()
@@ -133,6 +128,23 @@ gulp.task('watch', ['connect', 'serve'], function () {
 	gulp.watch('src/scripts/**/*.js', ['scripts']);
 	gulp.watch('src/images/**/*', ['images']);
 	gulp.watch('bower.json', ['wiredep']);
+});
+
+gulp.task('build', ['images', 'styles', 'scripts']);
+
+function bump(versionLevel) {
+	return gulp.src(['./package.json', './bower.json'])
+		.pipe($.bump({type: versionLevel}))
+		.pipe(gulp.dest('./'))
+		.pipe($.git.commit('bump package version'))
+		.pipe($.filter('bower.json'))
+		.pipe(tag_version());
+}
+
+gulp.task('patch', function() { return bump('patch') });
+
+gulp.task('default', ['clean'], function () {
+	gulp.start('build');
 });
 
 // Eat up all the errors
