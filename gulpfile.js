@@ -15,6 +15,7 @@ gulp.task('styles', function () {
 		})).on('error', handleError)
 		.pipe($.autoprefixer('> 5%')).on('error', handleError)
 		.pipe(gulp.dest('dist')).on('error', handleError)
+    .pipe(gulp.dest('./'))
 		.pipe($.size());
 });
 
@@ -25,6 +26,7 @@ gulp.task('scripts', function () {
 		.pipe($.concat('cu_components.js'))
 		.pipe(gulp.dest('dist'))
 		.pipe(gulp.dest('src/scripts'))
+    .pipe(gulp.dest('./'))
 		.pipe($.size());
 });
 
@@ -59,14 +61,6 @@ gulp.task('html', ['fileinclude', 'styles', 'scripts'], function () {
 		.pipe(gulp.dest('dist'))
 		.pipe($.size());
 });
-
-// gulp.task('fonts', function () {
-// 	return $.bowerFiles()
-// 		.pipe($.filter('**/*.{eot,svg,ttf,woff}'))
-// 		.pipe($.flatten())
-// 		.pipe(gulp.dest('dist/fonts'))
-// 		.pipe($.size());
-// });
 
 gulp.task('extras', function () {
 	return gulp.src(['src/*.*', '!src/*.html'], { dot: true })
