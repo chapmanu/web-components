@@ -1,10 +1,15 @@
 {
   "name": "chapman-web-components",
-  "version": "0.0.1",
-  "keywords": ["Chapman University", "Chapman", "Web", "Components"],
+  "version": "0.0.7",
+  "keywords": [
+    "Chapman University",
+    "Chapman",
+    "Web",
+    "Components"
+  ],
   "main": [
-    "dist/styles/chapman.css",
-    "dist/scripts/chapman.js"
+    "dist/styles/cu_components.css",
+    "dist/scripts/cu_components.js"
   ],
   "ignore": [
     "src",
