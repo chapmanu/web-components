@@ -122,8 +122,7 @@ gulp.task('watch', ['connect', 'serve'], function () {
 		server.changed(file.path);
 	});
 
-	gulp.watch('src/html/*.html', ['fileinclude']);
-	gulp.watch('src/widgets/*.html', ['fileinclude']);
+	gulp.watch('src/html/**/*.html', ['fileinclude']);
 	gulp.watch('src/styles/**/*.scss', ['styles']);
 	gulp.watch('src/scripts/**/*.js', ['scripts']);
 	gulp.watch('src/images/**/*', ['images']);
