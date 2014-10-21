@@ -16,7 +16,6 @@ gulp.task('styles', function () {
 		})).on('error', handleError)
 		.pipe($.autoprefixer('> 5%')).on('error', handleError)
 		.pipe(gulp.dest('dist')).on('error', handleError)
-    .pipe(gulp.dest('./'))
 		.pipe($.size());
 });
 
@@ -26,8 +25,6 @@ gulp.task('scripts', function () {
 		.pipe($.jshint.reporter(require('jshint-stylish')))
 		.pipe($.concat('cu_components.js'))
 		.pipe(gulp.dest('dist'))
-		.pipe(gulp.dest('src/scripts'))
-    .pipe(gulp.dest('./'))
 		.pipe($.size());
 });
 
