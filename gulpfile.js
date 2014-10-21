@@ -72,7 +72,7 @@ gulp.task('clean', function () {
 gulp.task('connect', function () {
 	var connect = require('connect');
 	var app = connect()
-		.use(require('connect-livereload')({ port: 35729 }))
+		.use(require('connect-livereload')({ port: 35730 }))
 		.use(connect.static('src'))
 		.use(connect.static('dist'))
 		.use(connect.directory('src'));
