@@ -91,7 +91,7 @@ gulp.task('connect', function () {
 });
 
 gulp.task('serve', ['connect', 'fileinclude', 'styles'], function () {
-	require('opn')('http://localhost:9000');
+	require('opn')('http://localhost:9000/src');
 });
 
 // inject bower components
