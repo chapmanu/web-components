@@ -13,7 +13,7 @@
 
 // Make more things look pretty
 @import "shared/tables";
-@import "shared/jquery_image_quickview";
+@import "./shared/jquery_image_quickview";
 
 // Molecules
 @import "molecules/buttons";
@@ -22,3 +22,4 @@
 
 // Organisms
 @import "organisms/story_tile";
+@import "organisms/calendar_day";
