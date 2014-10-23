@@ -12,6 +12,7 @@
 @import "shared/typography";
 
 // Make more things look pretty
+@import "shared/forms";
 @import "shared/tables";
 @import "./shared/jquery_image_quickview";
 
@@ -19,6 +20,7 @@
 @import "molecules/buttons";
 @import "molecules/calendar_day";
 @import "molecules/calendar_boxes";
+@import "molecules/pagination";
 
 // Organisms
 @import "organisms/story_tile";

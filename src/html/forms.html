@@ -1,0 +1,84 @@
+@@include('_header.html')
+
+
+	<h3>Forms</h3>
+	<p>These styles are applied to all common form elements. The form element must have the class "cu-form" in order to inherit these styles.</p>
+
+	<form class="cu-form">
+		<h2 class="component-heading">Text Inputs</h2>
+
+		<label for="name">Regular Text Field</label>
+		<input type="text" id="name" />
+
+		<label for="name">Text Area</label>
+		<textarea></textarea>
+
+
+		<h2 class="component-heading">Checkboxes</h2>
+
+		<label for="checkbox-one">Checkbox A</label>
+		<input type="checkbox" id="checkbox-one" value="1">
+
+		<label for="checkbox-two">Checkbox B</label>
+		<input type="checkbox" id="checkbox-two" value="2">
+
+		<label for="checkbox-three">Checkbox C</label>
+		<input type="checkbox" id="checkbox-three" value="3">
+
+		<hr />
+
+		<input type="checkbox" id="checkbox-four" value="4">
+		<label for="checkbox-four">Checkbox D</label>
+
+		<input type="checkbox" id="checkbox-five" value="5">
+		<label for="checkbox-five">Checkbox E</label>
+
+		<input type="checkbox" id="checkbox-six" value="6">
+		<label for="checkbox-six">Checkbox F</label>
+
+
+		<h2 class="component-heading">Radio Buttons</h2>
+
+		<label for="radio-one">Radio A</label>
+		<input type="radio" id="radio-one" value="1" name="radio-group-one">
+
+		<label for="radio-two">Radio B</label>
+		<input type="radio" id="radio-two" value="2" name="radio-group-one">
+
+		<label for="radio-three">Radio C</label>
+		<input type="radio" id="radio-three" value="3" name="radio-group-one">
+
+		<hr />
+
+		<input type="radio" id="radio-four" value="4" name="radio-group-two">
+		<label for="radio-four">Radio D</label>
+
+		<input type="radio" id="radio-five" value="5"name="radio-group-two">
+		<label for="radio-five">Radio E</label>
+
+		<input type="radio" id="radio-six" value="6"name="radio-group-two">
+		<label for="radio-six">Radio F</label>
+
+
+		<h2 class="component-heading">Text Input with Datalist</h2>
+
+		<label for="inpChocType">Chocolates</label>
+		<input type="text" id="inpChocType" list="chocType">
+		<datalist id="chocType">
+			<option value="white" />
+			<option value="milk" />
+			<option value="dark" />
+		</datalist>
+
+		<h2 class="component-heading">File Picker</h2>
+
+		<label>File select</label>
+		<input type="file" name="uploadFile">
+
+		<label>Photo select</label>
+		<input type="file" accept="image/*" capture="camera">
+
+	</form>
+
+
+@@include('_footer.html')
