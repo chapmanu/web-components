@@ -26,8 +26,19 @@ a.button {
 		text-decoration: none;
 	}
 
-	&.red {
+	&.red,
+	&.primary {
 		background: $color-chapman-red;
+		color: #FFF;
+
+		&:hover {
+			color: #FFF;
+		}
+	}
+
+	&.blue,
+	&.secondary {
+		background: $color-chapman-blue;
 		color: #FFF;
 
 		&:hover {
