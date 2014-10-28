@@ -44,12 +44,6 @@ html {
 	-webkit-font-smoothing: antialiased;
 }
 
-body {
-	background-color: #F2F2F0;
-	color: #383838;
-	padding-bottom: 4em;
-}
-
 ::-moz-selection {
 	background-color: rgba(168,36,57,0.875);
 	color: #FFF;
@@ -114,42 +108,6 @@ img {
 article, blockquote, h1, h2, h3, h4, h5, h6, p, pre, section, .section {
 	margin-top: 40px;
 	margin-top: 2.5rem;
-}
-
-h1, h2, h3, h4, h5, h6 {
-	font-family: "proxima-nova", "Helvetica Neue", "Microsoft Sans Serif", sans-serif;
-}
-
-h1, h2, h3, h4, h5, h6 {
-	color: #353430;
-}
-
-h1 {
-	font-size: 1.875em; /* 30px */
-	line-height: 1.06666666666667;
-	line-height: 2rem; /* 32px */
-}
-
-h2, h3 {
-	font-size: 1.5em; /* 24px */
-	line-height: 1.16666666666667;
-	line-height: 1.75rem; /* 28px */
-}
-
-h4, h5, h6 {
-	font-size: 1.25em; /* 20px */
-	line-height: 1.2;
-	line-height: 1.5rem; /* 24px */
-}
-
-p {
-	font-size: .875em; /* 14px */
-	line-height: 1.42857142857143;
-	line-height: 1.25rem; /* 20px */
-}
-
-*:first-child {
-	margin-top: 0;
 }
 
 /* Headings and content ≥ 1472 (extra large desktop)
