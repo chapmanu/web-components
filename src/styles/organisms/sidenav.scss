@@ -1,0 +1,63 @@
+/* Side Navigation
+   ====================================================== */
+
+.sidenav ul {
+	list-style: none;
+}
+
+.sidenav-menu a {
+	display: block;
+	font-size: .875em; /* 14px */
+	padding: 12px 20px;
+	transition: padding 200ms;
+}
+
+.sidenav-menu a {
+	color: #353430;
+}
+
+.sidenav-menu a:focus, .sidenav-menu a:hover {
+	color: #A9233A;
+}
+
+.sidenav-menu > li > a {
+	margin-top: 1px;
+	background-color: #FAF9F5;
+}
+
+.sidenav-menu > li > a:focus, .sidenav-menu > li > a:hover, .sidenav-menu > .is-parent, .sidenav-menu > .is-parent > a {
+	background-color: #FFF;
+}
+
+.sidenav-menu > .is-parent > a {
+	font-weight: 700;
+}
+
+.sidenav-menu > .is-parent a:hover span, .sidenav-menu .is-active > a span {
+	box-shadow: 0 1px 0 0 rgba(169,35,58,0.25);
+}
+
+.sidenav-menu ul {
+	margin-top: -4px;
+	padding-bottom: 8px;
+}
+
+.sidenav-menu ul > li > a {
+	color: #62605A;
+	padding: 8px 32px;
+}
+
+/* Side Navigation ≥ 1472 (extra large desktop)
+   ====================================================== */
+
+@media (min-width: 1472px) {
+	.sidenav-menu > li > a {
+		font-size: 1em;
+	}
+
+	.sidenav-menu ul > li > a {
+		font-size: .875em;
+		line-height: 1.14285714285714;
+		line-height: 1rem; /* 16px */
+	}
+}

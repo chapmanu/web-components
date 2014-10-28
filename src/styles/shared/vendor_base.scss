@@ -1,0 +1,122 @@
+[data-hidden] {
+	border: 0;
+	clip: rect(0 0 0 0);
+	display: block;
+	height: 1px;
+	padding: 0;
+	position: absolute;
+	margin: 0;
+	overflow: hidden;
+	width: 1px;
+}
+
+/* Base
+   ========================================================================== */
+
+*, *::before, *::after {
+	border: 0 solid;
+	-moz-box-sizing: border-box; /* remove when base support is Firefox ESR > 24 */
+	box-sizing: inherit;
+	color: inherit;
+	font-size: inherit;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	vertical-align: inherit;
+}
+
+/* Canvas
+   ========================================================================== */
+
+@-ms-viewport {
+	width: device-width;
+}
+
+html {
+	box-sizing: border-box;
+	font: 100%/1 "proxima-nova-soft", "Helvetica Neue", "Microsoft Sans Serif", sans-serif;
+	‑webkit‑text‑size‑adjust: 100%;
+	vertical-align: top;
+}
+
+html {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}
+
+::-moz-selection {
+	background-color: rgba(168,36,57,0.875);
+	color: #FFF;
+	text-shadow: none;
+}
+
+::selection {
+	background-color: rgba(168,36,57,0.875);
+	color: #FFF;
+	text-shadow: none;
+}
+
+a[data-focusin], [data-focusin]:not(a) a {
+	outline: none;
+}
+
+a[data-focusin]:focus > *:last-child, [data-focusin]:not(a) a:focus > *:last-child {
+	outline: 1px dotted;
+	outline: auto 5px -webkit-focus-ring-color;
+}
+
+/* Elements
+   ========================================================================== */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+	display: block;
+}
+
+[hidden], template {
+	display: none;
+}
+
+[data-hidden] {
+	border: 0;
+	clip: rect(0 0 0 0);
+	display: block;
+	height: 1px;
+	padding: 0;
+	position: absolute;
+	margin: 0;
+	overflow: hidden;
+	width: 1px;
+}
+
+img, svg {
+	max-height: 100%;
+	max-width: 100%;
+}
+
+svg {
+	height: 100%;
+	width: 100%;
+}
+
+img {
+	border: 0;
+}
+
+/* Headings and Content
+   ========================================================================== */
+
+article, blockquote, h1, h2, h3, h4, h5, h6, p, pre, section, .section {
+	margin-top: 40px;
+	margin-top: 2.5rem;
+}
+
+/* Headings and content ≥ 1472 (extra large desktop)
+   ========================================================================== */
+
+@media (min-width: 1472px) {
+	p {
+		font-size: 1em; /* 16px */
+		line-height: 1.5em;
+		line-height: 1.5rem; /* 24px */
+	}
+}

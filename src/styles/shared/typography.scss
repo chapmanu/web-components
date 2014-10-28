@@ -23,6 +23,25 @@ a:focus, a:hover, a:active {
 
 p {
 	a, a:link { border-bottom: 1px dotted #C0C0C0; }
+	a { position: relative; color: $color-dark-gray; }
+	a:hover::after { border-bottom-style: solid; }
+	a::after {
+		content: "";
+		display: block;
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+	}
+}
+
+a.alt::after {
+	content: "»";
+	padding-left: 0.25em;
+	transition: padding 100ms;
+}
+
+p:not(.unlink) a::after {
+	border-bottom: 1px dotted;
 }
 
 

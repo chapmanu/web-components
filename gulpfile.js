@@ -4,17 +4,29 @@
  * Plugins
  */
 var gulp        = require('gulp');
+var tagVersion  = require('gulp-tag-version');
+var fileinclude = require('gulp-file-include');
 var $           = require('gulp-load-plugins')();
-var tag_version = require('gulp-tag-version');
+
 
 /**
  * Configuration variables
  */
-var sourceScripts = ['src/scripts/**/*.js'];
-var sourceStyles  = ['src/styles/cu_components.scss'];
-var sourceImages  = ['src/images/**/*'];
-var sourceHtml    = ['src/html/**/*.html'];
-var destination   = 'dist';
+var sourceScripts       = ['src/scripts/*.js'];
+var sourceStyles        = ['src/styles/*.scss'];
+var sourceImages        = ['src/images/logos/*'];
+var sourceIcons         = ['src/images/icons/*.svg'];
+var sourceHtml          = ['src/html/*.html'];
+var cleanFolders        = ['dist/**/*', 'demos/**/*'];
+var destination         = 'dist';
+
+/**
+ * Error Handling
+ */
+function handleError(error) {
+		console.log(error.toString());
+		this.emit('end');
+}
 
 /**
  * Tasks
@@ -35,7 +47,8 @@ gulp.task('scripts', function () {
 	return gulp.src(sourceScripts)
 		.pipe($.jshint()).on('error', handleError)
 		.pipe($.jshint.reporter(require('jshint-stylish')))
-		.pipe($.concat('cu_components.js'))
+		.pipe($.include())
+		.pipe($.uglify())
 		.pipe(gulp.dest(destination))
 		.pipe($.size());
 });
@@ -46,34 +59,35 @@ gulp.task('images', function () {
 		.pipe($.size());
 });
 
+gulp.task('icons', function() {
+	return gulp.src(sourceIcons)
+		.pipe($.svgmin())
+		.pipe($.svgstore({
+			fileName: 'sprite.svg'
+			}))
+		.pipe(gulp.dest(destination + '/images'));
+});
+
+gulp.task('icons-preview', ['icons', 'fileinclude'], function() {
+	var target = gulp.src("demos/icons-preview.html");
+	var icons  = gulp.src("src/images/icons/*.svg", {read: false});
+	return target.pipe($.inject(icons, {
+			transform: function(filepath, file, index, length, targetFile) {
+				var id = filepath.split("/").slice(-1).pop().replace(".svg", "");
+				return "<div class=\"preview\">" +
+				       "<p>#" + id + "</p>" +
+							 "<svg class=\"icon\"><use xlink:href=\"../dist/images/sprite.svg#"+id+"\"/></svg>" +
+							 "</div>";
+			}
+		}))
+		.pipe(gulp.dest('demos'));
+});
+
 gulp.task('fileinclude', function() {
-	var fileinclude = require('gulp-file-include');
 	return gulp.src(sourceHtml)
 		.pipe(fileinclude()).on('error', handleError)
-		.pipe(gulp.dest('./src'))
+		.pipe(gulp.dest('./demos'))
 		.pipe($.size());
-});
-
-gulp.task('html', ['fileinclude', 'styles', 'scripts'], function () {
-	var jsFilter = $.filter('**/*.js');
-	var cssFilter = $.filter('**/*.css');
-
-	return gulp.src('src/*.html')
-		.pipe($.useref.assets({searchPath: '{dist, src}'}))
-		.pipe(jsFilter)
-		.pipe($.uglify())
-		.pipe(jsFilter.restore())
-		.pipe(cssFilter)
-		.pipe($.csso())
-		.pipe(cssFilter.restore())
-		.pipe($.useref.restore())
-		.pipe($.useref())
-		.pipe(gulp.dest(destination))
-		.pipe($.size());
-});
-
-gulp.task('clean', function () {
-	return gulp.src(destination, { read: false }).pipe($.clean());
 });
 
 gulp.task('connect', function () {
@@ -90,34 +104,15 @@ gulp.task('connect', function () {
 		});
 });
 
-gulp.task('serve', ['connect', 'fileinclude', 'styles'], function () {
-	require('opn')('http://localhost:9000/src');
+gulp.task('serve', ['connect'], function () {
+	require('opn')('http://localhost:9000/demos');
 });
 
-// inject bower components
-gulp.task('wiredep', function () {
-	var wiredep = require('wiredep').stream;
-
-	gulp.src('src/styles/*.scss')
-		.pipe(wiredep({
-			directory: 'src/bower_components'
-		}))
-		.pipe(gulp.dest('src/styles'));
-
-	gulp.src('src/*.html')
-		.pipe(wiredep({
-			directory: 'src/bower_components'
-		}))
-		.pipe(gulp.dest('src'));
-});
-
-gulp.task('watch', ['connect', 'serve'], function () {
+gulp.task('watch', ['build', 'connect', 'serve'], function () {
 	var server = $.livereload();
 
-	// watch for changes
-
 	gulp.watch([
-		'src/*.html',
+		'demos/*.html',
 		'dist/**/*',
 	]).on('change', function (file) {
 		server.changed(file.path);
@@ -126,11 +121,15 @@ gulp.task('watch', ['connect', 'serve'], function () {
 	gulp.watch('src/html/**/*.html', ['fileinclude']);
 	gulp.watch('src/styles/**/*.scss', ['styles']);
 	gulp.watch('src/scripts/**/*.js', ['scripts']);
-	gulp.watch('src/images/**/*', ['images']);
-	gulp.watch('bower.json', ['wiredep']);
+	gulp.watch('src/images/**/*', ['images'])
+	gulp.watch('src/images/icons/*.svg', ['icons', 'icons-preview']);
 });
 
-gulp.task('build', ['images', 'styles', 'scripts']);
+gulp.task('build', ['icons', 'images', 'styles', 'scripts', 'fileinclude', 'icons-preview']);
+
+gulp.task('clean', function () {
+	return gulp.src(cleanFolders, { read: false }).pipe($.clean());
+});
 
 function bump(versionLevel) {
 	return gulp.src(['./package.json', './bower.json'])
@@ -138,7 +137,7 @@ function bump(versionLevel) {
 		.pipe(gulp.dest('./'))
 		.pipe($.git.commit('bump package version'))
 		.pipe($.filter('bower.json'))
-		.pipe(tag_version());
+		.pipe(tagVersion());
 }
 
 gulp.task('patch', function() { return bump('patch') });
@@ -148,8 +147,3 @@ gulp.task('major', function() { return bump('major') });
 gulp.task('default', ['clean'], function () {
 	gulp.start('build');
 });
-
-function handleError(error) {
-    console.log(error.toString());
-    this.emit('end');
-}
