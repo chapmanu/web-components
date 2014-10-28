@@ -13,7 +13,6 @@
   ],
   "ignore": [
     "app",
-    "src",
     "test",
     ".bower.json",
     ".bowerrc",
