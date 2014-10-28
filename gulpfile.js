@@ -76,7 +76,7 @@ gulp.task('icons-preview', ['icons', 'fileinclude'], function() {
 				var id = filepath.split("/").slice(-1).pop().replace(".svg", "");
 				return "<div class=\"preview\">" +
 				       "<p>#" + id + "</p>" +
-							 "<svg><use xlink:href=\"../dist/images/sprite.svg#"+id+"\"/></svg>" +
+							 "<svg class=\"icon\"><use xlink:href=\"../dist/images/sprite.svg#"+id+"\"/></svg>" +
 							 "</div>";
 			}
 		}))
