@@ -5,16 +5,20 @@
  */
 var gulp        = require('gulp');
 var $           = require('gulp-load-plugins')();
-var tag_version = require('gulp-tag-version');
+var tagVersion = require('gulp-tag-version');
+var fileinclude = require('gulp-file-include');
 
 /**
  * Configuration variables
  */
-var sourceScripts = ['src/scripts/**/*.js'];
-var sourceStyles  = ['src/styles/cu_components.scss'];
-var sourceImages  = ['src/images/**/*'];
-var sourceHtml    = ['src/html/**/*.html'];
-var destination   = 'dist';
+var sourceScripts       = ['src/scripts/**/*.js'];
+var sourceStyles        = ['src/styles/cu_components.scss'];
+var sourceImages        = ['src/images/placeholders/*'];
+var sourceIcons         = ['src/images/icons/*.svg'];
+var sourceHtml          = 'src/html/*.html';
+var sourceHtmlTemplates = 'src/html/templates/*.html';
+var destination         = 'dist';
+var cleanFolders        = ['dist/**/*', 'demos/**/*'];
 
 /**
  * Tasks
@@ -46,11 +50,34 @@ gulp.task('images', function () {
 		.pipe($.size());
 });
 
+gulp.task('icons', function() {
+	return gulp.src(sourceIcons)
+		.pipe($.svgmin())
+		.pipe($.svgstore({
+			fileName: 'sprite.svg'
+			}))
+		.pipe(gulp.dest(destination + '/images'));
+});
+
+gulp.task('icons-preview', function() {
+	var target = gulp.src("demos/icons-preview.html");
+	var icons  = gulp.src("src/images/icons/*.svg", {read: false});
+	return target.pipe($.inject(icons, {
+			transform: function(filepath, file, index, length, targetFile) {
+				var id = filepath.split("/").slice(-1).pop().replace(".svg", "");
+				return "<div class=\"preview\">" +
+				       "<p>#" + id + "</p>" +
+							 "<svg><use xlink:href=\"../dist/images/sprite.svg#"+id+"\"/></svg>" +
+							 "</div>";
+			}
+		}))
+		.pipe(gulp.dest('demos'));
+});
+
 gulp.task('fileinclude', function() {
-	var fileinclude = require('gulp-file-include');
 	return gulp.src(sourceHtml)
 		.pipe(fileinclude()).on('error', handleError)
-		.pipe(gulp.dest('./src'))
+		.pipe(gulp.dest('./demos'))
 		.pipe($.size());
 });
 
@@ -73,7 +100,7 @@ gulp.task('html', ['fileinclude', 'styles', 'scripts'], function () {
 });
 
 gulp.task('clean', function () {
-	return gulp.src(destination, { read: false }).pipe($.clean());
+	return gulp.src(cleanFolders, { read: false }).pipe($.clean());
 });
 
 gulp.task('connect', function () {
@@ -91,7 +118,7 @@ gulp.task('connect', function () {
 });
 
 gulp.task('serve', ['connect', 'fileinclude', 'styles'], function () {
-	require('opn')('http://localhost:9000/src');
+	require('opn')('http://localhost:9000/demos');
 });
 
 // inject bower components
@@ -117,7 +144,7 @@ gulp.task('watch', ['connect', 'serve'], function () {
 	// watch for changes
 
 	gulp.watch([
-		'src/*.html',
+		'demos/*.html',
 		'dist/**/*',
 	]).on('change', function (file) {
 		server.changed(file.path);
@@ -126,7 +153,7 @@ gulp.task('watch', ['connect', 'serve'], function () {
 	gulp.watch('src/html/**/*.html', ['fileinclude']);
 	gulp.watch('src/styles/**/*.scss', ['styles']);
 	gulp.watch('src/scripts/**/*.js', ['scripts']);
-	gulp.watch('src/images/**/*', ['images']);
+	gulp.watch('src/images/icons/*.svg', ['icons', 'icons-preview']);
 	gulp.watch('bower.json', ['wiredep']);
 });
 
@@ -138,7 +165,7 @@ function bump(versionLevel) {
 		.pipe(gulp.dest('./'))
 		.pipe($.git.commit('bump package version'))
 		.pipe($.filter('bower.json'))
-		.pipe(tag_version());
+		.pipe(tagVersion());
 }
 
 gulp.task('patch', function() { return bump('patch') });

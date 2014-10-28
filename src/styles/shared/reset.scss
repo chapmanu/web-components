@@ -22,7 +22,9 @@ a img { border:none; outline:none; }
 
 hr { border:none; height:2px; background:#CCCCCC; margin:40px 0; clear:both; }
 
-img    { max-width:100%; height:auto; }
+img, svg { max-height: 100%; max-width: 100%; }
+img { height:auto; }
+svg { height: 100%; width: 100%; }
 iframe { max-width:100%; }
 
 .alignnone   { clear: both; display: block; margin: 10px 0; }
@@ -53,4 +55,16 @@ blockquote {
     display: table;
     clear: both;
   }
+}
+
+*, *::before, *::after {
+	border: 0 solid;
+	-moz-box-sizing: border-box; /* remove when base support is Firefox ESR > 24 */
+	box-sizing: inherit;
+	color: inherit;
+	font-size: inherit;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	vertical-align: inherit;
 }

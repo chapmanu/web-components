@@ -1,0 +1,37 @@
+/* Inset
+   ========================================================================== */
+
+.inset {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 90%;
+	max-width: calc(100% - 20px);
+	transition: max-width 200ms;
+}
+
+/* Inset ≥ 1152 (large desktop)
+   ========================================================================== */
+
+@media (min-width: 1152px) {
+	.inset {
+		max-width: 1120px;
+	}
+}
+
+/* Inset ≥ 1472 (extra large desktop)
+   ========================================================================== */
+
+@media (min-width: 1472px) {
+	.inset {
+		max-width: 1440px;
+	}
+}
+
+/* Inset Lite ≥ 1024 (large tablet and desktop)
+   ========================================================================== */
+
+@media (min-width: 1024px) {
+	.inset--lite {
+		max-width: 960px;
+	}
+}
