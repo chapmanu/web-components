@@ -12,9 +12,7 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
 <!-- Web Components -->
 <script src="../dist/cu_components.js" async></script>
-
-	<link rel="stylesheet" href="../dist/cu_components.css">
-
+<link rel="stylesheet" href="../dist/cu_components.css">
 
 	<style>
 	body {
@@ -46,14 +44,22 @@
 		<a href="forms.html">Forms</a> |
 		<a href="error-pages.html">Error Pages</a> |
 		<a href="icons-preview.html">Icons Preview</a> |
-		<a href="vendor-skins.html">Vendor Skins</a>
+		<a href="vendor-skins.html">Vendor Themes</a>
 	</nav>
 
 
-<h1>Description</h1>
-<p>Meghan, here is where you can write a description about what these styles might be used for.</p>
+<h1>CU Vendor Themes</h1>
 
-<ul style="margin-left: 30px">
+<p>
+Various departments may need to contract with external vendors to create websites with specific purposes.
+The sites created often need to look and feed like the main <a href="//www.chapman.edu">www.chapman.edu</a>
+website. We have created a set of assets specifically for this purpose.  External developers can link
+to these assets in the webpages and adopt the official Chapman styles.
+</p>
+
+<h2>Demo Pages with the CU Vendor Themes applied</h2>
+
+<ul class="demo-pages" style="margin-left: 30px">
   <li><a href="2col-lite.html">2 Column Lite</a></li>
   <li><a href="2col-sidenav.html">2 Column with Side Navigation</a></li>
   <li><a href="2col-sidenav.html">2 Column with Side Navigation</a></li>
@@ -62,9 +68,40 @@
   <li><a href="3col-carousel.html">3 Column Carousel</a></li>
   <li><a href="3col-sidenav.html">3 Column with Side Navigation</a></li>
   <li><a href="3col-sidenav-law.html">3 Column with Side Navigation (Law)</a></li>
-  <li><a href="update.html">Browser Update (Partially completed)</a></li>
-  <li><a href="error.html">Error (Partially completed)</a></li>
+  <li><a href="update.html">Browser Update</a></li>
+  <li><a href="error.html">Error</a></li>
 </ul>
+
+<h2>Usage</h2>
+
+<p>
+  We have tried to make using these themes as easy as possible.
+  First include the styles and scripts in the head of your pages.
+</p>
+
+<ol style="margin-left: 30px">
+  <li>
+    Include the style and script tags in the head of your pages. <br><br>
+    <code>
+      <pre>
+&lt;script src=&quot;https://www2.chapman.edu/assets/cu_vendor_themes.js&quot; data-version=&quot;1.1.1&quot;&gt;&lt;/script&gt;
+&lt;link href=&quot;https://www2.chapman.edu/assets/cu_vendor_themes.css&quot; rel=&quot;stylesheet&quot; data-version=&quot;1.1.1&quot;&gt;
+      </pre>
+    </code>
+  </li>
+  <li>
+    Now structure the html of your page in one of our available layouts.  See the html layout snippets below:
+    <ul style="margin-left: 30px;">
+      <li><a href="https://github.com/chapmanu/web-components/blob/gh-pages/demos/2col-lite.html">2 Column Lite</a></li>
+      <li><a href="https://github.com/chapmanu/web-components/blob/gh-pages/demos/2col-sidenav.html">2 Column with Side Navigation</a></li>
+      <li><a href="https://github.com/chapmanu/web-components/blob/gh-pages/demos/2col.html">2 Column</a></li>
+      <li><a href="https://github.com/chapmanu/web-components/blob/gh-pages/demos/3col-carousel-law.html">3 Column Carousel (Law)</a></li>
+      <li><a href="https://github.com/chapmanu/web-components/blob/gh-pages/demos/3col-carousel.html">3 Column Carousel</a></li>
+      <li><a href="https://github.com/chapmanu/web-components/blob/gh-pages/demos/3col-sidenav-law.html">3 Column with Side Navigation (Law)</a></li>
+      <li><a href="https://github.com/chapmanu/web-components/blob/gh-pages/demos/3col-sidenav.html">3 Column with Side Navigation</a></li>
+    </ul>
+  </li>
+</ol>
 
 
 </body>

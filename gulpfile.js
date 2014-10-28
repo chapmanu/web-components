@@ -12,13 +12,13 @@ var $           = require('gulp-load-plugins')();
 /**
  * Configuration variables
  */
-var sourceScripts       = ['src/scripts/**/*.js'];
-var sourceStyles        = ['src/styles/cu_components.scss'];
+var sourceScripts       = ['src/scripts/*.js'];
+var sourceStyles        = ['src/styles/*.scss'];
 var sourceImages        = ['src/images/logos/*'];
 var sourceIcons         = ['src/images/icons/*.svg'];
-var sourceHtml          = 'src/html/*.html';
-var destination         = 'dist';
+var sourceHtml          = ['src/html/*.html'];
 var cleanFolders        = ['dist/**/*', 'demos/**/*'];
+var destination         = 'dist';
 
 /**
  * Error Handling
@@ -47,7 +47,7 @@ gulp.task('scripts', function () {
 	return gulp.src(sourceScripts)
 		.pipe($.jshint()).on('error', handleError)
 		.pipe($.jshint.reporter(require('jshint-stylish')))
-		.pipe($.concat('cu_components.js'))
+		.pipe($.include())
 		.pipe($.uglify())
 		.pipe(gulp.dest(destination))
 		.pipe($.size());

@@ -1,11 +1,12 @@
-
 // Reset things
 @import "shared/normalize";
 @import "shared/reset";
 
 // Layout-ify things
 @import "shared/breakpoints";
-@import "shared/grid";
+@import "shared/vendor_base";
+@import "shared/vendor_inset";
+@import "shared/vendor_span";
 
 // Make things look pretty
 @import "shared/colors";
@@ -15,7 +16,7 @@
 @import "shared/icon";
 @import "shared/forms";
 @import "shared/tables";
-@import "./shared/jquery_image_quickview";
+@import "shared/jquery_image_quickview";
 
 // Molecules
 @import "molecules/buttons";
