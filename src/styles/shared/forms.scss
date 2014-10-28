@@ -19,6 +19,14 @@ form.cu-form {
 		margin: 10px 0;
 		padding: 5px;
 
+		&.valid {
+		}
+
+		&.invalid {
+			border: 1px solid #D00000;
+			background-color: #F7E9E5;
+		}
+
 		&:focus {
 			outline: 2px solid #444;
 		}
