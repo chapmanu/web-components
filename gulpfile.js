@@ -4,21 +4,29 @@
  * Plugins
  */
 var gulp        = require('gulp');
-var $           = require('gulp-load-plugins')();
-var tagVersion = require('gulp-tag-version');
+var tagVersion  = require('gulp-tag-version');
 var fileinclude = require('gulp-file-include');
+var $           = require('gulp-load-plugins')();
+
 
 /**
  * Configuration variables
  */
 var sourceScripts       = ['src/scripts/**/*.js'];
 var sourceStyles        = ['src/styles/cu_components.scss'];
-var sourceImages        = ['src/images/placeholders/*'];
+var sourceImages        = ['src/images/logos/*'];
 var sourceIcons         = ['src/images/icons/*.svg'];
 var sourceHtml          = 'src/html/*.html';
-var sourceHtmlTemplates = 'src/html/templates/*.html';
 var destination         = 'dist';
 var cleanFolders        = ['dist/**/*', 'demos/**/*'];
+
+/**
+ * Error Handling
+ */
+function handleError(error) {
+		console.log(error.toString());
+		this.emit('end');
+}
 
 /**
  * Tasks
@@ -40,6 +48,7 @@ gulp.task('scripts', function () {
 		.pipe($.jshint()).on('error', handleError)
 		.pipe($.jshint.reporter(require('jshint-stylish')))
 		.pipe($.concat('cu_components.js'))
+		.pipe($.uglify())
 		.pipe(gulp.dest(destination))
 		.pipe($.size());
 });
@@ -59,7 +68,7 @@ gulp.task('icons', function() {
 		.pipe(gulp.dest(destination + '/images'));
 });
 
-gulp.task('icons-preview', function() {
+gulp.task('icons-preview', ['icons', 'fileinclude'], function() {
 	var target = gulp.src("demos/icons-preview.html");
 	var icons  = gulp.src("src/images/icons/*.svg", {read: false});
 	return target.pipe($.inject(icons, {
@@ -81,28 +90,6 @@ gulp.task('fileinclude', function() {
 		.pipe($.size());
 });
 
-gulp.task('html', ['fileinclude', 'styles', 'scripts'], function () {
-	var jsFilter = $.filter('**/*.js');
-	var cssFilter = $.filter('**/*.css');
-
-	return gulp.src('src/*.html')
-		.pipe($.useref.assets({searchPath: '{dist, src}'}))
-		.pipe(jsFilter)
-		.pipe($.uglify())
-		.pipe(jsFilter.restore())
-		.pipe(cssFilter)
-		.pipe($.csso())
-		.pipe(cssFilter.restore())
-		.pipe($.useref.restore())
-		.pipe($.useref())
-		.pipe(gulp.dest(destination))
-		.pipe($.size());
-});
-
-gulp.task('clean', function () {
-	return gulp.src(cleanFolders, { read: false }).pipe($.clean());
-});
-
 gulp.task('connect', function () {
 	var connect = require('connect');
 	var app = connect()
@@ -117,31 +104,12 @@ gulp.task('connect', function () {
 		});
 });
 
-gulp.task('serve', ['connect', 'fileinclude', 'styles'], function () {
+gulp.task('serve', ['connect'], function () {
 	require('opn')('http://localhost:9000/demos');
 });
 
-// inject bower components
-gulp.task('wiredep', function () {
-	var wiredep = require('wiredep').stream;
-
-	gulp.src('src/styles/*.scss')
-		.pipe(wiredep({
-			directory: 'src/bower_components'
-		}))
-		.pipe(gulp.dest('src/styles'));
-
-	gulp.src('src/*.html')
-		.pipe(wiredep({
-			directory: 'src/bower_components'
-		}))
-		.pipe(gulp.dest('src'));
-});
-
-gulp.task('watch', ['connect', 'serve'], function () {
+gulp.task('watch', ['build', 'connect', 'serve'], function () {
 	var server = $.livereload();
-
-	// watch for changes
 
 	gulp.watch([
 		'demos/*.html',
@@ -153,11 +121,15 @@ gulp.task('watch', ['connect', 'serve'], function () {
 	gulp.watch('src/html/**/*.html', ['fileinclude']);
 	gulp.watch('src/styles/**/*.scss', ['styles']);
 	gulp.watch('src/scripts/**/*.js', ['scripts']);
+	gulp.watch('src/images/**/*', ['images'])
 	gulp.watch('src/images/icons/*.svg', ['icons', 'icons-preview']);
-	gulp.watch('bower.json', ['wiredep']);
 });
 
-gulp.task('build', ['images', 'styles', 'scripts']);
+gulp.task('build', ['icons', 'images', 'styles', 'scripts', 'fileinclude', 'icons-preview']);
+
+gulp.task('clean', function () {
+	return gulp.src(cleanFolders, { read: false }).pipe($.clean());
+});
 
 function bump(versionLevel) {
 	return gulp.src(['./package.json', './bower.json'])
@@ -175,8 +147,3 @@ gulp.task('major', function() { return bump('major') });
 gulp.task('default', ['clean'], function () {
 	gulp.start('build');
 });
-
-function handleError(error) {
-    console.log(error.toString());
-    this.emit('end');
-}
