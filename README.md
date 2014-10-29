@@ -1,6 +1,6 @@
 # web-components
 
-View the demos at http://chapmanu.github.io/web-components/src/.
+View the demos at http://chapmanu.github.io/web-components/demos/.
 
 A build system for common front-end web components used across Chapman University websites.
 
