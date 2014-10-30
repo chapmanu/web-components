@@ -49,61 +49,132 @@
 
 
 
-	<h3>Forms</h3>
+		<h3>Forms</h3>
 	<p>These styles are applied to all common form elements. The form element must have the class "cu-form" in order to inherit these styles.</p>
 
 	<section class="cu-form">
 
 		<h2 class="component-heading">Basic Input Types</h2>
 
-		<label>Button</label>
-		<input type="button" value="I'm a button"></input>
+		<div class="cu-form-group">
+			<label>Text</label>
+			<input class="cu-form-control" type="text" placeholder="I am a placeholder">
+		</div>
 
-		<label>Checkbox</label>
-		<input type="checkbox">
+		<div class="cu-form-group">
+			<label>Disabled</label>
+			<input class="cu-form-control" type="text" value="I am disabled" disabled>
+		</div>
 
-		<label>Checkbox Checked</label>
-		<input type="checkbox" checked>
+		<div class="checkbox">
+			<label>
+				<input type="checkbox"> Checkbox A
+			</label>
+		</div>
 
+		<div class="checkbox">
+			<label>
+				<input type="checkbox"> Checkbox B
+			</label>
+		</div>
+
+		<div class="cu-form-group">
+			<div class="checkbox-inline">
+				<label>
+					<input type="checkbox"> Inline Checkbox B
+				</label>
+			</div>
+
+			<div class="checkbox-inline">
+				<label>
+					<input type="checkbox"> Inline Checkbox A
+				</label>
+			</div>
+		</div>
+
+		<div class="cu-form-group">
+			<div class="radio">
+				<label>
+					<input name="radios" type="radio"> Radio A
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input name="radios" type="radio"> Radio B
+				</label>
+			</div>
+		</div>
+
+		<div class="cu-form-group">
+			<div class="radio-inline">
+				<label>
+					<input name="radios-inline" type="radio"> Radio A
+				</label>
+			</div>
+			<div class="radio-inline">
+				<label>
+					<input name="radios-inline" type="radio"> Radio B
+				</label>
+			</div>
+		</div>
+
+		<div class="cu-form-group">
 		<label>Email</label>
-		<input type="email">
+		<input class="cu-form-control" type="email">
+		</div>
 
+		<div class="cu-form-group">
 		<label>File Input</label>
-		<input type="file">
+		<input class="cu-form-control" type="file">
+		</div>
 
+		<div class="cu-form-group">
 		<label>Number</label>
-		<input type="number">
+		<input class="cu-form-control" type="number">
+		</div>
 
+		<div class="cu-form-group">
 		<label>Password</label>
-		<input type="password">
+		<input class="cu-form-control" type="password">
+		</div>
 
-		<label>Radio</label>
-		<input type="radio">
-
+		<div class="cu-form-group">
 		<label>Range</label>
 		<input type="range">
+		</div>
 
-		<label>Reset</label>
-		<input type="reset">
-
+		<div class="cu-form-group">
 		<label>Select</label>
 		<select>
 			<option value="white">White</option>
 			<option value="milk">Milk</option>
 			<option value="dark">Dark</option>
 		</select>
+		</div>
 
+		<div class="cu-form-group">
 		<label>Search</label>
-		<input type="search">
+		<input class="cu-form-control" type="search" placeholder="Search something here...">
+		</div>
 
+		<div class="cu-form-group">
 		<label>Tel</label>
-		<input type="tel">
+		<input class="cu-form-control" type="tel">
+		</div>
 
+		<div class="cu-form-group">
 		<label>Text Area</label>
-		<textarea></textarea>
-
+		<textarea class="cu-form-control" placeholder="Long description..."></textarea>
+		</div>
+		<div class="cu-form-group">
 		<label>Url</label>
-		<input type="url">
+		<input class="cu-form-control" type="url" placeholder="http://">
+		</div>
+
+		<div class="cu-form-group">
+			<label>Button</label>
+			<input type="button" value="I'm a button"></input>
+		</div>
 	</section>
 
 

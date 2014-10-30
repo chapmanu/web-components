@@ -8,14 +8,31 @@
  $input-border-radius: 3px;
  $input-padding: 6px;
  $input-color: $color-dark-gray;
-// $input-height-base: 24px;
-// $padding-base-vertical;
-// $padding-base-horizonal;
-// $font-size-base;
-// $line-height-base;
-// $input-color;
+ $input-border-focus: $color-chapman-blue;
+ $input-placeholder-color: $color-light-gray;
+ $cursor-disabled: auto;
+ $input-bg-disabled: #EEEEEE;
 
 
+/**
+ * Form Specific Mixins
+ */
+@mixin form-control-focus($color) {
+	$color-rgba: rgba(red($color), green($color), blue($color), 0.25);
+	&:focus {
+		border-color: $color;
+		outline: 0;
+	}
+}
+
+@mixin placeholder($color) {
+  &::-moz-placeholder {
+    color: $color;
+    opacity: 1;
+  }
+  &:-ms-input-placeholder { color: $color; }
+  &::-webkit-input-placeholder  { color: $color; }
+}
 
 /**
  * Normalize non-controls
@@ -41,6 +58,7 @@ label {
  // (* is not specific enough for this one)
 input[type="search"] {
 	box-sizing: border-box;
+	-webkit-appearance: none;
 }
 
 // Position radios and checkboxes nicer
@@ -100,37 +118,75 @@ input[type="checkbox"]:focus {
  * input[type="color"]
  */
 
-.cu-form {
+.cu-form-control {
+	display: block;
+	width: 100%;
+	border: 1px solid $input-border;
+	border-radius: $input-border-radius;
+	line-height: $line-height-base;
+	color: $input-color;
+	font-size: $font-size-base;
+	padding: $input-padding;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+	@include form-control-focus($input-border-focus);
+	@include placeholder($input-placeholder-color);
 
-	// Styles to apply to all elements
-	select,
-	textarea,
-	input[type="text"],
-	input[type="password"],
-	input[type="datetime"],
-	input[type="datetime-local"],
-	input[type="date"],
-	input[type="month"],
-	input[type="time"],
-	input[type="week"],
-	input[type="number"],
-	input[type="email"],
-	input[type="url"],
-	input[type="search"],
-	input[type="tel"],
-	input[type="color"] {
-		display: block;
-		width: 100%;
-		border: 1px solid $input-border;
-		border-radius: $input-border-radius;
-		line-height: $line-height-base;
-		color: $input-color;
-		font-size: $font-size-base;
-		padding: $input-padding;
-		box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-		transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+	&[disabled],
+	&[readonly],
+	fieldset[disabled] & {
+		cursor: $cursor-disabled;
+		background-color: $input-bg-disabled;
+		opacity: 1;
 	}
 }
+
+/**
+ * Make a grouping of related controls for vertical forms
+ */
+.cu-form-group {
+	margin-bottom: 18px;
+}
+
+/**
+ * Checkboxes and radios
+ */
+.radio,
+.checkbox {
+	position: relative;
+	display: block;
+	margin-top: 10px;
+	margin-bottom: 10px;
+
+	label {
+		min-height: $line-height-base;
+		font-weight: normal;
+		margin-bottom: 0;
+		cursor: pointer;
+	}
+}
+
+/**
+ * Inline checkboxes and radios
+ */
+.checkbox-inline,
+.radio-inline {
+	display: inline-block;
+
+	label {
+		min-height: $line-height-base;
+		font-weight: normal;
+		margin-bottom: 0;
+		cursor: pointer;
+	}
+}
+
+.radio-inline + .radio-inline,
+.checkbox-inline + .checkbox-inline {
+  margin-top: 0;
+  margin-left: 10px; // space out consecutive inline controls
+}
+
 
 
 
