@@ -1,9 +1,6 @@
-(function ($) {
+if (typeof quickView === 'undefined') {
 
-	$(document).ready( function() {
-		quickView.initialize();
-	});
-
+	// Add to the global scope!!
 	var quickView = {
 
 		isScrollLocked : false,
@@ -13,22 +10,35 @@
 			var $wrapper = $('body');
 
 			// Create container
-			$wrapper.append('<div id="imageQuickView"><div id="imageQuickViewCell"></div></div>');
-			this.$container 	= $('#imageQuickView');
-			this.$containerCell = $('#imageQuickViewCell');
+			$wrapper.append('<div id="QuickView"><div id="QuickViewCell"></div></div>');
+			this.$container 	= $('#QuickView');
+			this.$containerCell = $('#QuickViewCell');
 
 			// Quick View FX
 			$wrapper.delegate("a","click",function(e) {
 
+				// Do not intercept meta key clicks
+				if (e.metaKey) return true;
 
+				//
+				// Intercept image links
 				var targetURL = $(e.currentTarget).attr('href');
 
-				// Do not intercept URLs that are not images or alt-clicked
-				if (!quickView.hasImageExtension(targetURL) || e.metaKey) return true;
+				if (quickView.hasImageExtension(targetURL)) {
+					quickView.show('<img src="'+targetURL+'" />');
+					return false; // Prevent default
+				}
 
-				quickView.show(targetURL);
+				//
+				// Intercept data-quickview-content
+				var $quickviewHTML = $(e.currentTarget).attr('data-quickview-content');
 
-				return false;
+				if ($quickviewHTML.length) {
+					quickView.show($quickviewHTML);
+					return false; // Prevent default
+				}
+
+				return true; // Allow default
 			});
 
 			// Close on click
@@ -44,11 +54,11 @@
 			if (url) return(url.match(/\.(jpeg|jpg|gif|png)$/) !== null);
 		},
 
-		show : function(targetURL) {
+		show : function(htmlContent) {
 
-			var elem = '<img src="'+targetURL+'" />';
+			quickView.$containerCell.html(htmlContent).css('height',$(window).height()+"px").css('width',$(window).width()+"px");
 
-			quickView.$containerCell.html(elem).css('height',$(window).height()+"px").css('width',$(window).width()+"px");
+			console.log('the window height is ' + $(window).height());
 
 			quickView.$container.fadeIn(80);
 
@@ -88,4 +98,10 @@
 		}
 	};
 
-})(jQuery);
+	$(document).ready( function() {
+		quickView.initialize();
+	});
+
+} else {
+	console.log("Warning: quickView was already defined so we could not load chapmanU/web-components quickView!")
+}
