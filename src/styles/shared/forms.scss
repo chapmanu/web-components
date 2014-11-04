@@ -8,10 +8,11 @@
  $input-border-radius: 3px;
  $input-padding: 6px;
  $input-color: $color-dark-gray;
- $input-border-focus: $color-chapman-blue;
+ $input-border-focus: $color-dark-gray;
  $input-placeholder-color: $color-light-gray;
  $cursor-disabled: auto;
  $input-bg-disabled: #EEEEEE;
+ $error-color: #cc6700;
 
 
 /**
@@ -34,6 +35,16 @@
   &::-webkit-input-placeholder  { color: $color; }
 }
 
+@mixin icon-placeholder($icon, $focus-icon) {
+	background-image: inline-image($icon);
+	background-repeat: no-repeat;
+	background-size: $font-size-base $font-size-base;
+	background-position: center left $input-padding;
+	text-indent: 1.5em;
+
+	&:focus { background-image: inline-image($focus-icon); }
+}
+
 /**
  * Normalize non-controls
  */
@@ -48,6 +59,7 @@ label {
 	display: inline-block;
 	max-width: 100%;  // Force IE8 to wrap long content
 	margin-bottom: 6px;
+	margin-right: 6px;
 	font-weight: bold;
 }
 
@@ -84,15 +96,6 @@ input[type="range"] {
 select[multiple],
 select[size] {
 	height: auto;
-}
-
-// Focus for file, radio, and checkbox
-input[type="file"]:focus,
-input[type="radio"]:focus,
-input[type="checkbox"]:focus {
-	outline: thin dotted;
-	outline: 5px auto -webkit-focus-run-color;
-	outline-offset: -2px;
 }
 
 
@@ -188,7 +191,70 @@ input[type="checkbox"]:focus {
 }
 
 
+/**
+ * Speical Input Types
+ */
+.cu-form-control {
+	&.login {
+		@include icon-placeholder('icons/user-light-gray.svg', 'icons/user.svg');
+	}
+	&.password {
+		@include icon-placeholder('icons/lock-light-gray.svg', 'icons/lock.svg');
+	}
 
+	&.url {
+		@include icon-placeholder('icons/globe-light-gray.svg', 'icons/globe.svg');
+	}
+
+	&.email {
+		@include icon-placeholder('icons/envelope-light-gray.svg', 'icons/envelope.svg');
+	}
+
+	&.tel {
+		@include icon-placeholder('icons/phone-light-gray.svg', 'icons/phone.svg');
+	}
+
+	&.loading {
+		@include icon-placeholder('icons/spinning.gif', 'icons/spinning.gif');
+	}
+}
+
+
+/**
+ * Form Validation
+ */
+
+label.required:after {
+	content: " *";
+}
+
+.cu-form-control {
+	&.invalid {
+		border: 1px solid $error-color;
+		background-color: lighten($error-color, 56%);
+	}
+}
+
+
+
+/**
+ * Form messages and tips
+ */
+.error-message {
+		border-radius: 3px;
+		color: $error-color;
+		display: inline-block;
+		margin-bottom: 6px;
+
+		&:before {
+			content: " ";
+			width: $font-size-base;
+			height: $font-size-base;
+			display: inline-block;
+			background: inline-image("icons/warning-fill-orange.svg");
+			margin-right: 6px;
+		}
+}
 
 
 
@@ -222,10 +288,7 @@ input[type="checkbox"]:focus {
 	// 	margin:0 5px;
 	// 	font-size: 14px;
 
-	// 	&.required:after {
-	// 		content: " *";
-	// 		color: $color-chapman-blue;
-	// 	}
+
 	// }
 
 	// input {

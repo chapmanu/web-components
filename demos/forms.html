@@ -48,8 +48,7 @@
 	</nav>
 
 
-
-		<h3>Forms</h3>
+	<h3>Forms</h3>
 	<p>These styles are applied to all common form elements. The form element must have the class "cu-form" in order to inherit these styles.</p>
 
 	<section class="cu-form">
@@ -62,32 +61,46 @@
 		</div>
 
 		<div class="cu-form-group">
-			<label>Disabled</label>
-			<input class="cu-form-control" type="text" value="I am disabled" disabled>
+		<label>Number</label>
+		<input class="cu-form-control" type="number">
 		</div>
 
-		<div class="checkbox">
-			<label>
-				<input type="checkbox"> Checkbox A
-			</label>
-		</div>
 
-		<div class="checkbox">
-			<label>
-				<input type="checkbox"> Checkbox B
-			</label>
+
+		<div class="cu-form-group">
+		<label>Text Area</label>
+		<textarea class="cu-form-control" placeholder="Long description..."></textarea>
 		</div>
 
 		<div class="cu-form-group">
-			<div class="checkbox-inline">
+			<label>Select</label>
+			<select class="cu-form-control">
+				<option value="white">White</option>
+				<option value="milk">Milk</option>
+				<option value="dark">Dark</option>
+			</select>
+		</div>
+
+		<div class="cu-form-group">
+		<label>File Input</label>
+		<input class="cu-form-control" type="file">
+		</div>
+
+		<div class="cu-form-group">
+		<label>Range</label>
+		<input type="range">
+		</div>
+
+		<div class="cu-form-group">
+			<div class="checkbox">
 				<label>
-					<input type="checkbox"> Inline Checkbox B
+					<input type="checkbox"> Checkbox A
 				</label>
 			</div>
 
-			<div class="checkbox-inline">
+			<div class="checkbox">
 				<label>
-					<input type="checkbox"> Inline Checkbox A
+					<input type="checkbox"> Checkbox B
 				</label>
 			</div>
 		</div>
@@ -106,92 +119,103 @@
 		</div>
 
 		<div class="cu-form-group">
-			<div class="radio-inline">
+			<div class="checkbox-inline">
 				<label>
-					<input name="radios-inline" type="radio"> Radio A
+					<input type="checkbox"> Inline Checkbox B
 				</label>
 			</div>
-			<div class="radio-inline">
+
+			<div class="checkbox-inline">
 				<label>
-					<input name="radios-inline" type="radio"> Radio B
+					<input type="checkbox"> Inline Checkbox A
 				</label>
 			</div>
 		</div>
+
+		<div class="cu-form-group">
+			<div class="radio-inline">
+				<label>
+					<input name="radios-inline" type="radio"> Inline Radio A
+				</label>
+			</div>
+			<div class="radio-inline">
+				<label>
+					<input name="radios-inline" type="radio"> Inline Radio B
+				</label>
+			</div>
+		</div>
+
+		<h2 class="component-heading">Special Input Types</h2>
 
 		<div class="cu-form-group">
 		<label>Email</label>
-		<input class="cu-form-control" type="email">
+		<input class="cu-form-control email" type="email" placeholder="cu@chapman">
 		</div>
 
 		<div class="cu-form-group">
-		<label>File Input</label>
-		<input class="cu-form-control" type="file">
-		</div>
-
-		<div class="cu-form-group">
-		<label>Number</label>
-		<input class="cu-form-control" type="number">
+		<label>Username</label>
+		<input class="cu-form-control login" type="text" placeholder="charleschaptown">
 		</div>
 
 		<div class="cu-form-group">
 		<label>Password</label>
-		<input class="cu-form-control" type="password">
-		</div>
-
-		<div class="cu-form-group">
-		<label>Range</label>
-		<input type="range">
-		</div>
-
-		<div class="cu-form-group">
-		<label>Select</label>
-		<select>
-			<option value="white">White</option>
-			<option value="milk">Milk</option>
-			<option value="dark">Dark</option>
-		</select>
-		</div>
-
-		<div class="cu-form-group">
-		<label>Search</label>
-		<input class="cu-form-control" type="search" placeholder="Search something here...">
+		<input class="cu-form-control password" type="password" placeholder="I'm a secret...">
 		</div>
 
 		<div class="cu-form-group">
 		<label>Tel</label>
-		<input class="cu-form-control" type="tel">
+		<input class="cu-form-control tel" type="tel" placeholder="(xxx) xxx-xxxx" >
 		</div>
 
-		<div class="cu-form-group">
-		<label>Text Area</label>
-		<textarea class="cu-form-control" placeholder="Long description..."></textarea>
-		</div>
+
 		<div class="cu-form-group">
 		<label>Url</label>
-		<input class="cu-form-control" type="url" placeholder="http://">
-		</div>
-
-		<div class="cu-form-group">
-			<label>Button</label>
-			<input type="button" value="I'm a button"></input>
+		<input class="cu-form-control url" type="url" placeholder="http://...">
 		</div>
 	</section>
 
 
 
-	<h2 class="component-heading">Input Validation</h2>
+	<h2 class="component-heading">Input States</h2>
+
+	<div class="cu-form-group">
+		<label>Disabled</label>
+		<input class="cu-form-control" type="text" value="I am disabled" disabled>
+	</div>
+
+	<div class="cu-form-group">
+		<label class="required">A required field</label>
+		<input type="text" class="cu-form-control"></input>
+	</div>
+
+	<div class="cu-form-group">
+		<label>An Invalid Field</label>
+		<input type="text" class="cu-form-control invalid">
+	</div>
+
+	<div class="cu-form-group">
+		<label>A Field that is Loading</label>
+		<input type="text" class="cu-form-control loading">
+	</div>
+
+	<h2 class="component-heading">Input messages</h2>
+
+	<div class="cu-form-group">
+		<label>First Name</label> <span class="error-message">You're name must start with a Q</span>
+		<input type="text" class="cu-form-control invalid">
+	</div>
+
+	<div class="cu-form-group">
+		<label class="required">Life Role Model</label> <span class="error-message">This field is required</span>
+		<input type="text" class="cu-form-control invalid" required>
+	</div>
+
+	<div class="cu-form-group">
+		<label class="required">A Very Secure Password</label> <span class="error-message">Your password must contain three letters, 2 numbers, a single comma, and an ancient Chinese character.</span>
+		<input type="text" class="cu-form-control invalid" required>
+	</div>
 
 	<form class="cu-form">
-		<label for="name">Validated Text Field</label>
-		<input type="text" id="name" class="valid" />
-
-		<hr />
-
-		<label for="name">Invalid Text Field</label>
-		<input type="text" id="name" class="invalid" />
-
-
-
 		<h2 class="component-heading">Text Inputs</h2>
 
 		<label for="name">Regular Text Field</label>
