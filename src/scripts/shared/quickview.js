@@ -1,106 +1,113 @@
 if (typeof quickView === 'undefined') {
 
-	// Add to the global scope!!
-	var quickView = {
+	var quickView;
 
-		isScrollLocked : false,
+	// This code will not run if jQuery is not loaded
+	this.jQuery && (function ($) {
 
-		initialize : function() {
+		// Add to the global scope!!
+		quickView = {
 
-			var $wrapper = $('body');
+			isScrollLocked : false,
 
-			// Create container
-			$wrapper.append('<div id="QuickView"><div id="QuickViewCell"></div></div>');
-			this.$container 	= $('#QuickView');
-			this.$containerCell = $('#QuickViewCell');
+			initialize : function() {
 
-			// Quick View FX
-			$wrapper.delegate("a","click",function(e) {
+				var $wrapper = $('body');
 
-				// Do not intercept meta key clicks
-				if (e.metaKey) return true;
+				// Create container
+				$wrapper.append('<div id="QuickView"><div id="QuickViewCell"></div></div>');
+				this.$container 	= $('#QuickView');
+				this.$containerCell = $('#QuickViewCell');
 
-				//
-				// Intercept image links
-				var targetURL = $(e.currentTarget).attr('href');
+				// Quick View FX
+				$wrapper.delegate("a","click",function(e) {
 
-				if (quickView.hasImageExtension(targetURL)) {
-					quickView.show('<img src="'+targetURL+'" />');
-					return false; // Prevent default
-				}
+					// Do not intercept meta key clicks
+					if (e.metaKey) return true;
 
-				//
-				// Intercept data-quickview-content
-				var $quickviewHTML = $(e.currentTarget).attr('data-quickview-content');
+					//
+					// Intercept image links
+					var targetURL = $(e.currentTarget).attr('href');
 
-				if ($quickviewHTML.length) {
-					quickView.show($quickviewHTML);
-					return false; // Prevent default
-				}
+					if (quickView.hasImageExtension(targetURL)) {
+						quickView.show('<img src="'+targetURL+'" />');
+						return false; // Prevent default
+					}
 
-				return true; // Allow default
-			});
+					//
+					// Intercept data-quickview-content
+					var $quickviewHTML = $(e.currentTarget).attr('data-quickview-content');
 
-			// Close on click
-			this.$container.click(quickView.hide);
+					if ($quickviewHTML.length) {
+						quickView.show($quickviewHTML);
+						return false; // Prevent default
+					}
 
-			// Close on esc key
-			$('body').keyup(function(e) {
-				if (e.which === 27) quickView.hide();
-			});
-		},
+					return true; // Allow default
+				});
 
-		hasImageExtension : function(url) {
-			if (url) return(url.match(/\.(jpeg|jpg|gif|png)$/) !== null);
-		},
+				// Close on click
+				this.$container.click(quickView.hide);
 
-		show : function(htmlContent) {
+				// Close on esc key
+				$('body').keyup(function(e) {
+					if (e.which === 27) quickView.hide();
+				});
+			},
 
-			quickView.$containerCell.html(htmlContent).css('height',$(window).height()+"px").css('width',$(window).width()+"px");
+			hasImageExtension : function(url) {
+				if (url) return(url.match(/\.(jpeg|jpg|gif|png)$/) !== null);
+			},
 
-			console.log('the window height is ' + $(window).height());
+			show : function(htmlContent) {
 
-			quickView.$container.fadeIn(80);
+				quickView.$containerCell.html(htmlContent).css('height',$(window).height()+"px").css('width',$(window).width()+"px");
 
-			quickView.lockScroll();
-		},
+				console.log('the window height is ' + $(window).height());
 
-		hide : function() {
-			quickView.$container.fadeOut(40);
-			setTimeout(function(){
-				quickView.$containerCell.empty();
-			},40);
+				quickView.$container.fadeIn(80);
 
-			quickView.unlockScroll();
-		},
+				quickView.lockScroll();
+			},
 
-		lockScroll : function() {
-			// lock scroll position, but retain settings for later
-			var scrollPosition = [
-			  self.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft,
-			  self.pageYOffset || document.documentElement.scrollTop  || document.body.scrollTop
-			];
-			var html = jQuery('html'); // it would make more sense to apply this to body, but IE7 won't have that
-			html.data('scroll-position', scrollPosition);
-			html.data('previous-overflow', html.css('overflow'));
-			html.css('overflow', 'hidden');
-			window.scrollTo(scrollPosition[0], scrollPosition[1]);
-			this.isScrollLocked = true;
-		}, // end lockScroll
+			hide : function() {
+				quickView.$container.fadeOut(40);
+				setTimeout(function(){
+					quickView.$containerCell.empty();
+				},40);
 
-		unlockScroll : function() {
-			if (!this.isScrollLocked) return false;
+				quickView.unlockScroll();
+			},
 
-			var html = jQuery('html');
-			var scrollPosition = html.data('scroll-position');
-			html.css('overflow', html.data('previous-overflow'));
-			window.scrollTo(scrollPosition[0], scrollPosition[1]);
-		}
-	};
+			lockScroll : function() {
+				// lock scroll position, but retain settings for later
+				var scrollPosition = [
+				  self.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft,
+				  self.pageYOffset || document.documentElement.scrollTop  || document.body.scrollTop
+				];
+				var html = jQuery('html'); // it would make more sense to apply this to body, but IE7 won't have that
+				html.data('scroll-position', scrollPosition);
+				html.data('previous-overflow', html.css('overflow'));
+				html.css('overflow', 'hidden');
+				window.scrollTo(scrollPosition[0], scrollPosition[1]);
+				this.isScrollLocked = true;
+			}, // end lockScroll
 
-	$(document).ready( function() {
-		quickView.initialize();
-	});
+			unlockScroll : function() {
+				if (!this.isScrollLocked) return false;
+
+				var html = jQuery('html');
+				var scrollPosition = html.data('scroll-position');
+				html.css('overflow', html.data('previous-overflow'));
+				window.scrollTo(scrollPosition[0], scrollPosition[1]);
+			}
+		};
+
+		$(document).ready( function() {
+			quickView.initialize();
+		});
+
+	})(jQuery);
 
 } else {
 	console.log("Warning: quickView was already defined so we could not load chapmanU/web-components quickView!")
