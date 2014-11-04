@@ -4,7 +4,7 @@ this.jQuery && (function ($) {
 	var CU_Meltwater = {
 
 		show : 5,
-		url : '/temp/meltwater.json',
+		url : '//socialdev.chapman.edu/callback/meltwater.json',
 
 		initialize : function(num_to_show) {
 
@@ -34,9 +34,11 @@ this.jQuery && (function ($) {
 
 					console.log("There are "+ CU_Meltwater.data.length);
 				},
-				error: function(e) {
+				error: function(request, error) {
+					CU_Meltwater.$container.append('<p>Sorry, news items could not be loaded.</p>');
+
 					console.log("An error occured fetching Meltwater news stories.");
-					console.log(e);
+					console.log(error);
 				},
 				dataType: 'json'
 			});
