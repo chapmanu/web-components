@@ -1,6 +1,6 @@
 {
   "name": "chapman-web-components",
-  "version": "0.0.20",
+  "version": "0.0.32",
   "keywords": [
     "Chapman University",
     "Chapman",
@@ -13,7 +13,6 @@
   ],
   "ignore": [
     "app",
-    "src",
     "test",
     ".bower.json",
     ".bowerrc",

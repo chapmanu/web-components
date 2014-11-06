@@ -1,5 +1,9 @@
 
 form.cu-form {
+
+	/***************************************************
+	* Labels
+	***************************************************/
 	label {
 		display: inline-block;
 		text-transform: uppercase;
@@ -13,14 +17,66 @@ form.cu-form {
 		}
 	}
 
+	/***************************************************
+	* Standard input
+	***************************************************/
 	input {
 		border-radius: 3px;
 		border: 1px solid #eaeaea;
 		margin: 10px 0;
-		padding: 5px;
+		padding: 10px;
+
+		&.valid {
+		}
+
+		&.invalid {
+			border: 1px solid #D00000;
+			background-color: #F7E9E5;
+		}
 
 		&:focus {
 			outline: 2px solid #444;
 		}
 	}
+
+	/***************************************************
+	* Select box
+	***************************************************/
+
+	select {
+		background: #F5F5F5 inline-image('icons/arrow_down.svg') no-repeat right center;
+		background-size:20px;
+		width: auto;
+		padding: 5px 30px 5px 10px;
+		margin:5px 0;
+		font-size: 14px;
+		font-weight: 100;
+		line-height: 18px;
+		border:1px solid #DDD;
+		border-radius: 3px;
+		height: 34px;
+		max-width:100%;
+
+		cursor: pointer;
+
+		-webkit-appearance: none;
+		-ms-appearance: none;
+		appearance:none;
+
+		transition: all 0.1s ease-out;
+	}
+
+	/* Firefox fix - we cannot style the dropdown arrow */
+	@-moz-document url-prefix() {
+		select {
+			background-image:none;
+			padding-right:5px;
+		}
+	}
+
+	/* IE we cannot sytle the dropdown arrow */
+	.ie select { background-image:none; padding-right:5px; }
+
+	select:hover,
+	select.selected { background-color:#FFFFFF; border:1px solid #BBBBBB; }
 }

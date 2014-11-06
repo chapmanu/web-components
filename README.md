@@ -1,5 +1,7 @@
 # web-components
 
+View the demos at http://chapmanu.github.io/web-components/demos/.
+
 A build system for common front-end web components used across Chapman University websites.
 
 # How to use
@@ -16,7 +18,15 @@ You can then utilize any of the HTML snippets from the `/src/html/` directory.
 
 # Development
 
-In order to develop in this repository, you must set up [Gulp.js](http://gulpjs.com/) on your system. Use `gulp watch` to start a server, which pairs with your [live-reload](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en) extension in Chrome. 
+Installation and setup:
+
+1. `git clone git@github.com:chapmanu/web-components.git`
+2. `cd web-components`
+3.  `npm install`
+4.  `gem install compass`
+5.  `gulp watch`
+
+Running `gulp watch` will listen for changes in your project directory and reload the browser when appropriate using the livereload [live-reload](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en) extension in Chrome or FireFox.
 
 # File Structure
 
@@ -24,4 +34,4 @@ Modify files in the `/src/` directory. These are compiled and minified into the 
 
 1. **Shared** - Components which are loaded on to every page, across every website. 
 2. **Molecules** - Simple elements like buttons, date pickers, or tables.
-3. **Organisms** - Specific, complete objects such as a story tile, event preview, or tweet. 
+3. **Organisms** - Specific, complete objects such as a story tile, event preview, or tweet.

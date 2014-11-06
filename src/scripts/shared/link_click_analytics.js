@@ -7,10 +7,6 @@
 ***************************************************/
 (function ($) {
 
-	$(document).ready( function() {
-		linkAnalytics.initialize();
-	});
-
 	var linkAnalytics = {
 
 		initialize : function() {
@@ -68,5 +64,9 @@
 
 		} // end trackAction()
 	}; // end linkAnalytics
+
+	$(document).ready( function() {
+		linkAnalytics.initialize();
+	});
 
 })(jQuery);
