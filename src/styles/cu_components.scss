@@ -1,3 +1,4 @@
+@import "shared/mixins";
 
 // Reset things
 @import "shared/normalize";
@@ -6,6 +7,7 @@
 // Layout-ify things
 @import "shared/breakpoints";
 @import "shared/grid";
+
 
 // Make things look pretty
 @import "shared/colors";
