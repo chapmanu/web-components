@@ -1,0 +1,30 @@
+/* Form Mixins
+---------------------------------------- */
+
+@mixin form-control-focus($color) {
+  $color-rgba:   rgba(red($color), green($color), blue($color), 0.6);
+  $border-color: rgba(red($color), green($color), blue($color), .8);
+  &:focus {
+    border-color: $border-color;
+    outline: 0;
+    box-shadow: 0 0 8px $color-rgba;
+  }
+}
+
+@mixin placeholder-color($color) {
+  &::-moz-placeholder           { color: $color; opacity: 1; }
+  &:-ms-input-placeholder       { color: $color; }
+  &::-webkit-input-placeholder  { color: $color; }
+}
+
+@mixin icon-placeholder($icon, $focus-icon, $side: left) {
+  background-image:    inline-image($icon);
+  background-repeat:   no-repeat;
+  background-size:     $font-size-base $font-size-base;
+  background-position: center $side 12px;
+
+  &:focus { background-image: inline-image($focus-icon); }
+
+  @if $side == left       { text-indent: 30px; }
+  @else if $side == right { padding-right: 30px; }
+}

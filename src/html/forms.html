@@ -1,29 +1,28 @@
 @@include('partials/_header.html')
 
-<h3>Forms</h3>
-<p>These styles are applied to all common form elements. The form element must have the class "cu-form" in order to inherit these styles.</p>
+<h2 class="component-heading">Forms</h2>
 
     <fieldset>
         <legend>Basic Input Types</legend>
 
         <div class="field">
             <label>Text</label>
-            <input class="cu-form-control" type="text" placeholder="I am a placeholder">
+            <input class="form-control" type="text" placeholder="I am a placeholder">
         </div>
 
         <div class="field">
             <label>Number</label>
-            <input class="cu-form-control" type="number">
+            <input class="form-control" type="number">
         </div>
 
         <div class="field">
             <label>Text Area</label>
-            <textarea class="cu-form-control" placeholder="Long description..."></textarea>
+            <textarea class="form-control" placeholder="Long description..."></textarea>
         </div>
 
         <div class="field">
             <label>Select</label>
-            <select class="cu-form-control">
+            <select class="form-control">
                 <option value="white">White</option>
                 <option value="milk">Milk</option>
                 <option value="dark">Dark</option>
@@ -32,7 +31,7 @@
 
         <div class="field">
             <label>File Input</label>
-            <input class="cu-form-control" type="file">
+            <input class="form-control" type="file">
         </div>
 
         <div class="field">
@@ -100,52 +99,52 @@
 
         <div class="field">
             <label>Email</label>
-            <input class="cu-form-control email" type="email" placeholder="cu@chapman">
+            <input class="form-control email" type="email" placeholder="cu@chapman">
         </div>
 
         <div class="field">
             <label>Username</label>
-            <input class="cu-form-control login" type="text" placeholder="charleschaptown">
+            <input class="form-control login" type="text" placeholder="charleschaptown">
         </div>
 
         <div class="field">
             <label>Password</label>
-            <input class="cu-form-control password" type="password" placeholder="I'm a secret...">
+            <input class="form-control password" type="password" placeholder="I'm a secret...">
         </div>
 
         <div class="field">
             <label>Tel</label>
-            <input class="cu-form-control tel" type="tel" placeholder="(xxx) xxx-xxxx">
+            <input class="form-control tel" type="tel" placeholder="(xxx) xxx-xxxx">
         </div>
 
 
         <div class="field">
             <label>Url</label>
-            <input class="cu-form-control url" type="url" placeholder="http://...">
+            <input class="form-control url" type="url" placeholder="http://...">
         </div>
 
         <div class="field">
             <label>Input Add On Prefix</label>
-            <div class="input-add-on">
-                <span class="input-add-on-prefix">@</span>
-                <input class="cu-form-control" type="text" placeholder="jkerr838" />
+            <div class="input-prefix">
+                <span class="prefix">@</span>
+                <input class="form-control" type="text" placeholder="jkerr838" />
             </div>
         </div>
 
         <div class="field">
             <label>Input Add On Postfix</label>
-            <div class="input-add-on">
-                <input class="cu-form-control" type="search" placeholder="search me...">
-                <span class="input-add-on-postfix">@chapman.edu</span>
+            <div class="input-postfix">
+                <input class="form-control" type="search" placeholder="search me...">
+                <span class="postfix">@chapman.edu</span>
             </div>
         </div>
 
         <div class="field">
             <label>Input Add On Postfix and Prefix</label>
-            <div class="input-add-on">
-                <span class="input-add-on-prefix">$</span>
-                <input class="cu-form-control" type="search" placeholder="1,000,000.00">
-                <button class="input-add-on-postfix">Cash Out</button>
+            <div class="input-prefix input-postfix">
+                <span class="prefix">$</span>
+                <input class="form-control" type="search" placeholder="1,000,000.00">
+                <button class="postfix">Cash Out</button>
             </div>
         </div>
     </fieldset>
@@ -155,22 +154,22 @@
         <div class="inline-form-evenly">
             <div class="field">
                 <label>Street Address</label>
-                <input class="cu-form-control" type="text">
+                <input class="form-control" type="text">
             </div>
             <div class="field">
                 <label>Street Address 2</label>
-                <input class="cu-form-control" type="text">
+                <input class="form-control" type="text">
             </div>
         </div>
 
         <div class="inline-form">
             <div class="field">
                 <label>City</label>
-                <input class="cu-form-control" type="text">
+                <input class="form-control" type="text">
             </div>
             <div class="field">
                 <label>State</label>
-                <select class="cu-form-control state">
+                <select class="form-control state">
                     <option>CA</option>
                     <option>MO</option>
                     <option>CO</option>
@@ -178,7 +177,7 @@
             </div>
             <div class="field">
                 <label>Zip</label>
-                <input class="cu-form-control zip" type="text">
+                <input class="form-control zip" type="text">
             </div>
         </div>
     </fieldset>
@@ -188,27 +187,27 @@
 
         <div class="field">
             <label>Disabled</label>
-            <input class="cu-form-control" type="text" value="I am disabled" disabled>
+            <input class="form-control" type="text" value="I am disabled" disabled>
         </div>
 
         <div class="field">
             <label class="required">A required field</label>
-            <input type="text" class="cu-form-control"></input>
+            <input type="text" class="form-control"></input>
         </div>
 
         <div class="field">
             <label>A Field that is Loading</label>
-            <input type="text" class="cu-form-control loading">
+            <input type="text" class="form-control loading">
         </div>
 
         <div class="field">
             <label>An Invalid Field</label>
-            <input type="text" class="cu-form-control invalid">
+            <input type="text" class="form-control invalid">
         </div>
 
         <div class="field">
             <label>A Valid Field</label>
-            <input type="text" class="cu-form-control valid">
+            <input type="text" class="form-control valid">
         </div>
     </fieldset>
 
@@ -219,31 +218,28 @@
 
         <div class="field">
             <label class="required">Life Role Model</label>
-            <span class="field-description tooltip-anchor">Need help?
-                <span class="tooltip">
-                    <h4>Role Model Help Text</h4>Please list someone who has been extremely influential in your life.</span>
-            </span>
-            <input type="text" class="cu-form-control" required>
+            <span class="field-description tooltip-anchor" data-tooltip="Contact Ross in Marketing.">Need help?</span>
+            <input type="text" class="form-control" required>
         </div>
 
         <div class="field">
             <label class="required">A Very Secure Password</label>
             <span class="error-message">Your password must contain three letters, 2 numbers, a single comma, and an ancient Chinese character.</span>
-            <input type="text" class="cu-form-control invalid" required>
+            <input type="text" class="form-control invalid" required>
         </div>
 
         <div class="field">
             <label>ID Number</label>
             <span class="field-description">Please enter your chapman University ID</span>
             <p class="error-message">This is not a valid number</p>
-            <input type="text" class="cu-form-control invalid" required>
+            <input type="text" class="form-control invalid" required>
         </div>
 
         <div class="field">
             <label>Graduation Year</label>
             <span class="field-description">Please enter your chapman University ID</span>
-            <p class="sucess-message">Looks all good!</p>
-            <input type="text" class="cu-form-control valid" required>
+            <p class="success-message">Looks all good!</p>
+            <input type="text" class="form-control valid" required>
         </div>
     </fieldset>
 
@@ -251,53 +247,52 @@
         <legend>Vertical Forms</legend>
         <div class="field">
             <label>Graduation Year
-                <span class="description">Please enter your chapman University ID. If you decide not to use your chapman id, then please.</span>
+                <span class="field-description">Please enter your chapman University ID. If you decide not to use your chapman id, then please.</span>
             </label>
-            <input type="text" class="cu-form-control">
+            <input type="text" class="form-control">
         </div>
 
         <div class="field">
             <label>Username</label>
-            <input type="text" class="cu-form-control login">
+            <input type="text" class="form-control login">
         </div>
 
         <div class="field">
             <label>Password</label>
-            <input type="password" class="cu-form-control password">
+            <input type="password" class="form-control password">
         </div>
     </fieldset>
 
     <fieldset>
-        <legend class="horizontal">Right-aligned Forms</legend>
+        <legend class="horizontal">Horizontal Forms</legend>
         <div class="field-horizontal">
-            <label>Graduation Year
-                <span class="description">Please enter your chapman University ID. If you decide not to use your chapman id, then please.</span>
-            </label>
-            <input type="text" class="cu-form-control">
+            <label>Graduation Year</label>
+            <input type="text" class="form-control">
+            <span class="field-description">Please enter your chapman University ID. If you decide not to use your chapman id, then please.</span>
         </div>
 
         <div class="field-horizontal">
             <label>Username</label>
-            <input type="text" class="cu-form-control login">
+            <input type="text" class="form-control login">
         </div>
 
         <div class="field-horizontal">
             <label>Password</label>
-            <input type="password" class="cu-form-control password">
+            <input type="password" class="form-control password">
         </div>
 
         <div class="field-horizontal">
             <label></label>
             <div class="checkbox">
                 <label>
-                    <input type="checkbox">Keep me logged In
+                    <input type="checkbox"> Keep me logged In
                 </label>
             </div>
         </div>
 
         <div class="field-horizontal">
             <label>What is your major?</label>
-            <select class="cu-form-control">
+            <select class="form-control">
                 <option>Math</option>
                 <option>CS</option>
                 <option>Business</option>
@@ -306,74 +301,21 @@
 
         <div class="field-horizontal">
             <label>Graduation Year</label>
-            <input type="text" class="cu-form-control">
+            <input type="text" class="form-control">
         </div>
 
         <div class="field-horizontal">
             <label>I agree to keep things confidential</label>
             <div class="radio-inline">
                 <label>
-                    <input type="radio">Yes
+                    <input type="radio"> Yes
                 </label>
             </div>
             <div class="radio-inline">
                 <label>
-                    <input type="radio">No
+                    <input type="radio"> No
                 </label>
             </div>
-        </div>
-    </fieldset>
-
-    <fieldset>
-        <legend class="horizontal">Left-aligned Forms</legend>
-        <div class="field-horizontal">
-            <label class="left-align">Username</label>
-            <input type="text" class="cu-form-control login">
-        </div>
-
-        <div class="field-horizontal">
-            <label class="left-align">Password</label>
-            <input type="password" class="cu-form-control password">
-        </div>
-
-        <div class="field-horizontal">
-            <label class="left-align">Graduation Year
-                <span class="description">Please enter your chapman University ID. If you decide not to use your chapman id, then please.</span>
-            </label>
-            <input type="text" class="cu-form-control">
-        </div>
-
-        <div class="field-horizontal">
-            <label class="left-align">What year are you?</label>
-            <div class="checkbox-inline">
-                <label>
-                    <input type="checkbox">1L
-                </label>
-            </div>
-            <div class="checkbox-inline">
-                <label>
-                    <input type="checkbox">2L
-                </label>
-            </div>
-            <div class="checkbox-inline">
-                <label>
-                    <input type="checkbox">3L
-                </label>
-            </div>
-        </div>
-
-        <div class="field-horizontal">
-            <label class="left-align">What is your major?</label>
-            <select class="cu-form-control">
-                <option>Math</option>
-                <option>CS</option>
-                <option>Business</option>
-            </select>
-        </div>
-
-        <div class="field-horizontal">
-            <label class="left-align">Graduation Year</label>
-            <input type="text" class="cu-form-control">
         </div>
     </fieldset>
     @@include('partials/_footer.html')

@@ -51,9 +51,12 @@ $input-bg-color:            white;
 $input-text-color:          $black;
 $input-placeholder-color:   $gray-smoke;
 $input-disabled-bg-color:   $gray-cement;
-$input-disabled-text-color: $gray-mist;
+$input-disabled-text-color: $gray-smoke;
 $input-border-color:        $gray-mist;
 $input-focus-border-color:  $blue;
+
+$tooltip-bg-color: $black;
+$tooltip-text-color: white;
 
 /* TODO: Rename component colors below to be
    more meaningful and to only use the standard
