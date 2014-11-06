@@ -1,8 +1,71 @@
-// Social Network colors
-$color-facebook:     #38659f;
-$color-twitter:      #3aa8dd;
-$color-instagram:    #333333;
-$color-pinterest:    #cb2027;
+/* Standard Colors
+---------------------------------------- */
+$red:         #a82439;
+$black:       #353430;
+$warm-gray:   #edeade;
+$cool-gray:   #ecebe5;
+
+/* Accent Colors
+---------------------------------------- */
+$blue:        #407892;
+$light-blue:  #02bac1;
+$green:       #25b6a4;
+$light-green: #c6dbd2;
+$yellow:      #fed03d;
+$gold:        #f39c12;
+$orange:      #e35c4a;
+$purple:      #9b2672;
+$gray-slate:  #62605a;
+$gray-smoke:  #9a9996;
+$gray-mist:   #cbcac5;
+$gray-cement: #e2e2e1;
+
+/* Social Network Colors
+---------------------------------------- */
+$facebook-blue:  #38659f;
+$twitter-blue:   #3aa8dd;
+$instagram-gray: #333333;
+$pinterest-red:  #cb2027;
+
+/* Status Colors
+---------------------------------------- */
+$primary-color:   $red;
+$secondary-color: $cool-gray;
+$info-color:      $blue;
+$success-color:   $green;
+$warning-color:   $gold;
+$danger-color:    $orange;
+
+/* Layout Colors
+---------------------------------------- */
+$body-bg-color: $warm-gray;
+
+/* Typography Colors
+---------------------------------------- */
+$text-color:    $black;
+$link-color:    $red;
+
+/* Form Colors
+---------------------------------------- */
+$input-bg-color:            white;
+$input-text-color:          $black;
+$input-placeholder-color:   $gray-smoke;
+$input-disabled-bg-color:   $gray-cement;
+$input-disabled-text-color: $gray-smoke;
+$input-border-color:        $gray-mist;
+$input-focus-border-color:  $blue;
+
+$tooltip-bg-color: $black;
+$tooltip-text-color: white;
+
+/* TODO: Rename component colors below to be
+   more meaningful and to only use the standard
+   and accent colors at the top of this page.
+   Also, remove duplicate colors (we will just
+   need to do a find a replace to make sure we
+   don't miss any places it is being referenced)
+---------------------------------------- */
+
 
 
 // Element Rows
@@ -19,11 +82,15 @@ $bg-red:             #a82439;
 
 // Type colors
 $color-dark-gray:    #353430;
+$color-light-gray:   #9a9996;
+$color-green:        #43ac6a;
+$color-yellow:       #cc6700;
 
 
 // CU Brand Colors
 $color-chapman-red:  #a82439;
 $color-chapman-blue: #02bac1;
+$color-chapman-gray: #dad8cf;
 
 
 // Selection colors

@@ -1,109 +1,322 @@
 @@include('partials/_header.html')
 
+<h2 class="component-heading">Forms</h2>
 
-	<h3>Forms</h3>
-	<p>These styles are applied to all common form elements. The form element must have the class "cu-form" in order to inherit these styles.</p>
+    <fieldset>
+        <legend>Basic Input Types</legend>
 
-	<form class="cu-form">
+        <div class="field">
+            <label>Text</label>
+            <input class="form-control" type="text" placeholder="I am a placeholder">
+        </div>
+
+        <div class="field">
+            <label>Number</label>
+            <input class="form-control" type="number">
+        </div>
+
+        <div class="field">
+            <label>Text Area</label>
+            <textarea class="form-control" placeholder="Long description..."></textarea>
+        </div>
+
+        <div class="field">
+            <label>Select</label>
+            <select class="form-control">
+                <option value="white">White</option>
+                <option value="milk">Milk</option>
+                <option value="dark">Dark</option>
+            </select>
+        </div>
+
+        <div class="field">
+            <label>File Input</label>
+            <input class="form-control" type="file">
+        </div>
+
+        <div class="field">
+            <label>Range</label>
+            <input type="range">
+        </div>
+
+        <div class="field">
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox"> Checkbox A
+                </label>
+            </div>
+
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox"> Checkbox B
+                </label>
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="radio">
+                <label>
+                    <input name="radios" type="radio"> Radio A
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input name="radios" type="radio"> Radio B
+                </label>
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="checkbox-inline">
+                <label>
+                    <input type="checkbox"> Inline Checkbox B
+                </label>
+            </div>
+
+            <div class="checkbox-inline">
+                <label>
+                    <input type="checkbox"> Inline Checkbox A
+                </label>
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="radio-inline">
+                <label>
+                    <input name="radios-inline" type="radio"> Inline Radio A
+                </label>
+            </div>
+            <div class="radio-inline">
+                <label>
+                    <input name="radios-inline" type="radio"> Inline Radio B
+                </label>
+            </div>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Special Input Types</legend>
+
+        <div class="field">
+            <label>Email</label>
+            <input class="form-control email" type="email" placeholder="cu@chapman">
+        </div>
+
+        <div class="field">
+            <label>Username</label>
+            <input class="form-control login" type="text" placeholder="charleschaptown">
+        </div>
+
+        <div class="field">
+            <label>Password</label>
+            <input class="form-control password" type="password" placeholder="I'm a secret...">
+        </div>
+
+        <div class="field">
+            <label>Tel</label>
+            <input class="form-control tel" type="tel" placeholder="(xxx) xxx-xxxx">
+        </div>
 
 
-		<h2 class="component-heading">Select Dropdown</h2>
+        <div class="field">
+            <label>Url</label>
+            <input class="form-control url" type="url" placeholder="http://...">
+        </div>
 
-		<select>
-			<option value="once">One time only</option>
-			<option value="weekly">Every week</option>
-			<option value="biweekly">Every 2 weeks</option>
-			<option value="monthly">Every month</option>
-			<option value="custom">Custom schedule (ex: performances or screenings)</option>
-		</select>
+        <div class="field">
+            <label>Input Add On Prefix</label>
+            <div class="input-prefix">
+                <span class="prefix">@</span>
+                <input class="form-control" type="text" placeholder="jkerr838" />
+            </div>
+        </div>
 
+        <div class="field">
+            <label>Input Add On Postfix</label>
+            <div class="input-postfix">
+                <input class="form-control" type="search" placeholder="search me...">
+                <span class="postfix">@chapman.edu</span>
+            </div>
+        </div>
 
-		<h2 class="component-heading">Input Validation</h2>
+        <div class="field">
+            <label>Input Add On Postfix and Prefix</label>
+            <div class="input-prefix input-postfix">
+                <span class="prefix">$</span>
+                <input class="form-control" type="search" placeholder="1,000,000.00">
+                <button class="postfix">Cash Out</button>
+            </div>
+        </div>
+    </fieldset>
 
-		<label for="name">Validated Text Field</label>
-		<input type="text" id="name" class="valid" />
+    <fieldset>
+        <legend>Address form</legend>
+        <div class="inline-form-evenly">
+            <div class="field">
+                <label>Street Address</label>
+                <input class="form-control" type="text">
+            </div>
+            <div class="field">
+                <label>Street Address 2</label>
+                <input class="form-control" type="text">
+            </div>
+        </div>
 
-		<hr />
+        <div class="inline-form">
+            <div class="field">
+                <label>City</label>
+                <input class="form-control" type="text">
+            </div>
+            <div class="field">
+                <label>State</label>
+                <select class="form-control state">
+                    <option>CA</option>
+                    <option>MO</option>
+                    <option>CO</option>
+                </select>
+            </div>
+            <div class="field">
+                <label>Zip</label>
+                <input class="form-control zip" type="text">
+            </div>
+        </div>
+    </fieldset>
 
-		<label for="name">Invalid Text Field</label>
-		<input type="text" id="name" class="invalid" />
+    <fieldset>
+        <legend>Input States</legend>
 
+        <div class="field">
+            <label>Disabled</label>
+            <input class="form-control" type="text" value="I am disabled" disabled>
+        </div>
 
+        <div class="field">
+            <label class="required">A required field</label>
+            <input type="text" class="form-control"></input>
+        </div>
 
-		<h2 class="component-heading">Text Inputs</h2>
+        <div class="field">
+            <label>A Field that is Loading</label>
+            <input type="text" class="form-control loading">
+        </div>
 
-		<label for="name">Regular Text Field</label>
-		<input type="text" id="name" />
+        <div class="field">
+            <label>An Invalid Field</label>
+            <input type="text" class="form-control invalid">
+        </div>
 
-		<label for="name">Text Area</label>
-		<textarea></textarea>
-
-
-		<h2 class="component-heading">Checkboxes</h2>
-
-		<label for="checkbox-one">Checkbox A</label>
-		<input type="checkbox" id="checkbox-one" value="1">
-
-		<label for="checkbox-two">Checkbox B</label>
-		<input type="checkbox" id="checkbox-two" value="2">
-
-		<label for="checkbox-three">Checkbox C</label>
-		<input type="checkbox" id="checkbox-three" value="3">
-
-		<hr />
-
-		<input type="checkbox" id="checkbox-four" value="4">
-		<label for="checkbox-four">Checkbox D</label>
-
-		<input type="checkbox" id="checkbox-five" value="5">
-		<label for="checkbox-five">Checkbox E</label>
-
-		<input type="checkbox" id="checkbox-six" value="6">
-		<label for="checkbox-six">Checkbox F</label>
-
-
-		<h2 class="component-heading">Radio Buttons</h2>
-
-		<label for="radio-one">Radio A</label>
-		<input type="radio" id="radio-one" value="1" name="radio-group-one">
-
-		<label for="radio-two">Radio B</label>
-		<input type="radio" id="radio-two" value="2" name="radio-group-one">
-
-		<label for="radio-three">Radio C</label>
-		<input type="radio" id="radio-three" value="3" name="radio-group-one">
-
-		<hr />
-
-		<input type="radio" id="radio-four" value="4" name="radio-group-two">
-		<label for="radio-four">Radio D</label>
-
-		<input type="radio" id="radio-five" value="5"name="radio-group-two">
-		<label for="radio-five">Radio E</label>
-
-		<input type="radio" id="radio-six" value="6"name="radio-group-two">
-		<label for="radio-six">Radio F</label>
-
-
-		<h2 class="component-heading">Text Input with Datalist</h2>
-
-		<label for="inpChocType">Chocolates</label>
-		<input type="text" id="inpChocType" list="chocType">
-		<datalist id="chocType">
-			<option value="white" />
-			<option value="milk" />
-			<option value="dark" />
-		</datalist>
-
-		<h2 class="component-heading">File Picker</h2>
-
-		<label>File select</label>
-		<input type="file" name="uploadFile">
-
-		<label>Photo select</label>
-		<input type="file" accept="image/*" capture="camera">
-
-	</form>
+        <div class="field">
+            <label>A Valid Field</label>
+            <input type="text" class="form-control valid">
+        </div>
+    </fieldset>
 
 
-@@include('partials/_footer.html')
+
+    <fieldset>
+        <legend>Input messages</legend>
+
+        <div class="field">
+            <label class="required">Life Role Model</label>
+            <span class="field-description tooltip-anchor" data-tooltip="Contact Ross in Marketing.">Need help?</span>
+            <input type="text" class="form-control" required>
+        </div>
+
+        <div class="field">
+            <label class="required">A Very Secure Password</label>
+            <span class="error-message">Your password must contain three letters, 2 numbers, a single comma, and an ancient Chinese character.</span>
+            <input type="text" class="form-control invalid" required>
+        </div>
+
+        <div class="field">
+            <label>ID Number</label>
+            <span class="field-description">Please enter your chapman University ID</span>
+            <p class="error-message">This is not a valid number</p>
+            <input type="text" class="form-control invalid" required>
+        </div>
+
+        <div class="field">
+            <label>Graduation Year</label>
+            <span class="field-description">Please enter your chapman University ID</span>
+            <p class="success-message">Looks all good!</p>
+            <input type="text" class="form-control valid" required>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Vertical Forms</legend>
+        <div class="field">
+            <label>Graduation Year
+                <span class="field-description">Please enter your chapman University ID. If you decide not to use your chapman id, then please.</span>
+            </label>
+            <input type="text" class="form-control">
+        </div>
+
+        <div class="field">
+            <label>Username</label>
+            <input type="text" class="form-control login">
+        </div>
+
+        <div class="field">
+            <label>Password</label>
+            <input type="password" class="form-control password">
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend class="horizontal">Horizontal Forms</legend>
+        <div class="field-horizontal">
+            <label>Graduation Year</label>
+            <input type="text" class="form-control">
+            <span class="field-description">Please enter your chapman University ID. If you decide not to use your chapman id, then please.</span>
+        </div>
+
+        <div class="field-horizontal">
+            <label>Username</label>
+            <input type="text" class="form-control login">
+        </div>
+
+        <div class="field-horizontal">
+            <label>Password</label>
+            <input type="password" class="form-control password">
+        </div>
+
+        <div class="field-horizontal">
+            <label></label>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox"> Keep me logged In
+                </label>
+            </div>
+        </div>
+
+        <div class="field-horizontal">
+            <label>What is your major?</label>
+            <select class="form-control">
+                <option>Math</option>
+                <option>CS</option>
+                <option>Business</option>
+            </select>
+        </div>
+
+        <div class="field-horizontal">
+            <label>Graduation Year</label>
+            <input type="text" class="form-control">
+        </div>
+
+        <div class="field-horizontal">
+            <label>I agree to keep things confidential</label>
+            <div class="radio-inline">
+                <label>
+                    <input type="radio"> Yes
+                </label>
+            </div>
+            <div class="radio-inline">
+                <label>
+                    <input type="radio"> No
+                </label>
+            </div>
+        </div>
+    </fieldset>
+    @@include('partials/_footer.html')
+>>>>>>> forms
