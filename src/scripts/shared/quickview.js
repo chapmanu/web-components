@@ -9,6 +9,7 @@ if (typeof quickView === 'undefined') {
 		quickView = {
 
 			isScrollLocked : false,
+			isCloseAllowed : true,
 
 			initialize : function() {
 
@@ -46,37 +47,49 @@ if (typeof quickView === 'undefined') {
 					return true; // Allow default
 				});
 
-				// Close on click
-				this.$container.click(quickView.hide);
-
-				// Close on esc key
-				$('body').keyup(function(e) {
-					if (e.which === 27) quickView.hide();
-				});
 			},
 
 			hasImageExtension : function(url) {
 				if (url) return(url.match(/\.(jpeg|jpg|gif|png)$/) !== null);
 			},
 
-			show : function(htmlContent) {
+			show : function(htmlContent, disable_close) {
 
 				quickView.$containerCell.html(htmlContent).css('height',$(window).height()+"px").css('width',$(window).width()+"px");
 
-				console.log('the window height is ' + $(window).height());
-
 				quickView.$container.fadeIn(80);
-
 				quickView.lockScroll();
+
+				if (!disable_close) quickView.bindCloseActions();
+
 			},
 
 			hide : function() {
+				quickView.removeCloseActions();
+
 				quickView.$container.fadeOut(40);
 				setTimeout(function(){
 					quickView.$containerCell.empty();
 				},40);
 
 				quickView.unlockScroll();
+			},
+
+			bindCloseActions : function() {
+				// Close on click
+				quickView.$container.on('click', quickView.hide);
+
+				// Close on esc key
+				$('body').on('keyup', quickView.processKeyUp);
+			},
+
+			removeCloseActions : function() {
+				quickView.$container.off('click', quickView.hide);
+				$('body').off('keyup', quickView.processKeyUp);
+			},
+
+			processKeyUp : function(e) {
+				if (e.which === 27) quickView.hide();
 			},
 
 			lockScroll : function() {
