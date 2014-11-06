@@ -1,28 +1,24 @@
-/* CHAPMANU BRANDED FORMS
-   ========================================================================== */
-
 /**
- * Configurable Variables
+ * CHAPMAN BRANDED FORMS
  */
- $input-border: #D8D6D0;
- $input-border-radius: 3px;
- $input-padding: 6px;
- $input-color: $color-dark-gray;
- $input-border-focus: $color-dark-gray;
- $input-placeholder-color: $color-light-gray;
- $cursor-disabled: auto;
- $input-bg-disabled: #EEEEEE;
- $error-color: #cc6700;
+
+/* Configuration
+---------------------------------------- */
+$input-border-radius: 3px;
+$input-padding: 6px;
+$cursor-disabled: auto;
 
 
-/**
- * Form Specific Mixins
- */
+/* Mixins (Move to mixins file)
+---------------------------------------- */
+
 @mixin form-control-focus($color) {
 	$color-rgba: rgba(red($color), green($color), blue($color), 0.25);
+	$border-color: rgba(red($color), green($color), blue($color), 0.4);
 	&:focus {
-		border-color: $color;
+		border-color: $border-color;
 		outline: 0;
+		box-shadow: 0 0 6px 0px $color-rgba;
 	}
 }
 
@@ -30,24 +26,26 @@
   &::-moz-placeholder {
     color: $color;
     opacity: 1;
+    font-size: $font-size-base * 1.2;
   }
   &:-ms-input-placeholder { color: $color; }
   &::-webkit-input-placeholder  { color: $color; }
 }
 
-@mixin icon-placeholder($icon, $focus-icon) {
+@mixin icon-placeholder($icon, $focus-icon, $side: left) {
 	background-image: inline-image($icon);
 	background-repeat: no-repeat;
 	background-size: $font-size-base $font-size-base;
-	background-position: center left $input-padding;
-	text-indent: 1.5em;
+	background-position: center $side $input-padding;
+
+	@if $side == left       { text-indent: 1.5em; }
+	@else if $side == right { padding-right: 1.5em; }
 
 	&:focus { background-image: inline-image($focus-icon); }
 }
 
-/**
- * Normalize non-controls
- */
+/* Normalize non-controls
+---------------------------------------- */
 fieldset {
 	padding: 0;
 	margin: 0;
@@ -63,11 +61,9 @@ label {
 	font-weight: bold;
 }
 
-/**
- * Normalize controls
- */
-
- // (* is not specific enough for this one)
+/* Normalize controls
+---------------------------------------- */
+// (* is not specific enough for this one)
 input[type="search"] {
 	box-sizing: border-box;
 	-webkit-appearance: none;
@@ -98,11 +94,20 @@ select[size] {
 	height: auto;
 }
 
+// Set min-height for select
+select {
+	height: 34px;
+}
+
+// Set min-height for text area
+textarea {
+	min-height: 108px;
+}
 
 /**
  * Chapman University Form Styles
  *
- * These form styles will affect the following form controls:
+ * These form styles are intended for the following form controls:
  * select
  * textarea
  * input[type="text"]
@@ -124,32 +129,94 @@ select[size] {
 .cu-form-control {
 	display: block;
 	width: 100%;
-	border: 1px solid $input-border;
+	border: 1px solid $input-border-color;
 	border-radius: $input-border-radius;
-	line-height: $line-height-base;
-	color: $input-color;
-	font-size: $font-size-base;
+	line-height: $line-height-base * 1.2;
+	color: $input-text-color;
+	font-size: $font-size-base * 1.2;
 	padding: $input-padding;
 	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-	transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-	@include form-control-focus($input-border-focus);
+	@include form-control-focus($input-focus-border-color);
 	@include placeholder($input-placeholder-color);
 
 	&[disabled],
 	&[readonly],
 	fieldset[disabled] & {
 		cursor: $cursor-disabled;
-		background-color: $input-bg-disabled;
+		background-color: $input-disabled-bg-color;
 		opacity: 1;
 	}
 }
 
+fieldset {
+	margin-bottom: 48px;
+}
+
+legend {
+	font-family: $font-stack-heading;
+	font-size: 28px;
+	font-weight: 300;
+	margin-bottom: 18px;
+	padding-right: 6px;
+
+	&.horizontal {
+		margin-left: 25%;
+	}
+}
+
+// Inline forms when larger than xs
+@include breakpoint(xs) {
+	.inline-form, .inline-form-evenly {
+		display: table;
+		width: 100%;
+		margin-bottom: 18px;
+
+		.field {
+			display: table-cell;
+			padding: 0 3px;
+		}
+		.field:first-child { padding-left: 0; }
+		.field:last-child  { padding-right: 0; }
+	}
+
+	.inline-form-evenly { table-layout: fixed; }
+}
+
+
+
 /**
  * Make a grouping of related controls for vertical forms
  */
-.cu-form-group {
+.field {
 	margin-bottom: 18px;
+	width: 100%;
 }
+
+/**
+ * Make a grouping of related controls for horizontal forms
+ */
+.field-horizontal {
+	margin-bottom: 18px;
+	width: 100%;
+
+	// Alignment only when than xs screen size
+	@include breakpoint(xs) {
+		display: table;
+
+		& > label {
+			display: table-cell;
+			text-align: right;
+			width: 25%;
+			padding-right: 18px;
+			&.left-align { text-align: left; }
+			.description { display: inline-block; }
+		}
+		.cu-form-control {
+			display: table-cell;
+		}
+	}
+}
+
 
 /**
  * Checkboxes and radios
@@ -215,7 +282,15 @@ select[size] {
 	}
 
 	&.loading {
-		@include icon-placeholder('icons/spinning.gif', 'icons/spinning.gif');
+		@include icon-placeholder('icons/spinning.gif', 'icons/spinning.gif', right);
+	}
+
+	&.zip {
+		width: 5em;
+	}
+
+	&.state {
+		width: 10em;
 	}
 }
 
@@ -224,89 +299,114 @@ select[size] {
  * Form Validation
  */
 
-label.required:after {
-	content: " *";
+label.required:before {
+	content: "* ";
+	position: absolute;
+	margin-left: -8px;
 }
+
 
 .cu-form-control {
 	&.invalid {
-		border: 1px solid $error-color;
-		background-color: lighten($error-color, 56%);
+		border: 1px solid $danger-color;
+		background-color: lighten($danger-color, 56%);
+		@include icon-placeholder('icons/warning-fill-orange.svg', 'icons/warning-fill-orange.svg', right);
+	}
+
+	&.valid {
+		border: 1px solid $success-color;
+		background-color: lighten($success-color, 56%);
+		@include icon-placeholder('icons/checkmark-circle-fill-green.svg', 'icons/checkmark-circle-fill-green.svg', right);
 	}
 }
-
-
 
 /**
  * Form messages and tips
  */
 .error-message {
 		border-radius: 3px;
-		color: $error-color;
-		display: inline-block;
-		margin-bottom: 6px;
-
-		&:before {
-			content: " ";
-			width: $font-size-base;
-			height: $font-size-base;
-			display: inline-block;
-			background: inline-image("icons/warning-fill-orange.svg");
-			margin-right: 6px;
-		}
+		color: $danger-color;
+		display: block;
+		margin: 0 6px 6px 0;
+		font-size: $font-size-base;
 }
 
+.sucess-message {
+	border-radius: 3px;
+	color: $success-color;
+	display: block;
+	margin: 0 6px 6px 0;
+	font-size: $font-size-base;
+}
 
+label .description {
+	font-size: $font-size-base;
+	font-weight: normal;
+}
 
-.cu-form {
+.tooltip-anchor {
+	position: relative;
+	cursor: help;
+	border-bottom: 1px $link-color dotted;
+	color: $link-color;
 
-	/**
-	 * Text Based Inputs
-	 */
-	// input[type="email"],
-	// input[type="number"],
-	// input[type="password"],
-	// input[type="search"],
-	// input[type="tel"],
-	// input[type="text"],
-	// input[type="url"],
-	// textarea {
-	// 	width: 100%;
-	// 	display: inline-block;
-	// 	border-radius: 3px;
-	// 	margin: 6px 0;
-	// 	padding: 6px;
-	// 	border: 1px solid #eaeaea;
-	// }
+	.tooltip {
+		color: $text-color;
+		position: absolute;
+		width: 300px;
+		padding:  24px 24px;
+		background: white;
+		box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+		bottom: 100%;
+		opacity: 0;
+		left: 100%;
+		transform: translate(-16px, 16px);
+		transition: transform .25s ease-in-out, opacity .25s ease-in-out;
+	}
 
+	&:hover .tooltip {
+		display: block;
+		opacity: 1;
+		transform: translate(0, 0);
+		cursor: auto;
 
+		&:before { display: block }
+	}
+}
 
-	// label {
-	// 	display: inline-block;
-	// 	text-transform: uppercase;
-	// 	font-weight: bold;
-	// 	margin:0 5px;
-	// 	font-size: 14px;
+/* Input prefixes/postfixes
+---------------------------------------- */
+// Note, this must be tested cross-browser.  Might need to find different way.
+// see http://philipwalton.github.io/solved-by-flexbox/demos/input-add-ons/
 
+.input-add-on {
+	display: flex;
+}
 
-	// }
+.input-add-on .cu-form-control {
+	flex: 1;
+	border-radius: 3px 0 0 3px; // Since there are no previous siblings selectors
+}
 
-	// input {
-	//
-	// 	border: 1px solid #eaeaea;
-	// 	margin: 10px 0;
-	// 	padding: 10px;
+.input-add-on-prefix, .input-add-on-postfix {
+	padding: 8px 12px;
+	height: 34px;
+	background: #EEEEEE;
+	border: 1px solid $input-border-color;
+	border-radius: 3px;
+	display: block;
+}
 
-	// 	&.valid {
-	// 	}
+.input-add-on-prefix {
+	border-radius: 3px 0 0 3px;
+	border-right: none;
 
-	// 	&.invalid {
-	// 		border: 1px solid #D00000;
-	// 		background-color: #F7E9E5;
-	// 	}
+	& + .cu-form-control {
+		border-radius: 0 3px 3px 0;
+	}
+}
 
-	// 	&:focus {
-	// 		outline: 2px solid #444;
-	// 	}
-	// }
+.input-add-on-postfix {
+	border-radius: 0 3px 3px 0;
+	border-left: none;
 }
