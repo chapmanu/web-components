@@ -4,7 +4,7 @@ this.jQuery && (function ($) {
 	var CU_Meltwater = {
 
 		show : 5,
-		url : 'http://socialdev.chapman.edu/callback/meltwater.json',
+		url : 'https://inside.chapman.edu/callback/meltwater',
 
 		initialize : function(num_to_show) {
 
