@@ -91,6 +91,8 @@ this.jQuery && (function ($) {
 		}
 	}
 
-	CU_Meltwater.initialize();
+	$(document).ready( function() {
+		CU_Meltwater.initialize();
+	});
 
 })(jQuery);
