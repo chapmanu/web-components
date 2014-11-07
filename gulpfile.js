@@ -132,6 +132,7 @@ gulp.task('clean', function () {
 });
 
 function bump(versionLevel) {
+	gulp.start('build');
 	return gulp.src(['./package.json', './bower.json'])
 		.pipe($.bump({type: versionLevel}))
 		.pipe(gulp.dest('./'))
