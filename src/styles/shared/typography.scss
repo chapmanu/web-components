@@ -39,10 +39,6 @@ a.alt::after {
 	transition: padding 100ms;
 }
 
-p:not(.unlink) a::after {
-	border-bottom: 1px dotted;
-}
-
 
 /***************************************************
 * Headers and Content
