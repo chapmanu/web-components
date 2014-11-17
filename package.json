@@ -1,7 +1,7 @@
 {
   "name": "chapman-web-components",
   "repository": "https://github.com/chapmanu/web-components",
-  "version": "0.0.46",
+  "version": "0.0.47",
   "description": "Common web components for Chapman University.",
   "dependencies": {},
   "devDependencies": {
