@@ -6,6 +6,7 @@
 ---------------------------------------- */
 $input-border-radius: 3px;
 $input-font-size:     18px;
+$input-line-height:   18px;
 $input-padding:       8px;
 $input-height:        39px; // Calculate this manually for now
 $cursor-disabled:     not-allowed;
@@ -59,10 +60,6 @@ select[size] {
 
 select {
 	height: $input-height;
-}
-
-textarea {
-	min-height: 108px;
 }
 
 
@@ -136,7 +133,7 @@ legend {
 	* Select box
 	***************************************************/
 
-	select {
+select {
 		background: #F5F5F5 inline-image('icons/arrow_down.svg') no-repeat right center;
 		background-size:20px;
 		width: auto;
@@ -157,7 +154,7 @@ legend {
 		appearance:none;
 
 		transition: all 0.1s ease-out;
-	}
+}
 
 	/* Firefox fix - we cannot style the dropdown arrow */
 	@-moz-document url-prefix() {
@@ -257,6 +254,9 @@ label.required:before {
 	&.state { width: 10em; }
 }
 
+/* Textarea's look nicer when a little longer */
+textarea.form-control { min-height: 108px; }
+
 /* Input prefixes/postfixes */
 
 /* Note, this must be tested cross-browser.  Might need to find different way.
@@ -264,7 +264,7 @@ label.required:before {
 .input-prefix  .prefix,
 .input-postfix .postfix {
 	padding: 0 12px;
-	height: $input-height;
+	margin-bottom: 6px;
 	line-height: $input-height;
 	background: $input-disabled-bg-color;
 	color: $input-text-color;
