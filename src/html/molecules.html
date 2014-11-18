@@ -9,6 +9,17 @@
 	@@include('molecules/pagination.html')
 
 
+	<h2 class="component-heading">Calendar</h2>
+
+	<p>Days can be displayed as a plain number, with highlight-light, with highlight-dark, or as a clickable link. See molecue examples on how to use the classes and elements. The first row automatically aligns right, the last row automatically aligns left. Each row should have exactly seven items, except the last and first rows which may have fewer items. Any width can be applied to the <b>cu_calendar</b> class and child elements will resize accordingly. </p>
+	<div style="overflow:auto;">
+		<div style="float:left; margin-right: 30px;">@@include('molecules/calendar.html')</div>
+		<div style="float:left; margin-right: 30px;">@@include('molecules/calendar_b.html')</div>
+		<div style="float:left; margin-right: 30px;">@@include('molecules/calendar_c.html')</div>
+		<div style="float:left; margin-right: 30px;">@@include('molecules/calendar_d.html')</div>
+	</div>
+
+
 	<h2 class="component-heading">Calendar Icons</h2>
 	@@include('molecules/calendar_day.html')
 	@@include('molecules/calendar_box.html')
