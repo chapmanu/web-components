@@ -74,6 +74,21 @@
 
 	}
 
+	&.dark .days {
+		background: #353430;
+		border-color: #353430;
+
+		a.day { color: lighten($color-chapman-blue, 35%); }
+
+		.day {
+			color: #FFF;
+
+			&.highlight-light {
+				background: darken($color-chapman-blue, 20%);
+			}
+		}
+	}
+
 	.nav-prev {
 		position: absolute;
 		top: 22px;
