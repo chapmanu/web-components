@@ -53,7 +53,7 @@ if (typeof quickView === 'undefined') {
 				if (url) return(url.match(/\.(jpeg|jpg|gif|png)$/) !== null);
 			},
 
-			show : function(htmlContent, disable_close) {
+			show : function(htmlContent, disable_close, absolute_mode) {
 
 				quickView.$containerCell.html(htmlContent).css('height',$(window).height()+"px").css('width',$(window).width()+"px");
 
@@ -61,6 +61,7 @@ if (typeof quickView === 'undefined') {
 				quickView.lockScroll();
 
 				if (!disable_close) quickView.bindCloseActions();
+				if (absolute_mode)  quickView.addSpecialStyles();
 
 			},
 
@@ -70,9 +71,25 @@ if (typeof quickView === 'undefined') {
 				quickView.$container.fadeOut(40);
 				setTimeout(function(){
 					quickView.$containerCell.empty();
+					quickView.removeSpecialStyles();
 				},40);
 
 				quickView.unlockScroll();
+			},
+
+			addSpecialStyles : function() {
+				var
+				window_height   = $(window).height(),
+				contents_height = quickView.$containerCell.contents().height(),
+				top_padding     = Math.round((window_height / 2) - (contents_height / 2));
+
+				if (contents_height == 0) return;
+
+				quickView.$containerCell.css('paddingTop',top_padding+"px").css('verticalAlign','top');
+			},
+
+			removeSpecialStyles : function() {
+				quickView.$containerCell.css('paddingTop', '').css('verticalAlign', '');
 			},
 
 			bindCloseActions : function() {
