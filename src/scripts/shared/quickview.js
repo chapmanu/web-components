@@ -61,7 +61,11 @@ if (typeof quickView === 'undefined') {
 				quickView.lockScroll();
 
 				if (!disable_close) quickView.bindCloseActions();
-				if (absolute_mode)  quickView.addSpecialStyles();
+				if (absolute_mode) {
+					setTimeout(function() {
+						quickView.addSpecialStyles();
+					}, 70);
+				}
 
 			},
 
@@ -81,7 +85,8 @@ if (typeof quickView === 'undefined') {
 				var
 				window_height   = $(window).height(),
 				contents_height = quickView.$containerCell.contents().height(),
-				top_padding     = Math.round((window_height / 2) - (contents_height / 2));
+				top_padding     = Math.round((window_height / 2) - (contents_height / 2)),
+				top_padding     = Math.max(top_padding, 30);
 
 				if (contents_height == 0) return;
 
