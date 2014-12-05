@@ -84,7 +84,7 @@ if (typeof quickView === 'undefined') {
 			addSpecialStyles : function() {
 				var
 				window_height   = $(window).height(),
-				contents_height = quickView.$containerCell.contents().height(),
+				contents_height = quickView.$containerCell.contents().outerHeight(),
 				top_padding     = Math.round((window_height / 2) - (contents_height / 2)),
 				top_padding     = Math.max(top_padding, 30);
 
