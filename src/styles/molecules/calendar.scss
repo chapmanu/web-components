@@ -92,12 +92,12 @@
 	.nav-prev {
 		position: absolute;
 		top: 22px;
-		left: 2px;
+		left: 4px;
 		width: 40px;
 		height: 30px;
 
-		background: inline-image('icons/warning-fill-orange.svg') no-repeat center left;
-		background-size: 20px;
+		background: inline-image('icons/arrow_left.svg') no-repeat center left;
+		background-size: 14px;
 
 		cursor: pointer;
 		opacity: 0.5;
@@ -107,12 +107,12 @@
 	.nav-next {
 		position: absolute;
 		top: 22px;
-		right: 2px;
+		right: 4px;
 		width: 40px;
 		height: 30px;
 
-		background: inline-image('icons/warning-fill-orange.svg') no-repeat center right;
-		background-size: 20px;
+		background: inline-image('icons/arrow_right.svg') no-repeat center right;
+		background-size: 14px;
 
 		cursor: pointer;
 		opacity: 0.5;

@@ -1,3 +1,58 @@
+/* Base (these Base settings can be removed once bootstrap live)
+   ========================================================================== */
+
+.carousel, .carousel:before, .carousel::after,
+.carousel  figure, .carousel figure::before, .carousel figure::after,
+.carousel figcaption, .carousel figcaption::before, .carousel figcaption::after,
+.carousel blockquote, .carousel blockquote::before, .carousel blockquote::after,
+.carousel h2, .carousel h2::before, .carousel h2::after,
+.carousel p, .carousel p::before, .carousel p::after
+.carousel img, .carousel img::before, .carousel img::after
+{
+    border: 0 solid;
+	-moz-box-sizing: border-box; /* remove when base support is Firefox ESR > 24 */
+	box-sizing: inherit;
+	color: inherit;
+	font-size: inherit;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	vertical-align: inherit;
+}
+
+
+/* Elements
+   ========================================================================== */
+.carousel figcaption, figure {
+	display: block;
+}
+
+/* Headings and Content
+   ========================================================================== */
+
+.carousel figure blockquote  h2 {
+	margin-top: 20px;
+	margin-top: 1.25rem;
+
+	font-family: "proxima-nova", "Helvetica Neue", "Microsoft Sans Serif", sans-serif;
+
+	color: #353430;
+	font-size: 1.5em; /* 24px */
+	line-height: 1.16666666666667;
+	line-height: 1.75rem; /* 28px */
+}
+
+.carousel figure blockquote p {
+	font-size: .875em; /* 14px */
+	line-height: 1.42857142857143;
+	line-height: 1.25rem; /* 20px */
+}
+
+.carousel *:first-child {
+	margin-top: 0;
+}
+ 
+
 @-webkit-keyframes carousel-slidein {
 	0%   { opacity: 0; }
 	100% { opacity: 1; }
@@ -15,6 +70,7 @@
 	position: relative;
 	width: 100%;
 	z-index: 0;
+		margin-bottom: 10px;
 }
 
 .carousel {
@@ -29,7 +85,9 @@
 .carousel, .carousel h2 {
 	color: #F9F9F9;
 }
-
+.carousel, .carousel p {
+	color: #F9F9F9;
+}
 .carousel figure {
 	display: none;
 }
@@ -57,6 +115,10 @@
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: 100%;
+		padding-right:0;
+		padding-left:0;
+		margin-right:0;
+		margin-left:0;
 }
 
 .carousel figcaption {
@@ -95,16 +157,18 @@
 
 .carousel-prev {
 	left: 0;
-}
-
-.carousel-prev {
-	background: linear-gradient(to right, rgba(32,32,32,0.6666), rgba(32,32,32,0.25)), url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5IiBoZWlnaHQ9IjE0IiB2aWV3Qm94PSIwIDAgOSAxNCI+PHBhdGggZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwuNzUpIiBkPSJNNy4xMzkgMTQuMDAxYy0uMzI0IDAtLjU5OS0uMTExLS44MjUtLjMzMmwtNS45NjYtNS44NWMtLjIzMi0uMjI4LS4zNDgtLjUtLjM0OC0uODE4IDAtLjMyMy4xMTYtLjU5My4zNDgtLjgwOWw1Ljk2Ni01Ljg1Yy4yMi0uMjI4LjQ5NS0uMzQyLjgyNS0uMzQyLjMyNCAwIC42MDIuMTE0LjgzNC4zNDJsLjY4Ny42NjVjLjIyNi4yMzQuMzM5LjUwNi4zMzkuODE4IDAgLjMxOC0uMTEzLjU4Ny0uMzM5LjgwOWwtNC40NTQgNC40IDQuNSA0LjM2N2MuMjI2LjIyMi4zMzkuNDkxLjMzOS44MDkgMCAuMzEyLS4xMTMuNTg0LS4zMzkuODE4bC0uNjg3LjY3NGMtLjIzOC4yMjEtLjUxNi4zMzItLjgzNC4zMzJ6Ii8+PC9zdmc+) no-repeat center / 30%;
+    background: linear-gradient(to right, rgba(32,32,32,0.6666), rgba(32,32,32,0.25)), url('../../img/carousel-prev.png') no-repeat center / 60%;
+    /* repeated as separate properties for IE fix: */
+    background-image: url('../../img/carousel-prev.png');
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .carousel-next {
 	right: 0;
-}
-
-.carousel-next {
-	background: linear-gradient(to left, rgba(32,32,32,0.6666), rgba(32,32,32,0.25)), url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5IiBoZWlnaHQ9IjE0IiB2aWV3Qm94PSIwIDAgOSAxNCI+PHBhdGggZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwuNzUpIiBkPSJNMS44NiAwYy4zMjQgMCAuNTk5LjExMS44MjUuMzMybDUuOTY2IDUuODVjLjIzMi4yMjguMzQ4LjUuMzQ4LjgxOCAwIC4zMjMtLjExNi41OTMtLjM0OC44MDlsLTUuOTY2IDUuODVjLS4yMi4yMjgtLjQ5NS4zNDItLjgyNS4zNDItLjMyNCAwLS42MDItLjExNC0uODM0LS4zNDJsLS42ODctLjY2NWMtLjIyNi0uMjM0LS4zMzktLjUwNi0uMzM5LS44MTggMC0uMzE4LjExMy0uNTg3LjMzOS0uODA5bDQuNDU0LTQuMzY3LTQuNDU0LTQuMzY3Yy0uMjI2LS4yMjItLjMzOS0uNDkxLS4zMzktLjgwOSAwLS4zMTIuMTEzLS41ODQuMzM5LS44MThsLjY4Ny0uNjc0Yy4yMzgtLjIyMS41MTYtLjMzMi44MzQtLjMzMnoiLz48L3N2Zz4=) no-repeat center / 30%;
+    background: linear-gradient(to left, rgba(32,32,32,0.6666), rgba(32,32,32,0.25)), url('../../img/carousel-next.png') no-repeat center / 60%;
+    /* repeated as separate properties for IE fix: */
+    background-image: url('../../img/carousel-next.png');
+    background-repeat: no-repeat;
+    background-position: center;
 }
