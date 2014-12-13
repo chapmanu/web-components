@@ -1,6 +1,6 @@
 .button,
 a.button {
-	background: #dad8cf;
+	background-color: #dad8cf;
 	border: none;
 	border-radius: 3px;
 	color: #353430;
@@ -28,7 +28,7 @@ a.button {
 
 	&.red,
 	&.primary {
-		background: $color-chapman-red;
+		background-color: $color-chapman-red;
 		color: #FFF;
 
 		&:hover {
@@ -38,7 +38,7 @@ a.button {
 
 	&.blue,
 	&.secondary {
-		background: $color-chapman-blue;
+		background-color: $color-chapman-blue;
 		color: #FFF;
 
 		&:hover {

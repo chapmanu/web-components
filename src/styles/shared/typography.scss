@@ -23,9 +23,7 @@ a:focus, a:hover, a:active {
 }
 
 p {
-	a, a:link { border-bottom: 1px dotted #C0C0C0; }
 	a { position: relative; color: $color-dark-gray; }
-	a:hover::after { border-bottom-style: solid; }
 	a::after {
 		content: "";
 		display: block;
@@ -39,10 +37,6 @@ a.alt::after {
 	content: "»";
 	padding-left: 0.25em;
 	transition: padding 100ms;
-}
-
-p:not(.unlink) a::after {
-	border-bottom: 1px dotted;
 }
 
 
@@ -64,13 +58,6 @@ p {
 	font-size: .875em; /* 14px */
 	line-height: 1.42857142857143;
 	line-height: 1.25rem; /* 20px */
-}
-
-article, blockquote, h1, h2, h3, h4, h5, h6, p, pre, section, .section {
-	margin-top: 20px;
-	margin-top: 1.25rem;
-	margin-bottom: 20px;
-	margin-bottom: 1.25rem;
 }
 
 h1, h2, h3, h4, h5, h6 {

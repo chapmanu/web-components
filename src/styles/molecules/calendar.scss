@@ -1,0 +1,122 @@
+.cu_calendar {
+	position: relative;
+	width: 135px;
+
+	border-radius: 3px 3px 0 0;
+	overflow: hidden;
+
+	.year {
+		text-align: center;
+		background: $color-chapman-red;
+		color: #FFF;
+		font-size: 12px;
+		padding: 5px;
+	}
+
+	.month {
+		text-align: center;
+		background: #353430;
+		color: #FFF;
+		font-weight: bold;
+		font-size: 18px;
+		padding: 6px 8px;
+	}
+
+	.days {
+		border: 1px solid #dbdbdb;
+		border-top: none;
+		padding: 6px;
+		background-color: #FFF;
+	}
+
+	.days .row {
+		display: flex;
+
+		margin-top: 2px;
+		margin-bottom: 2px;
+
+		&:first-of-type { justify-content: flex-end; }
+		&:last-of-type  { justify-content: flex-start; }
+
+		.day {
+
+			position: relative;
+			padding: 3px 1px;
+			font-size: 9px;
+			color: #6b6b6b;
+			text-align: center;
+			cursor: default;
+
+			// ********************
+			// Layout for 7 boxes; all units must add up to 700
+			box-sizing: border-box;
+			width: percentage(92/700); // 7 of these
+			margin-left: percentage(7/700); // 7 of these
+			&:last-child { margin-right: percentage(7/700); } // 1 of these
+			// ********************
+
+			&.highlight-dark {
+				color: #FFF;
+				background: $color-chapman-blue;
+				border-radius: 50%;
+			}
+
+			&.highlight-light {
+				background: lighten($color-chapman-blue, 55%);
+				border-radius: 50%;
+			}
+		}
+
+		a.day {
+			cursor: pointer;
+			color: $color-chapman-red;
+		}
+
+	}
+
+	&.dark .days {
+		background: #353430;
+		border-color: #353430;
+
+		a.day { color: lighten($color-chapman-blue, 35%); }
+
+		.day {
+			color: #FFF;
+
+			&.highlight-light {
+				background: darken($color-chapman-blue, 20%);
+			}
+		}
+	}
+
+	.nav-prev {
+		position: absolute;
+		top: 22px;
+		left: 4px;
+		width: 40px;
+		height: 30px;
+
+		background: inline-image('icons/arrow_left.svg') no-repeat center left;
+		background-size: 14px;
+
+		cursor: pointer;
+		opacity: 0.5;
+		&:hover { opacity: 1; }
+	}
+
+	.nav-next {
+		position: absolute;
+		top: 22px;
+		right: 4px;
+		width: 40px;
+		height: 30px;
+
+		background: inline-image('icons/arrow_right.svg') no-repeat center right;
+		background-size: 14px;
+
+		cursor: pointer;
+		opacity: 0.5;
+		&:hover { opacity: 1; }
+	}
+
+}

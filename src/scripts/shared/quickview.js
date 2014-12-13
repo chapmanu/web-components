@@ -9,6 +9,7 @@ if (typeof quickView === 'undefined') {
 		quickView = {
 
 			isScrollLocked : false,
+			isCloseAllowed : true,
 
 			initialize : function() {
 
@@ -46,37 +47,71 @@ if (typeof quickView === 'undefined') {
 					return true; // Allow default
 				});
 
-				// Close on click
-				this.$container.click(quickView.hide);
-
-				// Close on esc key
-				$('body').keyup(function(e) {
-					if (e.which === 27) quickView.hide();
-				});
 			},
 
 			hasImageExtension : function(url) {
 				if (url) return(url.match(/\.(jpeg|jpg|gif|png)$/) !== null);
 			},
 
-			show : function(htmlContent) {
+			show : function(htmlContent, disable_close, absolute_mode) {
 
 				quickView.$containerCell.html(htmlContent).css('height',$(window).height()+"px").css('width',$(window).width()+"px");
 
-				console.log('the window height is ' + $(window).height());
-
 				quickView.$container.fadeIn(80);
-
 				quickView.lockScroll();
+
+				if (!disable_close) quickView.bindCloseActions();
+				if (absolute_mode) {
+					setTimeout(function() {
+						quickView.addSpecialStyles();
+					}, 70);
+				}
+
 			},
 
 			hide : function() {
+				quickView.removeCloseActions();
+
 				quickView.$container.fadeOut(40);
 				setTimeout(function(){
 					quickView.$containerCell.empty();
+					quickView.removeSpecialStyles();
 				},40);
 
 				quickView.unlockScroll();
+			},
+
+			addSpecialStyles : function() {
+				var
+				window_height   = $(window).height(),
+				contents_height = quickView.$containerCell.contents().outerHeight(),
+				top_padding     = Math.round((window_height / 2) - (contents_height / 2)),
+				top_padding     = Math.max(top_padding, 30);
+
+				if (contents_height == 0) return;
+
+				quickView.$containerCell.css('paddingTop',top_padding+"px").css('verticalAlign','top');
+			},
+
+			removeSpecialStyles : function() {
+				quickView.$containerCell.css('paddingTop', '').css('verticalAlign', '');
+			},
+
+			bindCloseActions : function() {
+				// Close on click
+				quickView.$container.on('click', quickView.hide);
+
+				// Close on esc key
+				$('body').on('keyup', quickView.processKeyUp);
+			},
+
+			removeCloseActions : function() {
+				quickView.$container.off('click', quickView.hide);
+				$('body').off('keyup', quickView.processKeyUp);
+			},
+
+			processKeyUp : function(e) {
+				if (e.which === 27) quickView.hide();
 			},
 
 			lockScroll : function() {
