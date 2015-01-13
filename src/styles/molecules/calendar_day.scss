@@ -1,11 +1,17 @@
 .calendar-day {
   width: 135px;
   border-radius: 10px 10px 0 0;
-  background: $color-dark-gray;
-  color: #FFFFFF;
   text-align: center;
+  background: #FFF;
+
+  &.dark {
+  	color: #FFFFFF;
+  	background: $color-dark-gray;
+  }
+
   .weekday {
       display: block;
+      color: #FFFFFF;
       background: $color-chapman-red;
       padding: 6px;
       border-radius: 5px 5px 0 0;

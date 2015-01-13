@@ -8,7 +8,6 @@ $calendar-box-width: 40px;
 	display: block;
 	margin: 7px 0;
 	width: $calendar-box-width;
-	color: #EEEEEE;
 	text-align: center;
 }
 
@@ -19,7 +18,17 @@ $calendar-box-width: 40px;
 	padding: 15px 10px 6px 10px;
 	border-radius: 5px 5px 0 0;
 
-	background: #353430;
+	background: #FFF;
+
+	&.dark {
+		color: #EEEEEE;
+		background: $color-dark-gray;
+	}
+
+	.calendar-boxes.dark & {
+		color: #EEEEEE;
+		background: $color-dark-gray;
+	}
 
 	font-size: $calendar-box-font-size;
 	font-weight: 100;
