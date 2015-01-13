@@ -2,7 +2,11 @@
   width: 135px;
   border-radius: 10px 10px 0 0;
   text-align: center;
+  font-family: "proxima-nova", "Helvetica Neue", "Microsoft Sans Serif", sans-serif;
   background: #FFF;
+  -moz-box-shadow:0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.1);
+  -webkit-box-shadow:0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.1);
+  box-shadow:0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.1);
 
   &.dark {
   	color: #FFFFFF;
@@ -16,12 +20,11 @@
       padding: 6px;
       border-radius: 5px 5px 0 0;
       font-size: 14px;
-      font-weight: bold;
-      text-transform: uppercase;
+      font-weight: 500;
   }
   .day-num {
       display: block;
-      padding: 4px 0 0 0;
+      padding: 8px 0 0 0;
       font-size: 56px;
       font-weight: bold;
   }

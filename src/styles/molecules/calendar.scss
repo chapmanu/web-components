@@ -4,6 +4,12 @@
 
 	border-radius: 3px 3px 0 0;
 	overflow: hidden;
+	font-family: "proxima-nova", "Helvetica Neue", "Microsoft Sans Serif", sans-serif;
+	-moz-box-shadow:0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.1);
+	-webkit-box-shadow:0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.1);
+  	box-shadow:0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.1);
+	
+
 
 	.year {
 		text-align: center;
@@ -11,6 +17,7 @@
 		color: #FFF;
 		font-size: 12px;
 		padding: 5px;
+		font-family: "proxima-nova", "Helvetica Neue", "Microsoft Sans Serif", sans-serif;
 	}
 
 	.month {
@@ -23,7 +30,6 @@
 	}
 
 	.days {
-		border: 1px solid #dbdbdb;
 		border-top: none;
 		padding: 6px;
 		background-color: #FFF;
@@ -92,12 +98,12 @@
 	.nav-prev {
 		position: absolute;
 		top: 22px;
-		left: 4px;
+		left: 6px;
 		width: 40px;
 		height: 30px;
 
 		background: inline-image('icons/arrow_left.svg') no-repeat center left;
-		background-size: 14px;
+		background-size: 10px;
 
 		cursor: pointer;
 		opacity: 0.5;
@@ -107,12 +113,12 @@
 	.nav-next {
 		position: absolute;
 		top: 22px;
-		right: 4px;
+		right: 6px;
 		width: 40px;
 		height: 30px;
 
 		background: inline-image('icons/arrow_right.svg') no-repeat center right;
-		background-size: 14px;
+		background-size: 10px;
 
 		cursor: pointer;
 		opacity: 0.5;

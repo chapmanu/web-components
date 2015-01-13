@@ -9,6 +9,9 @@ $calendar-box-width: 40px;
 	margin: 7px 0;
 	width: $calendar-box-width;
 	text-align: center;
+	-moz-box-shadow:0 0 1px rgba(0,0,0,0.12),0 1px 2px rgba(0,0,0,0.1);
+  	-webkit-box-shadow:0 0 1px rgba(0,0,0,0.12),0 1px 2px rgba(0,0,0,0.1);
+  	box-shadow:0 0 1px rgba(0,0,0,0.12),0 1px 2px rgba(0,0,0,0.1);
 }
 
 .calendar-box {
