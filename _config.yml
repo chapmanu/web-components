@@ -1,0 +1,11 @@
+# Site settings
+title: Chapman Web Components
+email: Email
+description: > # Description
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "URL" # the base hostname & protocol for your site
+twitter_username: chapmanu
+github_username:  chapmanu
+
+# Build settings
+markdown: kramdown

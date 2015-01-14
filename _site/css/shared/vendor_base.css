@@ -1,0 +1,136 @@
+@charset "UTF-8";
+/* line 1, ../../_sass/shared/vendor_base.scss */
+[data-hidden] {
+  border: 0;
+  clip: rect(0 0 0 0);
+  display: block;
+  height: 1px;
+  padding: 0;
+  position: absolute;
+  margin: 0;
+  overflow: hidden;
+  width: 1px;
+}
+
+/* Base
+   ========================================================================== */
+/* line 16, ../../_sass/shared/vendor_base.scss */
+*, *::before, *::after {
+  border: 0 solid;
+  -moz-box-sizing: border-box;
+  /* remove when base support is Firefox ESR > 24 */
+  box-sizing: inherit;
+  color: inherit;
+  font-size: inherit;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  vertical-align: inherit;
+}
+
+/* Canvas
+   ========================================================================== */
+@-ms-viewport {
+  width: device-width;
+}
+/* line 35, ../../_sass/shared/vendor_base.scss */
+html {
+  box-sizing: border-box;
+  font: 100%/1 "proxima-nova-soft", "Helvetica Neue", "Microsoft Sans Serif", sans-serif;
+  ‑webkit‑text‑size‑adjust: 100%;
+  vertical-align: top;
+}
+
+/* line 42, ../../_sass/shared/vendor_base.scss */
+html {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 47, ../../_sass/shared/vendor_base.scss */
+::-moz-selection {
+  background-color: rgba(168, 36, 57, 0.875);
+  color: #FFF;
+  text-shadow: none;
+}
+
+/* line 53, ../../_sass/shared/vendor_base.scss */
+::selection {
+  background-color: rgba(168, 36, 57, 0.875);
+  color: #FFF;
+  text-shadow: none;
+}
+
+/* line 59, ../../_sass/shared/vendor_base.scss */
+a[data-focusin], [data-focusin]:not(a) a {
+  outline: none;
+}
+
+/* line 63, ../../_sass/shared/vendor_base.scss */
+a[data-focusin]:focus > *:last-child, [data-focusin]:not(a) a:focus > *:last-child {
+  outline: 1px dotted;
+  outline: auto 5px -webkit-focus-ring-color;
+}
+
+/* Elements
+   ========================================================================== */
+/* line 71, ../../_sass/shared/vendor_base.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block;
+}
+
+/* line 75, ../../_sass/shared/vendor_base.scss */
+[hidden], template {
+  display: none;
+}
+
+/* line 79, ../../_sass/shared/vendor_base.scss */
+[data-hidden] {
+  border: 0;
+  clip: rect(0 0 0 0);
+  display: block;
+  height: 1px;
+  padding: 0;
+  position: absolute;
+  margin: 0;
+  overflow: hidden;
+  width: 1px;
+}
+
+/* line 91, ../../_sass/shared/vendor_base.scss */
+img, svg {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+/* line 96, ../../_sass/shared/vendor_base.scss */
+svg {
+  height: 100%;
+  width: 100%;
+}
+
+/* line 101, ../../_sass/shared/vendor_base.scss */
+img {
+  border: 0;
+}
+
+/* Headings and Content
+   ========================================================================== */
+/* line 108, ../../_sass/shared/vendor_base.scss */
+article, blockquote, h1, h2, h3, h4, h5, h6, p, pre, section, .section {
+  margin-top: 40px;
+  margin-top: 2.5rem;
+}
+
+/* Headings and content ≥ 1472 (extra large desktop)
+   ========================================================================== */
+@media (min-width: 1472px) {
+  /* line 117, ../../_sass/shared/vendor_base.scss */
+  p {
+    font-size: 1em;
+    /* 16px */
+    line-height: 1.5em;
+    line-height: 1.5rem;
+    /* 24px */
+  }
+}

@@ -1,0 +1,76 @@
+@charset "UTF-8";
+/* Side Navigation
+   ====================================================== */
+/* line 4, ../../_sass/organisms/sidenav.scss */
+.sidenav ul {
+  list-style: none;
+}
+
+/* line 8, ../../_sass/organisms/sidenav.scss */
+.sidenav-menu a {
+  display: block;
+  font-size: .875em;
+  /* 14px */
+  padding: 12px 20px;
+  transition: padding 200ms;
+}
+
+/* line 15, ../../_sass/organisms/sidenav.scss */
+.sidenav-menu a {
+  color: #353430;
+}
+
+/* line 19, ../../_sass/organisms/sidenav.scss */
+.sidenav-menu a:focus, .sidenav-menu a:hover {
+  color: #A9233A;
+}
+
+/* line 23, ../../_sass/organisms/sidenav.scss */
+.sidenav-menu > li > a {
+  margin-top: 1px;
+  background-color: #FAF9F5;
+}
+
+/* line 28, ../../_sass/organisms/sidenav.scss */
+.sidenav-menu > li > a:focus, .sidenav-menu > li > a:hover, .sidenav-menu > .is-parent, .sidenav-menu > .is-parent > a {
+  background-color: #FFF;
+}
+
+/* line 32, ../../_sass/organisms/sidenav.scss */
+.sidenav-menu > .is-parent > a {
+  font-weight: 700;
+}
+
+/* line 36, ../../_sass/organisms/sidenav.scss */
+.sidenav-menu > .is-parent a:hover span, .sidenav-menu .is-active > a span {
+  box-shadow: 0 1px 0 0 rgba(169, 35, 58, 0.25);
+}
+
+/* line 40, ../../_sass/organisms/sidenav.scss */
+.sidenav-menu ul {
+  margin-top: -4px;
+  padding-bottom: 8px;
+}
+
+/* line 45, ../../_sass/organisms/sidenav.scss */
+.sidenav-menu ul > li > a {
+  color: #62605A;
+  padding: 8px 32px;
+}
+
+/* Side Navigation ≥ 1472 (extra large desktop)
+   ====================================================== */
+@media (min-width: 1472px) {
+  /* line 54, ../../_sass/organisms/sidenav.scss */
+  .sidenav-menu > li > a {
+    font-size: 1em;
+  }
+
+  /* line 58, ../../_sass/organisms/sidenav.scss */
+  .sidenav-menu ul > li > a {
+    font-size: .875em;
+    line-height: 1.14285714285714;
+    line-height: 1rem;
+    /* 16px */
+  }
+}

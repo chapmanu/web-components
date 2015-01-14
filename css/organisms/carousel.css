@@ -1,0 +1,201 @@
+/* Base (these Base settings can be removed once bootstrap live)
+   ========================================================================== */
+/* line 4, ../../_sass/organisms/carousel.scss */
+.carousel, .carousel:before, .carousel::after,
+.carousel figure, .carousel figure::before, .carousel figure::after,
+.carousel figcaption, .carousel figcaption::before, .carousel figcaption::after,
+.carousel blockquote, .carousel blockquote::before, .carousel blockquote::after,
+.carousel h2, .carousel h2::before, .carousel h2::after,
+.carousel p, .carousel p::before, .carousel p::after
+.carousel img, .carousel img::before, .carousel img::after {
+  border: 0 solid;
+  -moz-box-sizing: border-box;
+  /* remove when base support is Firefox ESR > 24 */
+  box-sizing: inherit;
+  color: inherit;
+  font-size: inherit;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  vertical-align: inherit;
+}
+
+/* Elements
+   ========================================================================== */
+/* line 26, ../../_sass/organisms/carousel.scss */
+.carousel figcaption, figure {
+  display: block;
+}
+
+/* Headings and Content
+   ========================================================================== */
+/* line 33, ../../_sass/organisms/carousel.scss */
+.carousel figure blockquote h2 {
+  margin-top: 20px;
+  margin-top: 1.25rem;
+  font-family: "proxima-nova", "Helvetica Neue", "Microsoft Sans Serif", sans-serif;
+  color: #353430;
+  font-size: 1.5em;
+  /* 24px */
+  line-height: 1.16666666666667;
+  line-height: 1.75rem;
+  /* 28px */
+}
+
+/* line 45, ../../_sass/organisms/carousel.scss */
+.carousel figure blockquote p {
+  font-size: .875em;
+  /* 14px */
+  line-height: 1.42857142857143;
+  line-height: 1.25rem;
+  /* 20px */
+}
+
+/* line 51, ../../_sass/organisms/carousel.scss */
+.carousel *:first-child {
+  margin-top: 0;
+}
+
+@-webkit-keyframes carousel-slidein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes carousel-slidein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* line 66, ../../_sass/organisms/carousel.scss */
+.carousel {
+  height: 0;
+  padding-top: 56.25%;
+  padding-bottom: 160px;
+  position: relative;
+  width: 100%;
+  z-index: 0;
+  margin-bottom: 10px;
+}
+
+/* line 76, ../../_sass/organisms/carousel.scss */
+.carousel {
+  box-shadow: 0 4px 4px -4px #111;
+}
+
+/* line 80, ../../_sass/organisms/carousel.scss */
+.carousel, .carousel figcaption {
+  background-color: #111;
+  border-radius: 0 0 4px 4px;
+}
+
+/* line 85, ../../_sass/organisms/carousel.scss */
+.carousel, .carousel h2 {
+  color: #F9F9F9;
+}
+
+/* line 88, ../../_sass/organisms/carousel.scss */
+.carousel, .carousel p {
+  color: #F9F9F9;
+}
+
+/* line 91, ../../_sass/organisms/carousel.scss */
+.carousel figure {
+  display: none;
+}
+
+/* line 95, ../../_sass/organisms/carousel.scss */
+.carousel figure.active {
+  display: block;
+}
+
+/* line 99, ../../_sass/organisms/carousel.scss */
+.carousel figure.active blockquote {
+  -webkit-animation: carousel-slidein 400ms;
+  animation: carousel-slidein 400ms;
+}
+
+/* line 104, ../../_sass/organisms/carousel.scss */
+.carousel blockquote {
+  display: block;
+  position: absolute;
+  bottom: 160px;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+/* line 114, ../../_sass/organisms/carousel.scss */
+.carousel blockquote {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding-right: 0;
+  padding-left: 0;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+/* line 124, ../../_sass/organisms/carousel.scss */
+.carousel figcaption {
+  bottom: 0;
+  font-size: 14px;
+  left: 0;
+  line-height: 20px;
+  min-height: 160px;
+  padding: 16px;
+  position: absolute;
+  right: 0;
+  z-index: 2;
+}
+
+/* line 136, ../../_sass/organisms/carousel.scss */
+.carousel-prevnext {
+  bottom: 160px;
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  top: 0;
+  transition: box-shadow 200ms;
+  width: 8%;
+  z-index: 1;
+}
+
+/* line 147, ../../_sass/organisms/carousel.scss */
+.carousel-prevnext {
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.16666);
+  opacity: 0.5;
+  transition: opacity 200ms;
+}
+
+/* line 153, ../../_sass/organisms/carousel.scss */
+.carousel-prevnext:focus, .carousel-prevnext:hover {
+  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.16666), inset 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  opacity: 1;
+}
+
+/* line 158, ../../_sass/organisms/carousel.scss */
+.carousel-prev {
+  left: 0;
+  background: linear-gradient(to right, rgba(32, 32, 32, 0.6666), rgba(32, 32, 32, 0.25)), url("../../img/carousel-prev.png") no-repeat center/60%;
+  /* repeated as separate properties for IE fix: */
+  background-image: url("../../img/carousel-prev.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* line 167, ../../_sass/organisms/carousel.scss */
+.carousel-next {
+  right: 0;
+  background: linear-gradient(to left, rgba(32, 32, 32, 0.6666), rgba(32, 32, 32, 0.25)), url("../../img/carousel-next.png") no-repeat center/60%;
+  /* repeated as separate properties for IE fix: */
+  background-image: url("../../img/carousel-next.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
