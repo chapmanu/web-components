@@ -1,0 +1,16 @@
+.ellipsis {
+  width: 20px;
+  height: 10px;
+  line-height: 8px;
+  display: inline-block;
+  vertical-align: center;
+  background: $gray-cement;
+  color: $gray-slate;
+  padding: 0 5px;
+  margin-left: 10px;
+  letter-spacing: 2px;
+  text-align: center;
+  &::after {
+    content: '•••';
+  }
+}
