@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
   <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,85 +9,49 @@
   <meta name="description" content="">
 
   <link rel="stylesheet" href="/css/cu_components.css">
+  <link rel="stylesheet" href="/css/site.css">
   <link rel="canonical" href="URL/">
   <link rel="alternate" type="application/rss+xml" title="Chapman Web Components" href="URL/feed.xml" />
+
+	<!-- TypeKit -->
+	<script type="text/javascript" src="//use.typekit.net/nqy1aog.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>
+	<!-- Jquery -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
+  <script src="/scripts/organisms/meltwater.js"></script>
+  <script src="/scripts/shared/link_click_analytics.js"></script>
+  <script src="/scripts/shared/quickview.js"></script>
+  <script src="/scripts/shared/smooth_scroll.js"></script>
 </head>
-
-
   <body>
-
-    <header class="site-header">
-
-  <div class="wrapper">
-
-    <a class="site-title" href="/">Chapman Web Components</a>
-
-    <nav class="site-nav">
-     
-    </nav>
-
-  </div>
-
-</header>
-
 
     <div class="page-content">
       <div class="wrapper">
         <div class="home">
 
+<div id='cssmenu' style="height: 100%">
 
-<!doctype html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>Chapman Web Components</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+<img src="http://www.chapman.edu/_files/img/open-graph-cu-logo.png"/>
+<ul>
+   <li class='active'><a href='#index'><span>Atoms</span></a></li>
+   <li><a href='#molecules'><span>Molecules</span></a></li>
+   <li><a href='#organisms'><span>Organisms</span></a></li>
+   <li><a href='#omni-nav'><span>Omni-Nav</span></a></li>
+   <li><a href='#js'><span>Javascripts</span></a></li>
+   <li><a href='#layout'><span>Layout</span></a></li>
+   <li><a href='#forms'><span>Forms</span></a></li>
+   <li><a href='#error'><span>Error Pages</span></a></li>
+   <li><a href='#icons'><span>Icons Preview</span></a></li>
+   <li class='last'><a href='#vendor'><span>Vendor Themes</span></a></li>
+</ul>
+</div>
 
-	<!-- TypeKit -->
-<script type="text/javascript" src="//use.typekit.net/nqy1aog.js"></script>
-<script>try{Typekit.load();}catch(e){}</script>
-<!-- Jquery -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
-<!-- Web Components -->
-<script src="../_scripts/cu_components.js" async></script>
-<link rel="stylesheet" href="../css/cu_components.css">
 
-
-	<style>
-	body {
-		padding:100px 0;
-	}
-
-	.component-heading {
-		color: #BBB;
-		font-size: 52px;
-		margin-top:100px;
-		margin-bottom:50px;
-		padding-bottom: 20px;
-		border-bottom: 1px dashed #BBB;
-
-		text-shadow: 1px 1px 1px rgba(255,255,255,0.8);
-	}
-	</style>
-
-</head>
-<body class="container">
-
-	<nav>
-		<a href="#index">"Atoms"</a> |
-		<a href="#molecules">Molecules</a> |
-		<a href="#organisms">Organisms</a> |
-		<a href="omni-nav.html">Omni-Nav</a> |
-		<a href="#js">Javascripts</a> |
-		<a href="#layout">Grid</a> |
-		<a href="#forms">Forms</a> |
-		<a href="#error">Error Pages</a> |
-		<a href="#icons">Icons Preview</a> |
-		<a href="#vendor">Vendor Themes</a>
-	</nav>
 
 
 <h1 id="index">Chapman Web Components</h1>
+
+<h3 id="atoms">Atoms</h3>
 
 <p>This is file demonstrates all basic HTML elements, or "Atoms". The basic HTML elements are used to form molecules. Molecules can be put together into Organisms. Organisms are placed on a page.</p>
 
@@ -479,9 +442,6 @@ Horizontal Rule:
 
 
 
-</body>
-</html>
-
 
 
 
@@ -509,7 +469,7 @@ Horizontal Rule:
 			</h1>
 
 			<nav id="nav" class="nav" role="navigation">
-				<h2 class="nav-heading" data-hidden>Site Navigation</h2>
+				<h2 class="nav-heading" data-hidden></h2>
 
 				<a class="nav-glyph" href="#nav">@@include('molecules/svg.html', {"sprite_id": "menu"})</a>
 				<a class="nav-glyph nav-glyph--back" href="javascript:history.back();"><svg><use xlink:href="//www.chapman.edu/_bootstrap/sprite.svg#:menu"/></svg></a>
@@ -540,7 +500,7 @@ Horizontal Rule:
 			</h1>
 
 			<nav id="nav" class="nav" role="navigation">
-				<h2 class="nav-heading" data-hidden>Site Navigation</h2>
+				<h2 class="nav-heading" data-hidden></h2>
 
 				<a class="nav-glyph" href="#nav"><svg><use xlink:href="../dist/images/sprite.svg#menu"/></svg></a>
 				<a class="nav-glyph nav-glyph--back" href="javascript:history.back();"><svg><use xlink:href="//www.chapman.edu/_bootstrap/sprite.svg#:menu"/></svg></a>
@@ -903,12 +863,8 @@ Horizontal Rule:
 
 
 
-</body>
-</html>
 
-
-
-
+<!-- include omni-nav.html -->
 
 <h3 id="js"> Javascripts </h3>
 	<style>
@@ -971,8 +927,6 @@ Horizontal Rule:
 
 	<a href="#" class="button red" data-analytics-event="Big Red Button,Request Information,Page Footer">This button will track a Google Analytics custom event!</a>
 
-
-@@include('partials/_footer.html')
 
 
 
@@ -1449,15 +1403,7 @@ Horizontal Rule:
 
 
 <h1 id="error">Error Pages</h1>
-<ul>
-  <li><a href="502.html">502 Bad Gateway</a></li>
-  <li><a href="500.html">500 Interal Server Error</a></li>
-  <li><a href="422.html">422 Unprocessable Entity</a></li>
-  <li><a href="422.html">404 Not Found</a></li>
-</ul>
-
-
-<!--
+<p class="component-heading">502 Bad Gateway</p>
 <!doctype html>
 <html>
 
@@ -1691,6 +1637,7 @@ Horizontal Rule:
 
 </html>
 
+<p class="component-heading">500 Internal Server Error</p>
 <!doctype html>
 <html>
 
@@ -1924,6 +1871,7 @@ Horizontal Rule:
 
 </html>
 
+<p class="component-heading">422 Unprocessable Entity</p>
 <!doctype html>
 <html>
 
@@ -2157,6 +2105,7 @@ Horizontal Rule:
 
 </html>
 
+<p class="component-heading">404 Not Found</p>
 <!doctype html>
 <html>
 
@@ -2390,16 +2339,67 @@ Horizontal Rule:
 
 </html>
 
--->
 
+
+
+<h1 id="icons">Icons Preview</h1>
 
 <div class="container">
-  <!-- inject:svg -->
-  <!-- endinject -->
-
-	<h1 id="icons">Icons Preview</h1>
-
-		<p> Icons here! </p>
+  <div class="preview"><p>#arrow_down</p><svg class="icon"><use xlink:href="../dist/images/sprite.svg#arrow_down"/></svg></div>
+  <div class="preview"><p>#arrow_left</p><svg class="icon"><use xlink:href="../dist/images/sprite.svg#arrow_left"/></svg></div>
+  <div class="preview"><p>#arrow_right</p><svg class="icon"><use xlink:href="../dist/images/sprite.svg#arrow_right"/></svg></div>
+  <div class="preview"><p>#bubble-dots3</p><svg class="icon"><use xlink:href="../dist/images/sprite.svg#bubble-dots3"/></svg></div>
+  <div class="preview"><p>#bubble-dots4</p><svg class="icon"><use xlink:href="../dist/images/sprite.svg#bubble-dots4"/></svg></div>
+  <div class="preview"><p>#bubbles2</p><svg class="icon"><use xlink:href="../dist/images/sprite.svg#bubbles2"/></svg></div>
+  <div class="preview"><p>#calendar4</p><svg class="icon"><use xlink:href="../dist/images/sprite.svg#calendar4"/></svg></div>
+  <div class="preview"><p>#checkmark-circle-fill-green</p><svg class="icon"><use xlink:href="../dist/images/sprite.svg#checkmark-circle-fill-green"/></svg></div>
+  <div class="preview"><p>#checkmark-circle-fill</p><svg class="icon"><use xlink:href="../dist/images/sprite.svg#checkmark-circle-fill"/></svg></div>
+  <div class="preview"><p>#checkmark-circle-green</p><svg class="icon"><use xlink:href="../dist/images/sprite.svg#checkmark-circle-green"/></svg></div>
+  <div class="preview"><p>#checkmark-circle</p><svg class="icon"><use xlink:href="../dist/images/sprite.svg#checkmark-circle"/></svg></div>
+  <div class="preview"><p>#checkmark-no-circle</p><svg class="icon"><use xlink:href="../dist/images/sprite.svg#checkmark-no-circle"/></svg></div>
+  <div class="preview"><p>#clock3</p><svg class="icon"><use xlink:href="../dist/images/sprite.svg#clock3"/></svg></div>
+  <div class="preview"><p>#cu_monogram</p><svg class="icon"><use xlink:href="../dist/images/sprite.svg#cu_monogram"/></svg></div>
+  <div class="preview"><p>#cu_window</p><svg class="icon"><use xlink:href="../dist/images/sprite.svg#cu_window"/></svg></div>
+  <div class="preview"><p>#email</p><svg class="icon"><use xlink:href="../dist/images/sprite.svg#email"/></svg></div>
+  <div class="preview"><p>#envelope-light-gray</p><svg class="icon"><use xlink:href="../dist/images/sprite.svg#envelope-light-gray"/></svg></div>
+  <div class="preview"><p>#envelope</p><svg class="icon"><use xlink:href="../dist/images/sprite.svg#envelope"/></svg></div>
+  <div class="preview"><p>#eye2</p><svg class="icon"><use xlink:href="../dist/images/sprite.svg#eye2"/></svg></div>
+  <div class="preview"><p>#facebook</p><svg class="icon"><use xlink:href="../dist/images/sprite.svg#facebook"/></svg></div>
+  <div class="preview"><p>#feed2</p><svg class="icon"><use xlink:href="../dist/images/sprite.svg#feed2"/></svg></div>
+  <div class="preview"><p>#folder</p><svg class="icon"><use xlink:href="../dist/images/sprite.svg#folder"/></svg></div>
+  <div class="preview"><p>#globe-light-gray</p><svg class="icon"><use xlink:href="../dist/images/sprite.svg#globe-light-gray"/></svg></div>
+  <div class="preview"><p>#globe</p><svg class="icon"><use xlink:href="../dist/images/sprite.svg#globe"/></svg></div>
+  <div class="preview"><p>#google-plus</p><svg class="icon"><use xlink:href="../dist/images/sprite.svg#google-plus"/></svg></div>
+  <div class="preview"><p>#home</p><svg class="icon"><use xlink:href="../dist/images/sprite.svg#home"/></svg></div>
+  <div class="preview"><p>#instagram</p><svg class="icon"><use xlink:href="../dist/images/sprite.svg#instagram"/></svg></div>
+  <div class="preview"><p>#link-light-gray</p><svg class="icon"><use xlink:href="../dist/images/sprite.svg#link-light-gray"/></svg></div>
+  <div class="preview"><p>#link</p><svg class="icon"><use xlink:href="../dist/images/sprite.svg#link"/></svg></div>
+  <div class="preview"><p>#location</p><svg class="icon"><use xlink:href="../dist/images/sprite.svg#location"/></svg></div>
+  <div class="preview"><p>#lock-light-gray</p><svg class="icon"><use xlink:href="../dist/images/sprite.svg#lock-light-gray"/></svg></div>
+  <div class="preview"><p>#lock</p><svg class="icon"><use xlink:href="../dist/images/sprite.svg#lock"/></svg></div>
+  <div class="preview"><p>#menu</p><svg class="icon"><use xlink:href="../dist/images/sprite.svg#menu"/></svg></div>
+  <div class="preview"><p>#menu10</p><svg class="icon"><use xlink:href="../dist/images/sprite.svg#menu10"/></svg></div>
+  <div class="preview"><p>#menu3</p><svg class="icon"><use xlink:href="../dist/images/sprite.svg#menu3"/></svg></div>
+  <div class="preview"><p>#newspaper</p><svg class="icon"><use xlink:href="../dist/images/sprite.svg#newspaper"/></svg></div>
+  <div class="preview"><p>#pencil5</p><svg class="icon"><use xlink:href="../dist/images/sprite.svg#pencil5"/></svg></div>
+  <div class="preview"><p>#phone-light-gray</p><svg class="icon"><use xlink:href="../dist/images/sprite.svg#phone-light-gray"/></svg></div>
+  <div class="preview"><p>#phone</p><svg class="icon"><use xlink:href="../dist/images/sprite.svg#phone"/></svg></div>
+  <div class="preview"><p>#pinterest</p><svg class="icon"><use xlink:href="../dist/images/sprite.svg#pinterest"/></svg></div>
+  <div class="preview"><p>#play3</p><svg class="icon"><use xlink:href="../dist/images/sprite.svg#play3"/></svg></div>
+  <div class="preview"><p>#plus-circle2</p><svg class="icon"><use xlink:href="../dist/images/sprite.svg#plus-circle2"/></svg></div>
+  <div class="preview"><p>#search3</p><svg class="icon"><use xlink:href="../dist/images/sprite.svg#search3"/></svg></div>
+  <div class="preview"><p>#share</p><svg class="icon"><use xlink:href="../dist/images/sprite.svg#share"/></svg></div>
+  <div class="preview"><p>#tag5</p><svg class="icon"><use xlink:href="../dist/images/sprite.svg#tag5"/></svg></div>
+  <div class="preview"><p>#twitter</p><svg class="icon"><use xlink:href="../dist/images/sprite.svg#twitter"/></svg></div>
+  <div class="preview"><p>#user-light-gray</p><svg class="icon"><use xlink:href="../dist/images/sprite.svg#user-light-gray"/></svg></div>
+  <div class="preview"><p>#user</p><svg class="icon"><use xlink:href="../dist/images/sprite.svg#user"/></svg></div>
+  <div class="preview"><p>#vimeo</p><svg class="icon"><use xlink:href="../dist/images/sprite.svg#vimeo"/></svg></div>
+  <div class="preview"><p>#warning-fill-orange</p><svg class="icon"><use xlink:href="../dist/images/sprite.svg#warning-fill-orange"/></svg></div>
+  <div class="preview"><p>#warning</p><svg class="icon"><use xlink:href="../dist/images/sprite.svg#warning"/></svg></div>
+  <div class="preview"><p>#wordpress</p><svg class="icon"><use xlink:href="../dist/images/sprite.svg#wordpress"/></svg></div>
+  <div class="preview"><p>#x-mark-circle</p><svg class="icon"><use xlink:href="../dist/images/sprite.svg#x-mark-circle"/></svg></div>
+  <div class="preview"><p>#x-mark-no-circle</p><svg class="icon"><use xlink:href="../dist/images/sprite.svg#x-mark-no-circle"/></svg></div>
+  <div class="preview"><p>#youtube</p><svg class="icon"><use xlink:href="../dist/images/sprite.svg#youtube"/></svg></div>
 
 </div>
 
@@ -2471,7 +2471,8 @@ to these assets in the webpages and adopt the official Chapman styles.
       </div>
     </div>
 
-    <footer class="site-footer">
+    
+<!-- <footer class="site-footer">
 
   <div class="wrapper">
 
@@ -2496,7 +2497,7 @@ to these assets in the webpages and adopt the official Chapman styles.
 
   </div>
 
-</footer>
+</footer> -->
 
 
   </body>

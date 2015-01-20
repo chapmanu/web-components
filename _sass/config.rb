@@ -6,7 +6,7 @@ http_path = "/"
 sass_dir = "./"
 css_dir = "../css"
 images_dir = "../images"
-javascripts_dir = "../_scripts"
+javascripts_dir = "../scripts"
 relative_assets = true
 
 # You can select your preferred output style here (can be overridden via the command line):

@@ -7,6 +7,17 @@
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
   <link rel="stylesheet" href="{{ "/css/cu_components.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/css/site.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+
+	<!-- TypeKit -->
+	<script type="text/javascript" src="//use.typekit.net/nqy1aog.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>
+	<!-- Jquery -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
+  <script src="{{ "/scripts/organisms/meltwater.js" | prepend: site.baseurl }}"></script>
+  <script src="{{ "/scripts/shared/link_click_analytics.js" | prepend: site.baseurl }}"></script>
+  <script src="{{ "/scripts/shared/quickview.js" | prepend: site.baseurl }}"></script>
+  <script src="{{ "/scripts/shared/smooth_scroll.js" | prepend: site.baseurl }}"></script>
 </head>
