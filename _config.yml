@@ -9,3 +9,81 @@ github_username:  chapmanu
 
 # Build settings
 markdown: kramdown
+
+#
+# Plugin: jekyll-assets
+#
+assets:
+  #
+  # Pathname of the destination of generated (bundled) assets relative
+  # to the destination of the root.
+  #
+  dirname: assets
+  #
+  # Base URL of assets paths.
+  #
+  baseurl: /assets/
+  #
+  # Pathnames where to find assets relative to the root of the site.
+  #
+  sources:
+    - _assets/javascripts
+    - _assets/stylesheets
+    - _assets/images
+  #
+  # Sets JS compressor. No compression by default.
+  # Possible variants: 'yui', 'uglifier', nil
+  #
+  js_compressor: ~
+  #
+  # Sets CSS compressor. No compression by default.
+  # Possible variants: 'yui', 'sass', nil
+  #
+  css_compressor: ~
+  #
+  # Sets cachebusting policy for generated assets.
+  #
+  # Possible variants:
+  #
+  #   none - disables cachebusting
+  #
+  #     source file:  _assets/javascripts/app.css
+  #     output file:  _site/assets/javascriptis/app.css
+  #     output URL:   /assets/javascripts/app.css
+  #
+  #   soft - leave filenames as-is, but `?cb=<md5>` suffix for URLs generated
+  #          with `asset_path`, `javascript` and `stylesheet`:
+  #
+  #     source file:  _assets/javascripts/app.css
+  #     output file:  _site/assets/javascriptis/app.css
+  #     output URL:   /assets/javascripts/app.css?cb=4f41243847da693a4f356c0486114bc6
+  #
+  #   hard - (default) injects cachebusting checksum into processed filename:
+  #
+  #     source file:  _assets/javascripts/app.css
+  #     output file:  _site/assets/javascriptis/app-4f41243847da693a4f356c0486114bc6.css
+  #     output URL:   /assets/javascripts/app-4f41243847da693a4f356c0486114bc6.css
+  #
+  cachebust: none
+  #
+  # Whenever or not cache compiled assets (disabled by default).
+  # See `Compilation Cache` section of README for details.
+  #
+  cache: false
+  #
+  # Specifies list of MIME types that needs to have gzipped versions.
+  # You can set it to `false` to disable gzipping. Only javascripts and
+  # stylesheets are gzipped by default.
+  #
+  gzip: [ text/css, application/javascript ]
+  #
+  # Does not concatenates files requested by `javascript` and `stylesheet`
+  # helpers. Instead outputs multiple files in order they are required.
+  # Default: false
+  #
+  debug: false
+  #
+  # Configuration version. Used to force cache invalidation.
+  # Default: 1
+  #
+  version: 1	

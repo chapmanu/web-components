@@ -8,20 +8,20 @@
   <title>Chapman Web Components</title>
   <meta name="description" content="">
 
-  <link rel="stylesheet" href="/css/cu_components.css">
-  <link rel="stylesheet" href="/css/site.css">
+
   <link rel="canonical" href="URL/">
   <link rel="alternate" type="application/rss+xml" title="Chapman Web Components" href="URL/feed.xml" />
+
+  <link rel="stylesheet" href="/assets/cu_components.css">
+  <link rel="stylesheet" href="/assets/site.css">
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
+  <script src="/assets/cu_components.js"></script>
+  <script src="/assets/site.js"></script>
 
 	<!-- TypeKit -->
 	<script type="text/javascript" src="//use.typekit.net/nqy1aog.js"></script>
 	<script>try{Typekit.load();}catch(e){}</script>
-	<!-- Jquery -->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
-  <script src="/scripts/organisms/meltwater.js"></script>
-  <script src="/scripts/shared/link_click_analytics.js"></script>
-  <script src="/scripts/shared/quickview.js"></script>
-  <script src="/scripts/shared/smooth_scroll.js"></script>
 </head>
   <body>
 
@@ -541,7 +541,7 @@ Horizontal Rule:
 	<a href="#" class="permalink">
 		<h1 class="title">Lorem Ipsum Doler Title</h1>
 		<p class="date">January 1, 1999</p>
-		<div class="story-bg" style="background-image:url('images/placeholders/memorial_lawn.jpg');"><img src="images/placeholders/chapman_mug.jpg" /></div>
+		<div class="story-bg" style="background-image:url('/assets/placeholders/memorial_lawn.jpg');"><img src="/assets/placeholders/chapman_mug.jpg" /></div>
 	</a>
 
 	<footer class="footer">
@@ -570,7 +570,7 @@ Horizontal Rule:
 	<a href="#" class="permalink">
 		<h1 class="title">Lorem Ipsum Doler Title</h1>
 		<p class="date">January 1, 1999</p>
-		<div class="story-bg" style="background-image:url('images/placeholders/memorial_lawn.jpg');"><img src="images/placeholders/chapman_mug.jpg" /></div>
+		<div class="story-bg" style="background-image:url('/assets/placeholders/memorial_lawn.jpg');"><img src="/assets/placeholders/chapman_mug.jpg" /></div>
 	</a>
 
 	<footer class="footer">
@@ -597,7 +597,7 @@ Horizontal Rule:
 	<a href="#" class="permalink">
 		<h1 class="title">Lorem Ipsum Doler Title</h1>
 		<p class="date">January 1, 1999</p>
-		<div class="story-bg" style="background-image:url('images/placeholders/memorial_lawn.jpg');"><img src="images/placeholders/chapman_mug.jpg" /></div>
+		<div class="story-bg" style="background-image:url('/assets/placeholders/memorial_lawn.jpg');"><img src="/assets/placeholders/chapman_mug.jpg" /></div>
 	</a>
 
 	<footer class="footer">
@@ -627,7 +627,7 @@ Horizontal Rule:
 	<a href="#" class="permalink">
 		<h1 class="title">Lorem Ipsum Doler Title</h1>
 		<p class="date">January 1, 1999</p>
-		<div class="story-bg" style="background-image:url('images/placeholders/memorial_lawn.jpg');"><img src="images/placeholders/chapman_mug.jpg" /></div>
+		<div class="story-bg" style="background-image:url('/assets/placeholders/memorial_lawn.jpg');"><img src="/assets/placeholders/chapman_mug.jpg" /></div>
 	</a>
 
 	<footer class="footer">
@@ -654,7 +654,7 @@ Horizontal Rule:
 	<a href="#" class="permalink">
 		<h1 class="title">Lorem Ipsum Doler Title</h1>
 		<p class="date">January 1, 1999</p>
-		<div class="story-bg" style="background-image:url('images/placeholders/memorial_lawn.jpg');"><img src="images/placeholders/chapman_mug.jpg" /></div>
+		<div class="story-bg" style="background-image:url('/assets/placeholders/memorial_lawn.jpg');"><img src="/assets/placeholders/chapman_mug.jpg" /></div>
 	</a>
 
 	<footer class="footer">
@@ -681,7 +681,7 @@ Horizontal Rule:
 	<a href="#" class="permalink">
 		<h1 class="title">Lorem Ipsum Doler Title</h1>
 		<p class="date">January 1, 1999</p>
-		<div class="story-bg" style="background-image:url('images/placeholders/memorial_lawn.jpg');"><img src="images/placeholders/chapman_mug.jpg" /></div>
+		<div class="story-bg" style="background-image:url('/assets/placeholders/memorial_lawn.jpg');"><img src="/assets/placeholders/chapman_mug.jpg" /></div>
 	</a>
 
 	<footer class="footer">
@@ -708,7 +708,7 @@ Horizontal Rule:
 	<a href="#" class="permalink">
 		<h1 class="title">Lorem Ipsum Doler Title</h1>
 		<p class="date">January 1, 1999</p>
-		<div class="story-bg" style="background-image:url('images/placeholders/memorial_lawn.jpg');"><img src="images/placeholders/chapman_mug.jpg" /></div>
+		<div class="story-bg" style="background-image:url('/assets/placeholders/memorial_lawn.jpg');"><img src="/assets/placeholders/chapman_mug.jpg" /></div>
 	</a>
 
 	<footer class="footer">
@@ -887,14 +887,18 @@ Horizontal Rule:
 
 	<h2 class="component-heading">Image Quickview</h2>
 
-	<p>Just link to a <b>.jpg, .gif,</b> or <b>.png</b> image. <a href="/src/images/placeholders/argyros_forum.jpg">It's really that simple!</a></p>
+	<p>Just link to a <b>.jpg, .gif,</b> or <b>.png</b> image. <a href="/assets/placeholders/argyros_forum.jpg">It's really that simple!</a></p>
 
 	<div class="row">
-		<a href="/src/images/placeholders/chapman_radio.jpg" class="box" style="background-image:url(/src/images/placeholders/chapman_radio.jpg);"></a>
-		<a href="/src/images/placeholders/irvine_lecture_hall.jpg" class="box" style="background-image:url(/src/images/placeholders/irvine_lecture_hall.jpg);"></a>
-		<a href="/src/images/placeholders/lecture_hall.jpg" class="box" style="background-image:url(/src/images/placeholders/lecture_hall.jpg);"></a>
-		<a href="/src/images/placeholders/memorial_lawn.jpg" class="box" style="background-image:url(/src/images/placeholders/memorial_lawn.jpg);"></a>
-		<a href="/src/images/placeholders/piazza.jpg" class="box" style="background-image:url(/src/images/placeholders/piazza.jpg);"></a>
+		<a href="/assets/placeholders/chapman_radio.jpg" class="box" style="background-image:url(/assets/placeholders/chapman_radio.jpg);"></a>
+
+		<a href="/assets/placeholders/irvine_lecture_hall.jpg" class="box" style="background-image:url(/assets/placeholders/irvine_lecture_hall.jpg);"></a>
+
+		<a href="/assets/placeholders/lecture_hall.jpg" class="box" style="background-image:url(/assets/placeholders/lecture_hall.jpg);"></a>
+
+		<a href="/assets/placeholders/memorial_lawn.jpg" class="box" style="background-image:url(/assets/placeholders/memorial_lawn.jpg);"></a>
+
+		<a href="/assets/placeholders/piazza.jpg" class="box" style="background-image:url(/assets/placeholders/piazza.jpg);"></a>
 	</div>
 
 	<h2 class="component-heading">Content/HTML Quickview</h2>
