@@ -31,8 +31,8 @@ task :release do
 	puts "version has been bumped from #{old_version} to #{bower["version"]}"
 	
 	# Run the git commands
-	git_commit = "git commit -am \"#{commit_message}\""
 	git_add = "git add ."
+	git_commit = "git commit -am \"#{commit_message}\""
 	puts `#{git_add}`
 	puts `#{git_commit}`
 

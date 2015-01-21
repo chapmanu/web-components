@@ -4,15 +4,10 @@ require 'json'
 # ::: CONFIGURATION ::: #
 #########################
 
-task :serve do
-	puts `jekyll serve -w`
-end
-
 task :release do
 	# First git pull
 	git_pull = "git pull --tags"
 	puts `#{git_pull}`
-
 
 	# Get the release commit message
 	print "Please enter your release commit message: "
@@ -36,12 +31,20 @@ task :release do
 	puts "version has been bumped from #{old_version} to #{bower["version"]}"
 	
 	# Run the git commands
-	git_commit = "git commit -am \"#{commit_message}\""
 	git_add = "git add ."
+	git_commit = "git commit -am \"#{commit_message}\""
 	puts `#{git_add}`
 	puts `#{git_commit}`
 
 	# Tag it with the version
 	git_tag = "git tag -a v#{bower["version"]} -m '#{commit_message}'"
 	puts `#{git_tag}`
+
+	# Ask if they want to push to github
+	print "Would you like to push your commits to git github? (Y/n)"
+	answer = STDIN.gets.strip.downcase
+	if answer == 'y'
+		puts `git push --tags`
+	end
+	puts "All done :)"
 end
