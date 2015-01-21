@@ -1,0 +1,121 @@
+
+
+/***************************************************
+* Configuration
+***************************************************/
+$gutters: 2%;
+$column-prefix: 'column-';
+$column-number: 16; // how many columns?
+$disable-grid-at: 's'; // At what size should all columns switch to rows?
+
+
+/***************************************************
+* Setup
+***************************************************/
+
+//
+// Create variable-number grid columns given the value
+// for variable `$column-number`
+//
+@mixin grid-setup($number: $column-number) {
+  // Assign percentage-based widths for columns
+  @for $i from 1 through $number {
+    .#{$column-prefix + $i} { width: 100% / $number * $i; }
+  }
+
+  @for $i from 1 through $number {
+    // Style all but the last column
+    $width-of-column: (100% - $gutters * ($number - 1)) / $number;
+
+    .gutters .#{$column-prefix + $i} {
+      width: $width-of-column * $i + $gutters * ($i - 1);
+      content: $gutters * ($i - 1);
+    }
+  }
+}
+
+//
+// Create proper `.push-` classes given the value
+// for variable `$column-number`
+//
+@mixin push-setup($number: $column-number) {
+  @for $i from 1 to $number {
+    .push-#{$i} { left: 100% / $number * $i; }
+  }
+
+  @for $i from 1 to $number {
+    .gutters .push-#{$i} { left: 100% / $number * $i - $gutters; }
+  }
+}
+
+//
+// Create proper `.pull-` classes given the value
+// for variable `$column-number`
+//
+@mixin pull-setup($number: $column-number) {
+  @for $i from 1 to $number {
+    .pull-#{$i} { right: 100% / $number * $i; }
+  }
+
+  @for $i from 1 to $number {
+    .gutters .pull-#{$i} { right: 100% / $number * $i - $gutters; }
+  }
+}
+
+
+/***************************************************
+* Grid
+***************************************************/
+.row {
+	width: 100%;
+
+	&:after {
+		clear: both;
+		content: " ";
+		display: table;
+	}
+}
+
+[class*='#{$column-prefix}'] {
+	background-clip: padding-box;
+
+	&.right { float: right; }
+
+	img { max-width: 100%; }
+}
+
+@include breakpoint($disable-grid-at) {
+	[class*='#{$column-prefix}'] { float: left; }
+
+	.gutters [class*='#{$column-prefix}'] {
+		margin-left: $gutters;
+
+		&:first-child { margin-left: 0; }
+	}
+
+	// Row columns
+	@include grid-setup();
+
+	// Push / pull
+	[class*='push-'] { position: relative; }
+	@include push-setup();
+
+	[class*='pull-'] { position: relative; }
+	@include pull-setup();
+
+}
+
+
+// Non-responsive grid
+.non-responsive {
+	[class*='#{$column-prefix}'] {
+		float: left;
+		width: auto !important;
+	}
+
+	.gutters [class*='#{$column-prefix}'],
+	&.gutters [class*='#{$column-prefix}'] { margin-left: $gutters; }
+
+	.gutters [class*='#{$column-prefix}']:first-child,
+	&.gutters [class*='#{$column-prefix}']:first-child { margin-left: 0; }
+}

@@ -1,0 +1,58 @@
+
+
+/***************************************************
+* Reset things and create consistent styles
+***************************************************/
+html, body { margin:0; padding: 0; }
+
+*:first-child { margin-top:0; }
+
+h1 { margin:8px 0; }
+h2 { margin:7px 0; }
+h3 { margin:6px 0; }
+h4 { margin:5px 0; }
+h5 { margin:4px 0; }
+h6 { margin:3px 0; }
+
+a,
+a:link { text-decoration:none; }
+a:hover,
+a:focus { text-decoration:underline; }
+a img { border:none; outline:none; }
+
+hr { border:none; height:2px; background:#CCCCCC; margin:40px 0; clear:both; }
+
+img, svg { max-height: 100%; max-width: 100%; }
+img { height:auto; }
+svg { height: 100%; width: 100%; }
+iframe { max-width:100%; }
+
+.alignnone   { clear: both; display: block; margin: 10px 0; }
+.aligncenter { clear: both; display: block; margin:0 auto; max-width:100%; }
+.alignright  { float: right; margin-left:15px; margin-bottom:5px; margin-top:5px; max-width:60%; }
+.alignleft   { float: left; margin-right:15px; margin-bottom:5px; margin-top:5px; max-width:60%; }
+
+blockquote {
+	border-left: 5px solid #CCC;
+	padding: 20px;
+	background: #F3F3F3;
+	background: rgba(0,0,0,0.05);
+	overflow: auto;
+	clear: both;
+}
+
+@media only screen and (max-width:670px) {
+	blockquote { margin:15px 0; }
+}
+
+::-webkit-selection { background: #a82439; color: #fff; text-shadow: none; }
+   ::-moz-selection { background: #a82439; color: #fff; text-shadow: none; }
+        ::selection { background: #a82439; color: #fff; text-shadow: none; }
+
+.clearfix {
+   &:after{
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

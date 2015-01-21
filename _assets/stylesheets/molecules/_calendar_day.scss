@@ -1,0 +1,28 @@
+.calendar-day {
+  width: 135px;
+  border-radius: 10px 10px 0 0;
+  background: $color-dark-gray;
+  color: #FFFFFF;
+  text-align: center;
+  .weekday {
+      display: block;
+      background: $color-chapman-red;
+      padding: 6px;
+      border-radius: 5px 5px 0 0;
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: uppercase;
+  }
+  .day-num {
+      display: block;
+      padding: 4px 0 0 0;
+      font-size: 56px;
+      font-weight: bold;
+  }
+  .month-year {
+      display: block;
+      padding: 6px 0 16px 0;
+      font-size: 12px;
+      font-weight: 100;
+  }
+}
