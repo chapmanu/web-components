@@ -11,7 +11,7 @@ task :release do
 	commit_message = STDIN.gets.strip
 
 	# Copy the assets into the dist folder
-	FileUtils.cp_r('_site/assets', 'dist')
+	FileUtils.cp_r('_site/assets/.', 'dist')
 
 	# Get the version from the bower.json File
 	bower = JSON.parse(File.read('bower.json'))
