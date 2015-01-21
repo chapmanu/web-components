@@ -35,5 +35,5 @@ task :release do
 
 	# Tag it with the version
 	git_tag = "git tag -a v#{bower["version"]} -m '#{commit_message}'"
-	puts git_tag
+	puts `#{git_tag}`
 end
