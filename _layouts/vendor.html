@@ -4,30 +4,21 @@
 	  <meta charset="utf-8">
 	  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	  <meta name="viewport" content="width=device-width, initial-scale=1">
-	  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+	  <title>{% if page.title %}    {{ page.title }}     {% else %}    {{ site.title }}    {% endif %}</title>
+	  <link href="//www2.chapman.edu/assets/images/favicon.ico" rel="shortcut icon">
 
 	  <!-- STYLE -->
-	  {% stylesheet cu_components %}
-	  {% stylesheet site %}
+	  {% stylesheet cu_vendor_themes %}
 
 	  <!-- SCRIPTS -->
 	  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
 	  <script type="text/javascript" src="//use.typekit.net/nqy1aog.js"></script>
 	  <script>try{Typekit.load();}catch(e){}</script>
-	  {% javascript cu_components %}
-	  {% javascript site %}
+	  {% javascript cu_vendor_themes %}
 	</head>
 
 	<body>
-	
-	<div class="page-content">
-	  <div class="wrapper">
 	    {{ content }}
-	  </div>
-	</div>
-
-	{% include footer.html %}
-
 	</body>
 
 </html>
