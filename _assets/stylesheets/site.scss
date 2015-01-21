@@ -1,8 +1,9 @@
 .page-content {
 	margin-left: 185px;
-	margin-top: 35px;
-  width: 80%;
-  outline: 1px solid blue;
+  margin-top: 35px;
+  margin-right: 40px;
+  overflow: hidden;
+  min-width: 740px;
 }
 
 .component-heading {
@@ -71,7 +72,7 @@
   padding-top: 3em;
 }
 
-#atoms, #molecules, #organisms, #js, #layout, #forms, #error, #icons, #vendor {
+#atoms, #molecules, #organisms, #js, #layout, #forms, #error, #icons, #vendor, #omni-nav {
   font-size: 40px;
 }
 
