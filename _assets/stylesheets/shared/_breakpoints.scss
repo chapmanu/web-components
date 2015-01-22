@@ -14,27 +14,27 @@ $xl: 80em; /* 1280px */
 * SASS Mixin for Breakpoints
 ***************************************************/
 @mixin breakpoint($point) {
-	@if to_lower_case($point) == xs {
-		@media (min-width: $xs)  { @content; }
-	}
-	@else if to_lower_case($point) == s {
-		@media (min-width: $s)  { @content; }
-	}
-	@else if to_lower_case($point) == m {
-		@media (min-width: $m) { @content; }
-	}
-	@else if to_lower_case($point) == l {
-		@media (min-width: $l) { @content; }
-	}
-	@else if to_lower_case($point) == xl {
-		@media (min-width: $xl) { @content; }
-	}
-	@else if to_lower_case($point) == hdpi {
-		@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-					 only screen and (min--moz-device-pixel-ratio: 1.5),
-					 only screen and (-o-min-device-pixel-ratio: 3/2),
-					 only screen and (min-device-pixel-ratio: 1.5) { @content; }
-	}
+  @if to_lower_case($point) == to_lower_case(xs) {
+    @media (min-width: $xs) { @content; }
+  }
+  @else if to_lower_case($point) == to_lower_case(s) {
+    @media (min-width: $s) { @content; }
+  }
+  @else if to_lower_case($point) == to_lower_case(m) {
+    @media (min-width: $m) { @content; }
+  }
+  @else if to_lower_case($point) == to_lower_case(l) {
+    @media (min-width: $l) { @content; }
+  }
+  @else if to_lower_case($point) == to_lower_case(xl) {
+    @media (min-width: $xl) { @content; }
+  }
+  @else if to_lower_case($point) == to_lower_case(hdpi) {
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+      only screen and (min--moz-device-pixel-ratio: 1.5),
+      only screen and (-o-min-device-pixel-ratio: 3/2),
+      only screen and (min-device-pixel-ratio: 1.5) { @content; }
+  }
 }
 
 

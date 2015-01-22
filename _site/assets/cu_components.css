@@ -1560,11 +1560,13 @@ a.button {
   display: block;
   width: 100%;
   box-sizing: border-box;
-  font-size: 16px;
+  font-size: 14px;
+  font-weight: 500;
   text-align: center;
   line-height: 16px;
-  padding: 15px 25px;
-  margin: 6px 0; }
+  padding: 12px 20px;
+  margin: 6px 0;
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.1), 0px 2px 1px 0px rgba(0, 0, 0, 0.12); }
   @media (min-width: 48em) {
     .button,
     a.button {
@@ -1574,45 +1576,56 @@ a.button {
       text-align: inherit; } }
   .button:hover,
   a.button:hover {
-    color: #000;
-    opacity: 0.9;
+    color: #353430;
+    background: #9a9996;
+    transition: background 0.4s ease;
     text-decoration: none; }
   .button.red, .button.primary,
   a.button.red,
   a.button.primary {
     background-color: #a82439;
-    color: #FFF; }
+    color: #FFF;
+    box-shadow: 0px 1px 0px 0px rgba(75, 0, 12, 0.8), 0px 2px 1px 0px rgba(75, 0, 12, 0.3); }
     .button.red:hover, .button.primary:hover,
     a.button.red:hover,
     a.button.primary:hover {
-      color: #FFF; }
+      color: #FFF;
+      background: #741524;
+      transition: background 0.4s ease; }
   .button.blue, .button.secondary,
   a.button.blue,
   a.button.secondary {
-    background-color: #02bac1;
-    color: #FFF; }
+    background-color: #407892;
+    color: #FFF;
+    box-shadow: 0px 1px 0px 0px rgba(11, 39, 52, 0.7), 0px 2px 1px 0px rgba(11, 39, 52, 0.3); }
     .button.blue:hover, .button.secondary:hover,
     a.button.blue:hover,
     a.button.secondary:hover {
-      color: #FFF; }
+      color: #FFF;
+      background: #14253f;
+      transition: background 0.4s ease; }
 
 .calendar-day {
   width: 135px;
   border-radius: 10px 10px 0 0;
-  background: #353430;
-  color: #FFFFFF;
-  text-align: center; }
+  text-align: center;
+  font-family: "proxima-nova", "Helvetica Neue", "Microsoft Sans Serif", sans-serif;
+  background: #FFF;
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.1), 0px 1px 1px 1px rgba(0, 0, 0, 0.08); }
+  .calendar-day.dark {
+    color: #FFFFFF;
+    background: #353430; }
   .calendar-day .weekday {
     display: block;
+    color: #FFFFFF;
     background: #a82439;
     padding: 6px;
     border-radius: 5px 5px 0 0;
     font-size: 14px;
-    font-weight: bold;
-    text-transform: uppercase; }
+    font-weight: 500; }
   .calendar-day .day-num {
     display: block;
-    padding: 4px 0 0 0;
+    padding: 8px 0 0 0;
     font-size: 56px;
     font-weight: bold; }
   .calendar-day .month-year {
@@ -1626,17 +1639,25 @@ a.button {
   display: block;
   margin: 7px 0;
   width: 40px;
-  color: #EEEEEE;
-  text-align: center; }
+  text-align: center;
+  -moz-box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.1), 0px 1px 1px 1px rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.1), 0px 1px 1px 1px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.1), 0px 1px 1px 1px rgba(0, 0, 0, 0.08); }
 
 .calendar-box {
   position: relative;
   box-sizing: border-box;
   padding: 15px 10px 6px 10px;
   border-radius: 5px 5px 0 0;
-  background: #353430;
+  background: #FFF;
   font-size: 16px;
   font-weight: 100; }
+  .calendar-box.dark {
+    color: #EEEEEE;
+    background: #353430; }
+  .calendar-boxes.dark .calendar-box {
+    color: #EEEEEE;
+    background: #353430; }
   .calendar-box:before {
     position: absolute;
     display: block;
@@ -1709,13 +1730,18 @@ a.button {
   position: relative;
   width: 135px;
   border-radius: 3px 3px 0 0;
-  overflow: hidden; }
+  overflow: hidden;
+  font-family: "proxima-nova", "Helvetica Neue", "Microsoft Sans Serif", sans-serif;
+  -moz-box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.1), 0px 1px 1px 1px rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.1), 0px 1px 1px 1px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.1), 0px 1px 1px 1px rgba(0, 0, 0, 0.08); }
   .cu_calendar .year {
     text-align: center;
     background: #a82439;
     color: #FFF;
     font-size: 12px;
-    padding: 5px; }
+    padding: 5px;
+    font-family: "proxima-nova", "Helvetica Neue", "Microsoft Sans Serif", sans-serif; }
   .cu_calendar .month {
     text-align: center;
     background: #353430;
@@ -1724,7 +1750,6 @@ a.button {
     font-size: 18px;
     padding: 6px 8px; }
   .cu_calendar .days {
-    border: 1px solid #dbdbdb;
     border-top: none;
     padding: 6px;
     background-color: #FFF; }
@@ -1750,10 +1775,10 @@ a.button {
         margin-right: 1%; }
       .cu_calendar .days .row .day.highlight-dark {
         color: #FFF;
-        background: #02bac1;
+        background: #407892;
         border-radius: 50%; }
       .cu_calendar .days .row .day.highlight-light {
-        background: #ddfdff;
+        background: #f1f7f9;
         border-radius: 50%; }
     .cu_calendar .days .row a.day {
       cursor: pointer;
@@ -1762,19 +1787,19 @@ a.button {
     background: #353430;
     border-color: #353430; }
     .cu_calendar.dark .days a.day {
-      color: #78f9fe; }
+      color: #abcbda; }
     .cu_calendar.dark .days .day {
       color: #FFF; }
       .cu_calendar.dark .days .day.highlight-light {
-        background: #01595c; }
+        background: #213e4b; }
   .cu_calendar .nav-prev {
     position: absolute;
     top: 22px;
-    left: 4px;
+    left: 6px;
     width: 40px;
     height: 30px;
     background: inline-image("icons/arrow_left.svg") no-repeat center left;
-    background-size: 14px;
+    background-size: 10px;
     cursor: pointer;
     opacity: 0.5; }
     .cu_calendar .nav-prev:hover {
@@ -1782,15 +1807,28 @@ a.button {
   .cu_calendar .nav-next {
     position: absolute;
     top: 22px;
-    right: 4px;
+    right: 6px;
     width: 40px;
     height: 30px;
     background: inline-image("icons/arrow_right.svg") no-repeat center right;
-    background-size: 14px;
+    background-size: 10px;
     cursor: pointer;
     opacity: 0.5; }
     .cu_calendar .nav-next:hover {
       opacity: 1; }
+
+.ellipsis {
+  display: inline-block;
+  height: 0.6em;
+  line-height: 0.46em;
+  background: #e2e2e1;
+  color: #62605a;
+  padding: 0 0.1em;
+  padding-left: 0.2em;
+  letter-spacing: 0.1em;
+  text-align: center; }
+  .ellipsis::after {
+    content: '•••'; }
 
 /***************************************************
 * Story Block
@@ -2649,7 +2687,7 @@ a.button {
   background-color: #f7f6f0;
   font-family: proxima-nova;
   text-align: left;
-  color: #02bac1;
+  color: #407892;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13);
   line-height: 14px;
   font-size: 12px;
@@ -2658,7 +2696,7 @@ a.button {
   padding: 20px 20px 20px 20px;
   word-wrap: break-word; }
   .fact-link:hover {
-    color: #01898f; }
+    color: #305b6f; }
 
 /*
 .fact-image{

@@ -25,13 +25,25 @@
 
 
 	<h2 class="component-heading">Calendar Icons</h2>
-	{% include molecules/calendar_day.html %}
-	{% include molecules/calendar_box.html %}
-	{% include molecules/calendar_boxes.html %}
+	<div style="overflow:auto;">
+		<div style="float:left; margin-right: 30px;">
+			{% include molecules/calendar_day.html %}
+			{% include molecules/calendar_box.html %}
+			{% include molecules/calendar_boxes.html %}
+		</div>
+		<div style="float:left; margin-right: 30px;">
+			{% include molecules/calendar_day_dark.html %}
+			{% include molecules/calendar_box_dark.html %}
+			{% include molecules/calendar_boxes_dark.html %}
+		</div>
 
+	</div>
 
 	<h2 class="component-heading">Buttons</h2>
 	{% include molecules/button.html %}
+
+	<br>
+	{% include molecules/ellipsis.html %}
 
 
 
