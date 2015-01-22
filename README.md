@@ -35,3 +35,5 @@ Modify files in the `/src/` directory. These are compiled and minified into the 
 1. **Shared** - Components which are loaded on to every page, across every website. 
 2. **Molecules** - Simple elements like buttons, date pickers, or tables.
 3. **Organisms** - Specific, complete objects such as a story tile, event preview, or tweet.
+
+Readme is changed
