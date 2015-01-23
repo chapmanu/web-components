@@ -15,6 +15,13 @@ task :release do
   bot = ReleaseRobot.new 'bower.json'
   bot.welcome
 
+  bot.inform "Checking for any uncommitted changes..."
+  if bot.uncommitted_changes?
+
+  else
+
+  end
+
   bot.inform "Checking if your branch is up-to-date with the remote..."
   if bot.branch_up_to_date?
     bot.inform "Cool. Everything is up to date."
