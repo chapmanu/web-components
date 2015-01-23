@@ -5,6 +5,11 @@ require './_plugins/release_robot.rb'
 # ::: CONFIGURATION ::: #
 #########################
 
+task :serve do
+  `bundle exec guard`
+end
+
+
 task :release do
   # Print the ascii art!
   bot = ReleaseRobot.new 'bower.json'

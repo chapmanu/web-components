@@ -6,6 +6,7 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "URL" # the base hostname & protocol for your site
 twitter_username: chapmanu
 github_username:  chapmanu
+exclude: ["dist", "bower.json", "Gemfile", "Gemfile.lock", "Guardfile", "Rakefile", "README.md"]
 
 # Build settings
 markdown: kramdown
