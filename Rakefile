@@ -11,6 +11,7 @@ end
 
 
 task :release do
+  begin
   bot = ReleaseRobot.new 'bower.json'
   
   # Welcome!
@@ -66,4 +67,8 @@ task :release do
 
   # Goodbye
   bot.all_done
+
+  rescue Interrupt => e
+    puts "Release Cancelled"
+  end
 end
