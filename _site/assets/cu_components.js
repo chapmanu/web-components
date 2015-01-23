@@ -327,15 +327,44 @@ $(document).ready(function() {
 
 	$('a[href^="#"]').on('click',function (e) {
 	    e.preventDefault();
+
+	   	/***************
+		* CONFIGURABLE
+	   	****************/
+
+	    // How fast should the transiion be?
+	    var transition_speed = 400; // milliseconds
+
+	    // How far before we speed up the scroll FX?
+	    var max_scroll_pixels = 2800; // pixels
+
+       	/***************
+    	* DO NOT EDIT BELOW THIS LINE
+       	****************/
 	 
-	    var target = this.hash,
-	    $target = $(target);
+	    var 
+	    target = this.hash,
+		target_offset = $(target).offset().top,
+		window_offset = $(document).scrollTop();
+
+		console.log("Target: "+target_offset);
+		console.log("Window: "+window_offset);
+
+	    var delta = target_offset - window_offset;
 	 
+	    if (Math.abs(delta) < max_scroll_pixels) {
+	    	
+	    } else {
+    		transition_speed = 100;
+	    }
+
 	    $('html, body').stop().animate({
-	        'scrollTop': $target.offset().top
-	    }, 900, 'swing', function () {
+	        'scrollTop': target_offset - 50 // 50px less
+	    }, transition_speed, 'swing', function () {
 	        window.location.hash = target;
 	    });
+
+	
 	});
 
 });
