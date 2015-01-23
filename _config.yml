@@ -70,7 +70,7 @@ assets:
   # Whenever or not cache compiled assets (disabled by default).
   # See `Compilation Cache` section of README for details.
   #
-  cache: false
+  cache: true
   #
   # Specifies list of MIME types that needs to have gzipped versions.
   # You can set it to `false` to disable gzipping. Only javascripts and
