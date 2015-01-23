@@ -329,7 +329,7 @@ $(document).ready(function() {
 	    e.preventDefault();
 
 	   	/***************
-		* CONFIGURABLE
+		* CONFIGURATION
 	   	****************/
 
 	    // How fast should the transiion be?
@@ -339,31 +339,24 @@ $(document).ready(function() {
 	    var max_scroll_pixels = 2800; // pixels
 
        	/***************
-    	* DO NOT EDIT BELOW THIS LINE
+    	* END CONFIGURATION
        	****************/
 	 
 	    var 
 	    target = this.hash,
 		target_offset = $(target).offset().top,
-		window_offset = $(document).scrollTop();
-
-		console.log("Target: "+target_offset);
-		console.log("Window: "+window_offset);
-
-	    var delta = target_offset - window_offset;
+		window_offset = $(document).scrollTop(),
+		delta = target_offset - window_offset;
 	 
-	    if (Math.abs(delta) < max_scroll_pixels) {
-	    	
-	    } else {
-    		transition_speed = 100;
+	    if (Math.abs(delta) > max_scroll_pixels) {
+	    	transition_speed = 100;
 	    }
 
 	    $('html, body').stop().animate({
-	        'scrollTop': target_offset - 50 // 50px less
+	        'scrollTop': target_offset
 	    }, transition_speed, 'swing', function () {
 	        window.location.hash = target;
 	    });
-
 	
 	});
 
