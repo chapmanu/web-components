@@ -1,0 +1,148 @@
+
+<h3 id="layout"> Layout </h3>
+	<style>
+	.demo .row {
+		margin-bottom:20px;
+	}
+	.demo [class^=column] {
+		outline: 1px dashed #999;
+		background: #EEE;
+		min-height: 40px;
+	}
+
+	.box {
+		float: left;
+		outline: 1px dashed #999;
+		background: #EEE;
+		min-width:70px;
+
+		padding:10px;
+		text-align: center;
+	}
+	</style>
+
+
+	<h2 class="component-heading">Media Queries</h2>
+
+	<h3>Container</h3>
+
+	<p>Apply the class <b>.container</b> to your main wrapper and it will become centered with the correct width.</p>
+
+	<h3>Sass Mixin</h3>
+
+	<p>You have access to the <b>@include breakpoint(s)</b> mixin for media queries. The following sizes are defined in breakpoints.scss: <b>XS, S, M, L, XL</b></p>
+
+	<h3>HTML Helper classes</h3>
+
+	<p>The following classes will show or hide contents accordingly:</p>
+
+	<div class="row" style="margin-bottom:20px;">
+		<div class="box show-xs">.show-xs</div>
+		<div class="box hide-xs" style="opacity:0.2">.show-xs</div>
+
+		<div class="box show-s">.show-s</div>
+		<div class="box hide-s" style="opacity:0.2">.show-s</div>
+
+		<div class="box show-m">.show-m</div>
+		<div class="box hide-m" style="opacity:0.2">.show-m</div>
+
+		<div class="box show-l">.show-l</div>
+		<div class="box hide-l" style="opacity:0.2">.show-l</div>
+
+		<div class="box show-xl">.show-xl</div>
+		<div class="box hide-xl" style="opacity:0.2">.show-xl</div>
+	</div>
+
+	<div class="row" style="margin-bottom:20px;">
+		<div class="box hide-xs">.hide-xs</div>
+		<div class="box show-xs" style="opacity:0.2">.hide-xs</div>
+
+		<div class="box hide-s">.hide-s</div>
+		<div class="box show-s" style="opacity:0.2">.hide-s</div>
+
+		<div class="box hide-m">.hide-m</div>
+		<div class="box show-m" style="opacity:0.2">.hide-m</div>
+
+		<div class="box hide-l">.hide-l</div>
+		<div class="box show-l" style="opacity:0.2">.hide-l</div>
+
+		<div class="box hide-xl">.hide-xl</div>
+		<div class="box show-xl" style="opacity:0.2">.hide-xl</div>
+	</div>
+
+
+	<h2 class="component-heading">Grid System</h2>
+
+	<p>This grid system was borrowed from the <b>concise</b> framework. Please <a href="http://concisecss.com/documentation/layout/grid/">read the full documentation</a> on how to use the grid system. </p>
+
+	<span class="demo">
+		<div class="row gutters">
+		  <div class="column-16"></div>
+		</div>
+
+		<div class="row gutters">
+		  <div class="column-1"></div>
+		  <div class="column-15"></div>
+		</div>
+
+		<div class="row gutters">
+		  <div class="column-2"></div>
+		  <div class="column-14"></div>
+		</div>
+
+		<div class="row gutters">
+		  <div class="column-3"></div>
+		  <div class="column-13"></div>
+		</div>
+
+		<div class="row gutters">
+		  <div class="column-4"></div>
+		  <div class="column-12"></div>
+		</div>
+
+		<div class="row gutters">
+		  <div class="column-5"></div>
+		  <div class="column-11"></div>
+		</div>
+
+		<div class="row gutters">
+		  <div class="column-6"></div>
+		  <div class="column-10"></div>
+		</div>
+
+		<div class="row gutters">
+		  <div class="column-7"></div>
+		  <div class="column-9"></div>
+		</div>
+
+		<div class="row gutters">
+		  <div class="column-8"></div>
+		  <div class="column-8"></div>
+		</div>
+
+		<div class="row gutters">
+		  <div class="column-4"></div>
+		  <div class="column-4"></div>
+		  <div class="column-4"></div>
+		  <div class="column-4"></div>
+		</div>
+
+		<div class="row gutters">
+		  <div class="column-2"></div>
+		  <div class="column-2"></div>
+		  <div class="column-2"></div>
+		  <div class="column-2"></div>
+		  <div class="column-2"></div>
+		  <div class="column-2"></div>
+		  <div class="column-2"></div>
+		  <div class="column-2"></div>
+		</div>
+	</span>
+
+	<p>Concise comes with a fluid, mobile-first grid system. Once the viewport of a device is larger than 768px, the rows of the grid display with 16 columns. Getting started with the grid system is as easy as wrapping any of the .column-* classes inside of a .row class.</p>
+
+	<p>By default, no gutters are added onto any of the grid columns. However, simply adding the class .gutters to your .row class provides a 2% gutter to each of the columns, except for the first one.</p>
+
+	<p>You also can nest grids inside of each other by nesting a .row class inside of a column.</p>
+
+

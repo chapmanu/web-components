@@ -1,0 +1,12 @@
+.ellipsis {
+display: inline-block;
+height: 0.6em;
+line-height: 0.46em; // This works great only for our font
+background: $gray-cement;
+color: $gray-slate;
+padding: 0 0.1em;
+padding-left: 0.2em; // to compensate for the letter spacing
+letter-spacing: 0.1em;
+text-align: center;
+&::after { content: '•••'; }
+}

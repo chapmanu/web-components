@@ -1,6 +1,6 @@
 {
   "name": "chapman-web-components",
-  "version": "0.0.60",
+  "version": "0.1.5",
   "keywords": [
     "Chapman University",
     "Chapman",
@@ -8,27 +8,20 @@
     "Components"
   ],
   "main": [
-    "dist/cu_components.css",
-    "dist/cu_components.js"
+    "_site/assets/cu_components.css",
+    "_site/assets/cu_components.js"
   ],
   "ignore": [
-    "app",
-    "test",
-    ".bower.json",
-    ".bowerrc",
+    ".sass-cache",
+    "_demos",
+    "_includes",
+    "_layouts",
+    "_plugins",
     ".editorconfig",
-    ".gitattributes",
-    ".gitignore",
-    ".jshintrc",
-    ".yo-rc.json",
-    "README.md",
-    "bower.json",
-    "gulpfile.js",
-    "package.json"
-  ],
-  "dependencies": {
-    "modernizr": "~2.6.2",
-    "jquery": "~1.11.0"
-  },
-  "devDependencies": {}
+    "_config.yml",
+    "Gemfile",
+    "Gemfile.lock",
+    "index.html",
+    "Rakefile"
+  ]
 }

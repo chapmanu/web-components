@@ -1,5 +1,2 @@
-node_modules
-.tmp
+_site
 .sass-cache
-src/bower_components
-test/bower_components
