@@ -26,7 +26,7 @@ class ReleaseRobot
   end
 
   def inform(phrase)
-    puts "  #{phrase}".colorize(:green)
+    puts "#{phrase}".colorize(:green)
   end
 
   def inform_print(phrase)
@@ -147,7 +147,7 @@ class ReleaseRobot
   end
 
   def print_monogram
-    puts File.read('_plugins/cu_ascii.txt').colorize(:red)
+    puts File.read('_plugins/title.txt')
   end
 
   def parse_bower
