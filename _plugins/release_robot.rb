@@ -75,7 +75,7 @@ class ReleaseRobot
 
   def tag
     inform "Running git tag -a v#{@next_version}"
-    `git tag -a v#{@next_version} -m #{@commit_message}`
+    `git tag -a v#{@next_version} -m "#{@commit_message}"`
   end
 
   def push
