@@ -10,11 +10,11 @@ task :release do
   bot = ReleaseRobot.new 'bower.json'
   bot.welcome
 
-  bot.inform_print "Checking if your branch is up-to-date with the remote..."
+  bot.inform "Checking if your branch is up-to-date with the remote..."
   if bot.branch_up_to_date?
-    bot.inform_print "it is!\n"
+    bot.inform "Cool. Everything is up to date."
   else
-    bot.inform_print "it is not.\n"
+    bot.inform "Uh oh. Your branch is behind the remote."
     should_pull = bot.prompt "Would you like to run git pull? (Y/n) "
     if should_pull.downcase == 'y'
       bot.pull
