@@ -35,7 +35,7 @@ class ReleaseRobot
 
   def branch_up_to_date?
     `git remote update`
-    !!(`git status -uno` =~ /up-to-date/)
+    !!(`git status -uno` =~ /(up-to-date|branch is ahead)/)
   end
 
   def pull
@@ -146,6 +146,6 @@ class ReleaseRobot
   end
 
   def parse_bower
-    @bower_file = JSON.parse(File.read(bower_file))
+    @bower_file = JSON.parse(File.read('bower.json'))
   end
 end
