@@ -20,7 +20,7 @@ Installation and setup:
 
 # File Structure
 
-Modify images, javascript, and styles in the `/_assets/` directory. Modify html in the `/_includes/` directory. These are compiled and minified into the `/_site/` directory for usage. Files are generally stored in one of three folders:
+Modify images, javascript, and styles in the `/_assets/` directory. Modify html in the `/_includes/` directory. These are compiled and minified into the `/_site/` directory for usage. Files are generally stored in one of three folders :
 
 1. **Shared** - Components which are loaded on to every page, across every website. 
 2. **Molecules** - Simple elements like buttons, date pickers, or tables.
