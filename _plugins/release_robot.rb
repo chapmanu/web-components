@@ -38,6 +38,10 @@ class ReleaseRobot
     !!(`git status -uno` =~ /(up-to-date|branch is ahead)/)
   end
 
+  def nothing_to_commit?
+    !!(`git status` =~ /nothing to commit/)
+  end
+
   def pull
     inform "Running git pull"
     puts `git pull`

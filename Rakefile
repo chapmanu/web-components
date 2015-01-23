@@ -16,10 +16,11 @@ task :release do
   bot.welcome
 
   bot.inform "Checking for any uncommitted changes..."
-  if bot.uncommitted_changes?
-
+  if bot.nothing_to_commit?
+    bot.inform "All changes committed :)"
   else
-
+    bot.inform "You have uncommitted changes.  Please commit them first, then run `rake release` again."
+    next
   end
 
   bot.inform "Checking if your branch is up-to-date with the remote..."
