@@ -16,7 +16,7 @@ Installation and setup:
 1. 	`git clone git@github.com:chapmanu/web-components.git`
 2. 	`cd web-components`
 3. 	`bundle install`
-4. 	`bundle exec guard`
+4. 	`rake serve`
 
 # File Structure
 
