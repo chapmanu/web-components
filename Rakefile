@@ -60,7 +60,7 @@ task :release do
     bot.tag
     bot.push
     bot.push_tags
-    bot.push_gh_pages
+    # bot.push_gh_pages
   else
      bot.inform "Ok, not gonna do anything then..."
   end
