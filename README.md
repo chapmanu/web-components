@@ -6,7 +6,7 @@ A build system for common front-end web components used across Chapman Universit
 
 # Necessary downloads
 
-Ruby - https://www.ruby-lang.org/en/
+Ruby - https://www.ruby-lang.org/en/  
 Ruby Gems - https://rubygems.org/pages/download
 
 # Development
