@@ -61,7 +61,7 @@ class ReleaseRobot
 
   def update_bower_file
     raise "NeedTheNextVersionNumber" if @next_version == nil
-    inform "updating bower.json to version #{@current_version.bold}"
+    inform "Updating bower.json to version #{@current_version.bold}"
     @bower_file["version"] = @next_version
     File.write('bower.json', JSON.pretty_generate(@bower_file))
   end
