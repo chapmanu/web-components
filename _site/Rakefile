@@ -1,50 +1,45 @@
 require 'json'
+require './_plugins/release_robot.rb'
 
 #########################
 # ::: CONFIGURATION ::: #
 #########################
 
 task :release do
-	# First git pull
-	git_pull = "git pull --tags"
-	puts `#{git_pull}`
+  # Print the ascii art!
+  bot = ReleaseRobot.new 'bower.json'
+  bot.welcome
 
-	# Get the release commit message
-	print "Please enter your release commit message: "
-	commit_message = STDIN.gets.strip
+  bot.inform_print "Checking if your branch is up-to-date with the remote..."
+  if bot.branch_up_to_date?
+    bot.inform_print "it is!\n"
+  else
+    bot.inform_print "it is not.\n"
+    should_pull = bot.prompt "Would you like to run git pull? (Y/n) "
+    if should_pull.downcase == 'y'
+      bot.pull
+      bot.pull_tags
+    else
+      bot.inform "You will need to pull before we can continue."
+      next
+    end
+  end
 
-	# Copy the assets into the dist folder
-	FileUtils.rm_r('dist', force: true)
-	FileUtils.cp_r('_site/assets/.', 'dist')
+  release_type_key = bot.prompt "What type of release is this?\n1) Major\n2) Minor\n3) Patch\nSelect number 1, 2 or 3: "
+  bot.commit_message = bot.prompt "Commit message for this release: "
 
-	# Get the version from the bower.json File
-	bower = JSON.parse(File.read('bower.json'))
-	old_version = bower["version"]
-	version = bower["version"].split('.').map(&:to_i)
-	
-	# Bump the version (TODO MORE ON THIS LATER)
-	version[2] += 1
-	bower["version"] = version.join('.')
-	
-	# Write back to the bower.json file
-	File.write('bower.json', JSON.pretty_generate(bower))
-	puts "version has been bumped from #{old_version} to #{bower["version"]}"
-	
-	# Run the git commands
-	git_add = "git add ."
-	git_commit = "git commit -am \"#{commit_message}\""
-	puts `#{git_add}`
-	puts `#{git_commit}`
-
-	# Tag it with the version
-	git_tag = "git tag -a v#{bower["version"]} -m '#{commit_message}'"
-	puts `#{git_tag}`
-
-	# Ask if they want to push to github
-	print "Would you like to push your commits to git github? (Y/n)"
-	answer = STDIN.gets.strip.downcase
-	if answer == 'y'
-		puts `git push --tags`
-	end
-	puts "All done :)"
+  release_type_map = {"1" => "major", "2" => "minor", "3" => "patch"}
+  bot.bump_version(release_type_map[release_type_key])
+  
+  if bot.you_sure?
+    bot.build
+    bot.update_dist
+    bot.update_bower_file
+    bot.commit
+    bot.tag
+    bot.push
+    bot.push_tags
+  else
+     bot.inform "Ok, not gonna do anything then..."
+  end
 end
