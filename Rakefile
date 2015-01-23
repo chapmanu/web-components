@@ -6,7 +6,7 @@ require './_plugins/release_robot.rb'
 #########################
 
 task :serve do
-  `bundle exec guard`
+  exec("bundle exec guard")
 end
 
 
