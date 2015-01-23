@@ -21,8 +21,8 @@ task :release do
       bot.pull_tags
     else
       bot.inform "You will need to pull before we can continue."
-      next
     end
+    next
   end
 
   release_type_key = bot.prompt "What type of release is this?\n1) Major\n2) Minor\n3) Patch\nSelect number 1, 2 or 3: "
@@ -42,4 +42,6 @@ task :release do
   else
      bot.inform "Ok, not gonna do anything then..."
   end
+
+  bot.all_done
 end

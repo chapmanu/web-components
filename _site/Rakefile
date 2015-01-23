@@ -42,4 +42,6 @@ task :release do
   else
      bot.inform "Ok, not gonna do anything then..."
   end
+
+  bot.all_done
 end

@@ -4,10 +4,10 @@ require 'json'
 class ReleaseRobot
 
   def initialize(bower_file)
-    @bower_file = JSON.parse(File.read(bower_file))
-    @current_version = @bower_file["version"]
-    @next_version = nil
-    @commit_message = nil
+    @bower_file      = nil
+    @current_version = nil
+    @next_version    = nil
+    @commit_message  = nil
   end
 
   def commit_message=(message)
@@ -89,6 +89,8 @@ class ReleaseRobot
   end
 
   def bump_version(version_bump_type)
+    parse_bower
+    @current_version = @bower_file["version"]
     versions = @current_version.split('.').map(&:to_i)
     
     case version_bump_type
@@ -123,6 +125,10 @@ class ReleaseRobot
     puts phrase.colorize(:yellow)
   end
 
+  def all_done
+    robot_says "All done :) Thanks for contributing!"
+  end
+
   private
 
   def robot_says(phrase)
@@ -137,5 +143,9 @@ class ReleaseRobot
 
   def print_monogram
     puts File.read('_plugins/cu_ascii.txt').colorize(:red)
+  end
+
+  def parse_bower
+    @bower_file = JSON.parse(File.read(bower_file))
   end
 end
