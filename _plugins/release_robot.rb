@@ -121,6 +121,7 @@ class ReleaseRobot
     warn "4. Commit all local changes with this message: #{@commit_message.bold.colorize(:white)}"
     warn "5. Tag this commit with v#{@next_version.bold}"
     warn "4. Push all changes and tags to remote branch"
+    warn "5. Push a copy of this branch to github pages to be hosted"
     answer = prompt "Does this sound agreeable to you? (Y/n) "
     answer.downcase == 'y'
   end
