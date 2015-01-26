@@ -1,5 +1,5 @@
 # Chapman University Web Components
-Common front-end web components used across Chapman University websites.  
+> Common front-end web components used across Chapman University websites.  
 
 This project is three things:  
 1. A build system for organizing and processing assets  
