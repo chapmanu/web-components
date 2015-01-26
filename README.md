@@ -1,34 +1,51 @@
-# web-components
+# Chapman University Web Components
 
-View at http://chapmanu.github.io/web-components/
+A build system for common front-end web components used across Chapman University websites.  
 
-A build system for common front-end web components used across Chapman University websites.
+## Demo
 
-# Necessary downloads
+A demo of the Chapman's web-components and instructions on how to use them can be found at http://chapmanu.github.io/web-components/
 
-Ruby - https://www.ruby-lang.org/en/  
-Ruby Gems - https://rubygems.org/pages/download
+## Contributing
 
-# Development
+*Dependencies*  
+Development on this project depends on Ruby and Ruby Gems
+* Ruby - https://www.ruby-lang.org/en/  
+* Ruby Gems - https://rubygems.org/pages/download
 
-Installation and setup:
+*Initial Setup*
 
 1. 	`git clone git@github.com:chapmanu/web-components.git`
 2. 	`cd web-components`
-3. 	`bundle install`
-4. 	`rake serve`
+3. 	`bundle install` Installs ruby gem dependencies
+4. 	`rake serve` Starts the local webserver and watches for changes
+5. 	View your local version of the site at http://localhost:4000
 
-# File Structure
+Note: If you desire a faster feedback loop, you can install the live-reload extention for Chrome or FireFox and connect after running `rake serve`.  This will reload the assets and the browser each time you save a file.
 
-Modify images, javascript, and styles in the `/_assets/` directory. Modify html in the `/_includes/` directory. These are compiled and minified into the `/_site/` directory for usage. Files are generally stored in one of three folders:
+*Frameworks Used*
 
-1. **Shared** - Components which are loaded on to every page, across every website. 
+The demo website uses the Jekyll framework.  Documentation can be found here: http://jekyllrb.com/docs/home/.  Along with jekyll, we the jekyll-assets plugin to create a Rails-like asset pipeline for a jekyll website.  Documentation for that can be found here: https://github.com/ixti/jekyll-assets.
+
+*Development Guidelines*
+
+*Folder Structure*
+
+#### _assets
+Only javascripts and stylesheets located at the root of `_assets/stylesheets` and  `_assets/javascripts` will be compiled and made available to the demo site.  Keep the assets for components organized in seperate files and sub-directories, then "include" them into a "manifest" file at the root of these folders.
+
+When developing a component, it will usually fall into one of these three categories.  Each category has its own sub-folder where the asset file should be saved.
+
+1. **Shared** - Components which are loaded on to every page, across every website.
 2. **Molecules** - Simple elements like buttons, date pickers, or tables.
 3. **Organisms** - Specific, complete objects such as a story tile, event preview, or tweet.
 
-<<<<<<< HEAD
-Readme is cha
-=======
+
+#### index.html
+
+
+
+
 `/_layouts/` contains overall layouts that may be applied by the following header:
 ```
 ---
@@ -39,7 +56,3 @@ layout: default
 #Inclusion Example
 
 `{% include molecules.html %}`
-
-
-
->>>>>>> origin/jekyll-master
