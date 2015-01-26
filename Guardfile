@@ -23,7 +23,7 @@
 #
 # and, you'll have to watch "config/Guardfile" instead of "Guardfile"
 
-guard "jekyll-plus", :extensions => ['js'], :serve => true do 
+guard "jekyll-plus", :extensions => ['js'], :serve => true, config_hash: {baseurl: ''} do 
 	watch /.*/
 	ignore /^_site/
 end

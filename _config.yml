@@ -2,7 +2,7 @@
 title: Chapman Web Components
 email: Email
 description: > # Description
-baseurl: "" # the subpath of your site, e.g. /blog/
+baseurl: "/web-components" # the subpath of your site, e.g. /blog/
 url: "URL" # the base hostname & protocol for your site
 twitter_username: chapmanu
 github_username:  chapmanu
@@ -23,7 +23,7 @@ assets:
   #
   # Base URL of assets paths.
   #
-  baseurl: http://chapmanu.github.io/web-components/assets
+  baseurl: /assets/
   #
   # Pathnames where to find assets relative to the root of the site.
   #

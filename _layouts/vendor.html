@@ -8,13 +8,13 @@
 	  <link href="//www2.chapman.edu/assets/images/favicon.ico" rel="shortcut icon">
 
 	  <!-- STYLE -->
-	  {% stylesheet cu_vendor_themes %}
+	  <link rel="stylesheet" type="text/css" href ="{{ site.baseurl}}{% asset_path cu_vendor_themes.css %}">
 
 	  <!-- SCRIPTS -->
 	  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
 	  <script type="text/javascript" src="//use.typekit.net/nqy1aog.js"></script>
 	  <script>try{Typekit.load();}catch(e){}</script>
-	  {% javascript cu_vendor_themes %}
+	  <script type="text/javascript" src="{{ site.baseurl}}{% asset_path cu_vendor_themes.js %}"></script>
 	</head>
 
 	<body>
