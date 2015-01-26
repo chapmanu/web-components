@@ -3,8 +3,6 @@ require 'json'
 
 class ReleaseRobot
 
-  @@release_type_map = {"1" => "major", "2" => "minor", "3" => "patch"}
-
   def initialize()
     @bower_file      = nil
     @current_version = nil
@@ -12,39 +10,96 @@ class ReleaseRobot
     @commit_message  = nil
   end
 
+
+  ###################################################################
+  # ::: GOES THROUGH THE STEPS OF RELEASING A NEW BOWER VERSION ::: #
+  ###################################################################
+
   def release!
     welcome
+
     return if uncommitted_changes?
 
+    # Check if everything is up to date with git remotes
     if branch_behind_remote? && want_to_pull?
-      pull && pull_tags
+      cmd "git pull"
+      cmd "git pull --tags"
     else
       inform "Please pull the changes, then run `rake release` again"
       return
     end
 
+    # Gather user input about the release
     get_release_message
     get_release_version_type
-      
+    
+    # Confirm and execute
     if you_sure?
-      build
+      cmd "jekyll build"
       update_dist
       update_bower_file
-      commit
-      tag
-      push
-      push_tags
-      # push_gh_pages
+
+      cmd "git add ."
+      cmd "git commit -am '#{@commit_message}'"
+      cmd "git tag -a v#{@next_version} -m '#{@commit_message}'"
+      cmd "git push"
+      cmd "git push --tags"
     else
        bot.inform "Ok, not gonna do anything then..."
     end
 
-    all_done
+    robot_says "All done :) Thanks for contributing!"
   end
 
+  
+  private
+  ##########################
+  # ::: OUTPUT HELPERS ::: #
+  ##########################
+
+  def welcome
+    puts File.read('_plugins/title.txt')
+    robot_says "Hi, I am the web-components release robot!\nLets walk you through the release processes."
+    puts
+  end
+
+  def robot_says(phrase)
+    lines = phrase.split("\n").reverse!
+    robot_text = File.read('_plugins/robot.txt')
+    [34, 15].each_with_index do | spot_to_put_line, index |
+      break unless lines[index]
+      robot_text[spot_to_put_line] = lines[index].bold
+    end
+    puts robot_text
+  end
+
+  def warn(phrase)
+    puts phrase.colorize(:yellow)
+  end
+
+  def prompt(phrase)
+    print phrase
+    STDIN.gets.strip
+  end
+
+  def inform(phrase)
+    puts "#{phrase}".green
+  end
+
+  def cmd(system_command)
+    inform "Running command: `#{system_command}`"
+    output = `#{system_command}`
+    puts output.prepend("  ").gsub("\n", "\n  ").cyan
+    output
+  end
+
+  ##############################
+  # ::: USER INPUT HELPERS ::: #
+  ##############################
+
   def get_release_version_type
-    @release_type_key = prompt "What type of release is this?\n1) Major\n2) Minor\n3) Patch\nSelect number 1, 2 or 3: "
-    bump_version(@@release_type_map[@release_type_key])
+    number = prompt "What type of release is this?\n1) Major\n2) Minor\n3) Patch\nSelect number 1, 2 or 3: "
+    bump_version({"1" => "major", "2" => "minor", "3" => "patch"}[number])
   end
 
   def get_release_message
@@ -55,6 +110,23 @@ class ReleaseRobot
     should_pull = prompt "Would you like to run `git pull` and `git pull --tags`? (Y/n) "
     should_pull.downcase == 'y'
   end
+
+  def you_sure?
+    robot_says "Please confirm that you want me to do the following:"
+    warn "1. Run a fresh build of the assets"
+    warn "2. Update the dist folder with compiled assets"
+    warn "3. Change version in bower.json from #{@current_version.bold} to #{@next_version.bold.colorize(:white)}"
+    warn "4. Commit all local changes with this message: #{@commit_message.bold.colorize(:white)}"
+    warn "5. Tag this commit with v#{@next_version.bold}"
+    warn "4. Push all changes and tags to remote branch"
+    # warn "5. Push a copy of this branch to github pages to be hosted"
+    answer = prompt "Does this sound agreeable to you? (Y/n) "
+    answer.downcase == 'y'
+  end
+
+  #######################
+  # ::: GIT HELPERS ::: #
+  #######################
 
   def uncommitted_changes?
     inform "Checking for any uncommitted changes..."
@@ -67,30 +139,15 @@ class ReleaseRobot
     end
   end
 
-  def commit_message=(message)
-    @commit_message = message
-  end
-
-  def welcome
-    print_monogram
-    robot_says "Hi, I am the web-components release robot!\nLets walk you through the release processes."
-    puts
-  end
-
-  def prompt(phrase)
-    print phrase
-    STDIN.gets.strip
-  end
-
-  def inform(phrase)
-    puts "#{phrase}".blue
+  def nothing_to_commit?
+    !!(cmd("git status") =~ /nothing to commit/)
   end
 
   def branch_behind_remote?
     inform "Checking if your branch is up-to-date with the remote..."
 
-    system "git remote update"
-    up_to_date = !!(`git status -uno` =~ /(up-to-date|branch is ahead)/)
+    cmd "git remote update"
+    up_to_date = !!(cmd("git status -uno") =~ /(up-to-date|branch is ahead)/)
 
     if up_to_date
       inform "Cool. Everything is up to date."
@@ -102,59 +159,9 @@ class ReleaseRobot
     end
   end
 
-  def nothing_to_commit?
-    !!(cmd("git status") =~ /nothing to commit/)
-  end
-
-  def pull
-    inform "Running git pull"
-    puts `git pull`
-  end
-
-  def pull_tags
-    inform "Running git pull --tags"
-    puts `git pull --tags`
-  end
-
-  def build
-    inform "Running jekyll build"
-    `jekyll build`
-  end
-
-  def update_dist
-    inform "Copying _sites/assets into dist"
-    FileUtils.rm_r('dist', force: true)
-    FileUtils.cp_r('_site/assets/.', 'dist')
-  end
-
-  def update_bower_file
-    raise "NeedTheNextVersionNumber" if @next_version == nil
-    inform "Updating bower.json to version #{@current_version.bold}"
-    @bower_file["version"] = @next_version
-    File.write('bower.json', JSON.pretty_generate(@bower_file))
-  end
-
-  def commit
-    inform "Running git add ."
-    `git add .`
-    inform "Running git commit -am \"#{@commit_message}\""
-    `git commit -am "#{@commit_message}"`
-  end
-
-  def tag
-    inform "Running git tag -a v#{@next_version}"
-    `git tag -a v#{@next_version} -m "#{@commit_message}"`
-  end
-
-  def push
-    inform "Running git push"
-    `git push`
-  end
-
-  def push_tags
-    inform "Running git push --tags"
-    `git push --tags`
-  end
+  #############################
+  # ::: UTILITY FUNCTIONS ::: #
+  #############################
 
   def bump_version(version_bump_type)
     parse_bower
@@ -177,48 +184,20 @@ class ReleaseRobot
     @next_version = versions.join('.')
   end
 
-  def you_sure?
-    robot_says "Please confirm that you want me to do the following:"
-    warn "1. Run a fresh build of the assets"
-    warn "2. Update the dist folder with compiled assets"
-    warn "3. Change version in bower.json from #{@current_version.bold} to #{@next_version.bold.colorize(:white)}"
-    warn "4. Commit all local changes with this message: #{@commit_message.bold.colorize(:white)}"
-    warn "5. Tag this commit with v#{@next_version.bold}"
-    warn "4. Push all changes and tags to remote branch"
-    # warn "5. Push a copy of this branch to github pages to be hosted"
-    answer = prompt "Does this sound agreeable to you? (Y/n) "
-    answer.downcase == 'y'
-  end
-
-  def warn(phrase)
-    puts phrase.colorize(:yellow)
-  end
-
-  def all_done
-    robot_says "All done :) Thanks for contributing!"
-  end
-
-  private
-
-  def robot_says(phrase)
-    lines = phrase.split("\n").reverse!
-    robot_text = File.read('_plugins/robot.txt')
-    [34, 15].each_with_index do | spot_to_put_line, index |
-      break unless lines[index]
-      robot_text[spot_to_put_line] = lines[index].bold
-    end
-    puts robot_text
-  end
-
-  def print_monogram
-    puts File.read('_plugins/title.txt')
-  end
-
   def parse_bower
     @bower_file = JSON.parse(File.read('bower.json'))
   end
 
-  def cmd(system_command)
-    `#{system_command}`.blue
+  def update_dist
+    inform "Copying _sites/assets into dist"
+    FileUtils.rm_r('dist', force: true)
+    FileUtils.cp_r('_site/assets/.', 'dist')
+  end
+
+  def update_bower_file
+    raise "NeedTheNextVersionNumber" if @next_version == nil
+    inform "Updating bower.json to version #{@current_version.bold}"
+    @bower_file["version"] = @next_version
+    File.write('bower.json', JSON.pretty_generate(@bower_file))
   end
 end
