@@ -50,7 +50,7 @@ class ReleaseRobot
       cmd "git tag -a v#{@next_version} -m '#{@commit_message}'"
       cmd "git push"
       cmd "git push --tags"
-      publish_to_gh_pages
+      publish! # to github pages
 
       robot_says "All done :) Thanks for contributing!"
     else
