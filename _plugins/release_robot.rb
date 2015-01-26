@@ -87,7 +87,7 @@ class ReleaseRobot
   end
 
   def cmd(system_command)
-    inform "Running command: `#{system_command}`"
+    puts "Running command: `#{system_command}`".yellow
     output = `#{system_command}`
     puts output.prepend("  ").gsub("\n", "\n  ").cyan
     output
