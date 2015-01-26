@@ -1,8 +1,17 @@
+require 'tmpdir'
+require 'bundler/setup'
 require 'colorize'
 require 'json'
 
 class ReleaseRobot
+  GITHUB_REPONAME = 'chapmanu/web-components'
 
+  ##########################
+  # ::: PUBLIC METHODS ::: #
+  ##########################
+
+  # The constructor, just to show you the instance variables that 
+  # will appear in the code below.
   def initialize()
     @bower_file      = nil
     @current_version = nil
@@ -10,14 +19,10 @@ class ReleaseRobot
     @commit_message  = nil
   end
 
-
-  ###################################################################
-  # ::: GOES THROUGH THE STEPS OF RELEASING A NEW BOWER VERSION ::: #
-  ###################################################################
-
+  # Walks the user through the process of releasing
+  # a new bower version of the assets.
   def release!
     welcome
-
     return if uncommitted_changes?
 
     # Check if everything is up to date with git remotes
@@ -34,25 +39,45 @@ class ReleaseRobot
     # Gather user input about the release
     get_release_message
     get_release_version_type
-    
+
     # Confirm and execute
     if you_sure?
       cmd "jekyll build"
       update_dist
       update_bower_file
-
       cmd "git add ."
       cmd "git commit -am '#{@commit_message}'"
       cmd "git tag -a v#{@next_version} -m '#{@commit_message}'"
       cmd "git push"
       cmd "git push --tags"
-
       publish_to_gh_pages
-      
+
       robot_says "All done :) Thanks for contributing!"
     else
-      inform "Ok, not gonna do anything then..."
+      inform "Release cancelled"
     end
+  end
+
+  # Publishes the compiled site to the gh-pages branch to be hosted
+  # by github at http://chapmanu.github.io/web-components
+  def publish!
+    inform "Publishing local version to http://chapmanu.github.io/web-components"
+    Dir.mktmpdir do |tmp|
+      FileUtils.cp_r "_site/.", tmp
+      
+      pwd = Dir.pwd
+      Dir.chdir tmp
+
+      cmd "git init"
+      cmd "git add ."
+      message = "Site updated at #{Time.now.utc}"
+      cmd "git commit -m  #{message.inspect}"
+      cmd "git remote add origin git@github.com:#{GITHUB_REPONAME}.git"
+      cmd "git push origin master:refs/heads/gh-pages --force"
+
+      Dir.chdir pwd
+    end
+    inform "Publish successful"
   end
 
   
@@ -200,25 +225,5 @@ class ReleaseRobot
     inform "Updating bower.json to version #{@current_version.bold}"
     @bower_file["version"] = @next_version
     File.write('bower.json', JSON.pretty_generate(@bower_file))
-  end
-
-  def publish_to_gh_pages
-    inform "Publishing local version to gh pages"
-    Dir.mktmpdir do |tmp|
-      cp_r "_site/.", tmp
-      
-      pwd = Dir.pwd
-      Dir.chdir tmp
-
-      cmd "git init"
-      cmd "git add ."
-      message = "Site updated at #{Time.now.utc}"
-      cmd "git commit -m  #{message.inspect}"
-      cmd "git remote add origin git@github.com:#{GITHUB_REPONAME}.git"
-      cmd "git push origin master:refs/heads/gh-pages --force"
-
-      Dir.chdir pwd
-    end
-    inform "Published new version to http://chapmanu.github.io/web-components"
   end
 end

@@ -1,14 +1,14 @@
-require 'json'
 require './_plugins/release_robot.rb'
-require 'tmpdir'
 require 'jekyll'
-require 'bundler/setup'
 
-#########################
-# ::: CONFIGURATION ::: #
-#########################
+#################
+# ::: TASKS ::: #
+#################
 
-GITHUB_REPONAME = 'chapmanu/web-components'
+desc "Serve the site locally for development"
+task :serve do
+  exec("bundle exec guard")
+end
 
 desc "Generate the website with jekyll"
 task :generate do
@@ -20,14 +20,10 @@ end
 
 desc "Publish this local version of the site to github pages"
 task :publish => [:generate] do
+  ReleaseRobot.new.publish!
 end
 
-desc "Serve the site locally for development"
-task :serve do
-  exec("bundle exec guard")
-end
-
-
+desc "Release a new bower version of the assets"
 task :release do
   begin
   ReleaseRobot.new.release!
