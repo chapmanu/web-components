@@ -1,5 +1,5 @@
-# Chapman University Web-Components
-> Common front-end web-components used throughout Chapman products
+# Chapman University Web Components
+> Common front-end assets used throughout Chapman products
 
 This project is three things:  
 1. A build system for organizing and processing assets  
