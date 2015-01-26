@@ -47,6 +47,6 @@ task :release do
   begin
   ReleaseRobot.new.release!
   rescue Interrupt => e
-    puts "Release Cancelled"
+    puts "\nRelease Cancelled"
   end
 end

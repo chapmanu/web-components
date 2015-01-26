@@ -20,6 +20,7 @@ class ReleaseRobot
       pull && pull_tags
     else
       inform "Please pull the changes, then run `rake release` again"
+      return
     end
 
     get_release_message
@@ -82,7 +83,7 @@ class ReleaseRobot
   end
 
   def inform(phrase)
-    puts "#{phrase}"
+    puts "#{phrase}".blue
   end
 
   def branch_behind_remote?
@@ -102,7 +103,7 @@ class ReleaseRobot
   end
 
   def nothing_to_commit?
-    !!(`git status` =~ /nothing to commit/)
+    !!(cmd("git status") =~ /nothing to commit/)
   end
 
   def pull
@@ -215,5 +216,9 @@ class ReleaseRobot
 
   def parse_bower
     @bower_file = JSON.parse(File.read('bower.json'))
+  end
+
+  def cmd(system_command)
+    `#{system_command}`.blue
   end
 end
