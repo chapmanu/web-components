@@ -23,7 +23,7 @@ assets:
   #
   # Base URL of assets paths.
   #
-  baseurl: /assets/
+  baseurl: http://chapmanu.github.io/web-components/assets
   #
   # Pathnames where to find assets relative to the root of the site.
   #

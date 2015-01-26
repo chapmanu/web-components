@@ -3,11 +3,67 @@ require 'json'
 
 class ReleaseRobot
 
-  def initialize(bower_file)
+  @@release_type_map = {"1" => "major", "2" => "minor", "3" => "patch"}
+
+  def initialize()
     @bower_file      = nil
     @current_version = nil
     @next_version    = nil
     @commit_message  = nil
+  end
+
+  def release!
+    welcome
+    return if uncommitted_changes?
+
+    if branch_behind_remote? && want_to_pull?
+      pull && pull_tags
+    else
+      inform "Please pull the changes, then run `rake release` again"
+    end
+
+    get_release_message
+    get_release_version_type
+      
+    if you_sure?
+      build
+      update_dist
+      update_bower_file
+      commit
+      tag
+      push
+      push_tags
+      # push_gh_pages
+    else
+       bot.inform "Ok, not gonna do anything then..."
+    end
+
+    all_done
+  end
+
+  def get_release_version_type
+    @release_type_key = prompt "What type of release is this?\n1) Major\n2) Minor\n3) Patch\nSelect number 1, 2 or 3: "
+    bump_version(@@release_type_map[@release_type_key])
+  end
+
+  def get_release_message
+    @commit_message = prompt "Commit message for this release: "
+  end
+
+  def want_to_pull?
+    should_pull = prompt "Would you like to run `git pull` and `git pull --tags`? (Y/n) "
+    should_pull.downcase == 'y'
+  end
+
+  def uncommitted_changes?
+    inform "Checking for any uncommitted changes..."
+    if nothing_to_commit?
+      inform "All changes committed :)"
+      false
+    else
+      inform "You have uncommitted changes.  Please commit them first, then run `rake release` again."
+      true
+    end
   end
 
   def commit_message=(message)
@@ -26,16 +82,23 @@ class ReleaseRobot
   end
 
   def inform(phrase)
-    puts "#{phrase}".colorize(:green)
+    puts "#{phrase}"
   end
 
-  def inform_print(phrase)
-    print phrase.colorize(:green)
-  end
+  def branch_behind_remote?
+    inform "Checking if your branch is up-to-date with the remote..."
 
-  def branch_up_to_date?
-    `git remote update`
-    !!(`git status -uno` =~ /(up-to-date|branch is ahead)/)
+    system "git remote update"
+    up_to_date = !!(`git status -uno` =~ /(up-to-date|branch is ahead)/)
+
+    if up_to_date
+      inform "Cool. Everything is up to date."
+      true
+    else
+      inform "Uh oh. Your branch is behind the remote."
+      inform "You will need to 'git pull' and 'git pull --tags'"
+      false
+    end
   end
 
   def nothing_to_commit?
