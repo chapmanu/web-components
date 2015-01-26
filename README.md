@@ -5,7 +5,7 @@ This project acts as a demo site and build system for common front-end web compo
 ## Contributing
 
 #### Development Dependencies
-* Git command line client
+* Git command-line client
 * Ruby - https://www.ruby-lang.org/en/  
 * Ruby Gems - https://rubygems.org/pages/download
 
@@ -17,9 +17,9 @@ Run these commands from your terminal or command prompt:
 2. 	`cd web-components`
 3. 	`bundle install` Installs ruby gem dependencies
 4. 	`rake serve` Starts the local webserver and watches for changes
-5. 	View your local version of the site at http://localhost:4000
+5. 	View your local version of the site at [http://localhost:4000](http://localhost:4000)
 
-Note: If you desire a faster feedback loop, you can install the live-reload extention for Chrome or FireFox and connect after running `rake serve`.  This will reload the assets and the browser each time you save a file.
+> _Note:_ If you desire a faster feedback loop, you can install the live-reload extention for Chrome or FireFox and connect after running `rake serve`.  This will reload the assets and the browser each time you save a file.
 
 #### Frameworks Used
 
