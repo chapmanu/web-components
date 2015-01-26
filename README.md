@@ -5,8 +5,6 @@ This project acts as a demo site and build system for common front-end web compo
 ## Contributing
 
 #### Development Dependencies
-
-Development on this project depends on Ruby and Ruby Gems
 * Git command line client
 * Ruby - https://www.ruby-lang.org/en/  
 * Ruby Gems - https://rubygems.org/pages/download
