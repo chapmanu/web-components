@@ -4,7 +4,7 @@
 This project is three things:  
 1. A build system for organizing and processing assets  
 2. A Bower package repository for distributing the finished assets  
-3. A demo website to showcase and demonstrate usage of the assets  
+3. A demo website to showcase usage of the assets  
 
 View the demo website here: http://chapmanu.github.io/web-components/.
 
