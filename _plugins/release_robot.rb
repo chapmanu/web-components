@@ -21,12 +21,14 @@ class ReleaseRobot
     return if uncommitted_changes?
 
     # Check if everything is up to date with git remotes
-    if branch_behind_remote? || want_to_pull?
-      cmd "git pull"
-      cmd "git pull --tags"
-    else
-      inform "Please pull the changes, then run `rake release` again"
-      return
+    if branch_behind_remote?
+      if want_to_pull? 
+        cmd "git pull"
+        cmd "git pull --tags"
+      else
+        inform "Please pull the changes, then run `rake release` again"
+        return
+      end
     end
 
     # Gather user input about the release
