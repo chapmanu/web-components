@@ -147,17 +147,14 @@ class ReleaseRobot
 
   def branch_behind_remote?
     inform "Checking if your branch is up-to-date with the remote..."
-
     cmd "git remote update"
-    up_to_date = !!(cmd("git status -uno") =~ /(up-to-date|branch is ahead)/)
-
-    if up_to_date
+    if (cmd("git status -uno") =~ /(up-to-date|branch is ahead)/)
       inform "Cool. Everything is up to date."
-      true
+      false # Branch is not behind
     else
       inform "Uh oh. Your branch is behind the remote."
       inform "You will need to 'git pull' and 'git pull --tags'"
-      false
+      true # Branch is behind
     end
   end
 
