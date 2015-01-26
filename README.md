@@ -1,19 +1,19 @@
 # Chapman University Web Components
 Common front-end web components used across Chapman University websites.  
 
-This project is three things:
-1. A build system for organizing and processing assets
-2. A Bower package repository for distributing the finished assets
-3. A demo website to showcase and demonstrate usage of the assets
+This project is three things:  
+1. A build system for organizing and processing assets  
+2. A Bower package repository for distributing the finished assets  
+3. A demo website to showcase and demonstrate usage of the assets  
 
 View the demo website here: http://chapmanu.github.io/web-components/.
 
 ## Contributing
 
 ### Development Dependencies
-* Git command-line client
+* Git command-line client  
 * Ruby - https://www.ruby-lang.org/en/  
-* Ruby Gems - https://rubygems.org/pages/download
+* Ruby Gems - https://rubygems.org/pages/download  
 
 ### Initial Setup
 
