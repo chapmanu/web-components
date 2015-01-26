@@ -1,5 +1,5 @@
-# Chapman University Web Components
-> Common front-end web components used across Chapman University websites.  
+# Chapman University Web-Components
+> Common front-end web-components used throughout Chapman products
 
 This project is three things:  
 1. A build system for organizing and processing assets  
@@ -29,7 +29,7 @@ Run these commands from your terminal or command prompt:
 
 ### Frameworks Used
 
-The demo website uses the Jekyll framework.  Documentation can be found here: http://jekyllrb.com/docs/home/.  Along with jekyll, we use the jekyll-assets plugin to create a Rails-like asset pipeline for a jekyll website.  Documentation for that can be found here: https://github.com/ixti/jekyll-assets.
+The demo website uses the Jekyll framework.  Documentation can be found here: http://jekyllrb.com/docs/home/.  Along with Jekyll, we use the jekyll-assets plugin to create a Rails-like asset pipeline for a Jekyll website.  Documentation for that can be found here: https://github.com/ixti/jekyll-assets.
 
 ### Folder Structure
 
@@ -37,10 +37,10 @@ The demo website uses the Jekyll framework.  Documentation can be found here: ht
 This is the home page of the website.  You will notice that most of the file contains includes to other files located in the `_includes/` directory.
 
 ##### _includes/
-Save html that needs to be re-used in this folder.  It can be referenced anywhere using the `{% include file.html %}`.  Included files like this are referenced from the root of the `_includes/` directory.  Therefore, _includes/molecules/button.html can be included anywhere with `{% include molecules/button.html %}`
+Contains html that will be re-used.  It can be referenced anywhere using `{% include file.html %}`.  Included files like this are referenced from the root of the `_includes/` directory.  Therefore, `_includes/molecules/button.html` can be included anywhere with `{% include molecules/button.html %}`.
 
 ##### _assets/
-Only javascripts and stylesheets located at the root of `_assets/stylesheets` and `_assets/javascripts` will be compiled and made available to the demo site.  Keep the assets for components organized in seperate files and sub-directories, then "include" them into a "manifest" file at the root of these folders.
+Only javascripts and stylesheets located at the root of `_assets/stylesheets` and `_assets/javascripts` will be compiled and made available to bower and the demo site.  However, assets for components should be organized in seperate files and sub-directories, then "included" into a "manifest" file at the root of these folders.
 
 When developing a component, it will usually fall into one of these three categories.  Each category has its own sub-folder where the asset file should be saved.
 
@@ -50,8 +50,8 @@ When developing a component, it will usually fall into one of these three catego
 
 ### Releasing a New Bower Version
 
-When you have made new changes to the assets and are ready to release a new bower version, run the command `rake release`.  The release robot will help walk you through the steps of releasing a new version.
+Run `rake release` to publish a new bower version and update the demo site. The release robot will help walk you through these steps.
 
 ### Updating the Demo Site
 
-Run `rake publish` to update hosted demo site to match your local version.  Note that this step is already done for you when running `rake release`.
+Run `rake publish` to make demo site to match your local version.  Note that this step is already done for you when running `rake release`.
