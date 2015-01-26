@@ -1,15 +1,21 @@
 # Chapman University Web Components
+Common front-end web components used across Chapman University websites.  
 
-This project acts as a demo site and build system for common front-end web components used across Chapman University websites.  The website showcasing the components and demonstrating how to use them can be found at http://chapmanu.github.io/web-components/.
+This project is three things:
+1. A build system for organizing and processing assets
+2. A Bower package repository for distributing the finished assets
+3. A demo website to showcase and demonstrate usage of the assets
+
+View the demo website here: http://chapmanu.github.io/web-components/.
 
 ## Contributing
 
-#### Development Dependencies
+### Development Dependencies
 * Git command-line client
 * Ruby - https://www.ruby-lang.org/en/  
 * Ruby Gems - https://rubygems.org/pages/download
 
-#### Initial Setup
+### Initial Setup
 
 Run these commands from your terminal or command prompt:
 
@@ -19,16 +25,22 @@ Run these commands from your terminal or command prompt:
 4. 	`rake serve` Starts the local webserver and watches for changes
 5. 	View your local version of the site at [http://localhost:4000](http://localhost:4000)
 
-> _Note:_ If you desire a faster feedback loop, you can install the live-reload extention for Chrome or FireFox and connect after running `rake serve`.  This will reload the assets and the browser each time you save a file.
+> If you desire a faster feedback loop, you can install the live-reload extention for Chrome or FireFox and connect after running `rake serve`.  This will reload the assets and the browser each time you save a file.
 
-#### Frameworks Used
+### Frameworks Used
 
-The demo website uses the Jekyll framework.  Documentation can be found here: http://jekyllrb.com/docs/home/.  Along with jekyll, we the jekyll-assets plugin to create a Rails-like asset pipeline for a jekyll website.  Documentation for that can be found here: https://github.com/ixti/jekyll-assets.
+The demo website uses the Jekyll framework.  Documentation can be found here: http://jekyllrb.com/docs/home/.  Along with jekyll, we use the jekyll-assets plugin to create a Rails-like asset pipeline for a jekyll website.  Documentation for that can be found here: https://github.com/ixti/jekyll-assets.
 
-#### Folder Structure
+### Folder Structure
 
-__assets_
-Only javascripts and stylesheets located at the root of `_assets/stylesheets` and  `_assets/javascripts` will be compiled and made available to the demo site.  Keep the assets for components organized in seperate files and sub-directories, then "include" them into a "manifest" file at the root of these folders.
+##### index.html
+This is the home page of the website.  You will notice that most of the file contains includes to other files located in the `_includes/` directory.
+
+##### _includes/
+Save html that needs to be re-used in this folder.  It can be referenced anywhere using the `{% include file.html %}`.  Included files like this are referenced from the root of the `_includes/` directory.  Therefore, _includes/molecules/button.html can be included anywhere with `{% include molecules/button.html %}`
+
+##### _assets/
+Only javascripts and stylesheets located at the root of `_assets/stylesheets` and `_assets/javascripts` will be compiled and made available to the demo site.  Keep the assets for components organized in seperate files and sub-directories, then "include" them into a "manifest" file at the root of these folders.
 
 When developing a component, it will usually fall into one of these three categories.  Each category has its own sub-folder where the asset file should be saved.
 
@@ -36,19 +48,10 @@ When developing a component, it will usually fall into one of these three catego
 2. **Molecules** - Simple elements like buttons, date pickers, or tables.
 3. **Organisms** - Specific, complete objects such as a story tile, event preview, or tweet.
 
+### Releasing a New Bower Version
 
-_index.html_
+When you have made new changes to the assets and are ready to release a new bower version, run the command `rake release`.  The release robot will help walk you through the steps of releasing a new version.
 
+### Updating the Demo Site
 
-
-
-`/_layouts/` contains overall layouts that may be applied by the following header:
-```
----
-layout: default
----
-```
-
-#Inclusion Example
-
-`{% include molecules.html %}`
+Run `rake publish` to update hosted demo site to match your local version.  Note that this step is already done for you when running `rake release`.
