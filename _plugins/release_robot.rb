@@ -46,6 +46,9 @@ class ReleaseRobot
       cmd "git tag -a v#{@next_version} -m '#{@commit_message}'"
       cmd "git push"
       cmd "git push --tags"
+
+      publish_to_gh_pages
+      
       robot_says "All done :) Thanks for contributing!"
     else
       inform "Ok, not gonna do anything then..."
@@ -120,7 +123,7 @@ class ReleaseRobot
     warn "4. Commit all local changes with this message: #{@commit_message.bold}"
     warn "5. Tag this commit with v#{@next_version.bold}"
     warn "6. Push all changes and tags to remote branch"
-    # warn "7. Push a copy of this branch to github pages to be hosted"
+    warn "7. Push this local version of the site to github pages to be hosted"
     answer = prompt "Does this sound agreeable to you? (Y/n) "
     answer.downcase == 'y'
   end
@@ -197,5 +200,25 @@ class ReleaseRobot
     inform "Updating bower.json to version #{@current_version.bold}"
     @bower_file["version"] = @next_version
     File.write('bower.json', JSON.pretty_generate(@bower_file))
+  end
+
+  def publish_to_gh_pages
+    inform "Publishing local version to gh pages"
+    Dir.mktmpdir do |tmp|
+      cp_r "_site/.", tmp
+      
+      pwd = Dir.pwd
+      Dir.chdir tmp
+
+      cmd "git init"
+      cmd "git add ."
+      message = "Site updated at #{Time.now.utc}"
+      cmd "git commit -m  #{message.inspect}"
+      cmd "git remote add origin git@github.com:#{GITHUB_REPONAME}.git"
+      cmd "git push origin master:refs/heads/gh-pages --force"
+
+      Dir.chdir pwd
+    end
+    inform "Published new version to http://chapmanu.github.io/web-components"
   end
 end
