@@ -21,7 +21,7 @@ class ReleaseRobot
     return if uncommitted_changes?
 
     # Check if everything is up to date with git remotes
-    if branch_behind_remote? && want_to_pull?
+    if branch_behind_remote? || want_to_pull?
       cmd "git pull"
       cmd "git pull --tags"
     else
@@ -89,7 +89,7 @@ class ReleaseRobot
   def cmd(system_command)
     puts "Running command: `#{system_command}`".yellow
     output = `#{system_command}`
-    puts output.prepend("  ").gsub("\n", "\n  ").cyan
+    # puts output.prepend("  ").gsub("\n", "\n  ").cyan
     output
   end
 
@@ -98,7 +98,7 @@ class ReleaseRobot
   ##############################
 
   def get_release_version_type
-    number = prompt "What type of release is this?\n1) Major\n2) Minor\n3) Patch\nSelect number 1, 2 or 3: "
+    number = prompt "What type of release is this?\n1) Major\n2) Minor\n3) Patch\nSelect option number: "
     bump_version({"1" => "major", "2" => "minor", "3" => "patch"}[number])
   end
 
