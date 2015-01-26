@@ -58,5 +58,5 @@ Run `rake publish` to make demo site to match your local version.  Note that thi
 
 ### Linking URLs
 
-In order to link to paths, use the following example:
+In order to link to paths, use the following example:  
 `<link rel="stylesheet" type="text/css" href ="{{ site.baseurl}}{% asset_path site.css %}">`
