@@ -46,11 +46,10 @@ class ReleaseRobot
       cmd "git tag -a v#{@next_version} -m '#{@commit_message}'"
       cmd "git push"
       cmd "git push --tags"
+      robot_says "All done :) Thanks for contributing!"
     else
-       bot.inform "Ok, not gonna do anything then..."
+      inform "Ok, not gonna do anything then..."
     end
-
-    robot_says "All done :) Thanks for contributing!"
   end
 
   
@@ -76,7 +75,7 @@ class ReleaseRobot
   end
 
   def warn(phrase)
-    puts phrase.colorize(:yellow)
+    puts phrase.yellow
   end
 
   def prompt(phrase)
@@ -117,11 +116,11 @@ class ReleaseRobot
     robot_says "Please confirm that you want me to do the following:"
     warn "1. Run a fresh build of the assets"
     warn "2. Update the dist folder with compiled assets"
-    warn "3. Change version in bower.json from #{@current_version.bold} to #{@next_version.bold.colorize(:white)}"
-    warn "4. Commit all local changes with this message: #{@commit_message.bold.colorize(:white)}"
+    warn "3. Change version in bower.json from #{@current_version.bold} to #{@next_version.bold}"
+    warn "4. Commit all local changes with this message: #{@commit_message.bold}"
     warn "5. Tag this commit with v#{@next_version.bold}"
-    warn "4. Push all changes and tags to remote branch"
-    # warn "5. Push a copy of this branch to github pages to be hosted"
+    warn "6. Push all changes and tags to remote branch"
+    # warn "7. Push a copy of this branch to github pages to be hosted"
     answer = prompt "Does this sound agreeable to you? (Y/n) "
     answer.downcase == 'y'
   end
