@@ -46,12 +46,17 @@
   margin: 0;
   padding: 16px 20px;
   text-decoration: none;
-  font-weight: normal;
+  font-weight: 100;
 }
 #cssmenu a:hover {
   background: #fff;
   color: #A82439;
   padding-bottom: 16px;
+}
+
+#cssmenu img {
+  padding-top: 15px;
+  padding-left: 6px;
 }
 
 /* ---------- */
