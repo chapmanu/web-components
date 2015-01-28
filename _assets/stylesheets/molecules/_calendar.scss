@@ -8,8 +8,6 @@
 	-moz-box-shadow:0px 1px 0px 0px rgba(0,0,0,0.1),0px 1px 1px 1px rgba(0,0,0,.08);
 	-webkit-box-shadow:0px 1px 0px 0px rgba(0,0,0,0.1),0px 1px 1px 1px rgba(0,0,0,.08);
   	box-shadow:0px 1px 0px 0px rgba(0,0,0,0.1),0px 1px 1px 1px rgba(0,0,0,.08);
-	
-
 
 	.year {
 		text-align: center;
@@ -36,22 +34,24 @@
 	}
 
 	.days .row {
-		display: flex;
-
 		margin-top: 2px;
 		margin-bottom: 2px;
 
-		&:first-of-type { justify-content: flex-end; }
-		&:last-of-type  { justify-content: flex-start; }
+		// Hotfix for right alignment
+		font-size: 0;
+		&:first-of-type {
+			text-align: right;
+			.day { float: none; }
+		}
 
 		.day {
-
-			position: relative;
+			display: inline-block;
 			padding: 3px 1px;
 			font-size: 9px;
 			color: #6b6b6b;
 			text-align: center;
 			cursor: default;
+			float: left;
 
 			// ********************
 			// Layout for 7 boxes; all units must add up to 700
