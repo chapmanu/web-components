@@ -29,10 +29,11 @@
   padding: 0; }
 
 #cssmenu li {
-  font: 80% "Lucida Sans Unicode", "Bitstream Vera Sans", "Trebuchet Unicode MS", "Lucida Grande", Verdana, Helvetica, sans-serif;
+  font: 80% "futura-pt",sans-serif;
   margin: 10;
   padding: 0;
-  list-style: none; }
+  list-style: none;
+  text-transform: uppercase; }
 
 #cssmenu a {
   background: #333;
@@ -42,12 +43,16 @@
   margin: 0;
   padding: 16px 20px;
   text-decoration: none;
-  font-weight: normal; }
+  font-weight: 100; }
 
 #cssmenu a:hover {
   background: #fff;
   color: #A82439;
   padding-bottom: 16px; }
+
+#cssmenu img {
+  padding-top: 15px;
+  padding-left: 6px; }
 
 /* ---------- */
 #index {

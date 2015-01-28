@@ -1754,20 +1754,21 @@ a.button {
     padding: 6px;
     background-color: #FFF; }
   .cu_calendar .days .row {
-    display: flex;
     margin-top: 2px;
-    margin-bottom: 2px; }
+    margin-bottom: 2px;
+    font-size: 0; }
     .cu_calendar .days .row:first-of-type {
-      justify-content: flex-end; }
-    .cu_calendar .days .row:last-of-type {
-      justify-content: flex-start; }
+      text-align: right; }
+      .cu_calendar .days .row:first-of-type .day {
+        float: none; }
     .cu_calendar .days .row .day {
-      position: relative;
+      display: inline-block;
       padding: 3px 1px;
       font-size: 9px;
       color: #6b6b6b;
       text-align: center;
       cursor: default;
+      float: left;
       box-sizing: border-box;
       width: 13.14286%;
       margin-left: 1%; }
