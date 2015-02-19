@@ -1,0 +1,387 @@
+[
+  {
+    "name": "arrow_down",
+    "name_ext": "arrow_down.svg",
+    "path": "_assets/images/icons",
+    "ext": ".svg",
+    "rel_path": "icons/arrow_down.svg"
+  },
+  {
+    "name": "arrow_left",
+    "name_ext": "arrow_left.svg",
+    "path": "_assets/images/icons",
+    "ext": ".svg",
+    "rel_path": "icons/arrow_left.svg"
+  },
+  {
+    "name": "arrow_right",
+    "name_ext": "arrow_right.svg",
+    "path": "_assets/images/icons",
+    "ext": ".svg",
+    "rel_path": "icons/arrow_right.svg"
+  },
+  {
+    "name": "bubble-dots3",
+    "name_ext": "bubble-dots3.svg",
+    "path": "_assets/images/icons",
+    "ext": ".svg",
+    "rel_path": "icons/bubble-dots3.svg"
+  },
+  {
+    "name": "bubble-dots4",
+    "name_ext": "bubble-dots4.svg",
+    "path": "_assets/images/icons",
+    "ext": ".svg",
+    "rel_path": "icons/bubble-dots4.svg"
+  },
+  {
+    "name": "bubbles2",
+    "name_ext": "bubbles2.svg",
+    "path": "_assets/images/icons",
+    "ext": ".svg",
+    "rel_path": "icons/bubbles2.svg"
+  },
+  {
+    "name": "calendar4",
+    "name_ext": "calendar4.svg",
+    "path": "_assets/images/icons",
+    "ext": ".svg",
+    "rel_path": "icons/calendar4.svg"
+  },
+  {
+    "name": "checkmark-circle-fill-green",
+    "name_ext": "checkmark-circle-fill-green.svg",
+    "path": "_assets/images/icons",
+    "ext": ".svg",
+    "rel_path": "icons/checkmark-circle-fill-green.svg"
+  },
+  {
+    "name": "checkmark-circle-fill",
+    "name_ext": "checkmark-circle-fill.svg",
+    "path": "_assets/images/icons",
+    "ext": ".svg",
+    "rel_path": "icons/checkmark-circle-fill.svg"
+  },
+  {
+    "name": "checkmark-circle-green",
+    "name_ext": "checkmark-circle-green.svg",
+    "path": "_assets/images/icons",
+    "ext": ".svg",
+    "rel_path": "icons/checkmark-circle-green.svg"
+  },
+  {
+    "name": "checkmark-circle",
+    "name_ext": "checkmark-circle.svg",
+    "path": "_assets/images/icons",
+    "ext": ".svg",
+    "rel_path": "icons/checkmark-circle.svg"
+  },
+  {
+    "name": "checkmark-no-circle",
+    "name_ext": "checkmark-no-circle.svg",
+    "path": "_assets/images/icons",
+    "ext": ".svg",
+    "rel_path": "icons/checkmark-no-circle.svg"
+  },
+  {
+    "name": "clock3",
+    "name_ext": "clock3.svg",
+    "path": "_assets/images/icons",
+    "ext": ".svg",
+    "rel_path": "icons/clock3.svg"
+  },
+  {
+    "name": "cu_monogram",
+    "name_ext": "cu_monogram.svg",
+    "path": "_assets/images/icons",
+    "ext": ".svg",
+    "rel_path": "icons/cu_monogram.svg"
+  },
+  {
+    "name": "cu_window",
+    "name_ext": "cu_window.svg",
+    "path": "_assets/images/icons",
+    "ext": ".svg",
+    "rel_path": "icons/cu_window.svg"
+  },
+  {
+    "name": "email",
+    "name_ext": "email.svg",
+    "path": "_assets/images/icons",
+    "ext": ".svg",
+    "rel_path": "icons/email.svg"
+  },
+  {
+    "name": "envelope-light-gray",
+    "name_ext": "envelope-light-gray.svg",
+    "path": "_assets/images/icons",
+    "ext": ".svg",
+    "rel_path": "icons/envelope-light-gray.svg"
+  },
+  {
+    "name": "envelope",
+    "name_ext": "envelope.svg",
+    "path": "_assets/images/icons",
+    "ext": ".svg",
+    "rel_path": "icons/envelope.svg"
+  },
+  {
+    "name": "eye2",
+    "name_ext": "eye2.svg",
+    "path": "_assets/images/icons",
+    "ext": ".svg",
+    "rel_path": "icons/eye2.svg"
+  },
+  {
+    "name": "facebook",
+    "name_ext": "facebook.svg",
+    "path": "_assets/images/icons",
+    "ext": ".svg",
+    "rel_path": "icons/facebook.svg"
+  },
+  {
+    "name": "feed2",
+    "name_ext": "feed2.svg",
+    "path": "_assets/images/icons",
+    "ext": ".svg",
+    "rel_path": "icons/feed2.svg"
+  },
+  {
+    "name": "folder",
+    "name_ext": "folder.svg",
+    "path": "_assets/images/icons",
+    "ext": ".svg",
+    "rel_path": "icons/folder.svg"
+  },
+  {
+    "name": "globe-light-gray",
+    "name_ext": "globe-light-gray.svg",
+    "path": "_assets/images/icons",
+    "ext": ".svg",
+    "rel_path": "icons/globe-light-gray.svg"
+  },
+  {
+    "name": "globe",
+    "name_ext": "globe.svg",
+    "path": "_assets/images/icons",
+    "ext": ".svg",
+    "rel_path": "icons/globe.svg"
+  },
+  {
+    "name": "google-plus",
+    "name_ext": "google-plus.svg",
+    "path": "_assets/images/icons",
+    "ext": ".svg",
+    "rel_path": "icons/google-plus.svg"
+  },
+  {
+    "name": "home",
+    "name_ext": "home.svg",
+    "path": "_assets/images/icons",
+    "ext": ".svg",
+    "rel_path": "icons/home.svg"
+  },
+  {
+    "name": "instagram",
+    "name_ext": "instagram.svg",
+    "path": "_assets/images/icons",
+    "ext": ".svg",
+    "rel_path": "icons/instagram.svg"
+  },
+  {
+    "name": "link-light-gray",
+    "name_ext": "link-light-gray.svg",
+    "path": "_assets/images/icons",
+    "ext": ".svg",
+    "rel_path": "icons/link-light-gray.svg"
+  },
+  {
+    "name": "link",
+    "name_ext": "link.svg",
+    "path": "_assets/images/icons",
+    "ext": ".svg",
+    "rel_path": "icons/link.svg"
+  },
+  {
+    "name": "location",
+    "name_ext": "location.svg",
+    "path": "_assets/images/icons",
+    "ext": ".svg",
+    "rel_path": "icons/location.svg"
+  },
+  {
+    "name": "lock-light-gray",
+    "name_ext": "lock-light-gray.svg",
+    "path": "_assets/images/icons",
+    "ext": ".svg",
+    "rel_path": "icons/lock-light-gray.svg"
+  },
+  {
+    "name": "lock",
+    "name_ext": "lock.svg",
+    "path": "_assets/images/icons",
+    "ext": ".svg",
+    "rel_path": "icons/lock.svg"
+  },
+  {
+    "name": "menu",
+    "name_ext": "menu.svg",
+    "path": "_assets/images/icons",
+    "ext": ".svg",
+    "rel_path": "icons/menu.svg"
+  },
+  {
+    "name": "menu10",
+    "name_ext": "menu10.svg",
+    "path": "_assets/images/icons",
+    "ext": ".svg",
+    "rel_path": "icons/menu10.svg"
+  },
+  {
+    "name": "menu3",
+    "name_ext": "menu3.svg",
+    "path": "_assets/images/icons",
+    "ext": ".svg",
+    "rel_path": "icons/menu3.svg"
+  },
+  {
+    "name": "newspaper",
+    "name_ext": "newspaper.svg",
+    "path": "_assets/images/icons",
+    "ext": ".svg",
+    "rel_path": "icons/newspaper.svg"
+  },
+  {
+    "name": "pencil5",
+    "name_ext": "pencil5.svg",
+    "path": "_assets/images/icons",
+    "ext": ".svg",
+    "rel_path": "icons/pencil5.svg"
+  },
+  {
+    "name": "phone-light-gray",
+    "name_ext": "phone-light-gray.svg",
+    "path": "_assets/images/icons",
+    "ext": ".svg",
+    "rel_path": "icons/phone-light-gray.svg"
+  },
+  {
+    "name": "phone",
+    "name_ext": "phone.svg",
+    "path": "_assets/images/icons",
+    "ext": ".svg",
+    "rel_path": "icons/phone.svg"
+  },
+  {
+    "name": "pinterest",
+    "name_ext": "pinterest.svg",
+    "path": "_assets/images/icons",
+    "ext": ".svg",
+    "rel_path": "icons/pinterest.svg"
+  },
+  {
+    "name": "play3",
+    "name_ext": "play3.svg",
+    "path": "_assets/images/icons",
+    "ext": ".svg",
+    "rel_path": "icons/play3.svg"
+  },
+  {
+    "name": "plus-circle2",
+    "name_ext": "plus-circle2.svg",
+    "path": "_assets/images/icons",
+    "ext": ".svg",
+    "rel_path": "icons/plus-circle2.svg"
+  },
+  {
+    "name": "search3",
+    "name_ext": "search3.svg",
+    "path": "_assets/images/icons",
+    "ext": ".svg",
+    "rel_path": "icons/search3.svg"
+  },
+  {
+    "name": "share",
+    "name_ext": "share.svg",
+    "path": "_assets/images/icons",
+    "ext": ".svg",
+    "rel_path": "icons/share.svg"
+  },
+  {
+    "name": "tag5",
+    "name_ext": "tag5.svg",
+    "path": "_assets/images/icons",
+    "ext": ".svg",
+    "rel_path": "icons/tag5.svg"
+  },
+  {
+    "name": "twitter",
+    "name_ext": "twitter.svg",
+    "path": "_assets/images/icons",
+    "ext": ".svg",
+    "rel_path": "icons/twitter.svg"
+  },
+  {
+    "name": "user-light-gray",
+    "name_ext": "user-light-gray.svg",
+    "path": "_assets/images/icons",
+    "ext": ".svg",
+    "rel_path": "icons/user-light-gray.svg"
+  },
+  {
+    "name": "user",
+    "name_ext": "user.svg",
+    "path": "_assets/images/icons",
+    "ext": ".svg",
+    "rel_path": "icons/user.svg"
+  },
+  {
+    "name": "vimeo",
+    "name_ext": "vimeo.svg",
+    "path": "_assets/images/icons",
+    "ext": ".svg",
+    "rel_path": "icons/vimeo.svg"
+  },
+  {
+    "name": "warning-fill-orange",
+    "name_ext": "warning-fill-orange.svg",
+    "path": "_assets/images/icons",
+    "ext": ".svg",
+    "rel_path": "icons/warning-fill-orange.svg"
+  },
+  {
+    "name": "warning",
+    "name_ext": "warning.svg",
+    "path": "_assets/images/icons",
+    "ext": ".svg",
+    "rel_path": "icons/warning.svg"
+  },
+  {
+    "name": "wordpress",
+    "name_ext": "wordpress.svg",
+    "path": "_assets/images/icons",
+    "ext": ".svg",
+    "rel_path": "icons/wordpress.svg"
+  },
+  {
+    "name": "x-mark-circle",
+    "name_ext": "x-mark-circle.svg",
+    "path": "_assets/images/icons",
+    "ext": ".svg",
+    "rel_path": "icons/x-mark-circle.svg"
+  },
+  {
+    "name": "x-mark-no-circle",
+    "name_ext": "x-mark-no-circle.svg",
+    "path": "_assets/images/icons",
+    "ext": ".svg",
+    "rel_path": "icons/x-mark-no-circle.svg"
+  },
+  {
+    "name": "youtube",
+    "name_ext": "youtube.svg",
+    "path": "_assets/images/icons",
+    "ext": ".svg",
+    "rel_path": "icons/youtube.svg"
+  }
+]

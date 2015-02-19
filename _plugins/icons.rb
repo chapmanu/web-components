@@ -1,22 +1,16 @@
-=begin
-# Open the directory with the icons
-files = OpenDirectory("_assets/images/icons")
+require 'json'
 
 icons = []
-
-# Loop through the files and save to array
-files.each do |icon_file|
-    icons.push({
-        "name": icon_file.file_name,
-        "path": icon_file.file_path
-        "ext" : icon_file.file_ext
+Dir.glob('_assets/images/icons/*.svg') do |icon_file|
+  icons.push({
+        "name"=> File.basename(icon_file, ".*"),
+        "name_ext"=> File.basename(icon_file),
+        "path"=> File.dirname(icon_file),
+        "ext"=> File.extname(icon_file),
+        "rel_path" => 'icons/' + File.basename(icon_file)
     })
 end
 
-
-# Write the array to the _data/icons file
-File.write('_data/icons.json', JSON.pretty_generate(icons))
-
-
-{% foreach icon in site.data.icons %}
-=end
+File.open("_data/icons.json","w") do |icons_temp|
+  icons_temp.write(JSON.pretty_generate(icons))
+end
