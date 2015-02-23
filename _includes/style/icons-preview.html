@@ -2,7 +2,7 @@
 
 {% for icon in site.data.icons %}
 
-<div class="new_icons"><p>{{ icon.name }}</p><img src="{{ icon.rel_path | asset_path }}"/></div>
+<div class="new_icons"><p>{{ icon.name }}</p><img src="{{site.baseurl}}{{ icon.rel_path | asset_path }}"/></div>
 
 {% endfor %}
 
