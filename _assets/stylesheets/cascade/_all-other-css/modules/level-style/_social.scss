@@ -1,0 +1,66 @@
+// These styles don't look like they're being used.
+
+// .social {
+//   a {
+//     float: left;
+//     margin: 0 10px 0 0;
+//     text-indent: -999em;
+//     height: 26px;
+//     width: 26px;
+//     background-image: url("../img/left_nav_social_icons.png");
+//     background-repeat: no-repeat;
+//   }
+//   .facebook {
+//     background-position: left top;
+//   }
+//   .twitter {
+//     background-position: -30px top;
+//   }
+//   .linkedIn {
+//     background-position: -60px top;
+//   }
+//   .rss {
+//     background-position: -90px top;
+//   }
+//   .flickr {
+//     background-position: -120px top;
+//   }
+//   .youTube {
+//     background-position: -150px top;
+//   }
+//   .vimeo {
+//     background-position: -180px top;
+//   }
+//   .googlePlus {
+//     background-position: -210px top;
+//   }
+// }
+
+// .socialIcons {
+// 	a {
+// 	  background-image: url("../img/social_icons_footer.png");
+// 	  background-repeat: no-repeat;
+// 	  display: block;
+// 	  height: 25px;
+// 	  width: 24px;
+// 	  float: left;
+// 	  margin: 0 8px 0 0;
+// 	  @include bp(m) {
+// 	  	background-image: url("../img/social_icons_footer.png");
+//       background-repeat: no-repeat;
+//       display: block;
+//       height: 25px;
+//       width: 24px;
+//       float: left;
+//       margin: 7px 8px 0 0;
+// 	  }
+// 	}
+// 	@include bp(m) {
+// 		background: #e3dfcd;
+//     -moz-border-radius: 4px;
+//     -webkit-border-radius: 4px;
+//     border-radius: 4px;
+//     border-top: 1px solid #ccc8b8;
+//     border-bottom: 1px solid #fdfcf8;
+// 	}
+// }

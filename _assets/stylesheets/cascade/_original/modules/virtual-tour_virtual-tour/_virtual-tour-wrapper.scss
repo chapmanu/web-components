@@ -1,0 +1,22 @@
+.virtualTour-wrapper {
+  padding-right: 18px;
+  padding-left: 18px;
+}
+
+.virtualTour-wrapperDetail {
+  #virtualTour-search {
+    background: $white;
+    -webkit-box-shadow: inset 0px 5px 5px rgba(50, 50, 50, 0.1);
+    -moz-box-shadow: inset 0px 5px 5px rgba(50, 50, 50, 0.1);
+    box-shadow: inset 0px 5px 5px rgba(50, 50, 50, 0.1);
+    border: 1px solid #c5c5c5;
+    padding: 10px 13px 10px 13px;
+    @include bp(wildcard-min, 767px) {
+      width: 312px;
+    }
+  }
+  #virtualTour-categoryMenu {
+    padding: 0 0 10px 0;
+    margin-top: -1px;
+  }
+}

@@ -1,0 +1,108 @@
+p.source a:link, a:visited, p.source a:visited {
+  color: $cu-red;
+  border-bottom: none;
+}
+
+a:hover, p.source a:hover {
+  color: $cu-link-hover;
+  border-bottom: none;
+}
+
+.js .noscript {
+  display: none;
+}
+
+.noscript p {
+  position: static;
+  color: $black;
+  border-bottom: 1px solid $black;
+  text-align: left;
+  padding: 8px 12px 8px 50px;
+  margin: -8px 0 0 0;
+  font-size: 1.2em;
+  line-height: 1.4em;
+  background: #FFFFBD;
+}
+
+.hide-text {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.maxWidth {
+  @include bp(m) {
+  	max-width: 1128px;
+	  margin: 0 auto 0 auto;
+  }
+}
+
+.ir {
+  display: block;
+  border: 0;
+  text-indent: -999em;
+  overflow: hidden;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  text-align: left;
+  direction: ltr;
+  br {
+    display: none;
+  }
+}
+
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  &.focusable {
+    &:active, &:focus {
+      clip: auto;
+      height: auto;
+      margin: 0;
+      overflow: visible;
+      position: static;
+      width: auto;
+    }
+  }
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.clearfix {
+  &:before {
+    content: "";
+    display: table;
+  }
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  zoom: 1;
+}
+
+.is-visible {
+  visibility: visible;
+}
+
+.address {
+  color: $grey;
+  line-height: 18px;
+}
+
+.copyright {
+  font-style: italic;
+}

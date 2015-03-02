@@ -1,0 +1,34 @@
+.subNavResource {
+  float: right;
+  width: 505px;
+  min-height: 162px;
+  margin: 10px 10px 10px 10px;
+  background-color: $white;
+  a {
+    font-size: 11px;
+    color: #CB003D;
+    &:hover {
+      color: $cu-red;
+    }
+  }
+  .col1 {
+    float: left;
+    width: 200px;
+    min-height: 100px;
+    padding: 10px 10px 10px 20px;
+    line-height: 1.2;
+  }
+  .col2 {
+    float: left;
+    width: 200px;
+    min-height: 100px;
+    padding: 10px 10px 10px 20px;
+    line-height: 1.2;
+    margin: 45px 10px 10px 20px;
+    padding: 0 0 0 30px;
+    border-left: 1px solid #555a5e;
+    h3 {
+      margin: 0 0 5px 0;
+    }
+  }
+}

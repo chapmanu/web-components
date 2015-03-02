@@ -1,0 +1,376 @@
+/*
+ * jQuery FlexSlider v1.7
+ * http://flex.madebymufffin.com
+ *
+ * Copyright 2011, Tyler Smith
+ * Free to use under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ */
+
+/* this is a mshup between 1.7 and 2.2.0 to fix a windows 8 touch screen bug mid project */
+
+/* Browser Resets */
+
+.flex-container a:active, .flexslider a:active, .flex-container a:focus, .flexslider a:focus {
+  outline: none;
+}
+
+.slides, .flex-control-nav, .flex-direction-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* FlexSlider Necessary Styles
+*********************************/
+
+.flexslider {
+  margin: 0;
+  padding: 0;
+  .slides {
+    > li {
+      display: none;
+      -webkit-backface-visibility: hidden;
+    }
+    img {
+      width: 100%;
+      display: block;
+    }
+    .bg3 img {
+      @include bp(xl) {
+        max-width: 200% !important;
+      }
+    }
+  }
+  @include bp(l) {
+    overflow: visible !important;
+  }
+  @include bp(xl) {
+    overflow: visible !important;
+  }
+}
+
+/* Hide the slides before the JS is loaded. Avoids image jumping */
+
+.flex-pauseplay {
+  color: $white;
+  background-color: Blue;
+  position: fixed;
+  left: 0;
+  top: 0;
+  visibility: hidden;
+  span {
+    text-transform: capitalize;
+  }
+}
+
+/* Clearfix for the .slides element */
+
+html[xmlns] .slides {
+  display: block;
+}
+
+* html .slides {
+  height: 1%;
+}
+
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+* include js that eliminates this class on page load */
+
+.no-js .slides > li:first-child {
+  display: block;
+}
+
+/* FlexSlider Default Theme
+*********************************/
+
+.flexslider {
+  background: transparent;
+  border: none;
+  position: relative;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  zoom: 1;
+  .slides {
+    zoom: 1;
+    > li {
+      position: relative;
+    }
+  }
+}
+
+.slide {
+  // border-bottom: 5px solid #E9E1C2;
+  // min-height: 340px;
+  overflow: hidden;
+  position: relative;
+  bottom: 0;
+  .more {
+    margin-left: 10px;
+  }
+  .dataDescription {
+    // font-family: Times New Roman;
+    background-color: $cu-light-grey;
+    font-size: 18px;
+    font-style: italic;
+    padding: 10px;
+    @include bp(m) {
+      // display: none;
+    }
+  }
+  @include bp(m) {
+    position: relative;
+    // height: 500px;
+    max-height: 500px;
+    border: none;
+  }
+  @include bp(l) {
+    position: relative;
+    // height: 468px;
+  }
+  @include bp(xl) {
+    position: relative;
+    // height: 590px;
+  }
+}
+
+.slideDescription {
+  display: none;
+  .active & {
+    @include bp(m) {
+      visibility: visible;
+    }
+  }
+  .centeredContent {
+    a {
+      &:after {
+        @include bp(m) {
+          content: '';
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 100%;
+          width: 0;
+          height: 0;
+          border: 17px solid transparent;
+          border-left: 10px solid $cu-red;
+        }
+      }
+      @include bp(m) {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 100px;
+        background-color: $cu-red;
+        color: $white;
+        line-height: 2.8;
+        padding: 0 10px 0 10px;
+        text-indent: 0;
+      }
+    }
+    @include bp(m) {
+      position: relative;
+      background-color: $white;
+      // font-size: 12px;
+      font-size: 14px;
+      // font-family: 'Open Sans';
+      font-family: "proxima-nova-soft", "proxima-nova-soft-n4", sans-serif;
+      // padding: 10px 0 10px 0;
+      padding: 8px 0 7px 0;
+      text-align: center;
+      -webkit-box-shadow: 0px 0px 7px 0px #434343;
+      box-shadow: 0px 0px 7px 0px #434343;
+    }
+  }
+  @include bp(m) {
+    // display: none;
+    display: block;
+    visibility: hidden;
+    position: absolute;
+    bottom: 100%;
+    bottom: 65px;
+    padding: 0 0 0 10%;
+    white-space: nowrap;
+    width: 80%;
+  }
+  @include bp(wildcard-max, 1024px) {
+    // display: none;
+  }
+}
+
+.centeredContent.withLink {
+  @include bp(m) {
+    // text-indent: -100px;
+  }
+}
+
+.slides {
+  &:after {
+    content: "\0020";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+  }
+  @include bp(m) {
+    border-bottom: none;
+  }
+}
+
+.slideLinks {
+  list-style-type: none;
+  li a {
+    // color: #CB003D;
+    &:hover {
+      color: $cu-red !important;
+    }
+    .bullet {
+      margin: 0 0 0 3px;
+      @include bp(m) {
+        margin: 0 0 0 3px;
+      }
+    }
+  }
+  @include bp(m) {
+    list-style-type: none;
+  }
+}
+
+/* Suggested container for "Slide" animation setups. Can replace this with your own, if you wish */
+
+.flex-container {
+  zoom: 1;
+  position: relative;
+  @include bp(m) {
+    overflow: hidden;
+  }
+  @include bp(l) {
+    overflow: visible !important;
+  }
+  @include bp(xl) {
+    overflow: visible !important;
+  }
+}
+
+/* Caption style */
+/* IE rgba() hack */
+
+.flex-caption {
+  background: none;
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000);
+  zoom: 1;
+  width: 96%;
+  padding: 2%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  color: $white;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+  line-height: 18px;
+}
+
+/* Direction Nav */
+
+.flex-direction-nav {
+  .oldie & {
+    height: 0;
+  }
+  li a {
+    width: 43px;
+    height: 56px;
+    margin: -28px 0 0;
+    display: block;
+    // background-image: url("../img/gray_arrows.png");
+    background: url(../img/bg_direction_nav.png) no-repeat 0 0;
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    text-indent: -9999px;
+    z-index: 9999999999999999999;
+    /*top:85%;  */
+    outline: none;
+    opacity: 0.4;
+    filter: alpha(opacity = 40);
+    &:hover {
+      opacity: 1;
+      filter: alpha(opacity = 100);
+    }
+    .homepage-feature & {
+      z-index: 10;
+    }
+    .ie7 & {
+      top: 80%;
+    }
+    &.next {
+      background-position: -43px 0;
+      right: 0;
+    }
+    &.flex-prev {
+      background-position: 0 0;
+      left: 0;
+    }
+    &.flex-next {
+      background-position: -42px 0;
+      right: 0;
+    }
+    &.flex-disabled {
+      /*opacity: .3; filter:alpha(opacity=30); cursor: default;*/
+      display: none;
+    }
+    @include bp(m) {
+      top: 45% !important;
+    }
+    @include bp(l) {
+      top: 45% !important;
+    }
+    @include bp(xl) {
+       top: 38% !important;
+    }
+  }
+}
+
+/* Control Nav */
+
+.flex-control-nav {
+  width: 100%;
+  position: absolute;
+  bottom: -30px;
+  text-align: center;
+  z-index: 9999;
+  li {
+    margin: 0 0 0 5px;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    &:first-child {
+      margin: 0;
+    }
+    a {
+      width: 13px;
+      height: 13px;
+      display: block;
+      background: url(../img/bg_control_nav.png) no-repeat 0 0;
+      cursor: pointer;
+      text-indent: -9999px;
+      &:hover {
+        background-position: 0 -13px;
+      }
+      &.active {
+        background-position: 0 -26px;
+        cursor: default;
+      }
+    }
+  }
+}
+
+.flexslider .flex-viewport {
+  overflow: visible !important;
+}

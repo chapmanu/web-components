@@ -1,0 +1,72 @@
+#main {
+  .maxWidth {
+    margin: 0 15px;
+    @include bp(m) {
+      margin: 0 30px;
+    }
+    @include bp(wildcard-min, 1180px) {
+      margin: 0 auto;
+    }
+  }
+  #mastheadNavigationWrapper {
+    position: relative;
+    height: 0px;
+    overflow: visible;
+    z-index: 100;
+  }
+  #mastheadNavigation {
+    position: absolute;
+    top: 15px;
+    right: 0;
+    z-index: 100;
+    display: none;
+    .smallButton {
+      color: $white;
+      border: none;
+      border-radius: 3px;
+      width: 44px;
+      height: 44px;
+      padding: 5px;
+      margin: 0 0 0 10px;
+      background: url('../img/gray_50.png');
+      text-indent: -9999px;
+      opacity: 0.75;
+      -webkit-transition: opacity 0.2s ease-out, height 0s ease-out;
+      -moz-transition: opacity 0.2s ease-out, height 0s ease-out;
+      -o-transition: opacity 0.2s ease-out, height 0s ease-out;
+      transition: opacity 0.2s ease-out, height 0s ease-out;
+      &.disabled {
+        opacity: 0;
+        cursor: default;
+        height: 0px;
+        padding: 0px;
+        overflow: hidden;
+      }
+      &:hover {
+        opacity: 1;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+    #changeVolume {
+      background: rgba(0, 0, 0, 0.8) url('../img/icons/svg/volume-on_white.svg') no-repeat center;
+      background-size: 20px;
+      &.muted {
+        background: rgba(0, 0, 0, 0.8) url('../img/icons/svg/volume-off_white.svg') no-repeat 16px center;
+        background-size: 20px;
+      }
+    }
+    #showOlderContent {
+      background: rgba(0, 0, 0, 0.8) url('../img/icons/svg/arrow-right_white.svg') no-repeat center;
+      background-size: 20px;
+    }
+    #showNewerContent {
+      background: rgba(0, 0, 0, 0.8) url('../img/icons/svg/arrow-left_white.svg') no-repeat center;
+      background-size: 20px;
+    }
+    @include bp(wildcard-min, 680px) {
+      display: block;
+    }
+  }
+}

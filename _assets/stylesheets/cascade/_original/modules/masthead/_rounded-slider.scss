@@ -1,0 +1,41 @@
+.rounded-slider {
+  .rotatorContainer {
+    max-width: 1128px;
+    max-height: 440px;
+    background: $grey;
+  }
+  .flexslider {
+    overflow: hidden !important;
+  }
+  .flex-control-nav {
+	  background: transparent;
+	  text-align: right;
+	  padding-right: 15px;
+	  bottom: 25px !important;
+	  box-sizing: border-box;
+	  padding-right: 15px;
+	  padding-top: 10px;
+	  right: 0;
+	  left: auto;
+	  li {
+	    display: inline-block;
+	    float: none;
+	    margin: 0 0 0 5px;
+	    a {
+	      width: 13px;
+	      height: 13px;
+	      background: url(../img/pager_sprite.png) no-repeat;
+	      background-position: -13px 0;
+	      text-indent: 999px;
+	      overflow: hidden;
+	      &:hover, &.flex-active {
+	        background-position: 0 0;
+	      }
+	    }
+	  }
+	  @include bp(wildcard-min, 768px) {
+	  	position: absolute !important;
+	    padding-top: 0;
+	  }
+	}
+}

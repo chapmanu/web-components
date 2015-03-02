@@ -1,0 +1,35 @@
+.carousel-prev {
+  left: 0;
+  background: linear-gradient(to right, rgba(32, 32, 32, 0.6666), rgba(32, 32, 32, 0.25)), url('../../img/carousel-prev.png') no-repeat center / 60%;
+  background-image: url('../../img/carousel-prev.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  // background: linear-gradient(to right, rgba(32,32,32,0.6666), rgba(32,32,32,0.25)), url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5IiBoZWlnaHQ9IjE0IiB2aWV3Qm94PSIwIDAgOSAxNCI+PHBhdGggZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwuNzUpIiBkPSJNNy4xMzkgMTQuMDAxYy0uMzI0IDAtLjU5OS0uMTExLS44MjUtLjMzMmwtNS45NjYtNS44NWMtLjIzMi0uMjI4LS4zNDgtLjUtLjM0OC0uODE4IDAtLjMyMy4xMTYtLjU5My4zNDgtLjgwOWw1Ljk2Ni01Ljg1Yy4yMi0uMjI4LjQ5NS0uMzQyLjgyNS0uMzQyLjMyNCAwIC42MDIuMTE0LjgzNC4zNDJsLjY4Ny42NjVjLjIyNi4yMzQuMzM5LjUwNi4zMzkuODE4IDAgLjMxOC0uMTEzLjU4Ny0uMzM5LjgwOWwtNC40NTQgNC40IDQuNSA0LjM2N2MuMjI2LjIyMi4zMzkuNDkxLjMzOS44MDkgMCAuMzEyLS4xMTMuNTg0LS4zMzkuODE4bC0uNjg3LjY3NGMtLjIzOC4yMjEtLjUxNi4zMzItLjgzNC4zMzJ6Ii8+PC9zdmc+) no-repeat center / 60%;
+}
+
+.carousel-next {
+  right: 0;
+  background: linear-gradient(to left, rgba(32, 32, 32, 0.6666), rgba(32, 32, 32, 0.25)), url('../../img/carousel-next.png') no-repeat center / 60%;
+  background-image: url('../../img/carousel-next.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  // background: linear-gradient(to left, rgba(32,32,32,0.6666), rgba(32,32,32,0.25)), url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5IiBoZWlnaHQ9IjE0IiB2aWV3Qm94PSIwIDAgOSAxNCI+PHBhdGggZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwuNzUpIiBkPSJNMS44NiAwYy4zMjQgMCAuNTk5LjExMS44MjUuMzMybDUuOTY2IDUuODVjLjIzMi4yMjguMzQ4LjUuMzQ4LjgxOCAwIC4zMjMtLjExNi41OTMtLjM0OC44MDlsLTUuOTY2IDUuODVjLS4yMi4yMjgtLjQ5NS4zNDItLjgyNS4zNDItLjMyNCAwLS42MDItLjExNC0uODM0LS4zNDJsLS42ODctLjY2NWMtLjIyNi0uMjM0LS4zMzktLjUwNi0uMzM5LS44MTggMC0uMzE4LjExMy0uNTg3LjMzOS0uODA5bDQuNDU0LTQuMzY3LTQuNDU0LTQuMzY3Yy0uMjI2LS4yMjItLjMzOS0uNDkxLS4zMzktLjgwOSAwLS4zMTIuMTEzLS41ODQuMzM5LS44MThsLjY4Ny0uNjc0Yy4yMzgtLjIyMS41MTYtLjMzMi44MzQtLjMzMnoiLz48L3N2Zz4=) no-repeat center / 60%;
+}
+
+.carousel-prevnext {
+  bottom: 160px;
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  top: 0;
+  transition: box-shadow 200ms;
+  width: 8%;
+  z-index: 1;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.16666);
+  opacity: 0.5;
+  transition: opacity 200ms;
+  &:focus, &:hover {
+    box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.16666), inset 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,83 @@
+.facultyList {
+  margin: 0 0 20px 0;
+  .facultyMember {
+    // margin: 20px 20px 0 0;
+    margin: 20px 20px 2px 0;
+    width: 190px;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    min-height: 100px;
+    // padding: 0 20px 10px 110px;
+    padding: 10px 20px 0 110px;
+    // border-bottom: 1px dotted #565554;
+    border-top: 1px dotted #565554;
+    &:nth-child(odd) {
+      margin-right: 45px;
+    }
+    &:nth-child(even) {
+      margin-right: 0;
+    }
+    .profilePicture {
+      border: 3px solid $white;
+      -webkit-box-shadow: 0px 0px 7px #434343;
+      -moz-box-shadow: 0px 0px 7px #434343;
+      box-shadow: 0px 0px 7px #434343;
+      position: absolute;
+      // top: 0;
+      top: 10px;
+      left: 20px;
+      height: 80px;
+      width: 70px;
+      overflow: hidden;
+      img {
+        position: absolute;
+        top: -3px;
+        left: -5px;
+      }
+    }
+    > {
+      h2 {
+        font-weight: normal;
+        font-size: 16px;
+        margin: 0;
+        padding: 0;
+        > a {
+          color: $cu-red;
+          &:after {
+            content: " \00BB";
+          }
+        }
+      }
+      .department {
+        font-size: 14px;
+      }
+      .title, .additionalTitles {
+        font-size: 13px;
+        margin: 0 0 5px 0;
+        color: $grey;
+      }
+      .specialty {
+        margin: 5px 0 5px 0;
+      }
+      .affiliation {
+        font-size: 12px;
+      }
+      .phone {
+        font-size: 12px;
+        margin: 5px 0 0 0;
+      }
+      .email {
+        margin: 5px 0 0 0;
+      }
+      .affiliation .spacer {
+        margin: 0 0 5px 0;
+      }
+      .bio {
+        font-size: 12px;
+        display: block;
+        margin: 10px 0 10px 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+// ---------- Degrees/Programs, Generic ---------- //
+
+.letterBlock {
+  margin: 0 0 20px 20px;
+  display: inline-block;
+  vertical-align: top;
+  width: 40%;
+  .ie7 & {
+  	display: inline;
+	  zoom: 1;
+  }
+  ul {
+	  list-style-type: none;
+	  li {
+	    margin: 0 20px 5px 0;
+	    padding: 0 0 0 12px;
+	    text-indent: -12px;
+	  }
+	}
+}
+
+.letter {
+  color: $black !important;
+  text-decoration: none;
+  margin: 0 0 5px 0;
+  display: block;
+  &:hover, &:focus, &:visited {
+    color: $black !important;
+    text-decoration: none;
+    margin: 0 0 5px 0;
+    display: block;
+  }
+}

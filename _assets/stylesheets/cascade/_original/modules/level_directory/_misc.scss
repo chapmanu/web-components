@@ -1,0 +1,42 @@
+// Miscellaneous selectors that don't require their own modules and/or only occur once.
+// Will move these to other modules later if necessary.
+
+.breadcrumbs {
+  margin: 0 0 10px 50px;
+}
+
+.personnel-listing {
+  padding: 0 20px 20px 20px;
+  margin: 0 0 20px 0;
+  // background-color: $white;
+}
+
+.oldie .totalResults {
+  margin-right: 5px;
+}
+
+.rightColumn {
+  float: left;
+  margin: 20px 0 0 0;
+  .oldie & {
+  	margin: 15px 0 0 0;
+  }
+}
+
+.primaryContent .main {
+  width: 100%;
+  max-width: 940px;
+  > .leftColumn {
+    width: 100%;
+    max-width: 680px;
+    float: left;
+    @include bp(m) {
+    	margin: 0 60px 0 0;
+    }
+  }
+  @include bp(m) {
+  	width: 100%;
+    max-width: 940px;
+    margin: 0 0 0 50px;
+  }
+}

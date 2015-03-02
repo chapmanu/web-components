@@ -1,0 +1,47 @@
+.newsEventsNav {
+  display: none;
+  z-index: 100;
+  position: relative;
+  .leftNav & {
+    height: 36px;
+    display: block;
+  }
+  li {
+    background-color: #e3e2de;
+    font-size: 1.1em;
+    font-style: normal;
+    color: #64605f;
+    float: left;
+    position: relative;
+    bottom: -5px;
+    list-style-type: none;
+    padding: 0 17px 0 17px;
+    margin: 0 2px 0 0;
+    height: 30px;
+    line-height: 30px;
+    color: #a2a0a0;
+    cursor: pointer;
+    &:hover {
+      background-color: #e0e0dd;
+      color: $cu-red;
+    }
+    &.active {
+      background-color: #f3f2ee;
+      font-weight: 800;
+      color: $cu-red;
+      bottom: 0;
+      padding: 0 40px 0 40px;
+      height: 35px;
+      line-height: 35px;
+      border-top: 2px solid #a82338;
+      border-right: 1px solid #cdccc7;
+      border-left: 1px solid #cdccc7;
+      border-bottom: none;
+    }
+  }
+  @include bp(m) {
+    margin: 0 0 0 0;
+    height: 36px;
+    display: block;
+  }
+}

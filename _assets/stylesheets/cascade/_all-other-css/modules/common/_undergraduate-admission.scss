@@ -1,0 +1,36 @@
+// ---------- Home ---------- //
+
+#undergraduateAdmission {
+  background: #111111 url('../img/big_backgrounds/undergrad_admissions_960.jpg') no-repeat center;
+  background-size: cover;
+  color: $white;
+  padding: 65px 0 140px 0;
+  text-align: center;
+  .skrollr & {
+    background-attachment: fixed;
+  }
+  &:before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 12px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -15px;
+    background: url('../img/pulldown_arrow.svg') no-repeat center top;
+    background-size: contain;
+  }
+  .maxWidth {
+    margin: 0 auto;
+  }
+  .subheading {
+    font-weight: 100;
+  }
+  @include bp(wildcard-min, 980px) {
+    background-image: url('../img/big_backgrounds/undergrad_admissions_1200.jpg');
+  }
+  @include bp(wildcard-min, 1180px) {
+    background-image: url('../img/big_backgrounds/undergrad_admissions_1786.jpg');
+  }
+}

@@ -1,0 +1,88 @@
+// Helpers
+@import "helpers/_variables"; // Common helper
+@import "helpers/_mixins"; // Common helper
+
+.smallMasthead .masthead, .smallMasthead .masthead-old, .bigMasthead .mastheadPlaceholder, .bigMasthead .masthead, .bigMasthead .masthead-old, .nameBar, .rightColumn .styleTwo {
+	background: $dodge-primary; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover,  $dodge-primary 0%, $dodge-secondary 100%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,$dodge-primary), color-stop(100%,$dodge-secondary)); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  $dodge-primary 0%,$dodge-secondary 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover,  $dodge-primary 0%,$dodge-secondary 100%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover,  $dodge-primary 0%,$dodge-secondary 100%); /* IE10+ */
+	background: radial-gradient(center, ellipse cover,  $dodge-primary 0%,$dodge-secondary 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$dodge-primary}', endColorstr='#{$dodge-secondary}',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.rightColumn .styleTwo .border {
+  background-color: $black;
+}
+
+.styleTwo {
+  p, li, div, h2, h3 {
+    color: $white;
+  }
+  a {
+	  color: $white;
+	  text-decoration: underline;
+	}
+}
+
+.nameBarButtons li a {
+  color: $dodge-primary;
+}
+
+.expandedNameBarContainer h2 {
+  color: #cdcdcd;
+}
+
+#social_follow_us {
+  li span {
+    &.hover_state, &.inactive_state {
+      background-image: url('[system-asset]/_files/social_accounts/images/dodge_icons.png[/system-asset]');
+    }
+  }
+  .banner {
+    background: url('[system-asset]/_files/social_accounts/images/dodge_follow_us.png[/system-asset]');
+    background-image: url('[system-asset]/_files/social_accounts/images/dodge_follow_us.png[/system-asset]');
+  }
+  li span {
+    &.hover_state, &.inactive_state {
+      background: url('[system-asset]/_files/social_accounts/images/dodge_icons.png[/system-asset]');
+    }
+  }
+}
+
+.rounded-slider .info-container .blue {
+  background-color: $dodge-primary;
+}
+
+.newbutton a {
+  border: 1px solid $black;
+  background-color: $dodge-primary;
+  background-image: -webkit-gradient(linear, left top, left bottom, from($dodge-tertiary), to($dodge-primary));
+  background-image: -webkit-linear-gradient(top, $dodge-tertiary, $dodge-primary);
+  background-image: -moz-linear-gradient(top, $dodge-tertiary, $dodge-primary);
+  background-image: -o-linear-gradient(top, $dodge-tertiary, $dodge-primary);
+  background-image: linear-gradient(to bottom, $dodge-tertiary, $dodge-primary);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$dodge-tertiary}', endColorstr='#{$dodge-primary}',GradientType=1 );
+  &:hover {
+    border: 1px solid $black;
+    background-color: $dodge-primary;
+    background-image: -webkit-gradient(linear, left top, left bottom, from($dodge-tertiary), to($dodge-primary));
+    background-image: -webkit-linear-gradient(top, $dodge-tertiary, $dodge-primary);
+    background-image: -moz-linear-gradient(top, $dodge-tertiary, $dodge-primary);
+    background-image: -o-linear-gradient(top, $dodge-tertiary, $dodge-primary);
+    background-image: linear-gradient(to bottom, $dodge-tertiary, $dodge-primary);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$dodge-tertiary}', endColorstr='#{$dodge-primary}',GradientType=1 );
+  }
+}
+
+.midPhotoCallouts .photoCallout .caption {
+  background-color: $dodge-primary;
+}
+
+.photoCallouts {
+  .caption, .rollover {
+    background-color: $dodge-primary;
+  }
+}

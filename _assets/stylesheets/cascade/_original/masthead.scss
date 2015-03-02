@@ -1,0 +1,25 @@
+//----------------------------------------//
+// Sass file for css/phase4_masthead.css
+//----------------------------------------//
+
+// Helpers
+@import "helpers/_variables"; // Common helper
+@import "helpers/_mixins"; // Common helper
+
+
+// Layout
+
+
+
+// Modules
+@import "modules/masthead/_big-masthead";
+@import "modules/masthead/_big-masthead-new";
+@import "modules/masthead/_big-masthead-old";
+@import "modules/masthead/_masthead-placeholder";
+@import "modules/masthead/_mini-rotator";
+@import "modules/masthead/_mini-rotator-nav";
+@import "modules/masthead/_rotator-container-slide";
+@import "modules/masthead/_rounded-slider";
+
+
+// Print

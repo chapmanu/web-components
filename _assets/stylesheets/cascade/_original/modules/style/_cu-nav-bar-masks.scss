@@ -1,0 +1,22 @@
+#cuNavBarMasks {
+  .mask_1 {
+    @include bp(m) {
+      position: absolute;
+      top: -52px;
+      left: -1555px;
+      background: rgba(0, 0, 0, 0.5);
+      width: 2000px;
+      height: 43px;
+    }
+  }
+  .mask_2 {
+    @include bp(m) {
+      position: absolute;
+      top: -52px;
+      left: 510px;
+      background: rgba(0, 0, 0, 0.5);
+      width: 2000px;
+      height: 43px;
+    }
+  }
+}

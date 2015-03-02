@@ -1,0 +1,90 @@
+.bg1 {
+	display: none;
+	.values & {
+		img {
+			@include bp(m) {
+				position: absolute;
+        left: -416px;
+        bottom: 0;
+        top: 274px;
+			}
+		}
+		@include bp(m) {
+			position: absolute;
+      top: -75px;
+      left: 95%;
+      height: 100%;
+      width: 47%;
+		}
+	}
+	@include bp(m) {
+		// display: block;
+	}
+	.realize & {
+		img {
+			@include bp(m) {
+				position: absolute;
+        left: -85px;
+        bottom: -56px;
+        max-width: 119%;
+			}
+		}
+		@include bp(m) {
+			position: absolute;
+      top: 9px;
+      left: 41%;
+      height: 100%;
+      width: 65%;
+		}
+	}
+	@include bp(xl) {
+		display: block;
+	}
+	.exploration & {
+		img {
+			@include bp(m) {
+				position: absolute;
+        left: 0;
+        bottom: -5px;
+			}
+		}
+		@include bp(m) {
+			position: absolute;
+      height: 100%;
+      top: 0;
+      left: 25%;
+      width: 70%;
+		}
+	}
+	.global & {
+		img {
+			@include bp(m) {
+				position: absolute;
+        left: -8px;
+        top: 201px;
+			}
+		}
+		@include bp(m) {
+			position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+		}
+	}
+	.creativity & {
+		img {
+			@include bp(m) {
+				position: absolute;
+        top: 0;
+			}
+		}
+		@include bp(m) {
+			position: absolute;
+      height: 100%;
+      width: 80%;
+      top: 0;
+      left: 20%;
+		}
+	}
+}

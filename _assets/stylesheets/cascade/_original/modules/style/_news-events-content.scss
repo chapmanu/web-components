@@ -1,0 +1,110 @@
+.newsEventsContent {
+  background-color: #f3f2ee;
+  border: 1px solid #cdccc7;
+  position: relative;
+  padding: 10px;
+  margin: 0 0 20px 0;
+  .homepage & {
+    .description {
+      @include bp(m) {
+        font-family: 'proxima-nova', sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+      }
+    }
+    .date {
+      @include bp(m) {
+        margin: 0 0 0 0;
+      }
+    }
+  }
+  .leftNav &, .homepage & {
+    li {
+      @include bp(m) {
+        list-style-type: none;
+        display: none;
+      }
+    }
+  }
+  .leftNav & {
+    li {
+      &.active {
+        @include bp(m) {
+          display: block;
+        }
+      }
+      list-style-type: none;
+      display: none;
+    }
+  }
+  .featureImage {
+    float: left;
+    display: block;
+    width: 30%;
+    max-width: 284px;
+    border: 7px solid $white;
+    margin: 0 0 0 0;
+    -webkit-box-shadow: 0px 0px 5px #e4e2d7;
+    -moz-box-shadow: 0px 0px 5px #e4e2d7;
+    box-shadow: 0px 0px 5px #e4e2d7;
+  }
+  h4 {
+    margin-top: 0;
+    top: -1px;
+    clear: both;
+  }
+  h6 {
+    // display: none !important;
+    background-color: $cu-red;
+    background-image: url("../img/active_tab_bg.png");
+    background-repeat: repeat-x;
+    background-position: left top;
+    font-size: 14px;
+    color: $white;
+    padding: 10px;
+    margin: 10px;
+    @include bp(m) {
+      display: none;
+    }
+  }
+  div {
+    margin: 5px 10px 10px 10px;
+  }
+  .description {
+    display: inline-block;
+    margin-left: 85px;
+    @include bp(m) {
+      margin-left: 0;
+    }
+  }
+  .events > div {
+    margin-bottom: 25px;
+  }
+  .events > div, .rss-story, .story1 {
+    > h4 {
+      @include bp(m) {
+        font-size: 24px;
+        padding: 0;
+        margin: 0;
+      }
+    }
+    .description {
+      @include bp(m) {
+        margin-left: 85px;
+        display: block;
+      }
+    }
+  }
+  .featureImage {
+    display: none;
+    @include bp(m) {
+      display: block;
+    }
+  }
+  a {
+    font-weight: normal;
+  }
+  .date {
+    margin: 0;
+  }
+}

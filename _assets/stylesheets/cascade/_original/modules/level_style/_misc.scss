@@ -1,0 +1,231 @@
+// Miscellaneous selectors that don't require their own modules and/or only occur once.
+// Will move these to other modules later if necessary.
+
+.entry-content {
+  img, iframe, object, embed {
+    max-width: 100%;
+  }
+}
+
+.bottomExtend {
+  position: absolute;
+  bottom: 0;
+  height: 50%;
+  width: 100%;
+  background-color: $cu-warm-light-grey;
+}
+
+.collapsedInfoForHeading {
+  width: 50%;
+}
+
+.collapsedResourcesHeading {
+  width: 40%;
+}
+
+#cse .gsc-search-box {
+  display: none;
+}
+
+.leftSlideFade {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  left: -100%;
+  z-index: 110;
+  background-image: url("../img/slide_fade_left.png");
+  background-repeat: repeat-y;
+  background-position: right top;
+  .ie7 & {
+  	display: none;
+  }
+}
+
+.rightSlideFade {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  right: -100%;
+  z-index: 110;
+  background-image: url("../img/slide_fade_right.png");
+  background-repeat: repeat-y;
+  background-position: left top;
+  .ie7 & {
+  	display: none;
+  }
+}
+
+.blockOut {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: $white;
+}
+
+.ellipsis.multiline {
+  white-space: normal;
+}
+
+.jspDrag {
+  background-color: black !important;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -16px;
+    height: 0;
+    width: 0;
+    border: 8px solid transparent;
+    border-left-color: $black;
+  }
+}
+
+.jspTrack {
+  background-color: #a5a5a5 !important;
+  -webkit-box-shadow: inset 0 0px 8px #7c7c7c;
+  -moz-box-shadow: inset 0 0px 8px #7c7c7c;
+  box-shadow: inset 0 0px 8px #7c7c7c;
+}
+
+.subRotator {
+  background-color: $cu-warm-light-grey;
+  @include bp(m) {
+  	position: relative;
+    z-index: 120;
+    padding: 10px 0 100px 0;
+  }
+}
+
+div.subRotator {
+  @include bp(wildcard-max, 1100px) {
+  	padding-bottom: 130px;
+  }
+}
+
+div.four-col-float {
+  float: left;
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+}
+
+.featured {
+  img {
+    max-width: 94%;
+    height: auto;
+  }
+  .title {
+    color: $cu-red;
+    font-family: arial;
+    margin: 0 0 10px 0;
+  }
+}
+
+.readMore {
+  float: right;
+  width: 100px;
+  text-align: right;
+}
+
+#search_message {
+  background: #9c998d;
+  height: 40px;
+  margin-bottom: 20px;
+  p {
+    color: $white;
+    text-shadow: 0 1px 0 #4d4c46;
+    line-height: 40px;
+    text-align: center;
+  }
+}
+
+.rgba .captionWrapper:before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -10px;
+  right: -10px;
+  height: 7px;
+  background-color: rgba(67, 67, 67, 0.6);
+}
+
+.allNews, .allEvents {
+  float: right;
+  width: 100px;
+  text-align: right;
+  margin-right: 33px;
+}
+
+.rotatorContainer {
+  position: relative;
+  z-index: 100;
+  @include bp(m) {
+    max-height: 468px;
+  }
+  @include bp(l) {
+    max-width: 960px;
+    margin: 0 auto 0 auto;
+    overflow: visible !important;
+  }
+}
+
+.scrollGallery {
+  height: 450px;
+  margin: 0 0 20px 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  @include bp(m) {
+    margin: 0 0 90px 0;
+  }
+}
+
+.collegeName {
+  font-family: Times New Roman;
+  font-size: 39px;
+  color: $white;
+  padding: 20px 0 0 0;
+}
+
+.collegeDescription {
+  font-family: Times New Roman;
+  font-style: italic;
+  font-size: 18px;
+  color: $white;
+  float: left;
+  position: relative;
+  left: 50%;
+  max-width: 90%;
+  margin: 0 0 10px 0;
+  .centeredContent {
+    text-align: left;
+    position: relative;
+    left: -50%;
+    word-break: break-word;
+  }
+}
+
+.story {
+  visibility: hidden;
+  &.story1, &.story3 {
+    background-color: #fbf9f0;
+  }
+}
+
+.headerWrap {
+  @include bp(m) {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+}
+
+.alert {
+  @include bp(m) {
+    margin: -12px 0 0 0;
+  }
+}

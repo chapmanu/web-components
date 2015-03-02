@@ -1,0 +1,43 @@
+.footer-ribbon {
+	.footer-ribbon-before, .footer-ribbon-after {
+    @include bp(m) {
+    	height: 45px;
+	    line-height: 45px;
+    }
+  }
+  .footer-ribbon-after {
+  	@include bp(m) {
+  		background-image: url(img/ribbon_tails.png);
+      background-repeat: no-repeat;
+      background-position: right 0;
+      position: absolute;
+      width: 15px;
+      top: 0;
+      right: -15px;
+  	}
+  }
+  .footer-ribbon-before {
+  	@include bp(m) {
+  		background-color: $grey;
+  		position: absolute;
+      top: 0;
+      left: -1000%;
+      width: 1000%;
+  	}
+  }
+	@include bp(m) {
+		height: 45px;
+    line-height: 45px;
+    background-color: $grey;
+    position: relative;
+    padding: 0 0 0 10px;
+    margin: 0;
+    width: 70%;
+    z-index: 100;
+    float: left;
+    @include vendorize(box-sizing, border-box);
+	}
+	@include bp(wildcard-min, 1160px) {
+		padding: 0 0 0 10px;
+	}
+}

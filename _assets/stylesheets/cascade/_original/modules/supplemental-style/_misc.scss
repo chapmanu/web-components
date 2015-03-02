@@ -1,0 +1,10 @@
+// Miscellaneous selectors that don't require their own modules and/or only occur once.
+// Will move these to other modules later if necessary.
+
+body.personnel .main {
+  margin-left: 0;
+}
+
+th.header-light {
+  background-color: #EAE1BC;
+}

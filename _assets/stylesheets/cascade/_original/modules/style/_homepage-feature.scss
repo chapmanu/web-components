@@ -1,0 +1,20 @@
+.homepage-feature {
+  h2, h3 {
+    margin-top: 10px;
+    color: $cu-red;
+  }
+  h2 {
+    font-family: "proxima-nova", sans-serif;
+    font-size: 50px;
+    font-weight: 800;
+    text-transform: none;
+    margin: 0;
+  }
+  h3 {
+    font-family: "proxima-nova-soft", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    margin-top: -17px;
+    text-transform: none;
+  }
+}

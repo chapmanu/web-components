@@ -1,0 +1,17 @@
+.roundedSlideshow {
+  header {
+		@include bp(m) {
+			padding: 0 0 300px 0;
+		}
+  }
+  #main {
+		@include bp(m) {
+			margin-top: -300px;
+		}
+  }
+}
+
+.accordion {
+  display: inline-block;
+  width: 100%;
+}

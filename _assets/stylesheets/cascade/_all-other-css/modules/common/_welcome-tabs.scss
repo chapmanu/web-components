@@ -1,0 +1,147 @@
+// ---------- Level, Level-Style ---------- //
+
+#welcome-tabs {
+  .desk-tabs {
+    display: none;
+    ul {
+      @include bp(m) {
+        height: 45px;
+      }
+    }
+    li {
+      &:first-child {
+        @include bp(m) {
+          border-width: 1px 1px 1px 1px;
+        }
+      }
+      &.open {
+        @include bp(m) {
+          color: $white;
+          font-size: 1.3em;
+          background: #81bd69 url('/_files/img/welcome/welcome_deskTabBg.png') top center no-repeat;
+          -ms-text-shadow: #81bd69;
+          text-shadow: #81bd69;
+          margin-top: 1px;
+        }
+      }
+      @include bp(m) {
+        float: left;
+        padding: 8px 10px;
+        border-style: solid;
+        border-color: #b1b1b1;
+        border-width: 1px 1px 1px 0px;
+        list-style: none;
+        color: #797979;
+        font-size: 1em;
+        background: #f4f4f4;
+        // font-family: 'Open Sans', "Times New Roman", Times, serif;
+        font-family: 'proxima-nova', sans-serif;
+        margin-top: 5px;
+        cursor: pointer;
+      }
+    }
+    @include bp(m) {
+      display: block;
+      overflow: auto;
+      text-align: right;
+      margin-left: 1px;
+    }
+    @include bp(l) {
+      position: absolute;
+      top: 69px;
+      right: 92px;
+    }
+  }
+  #b-blog .second-col li:first-child {
+    border-top: 1px dotted #7f5900;
+    @include bp(l) {
+      border-top: none;
+    }
+  }
+  .tabs {
+    .closed-body {
+      display: none;
+    }
+    .open-body {
+      display: block;
+      background: $white;
+    }
+    h2 {
+      color: #494949;
+      // font-family: 'Open Sans', "Times New Roman", Times, serif;
+      font-family: 'proxima-nova', sans-serif;
+      height: 30px;
+      display: block;
+      cursor: pointer;
+      background: url('/_files/img/welcome/welcome_mobileTabClosed.png') top center repeat-x;
+      -webkit-background-size: 10px 36px;
+      background-size: 10px 36px;
+      margin: 0;
+      padding: 6px 4px 0px 4px;
+      font-size: 1.15em;
+      &.open {
+        background: url('/_files/img/welcome/welcome_mobileTabOpen.png') top center repeat-x;
+        -webkit-background-size: 10px 36px;
+        background-size: 10px 36px;
+        color: $white;
+      }
+      @include bp(m) {
+        display: none;
+      }
+    }
+    .body li {
+      background-color: $white;
+      border-top: 1px dotted #7f5900;
+      padding: 8px 5px;
+      position: relative;
+      list-style: none;
+      &.pagingListItem {
+        padding: 0;
+      }
+      &:first-child {
+        border-top: none;
+      }
+      &.odd {
+        background-color: #f7f6ef;
+      }
+      a {
+        color: #3399d1;
+        // font-family: 'Open Sans', "Times New Roman", Times, serif;
+        font-family: 'proxima-nova', sans-serif;
+        font-size: 1em;
+      }
+      .close {
+        position: absolute;
+        top: 7px;
+        right: 10px;
+        &.confirm {
+          top: 3px;
+        }
+      }
+      span {
+        &.close {
+          @include bp(highres) {
+            top: 10px;
+            right: 7px;
+            background: url('/_files/img/welcome/welcome_close2x.png');
+            -webkit-background-size: 13px 13px;
+            background-size: 13px 13px;
+            height: 13px;
+            width: 13px;
+          }
+        }
+        &.confirm {
+          @include bp(highres) {
+            top: 3px;
+            right: 5px;
+            background: url('/_files/img/welcome/welcome_unsave2x.png');
+            -webkit-background-size: 69px 25px;
+            background-size: 69px 25px;
+            height: 25px;
+            width: 69px;
+          }
+        }
+      }
+    }
+  }
+}

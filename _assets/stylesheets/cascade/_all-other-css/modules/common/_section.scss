@@ -1,0 +1,162 @@
+// ---------- Home ---------- //
+
+.section {
+  position: relative;
+  overflow: auto;
+  background: $cu-light-grey;
+  .ie7 & {
+    .third {
+      padding: 0;
+      width: 31%;
+      margin-right: 2%;
+    }
+  }
+  .heading {
+    font-size: 28px;
+    line-height: 28px;
+    text-transform: none;
+    margin: 0;
+    @include bp(wildcard-min, 680px) {
+      font-size: 32px;
+      line-height: 32px;
+    }
+    @include bp(wildcard-min, 980px) {
+      font-size: 56px;
+      line-height: 56px;
+    }
+    @include bp(wildcard-min, 1180px) {
+      font-size: 64px;
+      line-height: 64px;
+    }
+  }
+  .subheading {
+    font-size: 18px;
+    line-height: 18px;
+    text-transform: none;
+    margin: 0;
+    @include bp(wildcard-min, 680px) {
+      font-size: 22px;
+      line-height: 22px;
+    }
+    @include bp(wildcard-min, 980px) {
+      font-size: 32px;
+      line-height: 32px;
+    }
+    @include bp(wildcard-min, 1180px) {
+      font-size: 32px;
+      line-height: 32px;
+    }
+  }
+  &.dark-bg {
+    background-color: #111111;
+    .heading, .subheading {
+      color: $white;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    }
+  }
+  &.light-bg {
+    .heading, .subheading {
+      color: $grey;
+    }
+    .heading {
+      color: $grey;
+      font-size: 18px;
+      line-height: 18px;
+      margin: 40px 0 0 0;
+      text-align: center;
+      @include bp(wildcard-min, 680px) {
+        font-size: 24px;
+        line-height: 24px;
+        margin: 75px 0 0 0;
+        font-weight: 800;
+      }
+      @include bp(wildcard-min, 980px) {
+        font-size: 32px;
+        line-height: 32px;
+        margin: 75px 0 0 0;
+      }
+    }
+    .subheading {
+      color: $grey;
+      font-size: 18px;
+      line-height: 18px;
+      margin: 0 0 40px 0;
+      text-align: center;
+      @include bp(wildcard-min, 680px) {
+        font-size: 24px;
+        line-height: 24px;
+        margin: 0 0 75px 0;
+        font-weight: 800;
+      }
+      @include bp(wildcard-min, 980px) {
+        font-size: 32px;
+        line-height: 32px;
+        margin: 0 0 75px 0;
+      }
+    }
+  }
+  .actions {
+    text-align: center;
+    clear: both;
+    .button {
+      background-size: 15px;
+      background-position: 15px center;
+      padding-left: 35px;
+      padding-right: 20px;
+      margin: 5px;
+      &.apply {
+        background-image: url('../img/icons/png/file6_white_15.png');
+        background-image: none, url('../img/icons/svg/file6_white.svg');
+      }
+      &.request {
+        background-image: url('../img/icons/png/email_white_15.png');
+        background-image: none, url('../img/icons/svg/email_white.svg');
+      }
+      &.monogram {
+        background-image: url('../img/cu_icons/cu_monogram_gray_25.png');
+        background-image: none, url('../img/cu_icons/cu_monogram_gray.svg');
+        background-size: 25px;
+        padding-left: 43px;
+      }
+      &.calendar {
+        background-image: url('../img/icons/png/calendar4_white_15.png');
+        background-image: none, url('../img/icons/svg/calendar4_white.svg');
+      }
+    }
+  }
+  .third {
+    padding: 10px;
+    overflow: hidden;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    h3 {
+      font-weight: 800;
+      padding: 0;
+      margin: 0;
+      text-transform: uppercase;
+      font-size: 24px;
+      line-height: 26px;
+    }
+    img {
+      width: 100%;
+    }
+    .imagerotator {
+      width: 100%;
+      margin: 0 0 15px 0;
+      @include bp(wildcard-min, 400px) {
+        width: 40%;
+        float: left;
+        margin: 0 15px 15px 0;
+      }
+      @include bp(wildcard-min, 680px) {
+        width: 100%;
+        height: auto;
+        margin: 0 0 20px 0;
+      }
+    }
+    @include bp(wildcard-min, 680px) {
+      float: left;
+      width: 33%;
+    }
+  }
+}

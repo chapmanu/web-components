@@ -1,0 +1,111 @@
+.collapsedNav {
+  margin: 110px 0 0 0;
+  border: 1px solid $black;
+  border-width: 1px 0 1px 0;
+  position: relative;
+  .collapsedInfoForHeading, .collapsedResourcesHeading {
+    float: left;
+    font-size: 14px;
+    padding: 10px 0 10px 0;
+    margin: 0;
+    cursor: pointer;
+    margin: 0 0 0 0;
+    border-right: 1px solid $black;
+    text-align: center;
+  }
+  .collapsedInfoForHeading .bullet, .collapsedResourcesHeading .bullet {
+    float: left;
+    height: 10px;
+    width: 12px;
+    margin: 0 0 0 2px;
+    background-image: url("../img/mobile_arrows.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+  }
+  @include bp(m) {
+    display: none !important;
+  }
+}
+
+.collapsedInfoForHeading {
+  width: 40%;
+  &.active {
+    background-color: #a2acb4;
+  }
+}
+
+.collapsedResourcesHeading {
+  width: 40%;
+  &.active {
+    background-color: #a2acb4;
+  }
+}
+
+.collapsedSearchHeading, .collapsedSearch .searchButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-image: url("../img/magnifying_glass.png");
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  height: 37px;
+  width: 20%;
+  cursor: pointer;
+  padding: 0 0 0 0;
+  border: none;
+  text-indent: -99999px;
+  overflow: hidden;
+}
+
+.collapsedSearchHeading {
+  &.active {
+    background-image: none !important;
+    background-color: #a2acb4;
+    border-left: 1px solid $black;
+    .downArrow {
+      font-size: 52px;
+      position: absolute;
+      height: 15px;
+      top: 15px;
+      left: 7px;
+      overflow: hidden;
+      color: $cu-red;
+      text-indent: 8px;
+      span {
+        display: block;
+        margin: -39px 0 0 -12px;
+      }
+    }
+  }
+  .downArrow span {
+    display: none;
+  }
+  &.active .downArrow {
+    display: block;
+  }
+}
+
+/*.collapsedSearchHeading.active .downArrow span:before {
+    font-family: "icomoon";
+    content: "\e01a";
+}*/
+
+.collapsedSearch {
+  position: relative;
+  .searchButton {
+    background-color: transparent;
+    height: 100%;
+  }
+  &.active {
+    display: block;
+  }
+  .searchBox {
+    font-size: 14px;
+    border: none;
+    /*padding: 0 0 0 10px;*/
+    /*padding-left: 10px;*/
+    padding: 10px;
+    width: 75%;
+    /*height: 37px;*/
+  }
+}

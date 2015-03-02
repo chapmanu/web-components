@@ -1,0 +1,18 @@
+.cu_nav_menu {
+  a.cu_nav_button {
+    height: 0;
+    opacity: 0;
+    padding: 0 12.85714px 0 12.85714px;
+  }
+  &.expanded {
+    a.cu_nav_button {
+      height: 45px;
+      opacity: 1;
+      padding: 12.85714px;
+      border-bottom: 1px solid #D6D5CF;
+    }
+    #cu_login_container .cu_dropdown_menu {
+      padding: 10px;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+// ---------- Style ---------- //
+
+.weather {
+  display: block;
+  .addressLocality {
+    display: none;
+  }
+  img {
+    float: left;
+  }
+  .temp {
+    float: left;
+    color: #4A4949;
+    line-height: 20px;
+    margin-top: 15px;
+    .f {
+      font-size: 35px;
+      color: $grey;
+      font-weight: 700;
+    }
+  }
+}

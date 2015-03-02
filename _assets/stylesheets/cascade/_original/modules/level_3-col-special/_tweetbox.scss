@@ -1,0 +1,82 @@
+.tweetbox {
+  margin: 0 0 1em 0;
+  .rightColumn & {
+    // border-left: 1px solid #0099c8;
+    // background-color: transparent;
+    // padding: 0;
+    // width: 163px;
+  }
+  iframe {
+    width: 100% !important;
+  }
+  .header {
+    // position: relative;
+    // background-color: #0099c8;
+    // font-size: 1.2em;
+    // color: $white;
+    // width: 100%;
+    // text-align: right;
+    // font-weight: bold;
+    // padding: 0.5em 1em;
+    .bird {
+      // width: 54px;
+      // height: 50px;
+      // background-image: url(../img/tbird.png);
+      // position: absolute;
+      // top: 0;
+      // left: 0;
+      // z-index: 25;
+    }
+  }
+  ul {
+    // list-style: none;
+    // width: 100%;
+    // display: block;
+  }
+  li {
+    // background-color: #0099c8;
+    // width: 194px;
+    // position: relative;
+    &.odd {
+      // background-color: #66c2de;
+    }
+    p {
+      // margin: 0;
+      // padding: 1em 1em 2em;
+      // font-size: 0.8em;
+      // color: $white;
+      // font-weight: bold;
+    }
+    a {
+      // color: $black;
+      &:hover, &:active {
+        // color: $cu-red;
+      }
+    }
+  }
+  .date {
+    // color: #007194;
+    // font-size: 0.8em;
+    // text-transform: uppercase;
+    // position: absolute;
+    // bottom: 7px;
+    // right: 7px;
+    // text-align: right;
+    // width: auto;
+    // height: auto;
+  }
+  .footer {
+    // background-color: #0099c8;
+    // font-size: 0.9em;
+    // width: 188px;
+    // font-weight: bold;
+    // padding: 3px;
+    .follow {
+      // color: $cu-red;
+      // padding-right: 20px;
+    }
+    .more-link {
+      // color: $white;
+    }
+  }
+}

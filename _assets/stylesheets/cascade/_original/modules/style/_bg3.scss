@@ -1,0 +1,104 @@
+.bg3 {
+	position: absolute;
+  left: -15%;
+  top: 0;
+  height: 100%;
+  width: 55%;
+  img {
+  	position: absolute;
+	  bottom: 0px;
+	  right: 10px;
+	  max-height: 290px;
+	  @include bp(m) {
+	  	right: auto;
+	    max-height: 100%;
+	  }
+  }
+	.values & {
+		img {
+			@include bp(m) {
+				position: absolute;
+        left: -243px;
+        top: 60px;
+			}
+		}
+		@include bp(m) {
+			position: absolute;
+      left: 8%;
+      top: -12px;
+      height: 100%;
+      width: 70%;
+		}
+		@include bp(xl) {
+			position: absolute;
+      left: 0%;
+      top: -62px;
+      height: 100%;
+      width: 75%;
+      // position: absolute;
+      // left: 5%;
+      // top: 0;
+      // height: 100%;
+      // width: 40%;
+		}
+	}
+	.realize & {
+		img {
+			@include bp(m) {
+				position: absolute;
+			}
+		}
+		@include bp(m) {
+			position: absolute;
+      left: -84px;
+      top: 0;
+      height: 100%;
+      width: 45%;
+		}
+	}
+	.exploration & {
+		img {
+			@include bp(m) {
+				position: absolute;
+        bottom: 0;
+			}
+		}
+		@include bp(m) {
+			position: absolute;
+      height: 100%;
+      top: 0;
+      left: 0;
+      width: 30%;
+		}
+	}
+	.global & {
+		img {
+			@include bp(m) {
+				position: absolute;
+        bottom: 0;
+			}
+		}
+		@include bp(m) {
+			position: absolute;
+      left: 0;
+      top: 77px;
+      height: 100%;
+      width: 40%;
+		}
+	}
+	.creativity & {
+		img {
+			@include bp(m) {
+				position: absolute;
+        bottom: 0;
+			}
+		}
+		@include bp(m) {
+			position: absolute;
+      height: 100%;
+      width: 72%;
+      left: -133px;
+      top: 23px;
+		}
+	}
+}

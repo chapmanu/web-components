@@ -1,0 +1,44 @@
+// ---------- Style ---------- //
+
+.scatteredBlurb {
+	.global & {
+		div {
+			@include bp(m) {
+				margin-top: -25px !important;
+			}
+		}
+	}
+	.rgba & {
+		@include bp(m) {
+			background-color: rgba(0, 0, 0, 0.7);
+		}
+	}
+	.button {
+		@include bp(m) {
+			display: block;
+	    padding: 10px;
+	    width: 100px;
+	    background-color: $white;
+	    color: $cu-red;
+	    margin: 10px 0 0 0;
+	    font-weight: 800;
+	    font-family: 'proxima-nova', sans-serif;
+		}
+	}
+	div {
+    @include bp(m) {
+    	padding: 20px;
+	    @include vendorize(transform, rotate(-3deg));
+    }
+  }
+  @include bp(m) {
+  	position: absolute;
+	  color: $white;
+	  background-color: #666;
+	  height: 100%;
+	  width: 100%;
+	  top: 0;
+	  left: 0;
+	  display: none;
+  }
+}

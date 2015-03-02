@@ -1,0 +1,37 @@
+#cu_feedback_button {
+  @include bp(wildcard-max, 780px) {
+    position: absolute;
+    bottom: auto;
+    left: auto;
+    top: 0;
+    right: 10px;
+  }
+}
+
+#cu_feedback_ribbon {
+  div.icon {
+    @include bp(wildcard-max, 780px) {
+      left: 9px;
+    }
+  }
+  .m-remove {
+    @include bp(wildcard-max, 780px) {
+      display: none;
+    }
+  }
+  @include bp(wildcard-max, 780px) {
+    position: relative;
+    width: 35px;
+    bottom: none;
+    left: none;
+    top: 10px;
+    right: 0;
+    padding: 0;
+  }
+}
+
+#cu_feedback_tooltip {
+  @include bp(wildcard-max, 780px) {
+    display: none !important;
+  }
+}

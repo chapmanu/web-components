@@ -1,0 +1,19 @@
+.addThis {
+  clear: both;
+  margin: 20px 0 10px;
+  .twitter_share {
+    top: 2px;
+    position: relative;
+    float: left;
+  }
+  .fb_like_container {
+    top: 2px;
+    float: left;
+    position: relative;
+    width: 110px !important;
+    overflow: hidden;
+  }
+  @include bp(m) {
+    display: block;
+  }
+}

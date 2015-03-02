@@ -1,0 +1,61 @@
+.bigMasthead {
+	&.smallRotator {
+		header {
+			@include bp(l) {
+				padding: 0 0 0 0;
+			}
+		}
+	}
+	header {
+		@include bp(l) {
+			padding: 0 0 0 0;
+		}
+	}
+	.mastheadPlaceholder {
+    background-color: $teal2-hover;
+    bottom: 30px;
+    max-width: 1130px;  
+    min-height: 83px;
+    position:relative;
+    margin: 50px auto 0 auto;
+    > div {
+		  color: $white;
+		  font-size: 19px;
+		  line-height: 19px;
+		  font-style: normal;
+		  padding: 30px;
+		  text-align: left;
+		  @include bp(l) {
+		  	padding: 25px 20px 20px 35%;
+		  }
+		}
+	}
+	.brandedMastheadContainer {
+	  max-width: 1128px;
+	  max-height: 220px;
+	  overflow: visible !important;
+	  margin: 0 auto;
+	  position: relative;
+	  z-index: 100;
+	  .masthead-new {
+	    .caption {
+	      padding: 30px 12px 10px 12px;
+	    }
+	    &.captionOnTop p.subTitle {
+	      max-width: 100%;
+	      @include bp(l) {
+	      	max-width: 45%;
+	      }
+	    }
+	    > img {
+	      max-height: 220px;
+	      width: 100%;
+	      bottom: 20px;
+	      @include bp(l) {
+	      	max-height: 220px;
+			    width: 1128px;
+	      }
+	    }
+	  }
+	}
+}

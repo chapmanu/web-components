@@ -1,0 +1,90 @@
+.accordion {
+	background-color: $cu-light-grey;
+  border: 1px solid #cdcdc7;
+  border-radius: 2px;
+  margin-bottom: 2px;
+	.ie7 & {
+		zoom: normal;
+		&.active header {
+			background-color: $cu-light-grey;
+		}
+    h3 {
+      zoom: normal;
+    }
+    .header {
+		  background-color: #e2e1db;
+		  overflow: hidden;
+		  width: 100%;
+		}
+	}
+	&.active {
+		header {
+			background-color: $cu-light-grey;
+		}
+		.header {
+			font-weight: 600;
+			.show {
+	      display: none;
+	    }
+	    .hide {
+	      display: block;
+	    }
+		}
+	}
+	&.first {
+    margin-top: 20px;
+  }
+  table {
+    width: 100%;
+  }
+  .header {
+    background-color: #e2e1db;
+    font-size: 16px;
+    // font-weight: normal;
+    color: #434343;
+    padding: 10px 45px 10px 27px;
+    margin: 0;
+    position: relative;
+    // cursor: pointer;
+    cursor: hand;
+    font-family: 'proxima-nova', sans-serif;
+    font-weight: 800;
+    text-transform: none;
+    .show, .hide {
+      background-image: url(img/miscButtons.png);
+      background-position: -23px 0;
+      background-repeat: no-repeat;
+      position: absolute;
+      text-indent: -9999px;
+      color: $white;
+      top: 8px;
+      right: 13px;
+      width: 27px;
+      height: 27px;
+    }
+    .show {
+      background-position: -23px 0;
+      display: block;
+      &:hover {
+        background-position: -51px 0;
+        display: block;
+      }
+    }
+    .hide {
+      background-position: -23px -29px;
+      display: none;
+      &:hover {
+        background-position: -51px -29px;
+        display: none;
+      }
+    }
+  }
+  .content {
+    margin: 0 20px 18px 27px;
+    overflow: hidden;
+  }
+}
+
+div.accordion:first-child {
+  margin-top: 20px;
+}

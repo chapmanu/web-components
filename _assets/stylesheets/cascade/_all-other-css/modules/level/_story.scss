@@ -1,0 +1,22 @@
+.story {
+	visibility: hidden;
+	h3 > a {
+    padding: 0;
+    margin: 0;
+  }
+  &.story1, &.story3 {
+    // background-color: #fbf9f0;
+  }
+  &.future {
+  	@include bp(l) {
+  		border: none;
+  	}
+  }
+  @include bp(l) {
+  	float: left;
+    width: 115px;
+    padding: 0 20px 0 15px;
+    margin: 10px 0 10px 0;
+    border-right: 1px solid #dfd3bc;
+  }
+}

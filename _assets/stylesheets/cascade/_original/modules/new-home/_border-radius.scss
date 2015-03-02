@@ -1,0 +1,40 @@
+.borderradius {
+	ul.statistics li {
+		@include bp(wildcard-min, 680px) {
+			float: left;
+      width: 85px;
+      height: 85px;
+      padding: 30px;
+      margin-right: -15px;
+      background: $cu-red;
+      background: rgba(168, 36, 57, 0.7);
+      border-radius: 50%;
+      padding: 30px;
+		}
+		@include bp(wildcard-min, 980px) {
+			width: 100px;
+	    height: 100px;
+	    padding: 50px;
+	    margin-right: -40px;
+		}
+		@include bp(wildcard-min, 1180px) {
+			width: 150px;
+	    height: 130px;
+	    padding: 70px 50px 50px 50px;
+		}
+	}
+	#undergraduateAdmission ul.statistics {
+		li {
+			@include bp(wildcard-min, 680px) {
+				position: relative;
+        left: 50%;
+			}
+		}
+		@include bp(wildcard-min, 680px) {
+			overflow: visible;
+      float: right;
+      position: relative;
+      right: 50%;
+		}
+	}
+}

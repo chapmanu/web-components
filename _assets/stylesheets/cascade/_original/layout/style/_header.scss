@@ -1,0 +1,7 @@
+header {
+  @include bp(m) {
+  	width: 100%;
+	  margin-bottom: 30px;
+	  margin-top: 30px;
+  }
+}

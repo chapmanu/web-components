@@ -1,0 +1,72 @@
+// Helpers
+@import "helpers/_variables"; // Common helper
+@import "helpers/_mixins"; // Common helper
+
+.smallMasthead .masthead, .smallMasthead .masthead-old, .bigMasthead .mastheadPlaceholder, .bigMasthead .masthead, .bigMasthead .masthead-old, .nameBar, .rightColumn .styleTwo {
+	background: $theatre-primary; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover,  $theatre-primary 0%, $theatre-secondary 100%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,$theatre-primary), color-stop(100%,$theatre-secondary)); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  $theatre-primary 0%,$theatre-secondary 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover,  $theatre-primary 0%,$theatre-secondary 100%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover,  $theatre-primary 0%,$theatre-secondary 100%); /* IE10+ */
+	background: radial-gradient(center, ellipse cover,  $theatre-primary 0%,$theatre-secondary 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$theatre-primary}', endColorstr='#{$theatre-secondary}',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.rightColumn .styleTwo .border {
+  background-color: #001226;
+}
+
+.nameBarButtons li a {
+  color: $theatre-primary;
+}
+
+.expandedNameBarContainer h2 {
+  color: #a1a9bd;
+}
+
+#social_follow_us {
+  .banner {
+    background-image: url('[system-asset]/_files/social_accounts/images/copa_theatre_follow_us.png[/system-asset]');
+  }
+  li span {
+    &.hover_state, &.inactive_state {
+      background: url('[system-asset]/_files/social_accounts/images/copa_theatre_icons.png[/system-asset]');
+    }
+  }
+}
+
+.rounded-slider .info-container .blue {
+  background-color: $theatre-primary;
+}
+
+.newbutton a {
+  border: 1px solid $theatre-primary;
+  background-color: $theatre-primary;
+  background-image: -webkit-gradient(linear, left top, left bottom, from($theatre-primary), to($theatre-secondary));
+  background-image: -webkit-linear-gradient(top, $theatre-primary, $theatre-secondary);
+  background-image: -moz-linear-gradient(top, $theatre-primary, $theatre-secondary);
+  background-image: -o-linear-gradient(top, $theatre-primary, $theatre-secondary);
+  background-image: linear-gradient(to bottom, $theatre-primary, $theatre-secondary);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$theatre-primary}', endColorstr='#{$theatre-secondary}',GradientType=1 );
+  &:hover {
+    border: 1px solid $theatre-primary;
+    background-color: $theatre-primary;
+    background-image: -webkit-gradient(linear, left top, left bottom, from($theatre-primary), to($theatre-secondary));
+    background-image: -webkit-linear-gradient(top, $theatre-primary, $theatre-secondary);
+    background-image: -moz-linear-gradient(top, $theatre-primary, $theatre-secondary);
+    background-image: -o-linear-gradient(top, $theatre-primary, $theatre-secondary);
+    background-image: linear-gradient(to bottom, $theatre-primary, $theatre-secondary);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$theatre-primary}', endColorstr='#{$theatre-secondary}',GradientType=1 );
+  }
+}
+
+.midPhotoCallouts .photoCallout .caption {
+  background-color: $theatre-primary;
+}
+
+.photoCallouts {
+  .caption, .rollover {
+    background-color: $theatre-primary;
+  }
+}

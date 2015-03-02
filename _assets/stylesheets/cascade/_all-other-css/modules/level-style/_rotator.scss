@@ -1,0 +1,27 @@
+.rotatorContainer {
+  position: relative;
+  z-index: 100;
+  @include bp(m) {
+    max-height: 468px;
+  }
+  @include bp(l) {
+    max-width: 960px;
+    margin: 0 auto 0 auto;
+    overflow: visible !important;
+  }
+}
+
+.subRotator {
+  background-color: $cu-warm-light-grey;
+  @include bp(m) {
+    position: relative;
+    z-index: 120;
+    padding: 10px 0 100px 0;
+  }
+}
+
+div.subRotator {
+  @include bp(wildcard-max, 1100px) {
+    padding-bottom: 130px;
+  }
+}

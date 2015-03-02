@@ -1,0 +1,81 @@
+.directorySearch {
+  // background-color: #e5e2cf;
+  background-color: #f7f6f0;
+  padding: 10px 15px 10px 15px;
+  // border-left: 1px solid $white;
+  // border-bottom: 1px solid $cu-border;
+  border-bottom: 1px solid #cdcdc7;
+  .ie7 & {
+    * {
+      zoom: normal;
+    }
+  }
+  > label {
+    display: block;
+    // font-family: "Open Sans";
+    font-size: 16px;
+    color: #4a4949;
+    margin: 0 0 8px 0;
+  }
+  .directorySearchButton {
+    white-space: nowrap;
+    // font-family: "Open Sans";
+    font-weight: 800;
+    font-size: 12px;
+    background-color: #8f0c30;
+    cursor: hand;
+    cursor: pointer;
+    color: $white;
+    padding: 7px 7px;
+    margin: 0 0 10px 0;
+    display: block;
+    width: 80px;
+    text-align: center;
+    display: inline-block;
+  }
+  > {
+    .helpText {
+      color: #4a4949;
+      font-style: italic;
+      margin: 8px 0 0 15px;
+      display: inline-block;
+    }
+    .filters {
+      border-top: 1px solid #cecbba;
+      box-shadow: inset 0 8px 8px -8px rgba(0, 0, 0, 0.5);
+      padding: 15px 0 15px 0;
+      margin: 10px 0 0 0;
+      > label, select {
+        margin: 0 10px 5px 0;
+        width: 170px;
+        max-height: 20px;
+        vertical-align: middle;
+      }
+      > label[for=allFaculty] {
+        margin-left: 5px;
+        vertical-align: text-top;
+      }
+      @include bp(l) {
+        // padding: 15px 5% 15px 5%;
+        padding: 30px 0 15px 0;
+        // margin: 10px 0 0 -5%;
+        margin: 10px 0 0 0;
+        // width: 100%;
+      }
+    }
+  }
+  @include bp(m) {
+    padding: 10px 45px 10px 45px;
+  }
+}
+
+#directorySearchBox {
+  min-width: 70%;
+  height: 25px;
+  line-height: 25px;
+  color: #4a4949;
+  @include bp(m) {
+    min-width: 60%;
+    display: inline-block;
+  }
+}

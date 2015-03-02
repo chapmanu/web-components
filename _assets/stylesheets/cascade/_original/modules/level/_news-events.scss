@@ -1,0 +1,38 @@
+.newsEvents {
+	margin: 5px auto 0 auto;
+  width: 100%;
+  max-width: 465px;
+  padding: 0 0 20px 0;
+  clear: both;
+  display: inline-block;
+	h3 {
+    margin: 0;
+    a {
+      font-weight: normal;
+      font-style: normal;
+      color: #4A4949;
+      font-size: 14px;
+      &:hover {
+        color: $cu-red;
+      }
+    }
+  }
+  .todayTomorrow {
+	  position: relative;
+	  height: 20px;
+	  font-family: "proxima-nova", sans-serif;
+	  font-weight: 800;
+	  font-size: 15px;
+	  span {
+	    position: absolute;
+	    visibility: hidden;
+	  }
+	}
+}
+
+.allNews, .allEvents {
+  float: right;
+  // width: 100px;
+  text-align: right;
+  margin-right: 33px;
+}

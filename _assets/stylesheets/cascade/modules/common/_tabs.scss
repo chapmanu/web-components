@@ -1,0 +1,57 @@
+.tabGroup {
+  margin: 5px auto 0 auto;
+  width: 100%;
+  max-width: 465px;
+  padding: 0 0 20px 0;
+  clear: both;
+  display: inline-block;
+}
+
+.tabNav {
+  display: block;
+  background-image: url("../img/tab_shadow.png");
+  background-repeat: no-repeat;
+  background-position: left 4px;
+  height: 37px;
+  li {
+    float: left;
+    position: relative;
+    bottom: -5px;
+    list-style-type: none;
+    margin: 0 2px 0 0;
+    padding: 0 10px 0 10px;
+    height: 30px;
+    line-height: 30px;
+    color: #a2a0a0;
+    cursor: pointer;
+    background-color: $cu-off-white;
+    background-image: url("../img/tab_bg.png");
+    background-repeat: repeat-x;
+    background-position: left top;
+    border: 1px solid #c4c2b7;
+    border-width: 1px 1px 0 1px;
+    &.active {
+      color: $white;
+      bottom: 0;
+      background-color: $cu-red;
+      background-image: url("../img/active_tab_bg.png");
+      background-repeat: repeat-x;
+      background-position: left top;
+      font-weight: bold;
+      height: 35px;
+      line-height: 35px;
+    }
+  }
+}
+
+.tabContent {
+  position: relative;
+  > li {
+    list-style-type: none;
+    // display: none;
+    position: relative;
+  }
+  li.active {
+    display: block !important;
+  }
+}

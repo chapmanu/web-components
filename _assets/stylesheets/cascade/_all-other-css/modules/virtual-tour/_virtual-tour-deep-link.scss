@@ -1,0 +1,21 @@
+#virtualTour-deepLink {
+  position: absolute;
+  top: 14px;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  z-index: 100;
+  display: none;
+  @include bp(wildcard-min, 767px) {
+  	top: 11px;
+    left: 338px;
+  }
+}
+
+#virtualTour-deepLinkTextField {
+  width: 97%;
+}
+
+#virtualTour-deepLinkDialog {
+  display: none;
+}

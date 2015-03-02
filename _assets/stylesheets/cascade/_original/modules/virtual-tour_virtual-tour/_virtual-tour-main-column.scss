@@ -1,0 +1,39 @@
+#virtualTour-mainColumn {
+  // background: $white;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  .headerWrap {
+    padding-top: 20px;
+    padding-bottom: 13px;
+    padding-left: 0;
+    padding-right: 0;
+    @include bp(wildcard-min, 767px) {
+      padding-bottom: 0;
+    }
+  }
+  .logo {
+    margin: 0 auto;
+    // width: 247px;
+    position: relative;
+    @include bp(wildcard-min, 767px) {
+      margin: 0 auto;
+      padding: 0;
+      position: relative;
+      float: none;
+    }
+  }
+  @include bp(wildcard-min, 767px) {
+    background: rgb(255, 255, 255);
+    width: 385px;
+    height: 100%;
+    min-height: 100%;
+    float: left;
+    -webkit-box-shadow: 2px 0 15px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow: 2px 0 15px rgba(50, 50, 50, 0.75);
+    box-shadow: 2px 0 15px rgba(50, 50, 50, 0.75);
+    z-index: 20;
+    overflow: hidden;
+    position: relative;
+  }
+}

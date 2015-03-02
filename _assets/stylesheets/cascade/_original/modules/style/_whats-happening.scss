@@ -1,0 +1,50 @@
+.whatsHappening {
+	.ie7 & {
+		.story1 p {
+			@include bp(m) {
+				margin: 5px 0 10px 0;
+			}
+		}
+	}
+	h4 {
+		@include bp(m) {
+			font-weight: normal;
+      font-size: 17px;
+      padding: 0;
+      margin: 0;
+		}
+	}
+	.story1 {
+		@include bp(m) {
+			border-bottom: 1px solid #a2acb4;
+      margin: 0 10px 0 30px;
+      width: 593px;
+      max-width: 60%;
+      float: left;
+		}
+	}
+	.story2, .story3 {
+		h4 {
+			@include bp(m) {
+				font-size: 16px;
+			}
+		}
+	}
+	.story2 {
+		@include bp(m) {
+			margin: 10px 30px 0 44px;
+      padding-left: 30%;
+      width: 25%;
+      float: left;
+		}
+	}
+	.story3 {
+		@include bp(m) {
+			width: 25%;
+      float: left;
+      margin: 10px 0 0 0;
+      padding: 0 0 0 30px;
+      border-left: 1px solid #a2acb4;
+		}
+	}
+}

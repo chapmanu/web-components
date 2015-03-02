@@ -1,0 +1,128 @@
+.subFooter {
+	.ie7 & {
+		.socialIcons {
+			top: 20px;
+		}
+	}
+  ul {
+    display: none;
+    li {
+    	a {
+				@include bp(m) {
+					color: #4A4949;
+				}
+    	}
+    	@include bp(m) {
+    		list-style-type: none;
+        float: left;
+        margin: 14px 10px 0 0;
+    	}
+    }
+    @include bp(m) {
+    	display: block;
+      float: left;
+      min-width: 200px;
+      margin: 0 10px 0 0;
+    }
+    @include bp(l) {
+    	margin: 0 10px 0 65px;
+    }
+  }
+  .weather {
+    float: none;
+    height: 50px;
+    width: 130px;
+    position: absolute;
+    bottom: 0;
+    display: block;
+    img {
+      float: left;
+      @include bp(m) {
+      	float: left;
+        margin: 0 0 0 10px;
+      }
+    }
+    .temp {
+      float: right;
+      color: #4A4949;
+      line-height: 50px;
+      @include bp(m) {
+      	float: left;
+        color: #4A4949;
+        line-height: 50px;
+      }
+    }
+    @include bp(m) {
+    	position: static;
+      float: left;
+      width: 145px;
+      display: block;
+    }
+  }
+  .copyright {
+    color: #4A4949;
+    position: absolute;
+    bottom: 15px;
+    right: 10px;
+    width: 170px;
+    @include bp(m) {
+    	top: 50px;
+      right: 20px !important;
+      clear: both;
+      float: right;
+      bottom: 0;
+      margin: 0;
+      color: #4A4949;
+      font-size: 8px;
+      width: auto;
+    }
+    @include bp(wildcard-min, 1085px) {
+    	right: 145px;
+    }
+  }
+  .socialIcons {
+    position: absolute;
+    width: 100%;
+    top: -35px;
+    left: 10px;
+    .twitter:hover {
+		  background-position: -2px -28px;
+		}
+		.facebook:hover {
+		  background-position: -28px -28px;
+		}
+		.pinterest:hover {
+		  background-position: -54px -28px;
+		}
+		.iTunes:hover {
+		  background-position: -80px -28px;
+		}
+		.youTube:hover {
+		  background-position: -106px -28px;
+		}
+		.linkedIn:hover {
+		  background-position: -132px -28px;
+		}
+		.googlePlus:hover {
+	    background-position: -158px -28px;
+	  }
+	  @include bp(m) {
+	  	position: static;
+      float: left;
+      width: auto;
+      height: 40px;
+      margin: 8px 0 0 0;
+	  }
+  }
+  @include bp(m) {
+  	height: 100px;
+    width: auto;
+    float: left;
+    position: relative;
+    margin: 0 0 0 10px;
+  }
+  @include bp(wildcard-min, 1085px) {
+  	float: right;
+    margin: 8px -20px 0 0;
+  }
+}

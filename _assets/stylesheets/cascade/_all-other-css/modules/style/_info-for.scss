@@ -1,0 +1,125 @@
+.infoFor {
+  display: none;
+  &.active {
+    display: block;
+  }
+  a {
+    display: block;
+    padding: 10px 0 10px 10px;
+    border-bottom: 1px solid $black;
+    @include bp(m) {
+      font-weight: 800;
+      font-size: 11px;
+      color: $grey;
+      padding: 0;
+      border: none;
+    }
+  }
+  li {
+    > a {
+      color: #686666;
+    }
+    a .bullet {
+      color: #C70909;
+      position: absolute;
+      right: 10px;
+    }
+  }
+  > div {
+    @include bp(m) {
+      background: #eeede8;
+      border-radius: 3px;
+      width: 190px;
+      height: auto;
+      margin-top: 5px;
+      margin-left: 5px;
+      float: left;
+      position: relative;
+    }
+  }
+  @include bp(m) {
+    width: 500px;
+    margin-left: 10px;
+    display: block;
+  }
+}
+
+.infoFor-menu {
+  &:hover {
+    @include bp(m) {
+      color: $cu-red;
+    }
+  }
+  &.is-visible {
+    visibility: visible;
+  }
+  &.is-hidden {
+    visibility: hidden;
+  }
+  > ul {
+    > li {
+      @include bp(m) {
+        padding: 0;
+        margin: 0;
+      }
+    }
+    a {
+      &:hover {
+        @include bp(m) {
+          background-color: #f8f8f8;
+          color: $cu-red;
+        }
+      }
+      @include bp(m) {
+        font-weight: 800;
+        padding: 5px 12px 5px 11px;
+        display: block;
+      }
+    }
+    @include bp(m) {
+      list-style-type: none;
+      margin-top: 5px;
+    }
+  }
+  @include bp(m) {
+    padding-bottom: 12px;
+    line-height: 12px;
+    z-index: 500;
+    background: #fdfdfc;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+    border-right: 1px solid rgba(0, 0, 0, 0.15);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    border-left: 1px solid rgba(0, 0, 0, 0.15);
+    width: 100%;
+    visibility: hidden;
+    display: block;
+    position: absolute;
+    top: 0;
+  }
+}
+
+.infoFor_label {
+  font-size: 11px;
+  color: $grey;
+  float: left;
+  display: none;
+  @include bp(m) {
+    display: block;
+  }
+}
+
+a.infoFor-btn {
+  display: none;
+  @include bp(m) {
+    background-image: url(img/arrows.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    line-height: 32px;
+    padding: 0 0 0 12px;
+    margin: 0;
+    height: 30px;
+    display: block;
+  }
+}

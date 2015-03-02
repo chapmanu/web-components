@@ -1,0 +1,11 @@
+.cu_nav_selectable .selected > a.cu_nav_button {
+  height: 45px;
+  opacity: 1;
+  padding: 12.85714px;
+  border-bottom: 1px solid #D6D5CF;
+  background: $white;
+}
+
+svg * .cu_nav_selectable .selected > a.cu_nav_button#cu_nav_domain {
+  fill: $cu-red;
+}

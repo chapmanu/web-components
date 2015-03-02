@@ -1,0 +1,88 @@
+.resources-nav {
+  list-style-type: none;
+  li {
+  	@include bp(m) {
+  		font-weight: 800;
+      font-size: 11px;
+      display: inline-block;
+      margin-left: 20px;
+      position: relative;
+  	}
+  }
+  > li > a {
+    display: none;
+    @include bp(m) {
+    	display: block;
+    }
+  }
+  .resources-nav-btn {
+  	&.is-active {
+  		&:before {
+  			@include bp(m) {
+  				background-position: 0 -14px;
+  			}
+  		}
+      @include bp(m) {
+      	color: $cu-red;
+      }
+    }
+    &:before {
+    	@include bp(m) {
+    		background-image: url(img/resources.png);
+	      background-repeat: no-repeat;
+	      background-position: 0 0;
+	      content: '';
+	      width: 15px;
+	      height: 14px;
+	      /*margin-top: 13px;*/
+	      margin-right: 5px;
+	      display: block;
+	      float: left;
+    	}
+    }
+  }
+  .resources-nav-btn-search {
+  	&.is-active:before {
+  		@include bp(m) {
+  			background-position: -32px -14px;
+  		}
+  	}
+  	&:before {
+	    @include bp(m) {
+	    	background-position: -32px 0;
+	    }
+	  }
+  }
+  .resources-nav-btn-shortcuts:before {
+  	&.is-active:before {
+			@include bp(m) {
+				background-position: -16px -14px;
+			}
+		}
+    @include bp(m) {
+    	background-position: -16px 0;
+    }
+  }
+  .no-touch & {
+  	> li:hover .resources-nav-btn, .resources-nav-btn:hover {
+			&:before {
+				@include bp(m) {
+					background-position: 0 -14px;
+				}
+			}
+			@include bp(m) {
+				color: $cu-red;
+			}
+  	}
+  	li:hover .resources-nav-btn-shortcuts:before, .resources-nav-btn-shortcuts:hover:before {
+			@include bp(m) {
+				background-position: -16px -14px;
+			}
+  	}
+  	li:hover .resources-nav-btn-search:before, .resources-nav-btn-search:hover:before {
+      @include bp(m) {
+      	background-position: -32px -14px;
+      }
+    }
+	}
+}

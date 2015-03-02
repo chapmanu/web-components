@@ -1,0 +1,28 @@
+#chapmanFamily {
+  margin-bottom: 50px;
+  .heading {
+    margin: 30px auto 0 auto;
+    @include bp(wildcard-min, 680px) {
+      margin: 50px auto;
+    }
+  }
+  .story {
+    display: none;
+    &.big .story-bg {
+      @include bp(wildcard-min, 680px) {
+        min-height: 200px;
+      }
+    }
+    @include bp(wildcard-min, 680px) {
+      display: block;
+    }
+  }
+  h2 {
+    margin-top: 0;
+  }
+  .third:nth-of-type(3) {
+    @include bp(wildcard-min, 680px) {
+      padding-left: 20px;
+    }
+  }
+}

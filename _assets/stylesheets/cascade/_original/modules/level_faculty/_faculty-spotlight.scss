@@ -1,0 +1,46 @@
+.facultySpotlight {
+  margin: 10px 0 10px 0;
+  background: #e1dbbf;
+  background: -ms-radial-gradient(circle, #f2eedd, #ece6ce);
+  background: -ms-radial-gradient(circle, #f2eedd, #ece6ce);
+  background: -webkit-radial-gradient(circle, #f2eedd, #ece6ce);
+  background: -moz-radial-gradient(circle, #f2eedd, #ece6ce);
+  background: -ms-radial-gradient(circle, #f2eedd, #ece6ce);
+  .copy {
+    max-width: 400px;
+    min-width: 300px;
+    padding: 0 10px 10px 10px;
+    float: left;
+    > h2 {
+      font-weight: 600;
+      color: #68441e;
+      font-size: 16px;
+      margin: 0 0 10px 0;
+    }
+  }
+  > {
+    .video {
+      display: block;
+      position: relative;
+      float: left;
+      > {
+        img {
+          margin: 0;
+        }
+        .playButton {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-image: url("../img/play_button.png");
+          background-repeat: no-repeat;
+          background-position: center center;
+        }
+      }
+    }
+    .copy {
+      margin: 10px 5px 10px 5px;
+    }
+  }
+}

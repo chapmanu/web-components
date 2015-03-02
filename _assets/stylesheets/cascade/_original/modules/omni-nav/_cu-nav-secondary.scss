@@ -1,0 +1,61 @@
+.cu_nav_secondary {
+	&:before {
+		position: absolute;
+		top: 15px;
+		right: 10px;
+		z-index: 10;
+		display: block;
+		content: "";
+		width: 15px;
+		height: 15px;
+		background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0… fill='#666' points='37.667,155.597 256.161,373.067 475,155.597 '/></svg>");
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+	&.expanded {
+		li {
+			&.selected a {
+				@include bp(wildcard-max, 700px) {
+					width: 175px;
+          color: #404040;
+				}
+			}
+			a {
+				@include bp(wildcard-max, 700px) {
+					width: 100% !important;
+				}
+			}
+			@include bp(wildcard-max, 700px) {
+				width: 100% !important;
+			}
+		}
+		@include bp(wildcard-max, 700px) {
+			overflow: visible;
+      max-width: 999px;
+      width: 100% !important;
+      position: absolute !important;
+      top: 0;
+      left: 0;
+      z-index: 99500 !important;
+		}
+	}
+	li {
+		&.selected a {
+			@include bp(wildcard-max, 700px) {
+				width: 45px;
+        color: $white;
+			}
+		}
+		a {
+			@include bp(wildcard-max, 700px) {
+				width: 175px;
+        color: #404040;
+			}
+		}
+	}
+	@include bp(wildcard-max, 700px) {
+	max-width: 45px;
+    overflow: hidden;
+    font-size: 11px;
+	}
+}

@@ -1,0 +1,15 @@
+.collapsedSearch {
+	.resources-subNav-search & {
+		@include bp(m) {
+      display: block;
+    }
+	}
+	@include bp(m) {
+		.searchButton {
+	    top: -200px;
+	    // top: -1px;
+	    // right: 2px;
+	    // width: 30px;
+	  }
+	}
+}

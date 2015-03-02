@@ -1,0 +1,73 @@
+.nameBarButtons {
+  clear: both;
+  margin: 10px auto 0 auto;
+  width: 95%;
+  font-family: "proxima-nova", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  .ie7 & {
+    a {
+      @include bp(l) {
+        display: inline;
+      }
+    }
+    @include bp(l) {
+      display: inline;
+    }
+  }
+  li {
+    float: none;
+    list-style-type: none;
+    a {
+      position: relative;
+      color: #0e8fc5;
+      background-color: $cu-light-grey;
+      border: 0px solid #98968d;
+      border-width: 0 2px 2px 0;
+      width: 90%;
+      max-width: 260px;
+      padding: 0 8% 0 8%;
+      min-height: 20px;
+      line-height: 16px;
+      display: inline-block;
+      text-decoration: none !important;
+      padding: 10px 25px 5px 25px;
+      margin: 5px 0 0 0;
+      &:hover {
+        background-color: $white;
+      }
+      &.long {
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+        line-height: 20px;
+        font-size: 90%;
+        @include bp(l) {
+          padding: 10px 25px 25px 25px;
+        }
+      }
+      .text {
+        width: 100%;
+        text-transform: uppercase;
+      }
+      @include bp(l) {
+        zoom: normal;
+        float: left;
+        width: 242px;
+        margin: 0 0 0 1%;
+        padding: 10px 25px 5px 25px;
+        font-size: 90%;
+      }
+    }
+  }
+  .bullet {
+    font-family: Georgia;
+    font-weight: 800;
+    font-size: 22px;
+    position: absolute;
+    top: 50%;
+    bottom: 0;
+    right: 10px;
+    line-height: 27px;
+    margin-top: -13px;
+  }
+}

@@ -1,0 +1,10 @@
+.primaryContent {
+	.ie7 & {
+		.main h1 {
+			zoom: normal;
+		}
+	}
+	.main {
+	  max-width: none !important;
+	}
+}

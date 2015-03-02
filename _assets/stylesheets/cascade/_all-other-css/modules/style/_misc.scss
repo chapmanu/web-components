@@ -1,0 +1,112 @@
+// Miscellaneous selectors that don't require their own modules and/or only occur once.
+// Will move these to other modules later if necessary.
+
+.funnelBlock a {
+  &:link, &:visited {
+    border-bottom: none;
+  }
+}
+
+.leftNavSubContent a {
+  &:link, &:visited {
+    border-bottom: 1px dotted #C0C0C0;
+  }
+}
+
+.search {
+  display: none;
+}
+
+#exploreVideo {
+  display: none;
+}
+
+div.rss-story p {
+  margin-top: -10px;
+}
+
+.toggle:after {
+  background-image: url(img/miscButtons.png);
+  background-position: -23px 0;
+}
+
+.btn-removeShortcut {
+  background-image: url(img/resources.png);
+  background-position: -48px -14px;
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  display: block;
+  &:hover {
+    background-position: -48px 0;
+  }
+}
+
+.btn-addThisPage {
+  font-size: 13px;
+  font-weight: 800;
+  color: $cu-red;
+  line-height: -20px;
+  &:before {
+    background-image: url(img/resources.png);
+    background-position: -63px 0px;
+    background-repeat: no-repeat;
+    width: 17px;
+    height: 16px;
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    content: "";
+  }
+  &.is-favorite:before {
+    background-position: -63px -16px;
+  }
+}
+
+.description {
+  &:hover {
+    @include bp(m) {
+      // color: $cu-red;
+    }
+  }
+  @include bp(m) {
+    font-size: 13px;
+    color: $grey;
+  }
+}
+
+.closeButton {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  left: 192px;
+  bottom: 268px;
+  margin: 0 auto;
+  color: $white;
+  font-weight: 900;
+  background-color: $black;
+  cursor: pointer;
+  @include bp(m) {
+    left: 294px;
+    bottom: 418px;
+  }
+}
+
+.alert {
+  margin: 0;
+  font-size: large;
+  background-color: $cu-red;
+  color: $white;
+  text-align: center;
+  p {
+    font-size: large;
+    color: $white;
+    padding: 15px;
+  }
+  a {
+    color: $white;
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,54 @@
+// ---------- Style ---------- //
+
+.resources-subNav-shortcuts {
+  &:before {
+    @include bp(m) {
+      left: 141px;
+      top: -7px;
+      content: '';
+    }
+  }
+  &:after {
+    @include bp(m) {
+      left: 141px;
+      top: -7px;
+    }
+  }
+  li {
+    &:hover {
+      .btn-removeShortcut {
+        @include bp(m) {
+          display: inline-block;
+        }
+      }
+      @include bp(m) {
+        background-color: $white;
+      }
+    }
+    @include bp(m) {
+      padding: 9px 10px 9px 12px;
+    }
+  }
+  .btn-addThisPage {
+    @include bp(m) {
+      border-bottom: 1px solid #e2e1db;
+      padding-left: 20px;
+      padding-bottom: 10px;
+      margin: 10px 12px;
+      height: 20px;
+      line-height: 17px;
+    }
+  }
+  .btn-removeShortcut {
+    @include bp(m) {
+      position: absolute;
+      top: 8px;
+      right: 15px;
+      display: none;
+    }
+  }
+  @include bp(m) {
+    width: 215px;
+    left: -140px;
+  }
+}

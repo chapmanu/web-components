@@ -1,0 +1,22 @@
+#main {
+  @include bp(m) {
+    overflow: hidden;
+  }
+}
+
+.main a {
+  &:link, &:visited {
+    border-bottom: 1px dotted #C0C0C0;
+  }
+}
+
+.rightColumn a {
+  &:link, &:visited {
+    border-bottom: 1px dotted #C0C0C0;
+  }
+}
+
+#container {
+  min-width: 320px;
+  overflow: hidden;
+}

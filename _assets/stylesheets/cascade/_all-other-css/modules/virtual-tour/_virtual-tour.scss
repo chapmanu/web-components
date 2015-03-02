@@ -1,0 +1,112 @@
+.virtualTour {
+  a:link {
+    text-decoration: none;
+  }
+  .jspVerticalBar {
+    background: $white;
+    margin-right: 6px;
+    width: 6px;
+  }
+  .jspTrack {
+    background: #fff !important;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+  .jspDrag {
+    background: #ccc !important;
+    &:after {
+      display: none;
+    }
+  }
+  header {
+    padding-top: 0;
+    padding-bottom: 10px;
+    @include bp(wildcard-min, 767px) {
+      background: $white;
+      // padding: 0;
+    }
+  }
+  h2 {
+    // font-family: "Open Sans";
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 1em;
+    padding: 0;
+    margin: 0;
+    a {
+      text-decoration: none;
+    }
+  }
+  .scroll-pane {
+    clear: both;
+  }
+  .breadcrumbs {
+    text-align: center;
+    padding: 0;
+    margin: 0 0 15px 0;
+    display: none;
+    ul li {
+      font-size: 13px;
+    }
+    .bullet {
+      margin: 0;
+      @include bp(wildcard-min, 767px) {
+        margin: 0 5px;
+      }
+    }
+    @include bp(wildcard-min, 767px) {
+      display: block;
+    }
+  }
+  .slideImgContainer {
+    border: 1px solid #dadada;
+    padding: 4px;
+  }
+  .slides {
+    min-height: 230px;
+  }
+  .slide {
+    // opacity: 0.2;
+    min-height: 230px;
+    @include bp(wildcard-min, 767px) {
+      height: auto;
+    }
+  }
+  #virtualTour-attractionContent {
+    .slides {
+      margin: 0;
+    }
+    .flex-direction-nav {
+      margin-top: 0;
+    }
+  }
+  .rotatorContainer {
+    @include bp(wildcard-min, 767px) {
+      background: #f1f1f1;
+      min-height: 171px;
+    }
+  }
+  .primaryContent .main {
+    padding: 0;
+    margin: 0;
+    h1 {
+      border-top: 1px solid #e1e1e1;
+      border-bottom: none;
+      -webkit-box-shadow: inset 0px 5px 7px rgba(0, 0, 0, 0.1);
+      -moz-box-shadow: inset 0px 5px 7px rgba(0, 0, 0, 0.1);
+      box-shadow: inset 0px 5px 7px rgba(0, 0, 0, 0.1);
+      padding: 20px 18px 0 18px;
+      margin: 5px 0 5px 0;
+      @include bp(wildcard-min, 767px) {
+        background: none;
+        border-top: none;
+        border-bottom: none;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        padding: 0 18px 0 18px;
+      }
+    }
+  }
+}

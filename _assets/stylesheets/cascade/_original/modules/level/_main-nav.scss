@@ -1,0 +1,23 @@
+.mainNav {
+	// clear: both;
+	// width: 100%;
+}
+
+.mainNavLinks {
+	> li {
+		// background-color: $black;
+		> a {
+			// color: $white;
+			// font-weight: 600;
+			// display: block;
+			// background-color: $black;
+			// margin: 0 0 1px 0;
+			// padding: 10px 0 10px 10px;
+			.bullet {
+				// position: absolute;
+				// right: 10px;   
+				// font-weight: normal;
+			}
+		}
+	}
+}

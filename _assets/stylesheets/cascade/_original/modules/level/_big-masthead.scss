@@ -1,0 +1,33 @@
+.bigMasthead {
+	header, &.smallRotator header {
+    @include bp(l) {
+    	// padding: 0 0 0 0;
+    }
+  }
+	.masthead {
+		> img {
+			@include bp(l) {
+				// width: 100%;
+				// max-height: 260px;
+			}
+		}
+		> div {
+			@include bp(l) {
+				// font-style: italic;
+				// font-size: 19px;
+				// text-align: left;
+				// color: $white;
+				// padding: 5px 5% 5px 5%;
+			}
+		}
+		@include bp(l) {
+			// position: relative;
+			// margin: 0 auto 0 auto;
+		}
+	}
+	@include bp(l) {
+		// background-color: $teal2-hover;
+		// max-width: 1024px;  
+		// min-height: 83px;
+	}
+}

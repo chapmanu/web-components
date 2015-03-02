@@ -1,0 +1,38 @@
+select.selector {
+  .ie & {
+    background-image: none;
+    padding-right: 5px;
+  }
+  background: #F5F5F5 url('../img/arrow_down.png') no-repeat right center;
+  background-size: 40px;
+  width: auto;
+  padding: 5px 30px 5px 10px;
+  margin: 0 10px 10px 0;
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 18px;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  height: 40px;
+  max-width: 100%;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-transition: all 0.1s ease-out;
+  -moz-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+  &:hover, &.selected {
+    background-color: $white;
+    outline: none;
+  }
+}
+
+@-moz-document url-prefix() {
+  select.selector {
+    background-image: none;
+    padding-right: 5px;
+  }
+}

@@ -1,0 +1,63 @@
+.mainNavLinks {
+	.open & {
+		@include bp(wildcard-min, 1085px) {
+			display: block;
+		}
+	}
+	a {
+	  text-decoration: none;
+	  &:hover {
+	    text-decoration: none;
+	  }
+	}
+	@include bp(m) {
+		display: block;
+	}
+  @include bp(wildcard-min, 1085px) {
+  	display: none;
+  }
+}
+
+.mainNavExpand {
+  text-transform: uppercase;
+  position: relative;
+  .open & {
+  	a .arrow {
+		  top: 50%;
+		  margin-top: -16px;
+		  background: url(/_files/img/up-arrow.png) no-repeat;
+		  text-indent: -999px;
+		  overflow: hidden;
+		}
+		@include bp(m) {
+			display: none;
+		}
+  }
+  a {
+    color: $white;
+    display: block;
+    font-weight: 600;
+    margin: 0 0 1px 0;
+    padding: 10px 0 10px 10px;
+    background-color: $black;
+    text-decoration: none;
+    .arrow {
+      position: absolute;
+      display: block;
+      width: 32px;
+      height: 32px;
+      right: 0;
+      top: 50%;
+      margin-top: -16px;
+      background: url(/_files/img/down-arrow.png) no-repeat;
+      text-indent: -999px;
+      overflow: hidden;
+    }
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  @include bp(m) {
+  	display: none;
+  }
+}

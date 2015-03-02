@@ -1,0 +1,40 @@
+.bigMasthead {
+  .masthead {
+    max-width: 1024px;
+    min-height: 83px;
+    background-color: #0e8fc5;
+    background: -ms-radial-gradient(circle, #44a8d2, #0e8fc5);
+    background: -webkit-radial-gradient(circle, #44a8d2, #0e8fc5);
+    background: -moz-radial-gradient(circle, #44a8d2, #0e8fc5);
+    background: radial-gradient(circle, #44a8d2, #0e8fc5);
+    > {
+      img {
+        width: 100%;
+        max-height: 260px;
+      }
+      div {
+        font-family: Times New Roman;
+        font-style: italic;
+        font-size: 19px;
+        color: $white;
+        text-align: left;
+        padding: 5px 5% 9px 5%;
+      }
+    }
+    @include bp(l) {
+      position: relative;
+      top: -270px;
+      margin: 0 auto -270px auto;
+    }
+  }
+  header {
+    @include bp(l) {
+      padding: 0 0 285px 0;
+    }
+  }
+  &.smallRotator header {
+    @include bp(l) {
+      padding: 0 0 260px 0;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.region {
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  .linkList {
+    margin: 10px 0 0 0;
+  }
+  li {
+    margin: 0 0 3px 0;
+  }
+  h3 {
+    border-bottom: 1px solid $grey;
+    clear: both;
+    margin: 0;
+    padding: 20px 0 7px;
+    // font-family: "proxima-nova-soft", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    font-style: normal;
+    color: $grey;
+    padding: 10px 0 5px 0;
+    margin: 0;
+    clear: both;
+    line-height: 1.25;
+    a:hover {
+      color: $cu-red;
+    }
+  }
+  .content {
+    float: left;
+    width: 100%;
+  }
+  .featureImage {
+    border: 3px solid $white;
+    box-shadow: 0 0 7px #434343;
+    -webkit-box-shadow: 0px 0px 7px #434343;
+    -moz-box-shadow: 0px 0px 7px #434343;
+    float: left;
+    margin: 0 10px 10px 0;
+  }
+}

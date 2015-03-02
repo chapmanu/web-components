@@ -1,0 +1,45 @@
+#big-sponsor {
+  margin: 1em 0;
+  position: relative;
+  .header {
+    font-family: Arial, sans-serif;
+    color: #a4896a;
+    text-transform: uppercase;
+    font-size: 1.3em;
+    font-weight: bold;
+    display: inline-block;
+  }
+  .jcarousel-clip {
+    overflow: hidden;
+  }
+  .carousel {
+    border: 1px solid #bcbcbc;
+    background: $white;
+    li {
+      width: 153px;
+      padding: 1em 0;
+      text-align: center;
+    }
+    .jcarousel-prev, .jcarousel-next {
+      position: absolute;
+      background-color: $cu-light-grey;
+      color: $cu-red;
+      width: 24px;
+      height: 26px;
+      font-size: 1.5em;
+      text-align: center;
+      cursor: pointer;
+    }
+    .jcarousel-prev {
+      top: -27px;
+      right: 29px;
+    }
+    .jcarousel-next {
+      top: -27px;
+      right: 0;
+    }
+    .jcarousel-prev-disabled, .jcarousel-next-disabled {
+      color: #bcbcbc;
+    }
+  }
+}

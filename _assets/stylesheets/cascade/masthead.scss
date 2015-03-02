@@ -1,0 +1,26 @@
+// Module for .masthead-old
+
+@import "helpers/_variables";
+@import "helpers/_mixins";
+@import "helpers/_icomoon";
+@import "helpers/_defaults";
+@import "helpers/_common";
+@import "helpers/_tipsy";
+@import "helpers/_flexslider";
+
+
+// Layout
+@import "modules/common/_big-masthead";
+@import "modules/common/_masthead-placeholder";
+@import "modules/common/_small-masthead";
+
+@import "modules/masthead/_mini-rotator";
+@import "modules/masthead/_mini-rotator-nav";
+@import "modules/masthead/_rotator-container-slide";
+@import "modules/masthead/_rounded-slider";
+
+
+// Modules
+
+
+// Print

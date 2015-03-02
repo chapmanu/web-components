@@ -1,0 +1,101 @@
+.rightColumn {
+  margin: 0 0 10px 0;
+  .callout {
+    background-color: #e1dbbf;
+    float: left;
+    vertical-align: top;
+    width: 160px;
+    padding: 10px 25px 10px 10px;
+    margin: 0 10px 10px 0;
+    position: relative;
+    -moz-box-shadow: inset 8px 8px 8px -8px #ccc5a5;
+    -webkit-box-shadow: inset 8px 8px 8px -8px #ccc5a5;
+    box-shadow: inset 8px 8px 8px -8px #ccc5a5;
+    > img {
+      position: relative;
+      top: -10px;
+      left: -10px;
+    }
+    h2 {
+      font-family: "Open Sans";
+      font-weight: 600;
+      font-size: 14px;
+      margin: 0 0 5px 0;
+    }
+    .editableContent {
+      font-family: Arial;
+      font-size: 11px;
+      line-height: 16px;
+    }
+    &.noPhoto h2 {
+      margin-top: 7px;
+    }
+    .linkList li {
+      a {
+        padding: 10px 0 10px 0;
+        display: block;
+        border-top: 1px solid #ccc0a7;
+      }
+      &:first-child a {
+        border-top: none;
+      }
+    }
+    @include bp(l) {
+      margin: 0 0 10px 0;
+    }
+  }
+  .photo {
+    float: left;
+  }
+  .border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 7px;
+  }
+  .styleOne {
+    background-color: #e1dbbf;
+    background: -ms-radial-gradient(circle, #e2dcc0, #e1dbbf);
+    background: -webkit-radial-gradient(circle, #e2dcc0, #e1dbbf);
+    background: -moz-radial-gradient(circle, #e2dcc0, #e1dbbf);
+    background: -ms-radial-gradient(circle, #e2dcc0, #e1dbbf);
+    position: relative;
+    overflow: hidden;
+    h2 {
+      color: $brown;
+    }
+    .border {
+      background-color: $brown;
+    }
+  }
+  .styleTwo {
+    color: $white;
+    background-color: #36aada;
+    background: -ms-radial-gradient(circle, #44a8d2, #0e8fc5);
+    background: -webkit-radial-gradient(circle, #44a8d2, #0e8fc5);
+    background: -moz-radial-gradient(circle, #44a8d2, #0e8fc5);
+    background: -ms-radial-gradient(circle, #44a8d2, #0e8fc5);
+    position: relative;
+    overflow: hidden;
+    h2 {
+      color: $white;
+    }
+    a {
+      color: #99ffff;
+    }
+    .border {
+      background-color: #0c85b8;
+    }
+  }
+  .linkList {
+    list-style-type: none;
+  }
+  @include bp(l) {
+    width: 195px;
+    margin: 0 30px 0 0;
+    position: relative;
+    float: right;
+    margin: 0 30px 0 -195px;
+  }
+}

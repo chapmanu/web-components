@@ -1,0 +1,67 @@
+#virtualTour-categoryMenu {
+  background: $white;
+  z-index: 1000;
+}
+
+#virtualTour-categories, .virtualTour-subCategories {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#virtualTour-categories {
+  margin: 0 0 12px 0;
+}
+
+.virtualTour-category {
+  border: 1px solid #c3c3c3;
+  margin-bottom: 3px;
+  position: relative;
+}
+
+.virtualTour-categoryCheckbox, .virtualTour-categoryCheckboxLabel {
+  display: none;
+}
+
+.virtualTour-categoryCheckbox {
+	body.oldie & {
+		@include bp(wildcard-min, 767px) {
+			position: absolute;
+      top: 10px;
+      left: 5px;
+      display: block;
+		}
+	}
+}
+
+.virtualTour-categoryCheckboxLabel {
+	&::selection, span::selection, &::-moz-selection, span::-moz-selection {
+    background: transparent;
+  }
+	@include bp(wildcard-min, 767px) {
+		border: 1px solid #d8d4cf;
+    -webkit-box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.65);
+    -moz-box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.65);
+    box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.65);
+	}
+}
+
+label.virtualTour-categoryCheckboxLabel {
+	body.oldie & {
+		@include bp(wildcard-min, 767px) {
+			display: none;
+		}
+	}
+}
+
+.virtualTour-primaryCategory.icon:before {
+  @include bp(wildcard-min, 767px) {
+  	font-size: 0.85em;
+	  text-align: center;
+	  color: $white;
+	  border-radius: 20px;
+	  padding: 5px;
+	  margin-left: 0.25em;
+	  // display: inline-block;
+  }
+}

@@ -1,0 +1,42 @@
+[data-img] {
+  background-color: rgba(0, 0, 0, 0.125);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+[data-img~="contain"] {
+  background-size: contain;
+}
+
+[data-img~="top-left"] {
+  background-position: 0% 0%;
+}
+
+[data-img~="top-center"] {
+  background-position: 50% 0%;
+}
+
+[data-img~="top-right"] {
+  background-position: 100% 0%;
+}
+
+[data-img~="middle-left"] {
+  background-position: 0% 50%;
+}
+
+[data-img~="middle-right"] {
+  background-position: 100% 50%;
+}
+
+[data-img~="bottom-left"] {
+  background-position: 0% 100%;
+}
+
+[data-img~="bottom-center"] {
+  background-position: 50% 100%;
+}
+
+[data-img~="bottom-right"] {
+  background-position: 100% 100%;
+}

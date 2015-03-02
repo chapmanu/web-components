@@ -1,0 +1,51 @@
+.smallMasthead {
+  header {
+    @include bp(l) {
+      padding: 0 0 30px 0;
+    }
+  }
+  .masthead-old {
+    max-width: 1024px;
+    min-height: 83px;
+    background-color: $teal2;
+    background: -ms-radial-gradient(circle, $teal2, $teal2-hover);
+    background: -webkit-radial-gradient(circle, $teal2, $teal2-hover);
+    background: -moz-radial-gradient(circle, $teal2, $teal2-hover);
+    background: radial-gradient(circle, $teal2, $teal2-hover);
+    &:before {
+      @include bp(l) {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: transparent;
+        background-image: url("../level/img/masthead_bg_small.png");
+        background-repeat: no-repeat;
+        background-position: left top;
+      }
+    }
+    > div {
+      font-family: "futura-pt", sans-serif;
+      font-weight: 600px;
+      font-size: 19px;
+      color: $white;
+      text-align: center;
+      padding: 15px 15% 15px 15%;
+      max-width: 70%;
+      width: 100%;
+      &.oneLine {
+        padding-top: 27px;
+      }
+      @include bp(l) {
+        position: absolute;
+      }
+    }
+    @include bp(l) {
+      position: relative;
+      top: -30px;
+      margin: 0 auto 0 auto;
+    }
+  }
+}

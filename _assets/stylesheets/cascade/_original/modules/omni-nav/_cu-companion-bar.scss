@@ -1,0 +1,28 @@
+#cu_companion_bar {
+	font-family: "proxima-nova-soft", "proxima-nova", "futura-pt", Arial, Verdana, "Sans Serif";
+  background: #969696;
+  color: #DDD;
+  left: 0;
+  font-size: 14px;
+  height: 30px;
+  line-height: 30px;
+  position: fixed;
+  text-align: center;
+  text-transform: uppercase;
+  top: 45px;
+  width: 100%;
+  z-index: 99000;
+  @include vendorize(transition, top 0.15s 0s ease-out);
+  .logged-in.admin-bar & {
+  	margin-top: 32px;
+    @include bp(wildcard-max, 782px) {
+      margin-top: 46px;
+    }
+  }
+  &.nav-down {
+    top: 45px;
+  }
+  &.nav-up {
+    top: 15px;
+  }
+}

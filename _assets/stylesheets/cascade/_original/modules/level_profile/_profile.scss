@@ -1,0 +1,65 @@
+.profile {
+  font-size: 14px;
+  .jobTitle {
+    font-weight: normal;
+    font-size: 14px;
+    margin: 0;
+  }
+  div[itemprop="affiliation"] {
+    font-size: 16px;
+    max-width: 600px;
+    &:first-child {
+      margin: 15px 0 0 0;
+    }
+  }
+  .honors {
+    font-size: 15px;
+    margin: 10px 0 0 0;
+  }
+  dl {
+    margin: 10px 0 10px 0;
+  }
+  .noFloat {
+    margin: 10px 0 10px 0;
+    // max-width: 600px;
+    width: 70%;
+  }
+  dt {
+    font-weight: bold;
+    float: left;
+    clear: left;
+    margin: 0 5px 0 0;
+  }
+  dd {
+    padding: 0;
+    margin: 0;
+    float: left;
+    &.scholarlyWork {
+      padding: 10px 15px 10px 30px;
+      text-indent: -15px;
+      div {
+        display: inline;
+        &:after {
+          content: '.';
+        }
+        &:first-child:after {
+          content: '';
+        }
+      }
+    }
+  }
+  .video {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+    iframe {
+      position: absolute;
+      top: 50px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+a.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 16px;
+  border-radius: 3px;
+  background: #dad8cf no-repeat center;
+  color: $grey;
+  width: 80%;
+  margin-bottom: 10px;
+  @include vendorize(box-sizing, border-box);
+  &:hover {
+    background-color: #cac9c4;
+    text-decoration: none;
+  }
+  &.red {
+    background: $cu-red no-repeat center;
+    color: $white;
+    &:hover {
+      background-color: #C92741;
+      text-decoration: none;
+    }
+  }
+  @include bp(wildcard-min, 500px) {
+    width: auto;
+    margin-bottom: 0;
+  }
+}
+
+.fast_transition {
+  -webkit-transition: left 1s ease-out, opacity 1s ease-out;
+  -moz-transition: left 1s ease-out, opacity 1s ease-out;
+  -o-transition: left 1s ease-out, opacity 1s ease-out;
+  transition: left 1s ease-out, opacity 1s ease-out;
+}
+
+.slow_transition {
+  -webkit-transition: left 2s ease-out, opacity 2s ease-out;
+  -moz-transition: left 2s ease-out, opacity 2s ease-out;
+  -o-transition: left 2s ease-out, opacity 2s ease-out;
+  transition: left 2s ease-out, opacity 2s ease-out;
+}

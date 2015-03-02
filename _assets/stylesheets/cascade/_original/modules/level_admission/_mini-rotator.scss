@@ -1,0 +1,98 @@
+.miniRotator {
+  position: relative;
+  overflow: hidden;
+  height: 285px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  ul {
+    width: 20000em;
+    position: absolute;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  .item {
+    display: block;
+    height: 285px;
+    width: 320px;
+    position: relative;
+    float: left;
+    margin: 0 4px 0 0;
+    background-color: $cu-dark-red;
+    background: -webkit-radial-gradient(circle, $cu-red, $cu-dark-red);
+    background: -moz-radial-gradient(circle, $cu-red, $cu-dark-red);
+    background: -ms-radial-gradient(circle, $cu-red, $cu-dark-red);
+    background: radial-gradient(circle, $cu-red, $cu-dark-red);
+    .pointyCaption {
+      margin: -3px 4px 0 0;
+      padding: 10px 25px 15px 25px;
+      color: White;
+      height: 45px;
+      font-family: Georgia;
+      font-size: 18px;
+      .point {
+        position: absolute;
+        bottom: 65px;
+        left: 0;
+        background-image: url("../img/pointy.png");
+        background-repeat: no-repeat;
+        background-position: center top;
+        width: 100%;
+        height: 22px;
+      }
+    }
+    &:hover .rollover {
+      visibility: visible;
+      top: 0;
+      transition: top 1s;
+      -moz-transition: top 1s;
+      -webkit-transition: top 1s;
+      -o-transition: top 1s;
+    }
+    .rollover {
+      visibility: hidden;
+      position: absolute;
+      top: 220px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 10px 25px 15px 25px;
+      background-color: $cu-dark-red;
+      background: -webkit-radial-gradient(circle, $cu-red, $cu-dark-red);
+      background: -moz-radial-gradient(circle, $cu-red, $cu-dark-red);
+      background: -ms-radial-gradient(circle, $cu-red, $cu-dark-red);
+      background: radial-gradient(circle, $cu-red, $cu-dark-red);
+      color: White;
+      transition: top 1s;
+      -moz-transition: top 1s;
+      -webkit-transition: top 1s;
+      -o-transition: top 1s;
+      .title {
+        color: White;
+        font-family: Georgia;
+        font-size: 18px;
+        margin: 75px 0 0 0;
+      }
+      .copy {
+        font-size: 12px;
+        margin: 10px 0 0 0;
+        height: 100px;
+        line-height: 1.5;
+      }
+      .button {
+        background-color: White;
+        color: $cu-dark-red;
+        float: left;
+        padding: 2px 10px 2px 10px;
+        font-family: "Open Sans";
+        font-weight: 800;
+      }
+    }
+  }
+}

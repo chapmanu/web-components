@@ -1,0 +1,113 @@
+.hide-text {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.virtualTour-dumbbell:before {
+  @include bp(wildcard-min, 767px) {
+    background: #55c4eb;
+  }
+}
+
+.virtualTour-library2:before {
+  @include bp(wildcard-min, 767px) {
+    background: #d2001d;
+  }
+}
+
+.virtualTour-users:before {
+  @include bp(wildcard-min, 767px) {
+    background: #ee7318;
+  }
+}
+
+.virtualTour-food3:before {
+  @include bp(wildcard-min, 767px) {
+    background: #07429d;
+  }
+}
+
+.virtualTour-mic3:before {
+  @include bp(wildcard-min, 767px) {
+    background: #a3a3a3;
+  }
+}
+
+.virtualTour-lab:before {
+  @include bp(wildcard-min, 767px) {
+    background: #b2156e;
+  }
+}
+
+.virtualTour-car:before {
+  @include bp(wildcard-min, 767px) {
+    background: #14a99b;
+  }
+}
+
+.virtualTour-steps:before {
+  @include bp(wildcard-min, 767px) {
+    background: #c18d61;
+  }
+}
+
+.virtualTour-camera:before {
+  @include bp(wildcard-min, 767px) {
+    background: #fe94a2;
+  }
+}
+
+.virtualTour-tree:before {
+  @include bp(wildcard-min, 767px) {
+    background: #aa1dbb;
+  }
+}
+
+.virtualTour-bed:before {
+  @include bp(wildcard-min, 767px) {
+    background: #707070;
+  }
+}
+
+.virtualTour-graduation:before {
+  @include bp(wildcard-min, 767px) {
+    background: #1d9114;
+  }
+}
+
+.virtualTour-star3:before {
+  @include bp(wildcard-min, 767px) {
+    background: #ffd028;
+  }
+}
+
+.virtualTour-bus:before {
+  @include bp(wildcard-min, 767px) {
+    background: #6a1c89;
+  }
+}
+
+.virtualTour-accessibility2:before {
+  @include bp(wildcard-min, 767px) {
+    background: #018be4;
+  }
+}
+
+.virtualTour-aid:before {
+  @include bp(wildcard-min, 767px) {
+    background: #fd338f;
+  }
+}
+
+.virtualTour-coin:before {
+  @include bp(wildcard-min, 767px) {
+    background: #a2dc35;
+  }
+}
+
+.virtualTour-toilets_unisex:before {
+  @include bp(wildcard-min, 767px) {
+    background: $black;
+  }
+}

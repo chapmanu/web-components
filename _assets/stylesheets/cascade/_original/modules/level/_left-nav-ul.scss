@@ -1,0 +1,157 @@
+// The _left-nav.scss module was getting too lengthy.
+// All ul, li, and a styles are here.
+
+.leftNav {
+	.ie8 & {
+		> ul > li > a {
+			&:hover .plus {
+				// background-position: -78px 0px;
+			}
+			.plus {
+				// background-position: -78px 0px;
+				// top: 7px;
+				&.open {
+					// background-position: -99px -20px;
+				}
+				&:hover {
+					// background-position: -98px 0px;
+				}
+			}
+		}
+	}
+	.ie9 & {
+		> ul > li > a .plus {
+			// background-position: -78px 0px;
+			// top: 7px;
+		}
+	}
+	.active > {
+    a {
+      font-weight: 700;
+      // font-family: "proxima-nova", sans-serif;
+      // font-weight: 400;
+      // font-size: 15px;
+      // background-color: $black;  
+      // color: $white;
+      &:hover {
+      	// background-color: $black;
+      }
+    }
+    ul > li > a > .bullet {
+      display: none;
+      color: $cu-red;
+    }
+  }
+	ul.is-open {
+	  background: $white;
+	}
+	> ul {
+  	float: left;
+    width: 100%;
+    background-color: $cu-light-grey;
+    // border: 1px solid #d9d8d2;
+    // border-width: 1px 0 1px 1px;
+    position: relative;
+  	> li {
+  		&.active > ul {
+		    @include bp(l) {
+		    	display: block;
+		    }
+		  }
+	    > {
+	      ul a {
+	        text-indent: -10px;
+	      }
+	      a {
+	        border-top: 1px solid $cu-light-grey;
+	        // font-family: "proxima-nova", sans-serif;
+	        font-size: 16px;
+	        // line-height: 18px;
+	        color: $grey;
+	        padding: 7px 40px 7px 20px;
+	        // margin-top: 1px;
+	        position: relative;
+	        &.is-open {
+	          background-color: $white;
+	          font-weight: 700;
+	        }
+	        .plus {
+	          background-image: url(img/miscButtons.png);
+	          background-repeat: no-repeat;
+	          background-position: -79px 0px;
+	          // background-position: -15px 1px;
+	          // background-size: 105px;
+	          text-indent: -50px;
+	          position: absolute;
+	          right: 12px;
+	          top: 6px;
+	          width: 21px;
+	          height: 21px;
+	          overflow: hidden;
+	          visibility: hidden;
+	          display: block;
+	          &:before {
+							// content: '';
+							// position: absolute;
+							// top: 5px;
+							// bottom: 5px;
+							// left: 0;
+							// right: 0;
+	          }
+	          &:hover {
+	            background-position: -100px 0px;
+	            &:before {
+	            	// background-position: -15px 1px;
+	            }
+	          }
+	          &.open {
+	            background-position: -79px -21px;
+	            &:hover {
+	              background-position: -100px -21px;
+	            }
+	          }
+	        }
+	        &:hover {
+	          .plus {
+	            text-decoration: none;
+	            // background-position: -15px 1px;
+	          }
+	          background-color: $white;
+	          color: $cu-red;
+	        }
+	      }
+	      ul {
+	        display: none;
+	        padding: 0 15px 10px 18px;
+	      }
+	    }
+	    &.active > {
+	      ul {
+	        display: block;
+	        background: $white;
+	      }
+	      a {
+	        background-color: $white;
+	        // color: $cu-red;
+	      }
+	    }
+	    > ul {
+	      > li > ul {
+	        display: none !important;
+	        padding: 0 0 10px 0;
+	      }
+	      li {
+	        padding: 1px 5px 5px 16px;
+	      }
+	    }
+	  }
+  }
+  li {
+    list-style-type: none;
+  }
+  a {
+    font-family: "proxima-nova-soft", "proxima-nova-soft-n4", sans-serif;
+    display: block;
+    padding: 7px 0 0 0;
+  }
+}

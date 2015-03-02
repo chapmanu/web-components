@@ -1,0 +1,168 @@
+#welcome {
+  display: inline-block;
+  position: static;
+  width: 100%;
+  .ie7 & {
+    @include bp(m) {
+      margin-top: 35px;
+    }
+  }
+  .no-js & {
+    display: none !important;
+  }
+  .overlay {
+    display: none;
+  }
+  .content-container {
+    display: none;
+    overflow: auto;
+    .links {
+      @include bp(l) {
+        float: left;
+        width: 550px;
+        margin-top: 115px;
+      }
+    }
+    .message {
+      .copy {
+        padding: 6px 12px;
+        font-family: 'Open Sans', "Times New Roman", Times, serif;
+        color: $white;
+        font-size: 1.1em;
+        font-weight: bold;
+        a {
+          color: $white;
+          text-decoration: underline;
+        }
+        @include bp(wildcard-min, 545px) {
+          float: left;
+          width: 40%;
+        }
+        @include bp(wildcard-min, 650px) {
+          float: left;
+          width: 50%;
+        }
+        @include bp(l) {
+          width: 313px;
+          position: absolute;
+          top: 315px;
+          left: 46px;
+          font-size: 1.05em;
+          line-height: 1.4em;
+          text-shadow: #2774a6 1px 1px;
+        }
+      }
+      .welcome {
+        @include bp(wildcard-min, 545px) {
+          float: left;
+          width: 281px;
+        }
+        @include bp(l) {
+          width: 321px;
+          height: 141px;
+          overflow: hidden;
+          text-indent: 100%;
+          font-size: 0px;
+          white-space: nowrap;
+          background: transparent url('/_files/img/welcome/welcomeBackDesktopText.png') left center no-repeat;
+          -webkit-background-size: 321px 141px;
+          background-size: 321px 141px;
+          padding: 6px 0px;
+          margin: 0px 7px;
+          position: absolute;
+          top: 170px;
+          left: 46px;
+        }
+      }
+      @include bp(wildcard-min, 480px) {
+        overflow: auto;
+      }
+      @include bp(l) {
+        float: left;
+        width: 430px;
+        height: 534px;
+        background: transparent url('/_files/img/welcome/welcomeBackPerson.png') center center no-repeat;
+        position: relative;
+      }
+    }
+  }
+  .sp {
+    display: none;
+  }
+  .message {
+    background: #2774a6;
+    .welcome {
+      background: transparent url('/_files/img/welcome/welcomeBackMobileText.png') left center no-repeat;
+      -webkit-background-size: 281px 46px;
+      background-size: 281px 46px;
+      height: 46px;
+      overflow: hidden;
+      text-indent: 100%;
+      font-size: 0px;
+      white-space: nowrap;
+      padding: 6px 0px;
+      margin: 0px 7px;
+    }
+    @include bp(wildcard-max, 480px) {
+      background: #2774a6 url('/_files/img/welcome/welcomeTextBg2x.png') center center no-repeat;
+    }
+  }
+  .control-links {
+    width: 100%;
+    height: 50px;
+    background: #e1e1e1;
+    span {
+      overflow: hidden;
+      text-indent: 100%;
+      font-size: 0px;
+      white-space: nowrap;
+      display: block;
+      float: right;
+      margin: 5px 2px 0;
+      cursor: pointer;
+    }
+    .save-btn {
+      width: 97px;
+      height: 23px;
+      background: url('/_files/img/welcome/welcomeButtonSprite.png') 0 0 no-repeat;
+    }
+    .unsave-btn {
+      width: 97px;
+      height: 23px;
+      background: url('/_files/img/welcome/welcomeButtonSprite.png') 0 -24px no-repeat;
+    }
+    .my-shortcuts {
+      width: 133px;
+      height: 23px;
+      background: url('/_files/img/welcome/welcomeButtonSprite.png') 0 -47px no-repeat;
+    }
+    .dont-show {
+      width: 153px;
+      height: 25px;
+      background: url('/_files/img/welcome/welcomeButtonSprite.png') 0 -70px no-repeat;
+    }
+    .close {
+      width: 79px;
+      height: 25px;
+      background: url('/_files/img/welcome/welcomeButtonSprite.png') 0 -95px no-repeat;
+      display: none;
+    }
+    .dont-show, .save-btn, .unsave-btn {
+      display: none;
+    }
+    .showme, .my-shortcuts {
+      display: block;
+    }
+    @include bp(m) {
+      background: none;
+    }
+    @include bp(l) {
+      width: 341px;
+    }
+  }
+  @include bp(m) {
+    width: auto;
+    margin-bottom: -21px;
+    height: 30px;
+  }
+}

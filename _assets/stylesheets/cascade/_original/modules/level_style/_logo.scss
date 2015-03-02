@@ -1,0 +1,26 @@
+.logo {
+  position: absolute;
+  top: 0;
+  display: block;
+  height: 58px;
+  width: 280px;
+  margin: 10px 0 0 10px;
+  text-indent: -999em;
+  background-image: url("../img/logo.png");
+  background-repeat: no-repeat;
+  @include bp(m) {
+  	clear: left;
+    float: left;
+    display: block;
+    position: static;
+    height: 58px;
+    width: 260px;
+    margin: 10px 0 0 10px;
+    text-indent: -999em;
+    background-image: url("../img/logo.png");
+    background-repeat: no-repeat;
+  }
+  @include bp(wildcard-main, 1085px) {
+  	margin-left: 0;
+  }
+}

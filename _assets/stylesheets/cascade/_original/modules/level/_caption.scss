@@ -1,0 +1,37 @@
+.caption {
+  height: 60px;
+  display: table;
+  padding: 0 10px 0 10px;
+  background-color: #434343;
+  color: $white;
+  position: relative;
+  top: -7px;
+  // margin: 0 0 -7px 0;
+  .ie7 & {
+    .text {
+      margin-top: expression(this.offsetHeight < this.parentNode.offsetHeight ? parseInt((this.parentNode.offsetHeight - this.offsetHeight) / 2) + "px" : "0");
+    }
+  }
+  .captionWrapper {
+    position: relative;
+  }
+  .text {
+    display: table-cell;
+    vertical-align: middle;
+    width: 170px;
+    line-height: 19px;
+    font-size: 21px;
+    padding: 12px 0 0 0;
+    text-align: center;
+  }
+}
+
+.rgba .captionWrapper:before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -10px;
+  right: -10px;
+  height: 7px;
+  background-color: rgba(67, 67, 67, 0.6);
+}

@@ -1,0 +1,21 @@
+// Miscellaneous selectors that don't require their own modules and/or only occur once.
+// Will move these to other modules later if necessary.
+
+#generalInformation {
+  padding: 0 0 30px 0;
+  a:after {
+    content: " »";
+  }
+  @include bp(wildcard-main, 680px) {
+  	padding: 0 0 80px 0;
+  }
+}
+
+.imagerotator {
+  position: relative;
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}

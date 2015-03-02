@@ -1,0 +1,28 @@
+.filters > .filter {
+  padding: 10px 0 10px 0;
+  &:first-child {
+    @include bp(m) {
+    	border: none;
+    }
+  }
+  @include bp(m) {
+  	padding: 3px 10px 3px 10px;
+    border-left: 1px solid $cu-border;
+  }
+}
+
+.filterContainer {
+  color: #4a4949;
+  padding: 10px 25px 10px 0px;
+  border-top: 1px dotted #ACAA9E;
+  margin: 15px 0 0 0;
+  input {
+    margin-right: 2px;
+  }
+  span {
+    display: block;
+    @include bp(m) {
+    	display: inline;
+    }
+  }
+}

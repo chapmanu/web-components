@@ -1,0 +1,14 @@
+.primaryContent {
+  .main {
+    @include bp(l) {
+    	width: 100%;
+	    max-width: 465px;
+	    float: left;
+    }
+  }
+  &.twoColumns .main {
+    @include bp(l) {
+    	max-width: 100%;
+    }
+  }
+}

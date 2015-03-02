@@ -1,0 +1,22 @@
+// Miscellaneous selectors that don't require their own modules and/or only occur once.
+// Will move these to other modules later if necessary.
+
+.primaryContent {
+	.ie7 & {
+		.main h1 {
+			zoom: normal;
+		}
+	}
+	.main {
+	  max-width: none !important;
+	}
+}
+
+.anchorLinks {
+  padding: 15px 0 10px 0;
+  border-bottom: 1px solid $cu-border;
+  margin: 0 0 0 20px;
+  .ie7 & {
+  	zoom: normal;
+  }
+}

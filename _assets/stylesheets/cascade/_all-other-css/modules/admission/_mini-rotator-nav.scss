@@ -1,0 +1,27 @@
+.miniRotatorNav {
+  position: relative;
+  top: 0;
+  left: auto;
+  a {
+    position: absolute;
+    height: 56px;
+    width: 43px;
+    color: White;
+    top: -200px;
+    cursor: pointer;
+    background-image: url("../img/gray_arrows.png");
+    background-repeat: no-repeat;
+    &.disabled {
+      opacity: .4;
+      filter: alpha(opacity = 40);
+    }
+  }
+  .prev {
+    background-position: left center;
+    left: 0;
+  }
+  .next {
+    background-position: right center;
+    right: 0;
+  }
+}

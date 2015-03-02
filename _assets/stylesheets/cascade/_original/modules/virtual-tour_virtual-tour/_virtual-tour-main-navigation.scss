@@ -1,0 +1,110 @@
+#virtualTour-mainNavigation {
+  margin: 0;
+  list-style: none;
+  display: none;
+}
+
+.virtualTour-mainNavigationItem {
+  margin-right: 5px;
+  float: left;
+  position: relative;
+  .oldie & {
+  	border: 1px solid #e1e1e1;
+  }
+}
+
+.virtualTour-mainNavigationButton {
+  &:link {
+    border: 1px solid rgba(189, 189, 189, 0.44);
+    text-decoration: none;
+    font-size: 15px;
+    color: #595858;
+    text-decoration: none;
+    padding: 10px 10px 0 10px;
+    height: 28px;
+    display: block;
+  }
+  &:hover {
+    -webkit-transition: background-color 0.5s;
+    transition: background-color;
+    background-color: #e8e8e8;
+    color: $cu-red;
+    text-decoration: none;
+  }
+  &:link, &:visited {
+    color: #595858;
+    text-decoration: none;
+  }
+  &:focus {
+    text-decoration: none;
+  }
+  &:active, &.active {
+    background-color: #e8e8e8;
+    text-decoration: none;
+    color: #595858;
+  }
+}
+
+#virtualTour-mainNavigationMenuButton, #virtualTour-mainNavigationSearchButton {
+  &:after {
+  	border-left: 1px solid #d9d9d5;
+	  font-family: 'icomoon';
+	  text-align: center;
+	  color: $cu-red;
+	  content: "\e017";
+	  width: 30px;
+	  height: 15px;
+	  position: absolute;
+	  top: 12px;
+	  right: 0;
+  }
+}
+
+#virtualTour-mainNavigationMenuButton {
+  width: 75px;
+  padding-right: 0;
+  &.active:after {
+	  color: #231f20;
+	  content: "\e016";
+	}
+}
+
+#virtualTour-mainNavigationSearchButton {
+  padding-right: 0;
+  &.active:after {
+    color: #231f20;
+    content: "\e016";
+  }
+  width: 55px;
+  &:before {
+    content: "\e005";
+    display: block;
+    float: left;
+    padding-top: 1px;
+  }
+  .staticText {
+    display: none;
+  }
+}
+
+#virtualTour-mainNavigationViewOnMapButton {
+  width: 90px;
+  text-align: center;
+  line-height: 12px;
+  padding-top: 6px;
+  height: 32px;
+  .staticText {
+    display: none;
+  }
+  &:after {
+    content: "View on Google Map";
+    @include bp(wildcard-min, 767px) {
+    	content: "Get Directions";
+    }
+  }
+  @include bp(wildcard-min, 767px) {
+  	padding-top: 14px;
+    width: auto;
+    height: 24px;
+  }
+}

@@ -1,0 +1,78 @@
+@mixin bp($point, $val: 0) {
+
+	@if $point == m { // Medium
+		@media (min-width: 780px) { @content; }
+	}
+
+	@if $point == l { // Large
+		@media (min-width: 1024px) { @content; }
+	}
+
+	@if $point == xl { // Large
+		@media (min-width: 1200px) { @content; }
+	}
+
+	@if $point == wildcard-min { // Uses variable breakpoint.
+		@media (min-width: #{$val}) { @content; }
+	}
+
+	@if $point == wildcard-max { // Uses variable breakpoint.
+		@media (max-width: #{$val}) { @content; }
+	}
+
+	// @if $point == highres {
+	// 	@media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-devicepixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx) { @content; }
+	// }
+
+	@if $point == print {
+		@media only print { @content; }
+	}
+
+}
+
+@mixin em_width($px, $default: $fontsize) { width: #{$px / $default}em; }
+@mixin em_height($px, $default: $fontsize) { height: #{$px / $default}em; }
+@mixin em_maxwidth($px, $default: $fontsize) { max-width: #{$px / $default}em; }
+@mixin em_minwidth($px, $default: $fontsize) { min-width: #{$px / $default}em; }
+@mixin em_maxheight($px, $default: $fontsize) { max-height: #{$px / $default}em; }
+@mixin em_minheight($px, $default: $fontsize) { min-height: #{$px / $default}em; }
+@mixin em_margin($top:0,$right:0,$bot:$top,$left:$right, $default: $fontsize) { margin: #{$top / $default}em #{$right / $default}em #{$bot / $default}em #{$left / $default}em }
+@mixin em_padding($top:0,$right:0,$bot:$top,$left:$right, $default: $fontsize) { padding: #{$top / $default}em #{$right / $default}em #{$bot / $default}em #{$left / $default}em }
+@mixin em_fontsize($px) { font-size: #{$px / $fontsize}em; }
+@mixin em_lineheight($px, $default: $fontsize) { line-height: #{$px / $default}em; }
+
+@mixin box_shadow($hoffset: 0, $voffset: 0, $blur: 0, $spread: 0, $color: $black, $inset: false) {
+
+	@if $inset == false {
+		-webkit-box-shadow: $hoffset $voffset $blur $spread $color;
+		box-shadow: $hoffset $voffset $blur $spread $color;
+	} @else {
+		-webkit-box-shadow: inset $hoffset $voffset $blur $spread $color;
+		box-shadow: inset $hoffset $voffset $blur $spread $color;
+	}
+
+}
+
+@mixin vendorize($property, $value) {
+	-webkit-#{$property}: $value;
+	-moz-#{$property}: $value;
+	-ms-#{$property}: $value;
+	-o-#{$property}: $value;
+	#{$property}: $value;
+}
+
+@mixin opacity($i) {
+	$forie: $i * 100;
+
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity="+$forie+")";
+	filter: alpha(opacity=$forie);
+	opacity: $i;
+}
+
+@mixin transition($sel: all,$time: 1s,$ease: linear) {
+	-webkit-transition: $sel $time $time;
+	-moz-transition: $sel $time $time;
+	-o-transition: $sel $time $time;
+	-ms-transition: $sel $time $time;
+	transition: $sel $time $time;
+}

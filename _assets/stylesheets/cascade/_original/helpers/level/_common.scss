@@ -1,0 +1,152 @@
+.btn-flat {
+  padding: 5px 10px 5px 10px;
+  &:after {
+    font-size: 16px;
+    content: "»";
+    margin-left: 20px;
+  }
+  &.white {
+    background-color: $white;
+  }
+}
+
+.teal {
+  background-color: $teal;
+  &:hover {
+    background-color: $teal-hover;
+  }
+}
+
+.teal2 {
+  background-color: $teal2;
+  &:hover {
+    background-color: $teal2-hover;
+  }
+}
+
+.red {
+  background-color: $red;
+  &:hover {
+    background-color: $red-hover;
+  }
+}
+
+.grey {
+  background-color: $grey;
+  &:hover {
+    background-color: $grey-hover;
+  }
+}
+
+.grey2 {
+  background-color: $grey2;
+  &:hover {
+    background-color: $grey2-hover;
+  }
+}
+
+.leftSlideFade, .rightSlideFade {
+	.ie7 & {
+		display: none;
+	}
+}
+
+.leftSlideFade {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  left: -100%;
+  z-index: 110;
+  background-image: url("../level/img/slide_fade_left.png");
+  background-repeat: repeat-y;
+  background-position: right top;
+}
+
+.rightSlideFade {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  right: -100%;
+  z-index: 110;
+  background-image: url("../level/img/slide_fade_right.png");
+  background-repeat: repeat-y;
+  background-position: left top;
+}
+
+a.cta {
+  padding: 7px 10px 7px 10px;
+  background-color: $cu-red;
+  color: $white;
+  display: inline-block;
+  text-transform: uppercase;
+  font-family: 'proxima-nova', sans-serif;
+  font-weight: 800;
+  max-width: 100%;
+  &.hover {
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+.ir {
+  display: block;
+  border: 0;
+  text-indent: -999em;
+  overflow: hidden;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  text-align: left;
+  direction: ltr;
+  br {
+    display: none;
+  }
+}
+
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  &.focusable {
+    &:active, &:focus {
+      clip: auto;
+      height: auto;
+      margin: 0;
+      overflow: visible;
+      position: static;
+      width: auto;
+    }
+  }
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.clearfix {
+  &:before {
+    content: "";
+    display: table;
+  }
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  zoom: 1;
+}
+
+.ellipsis.multiline {
+  white-space: normal;
+}

@@ -1,0 +1,142 @@
+.OLD > .miniRotatorContainer {
+  position: relative;
+  height: 285px;
+  max-width: 320px;
+  margin: 0 auto 0 auto;
+  overflow: hidden;
+  > {
+    .miniRotator {
+      position: relative;
+      overflow: hidden;
+      height: 285px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      ul {
+        width: 20000em;
+        position: absolute;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+      .item {
+        display: block;
+        height: 285px;
+        width: 320px;
+        position: relative;
+        float: left;
+        margin: 0 4px 0 0;
+        background-color: $cu-dark-red;
+        background: -webkit-radial-gradient(circle, $cu-red, $cu-dark-red);
+        background: -moz-radial-gradient(circle, $cu-red, $cu-dark-red);
+        background: -ms-radial-gradient(circle, $cu-red, $cu-dark-red);
+        background: radial-gradient(circle, $cu-red, $cu-dark-red);
+        .pointyCaption {
+          font-size: 18px;
+          font-weight: 600;
+          color: $white;
+          padding: 10px 25px 15px 25px;
+          margin: -3px 4px 0 0;
+          height: 45px;
+          .point {
+            position: absolute;
+            bottom: 65px;
+            left: 0;
+            background-image: url("../img/pointy.png");
+            background-repeat: no-repeat;
+            background-position: center top;
+            width: 100%;
+            height: 22px;
+          }
+        }
+        &:hover .rollover {
+          visibility: visible;
+          top: 0;
+          transition: top 1s;
+          -moz-transition: top 1s;
+          -webkit-transition: top 1s;
+          -o-transition: top 1s;
+        }
+        .rollover {
+          visibility: hidden;
+          position: absolute;
+          top: 220px;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          padding: 10px 25px 15px 25px;
+          background-color: $cu-dark-red;
+          background: -webkit-radial-gradient(circle, $cu-red, $cu-dark-red);
+          background: -moz-radial-gradient(circle, $cu-red, $cu-dark-red);
+          background: -ms-radial-gradient(circle, $cu-red, $cu-dark-red);
+          background: radial-gradient(circle, $cu-red, $cu-dark-red);
+          color: $white;
+          transition: top 1s;
+          -moz-transition: top 1s;
+          -webkit-transition: top 1s;
+          -o-transition: top 1s;
+          .title {
+            font-size: 18px;
+            font-weight: 600;
+            color: $white;
+            margin: 75px 0 0 0;
+          }
+          .copy {
+            font-size: 13px;
+            margin: 10px 0 0 0;
+            /*height:100px;*/
+            line-height: 1.5;
+          }
+          .button {
+            background-color: $white;
+            font-weight: 600;
+            color: $cu-dark-red;
+            float: left;
+            padding: 5px 10px 5px 10px;
+            margin-top: 15px;
+          }
+        }
+      }
+    }
+    .miniRotatorNav {
+      position: relative;
+      top: 0;
+      left: auto;
+      a {
+        position: absolute;
+        height: 56px;
+        width: 43px;
+        color: $white;
+        top: -200px;
+        cursor: pointer;
+        background-image: url("../img/gray_arrows.png");
+        background-repeat: no-repeat;
+        &.disabled {
+          opacity: .4;
+          filter: alpha(opacity = 40);
+        }
+      }
+      .prev {
+        background-position: left center;
+        left: 0;
+      }
+      .next {
+        background-position: right center;
+        right: 0;
+      }
+    }
+  }
+  @include bp(m) {
+    max-width: 648px;
+  }
+  @include bp(l) {
+    max-width: 972px;
+    // left: 22px;
+    margin: 0 auto 0 auto;
+  }
+}

@@ -1,0 +1,36 @@
+a.cu_nav_button {
+  display: block;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: #faf9f6;
+  display: block;
+  text-decoration: none;
+  overflow: hidden;
+  transition: color 0.1s ease-out;
+  &:hover {
+    background: $white;
+    color: $cu-red;
+    text-decoration: none;
+    transition: color 0.1s ease-out;
+    svg * {
+      fill: $cu-red;
+    }
+  }
+  &:link, &:visited {
+    color: #404040;
+  }
+  svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    background-size: contain;
+    vertical-align: middle;
+    * {
+      transition: fill 0.1s ease-out;
+      fill: #4d4d4d;
+    }
+  }
+}

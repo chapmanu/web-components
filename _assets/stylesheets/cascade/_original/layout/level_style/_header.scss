@@ -1,0 +1,8 @@
+header {
+  @include bp(m) {
+  	background-image: url("../img/diamond_pattern.png");
+	  background-color: $white;
+	  background-repeat: repeat;
+	  padding: 0 0 15px 0;
+  }
+}

@@ -1,0 +1,35 @@
+//----------------------------------------//
+// Sass file for css/new_home.css
+//----------------------------------------//
+
+// Helpers
+@import "helpers/_variables"; // Common helper
+@import "helpers/_mixins"; // Common helper
+@import "helpers/new-home/_common";
+@import "helpers/new-home/_defaults";
+
+
+// Layout
+
+
+// Modules
+@import "modules/new-home/_admission-cta";
+@import "modules/new-home/_border-radius";
+@import "modules/new-home/_chapman-family";
+@import "modules/new-home/_featured-stories";
+@import "modules/new-home/_graduate-admission";
+@import "modules/new-home/_hero";
+@import "modules/new-home/_hero-quick-view";
+@import "modules/new-home/_main";
+@import "modules/new-home/_section";
+@import "modules/new-home/_selector";
+@import "modules/new-home/_statistics";
+@import "modules/new-home/_stories";
+@import "modules/new-home/_story";
+@import "modules/new-home/_story-footer";
+@import "modules/new-home/_undergraduate-admission";
+
+@import "modules/new-home/_misc";
+
+
+// Print

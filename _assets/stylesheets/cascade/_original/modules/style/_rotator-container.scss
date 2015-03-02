@@ -1,0 +1,10 @@
+.rotatorContainer {
+	@include bp(m) {
+		max-height: 600px;
+	}
+	@include bp(xl) {
+		max-width: 1200px;
+    margin: 0 auto;
+    overflow: visible !important;
+	}
+}

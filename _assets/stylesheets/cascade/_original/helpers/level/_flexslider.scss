@@ -1,0 +1,46 @@
+// Flexslider source CSS is in helpers/style/_flexslider.scss.
+// This helper just adds flexslider styles specific to level pages.
+
+.flex-container, .flexslider {
+  @include bp(l) {
+  	overflow: visible !important;
+  }
+}
+
+.flex-control-nav {
+  z-index: 9999;
+}
+
+.flex-direction-nav {
+	.oldie & {
+		height: 0;
+	}
+	li a {
+		// background-image:url("../img/gray_arrows.png");
+		@include bp(l) {
+			top: 45% !important;
+		}
+	}
+}
+
+.slide {
+  overflow: hidden;
+  position: relative;
+  bottom: 0;
+  .dataDescription {
+	  background-color: $cu-light-grey;
+	  font-size: 18px;
+	  font-style: italic;
+	  padding: 10px;
+	}
+	@include bp(l) {
+		position: relative;
+    height: 468px;
+	}
+}
+
+.slideDescription {
+  @include bp(wildcard-max, 1024px) {
+  	display: none;
+  }
+}

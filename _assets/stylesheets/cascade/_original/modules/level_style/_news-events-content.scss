@@ -1,0 +1,43 @@
+.newsEventsContent {
+	position: relative;
+  color: $black;
+  h6 {
+    font-size: 14px;
+    background-color: $cu-red;
+    background-image: url("../img/active_tab_bg.png");
+    background-repeat: repeat-x;
+    background-position: left top;
+    margin: 10px;
+    padding: 10px;
+    color: $white;
+    display: none !important;
+  }
+  .featureImage {
+    display: none;
+  }
+  a {
+    font-weight: normal;
+    color: $cu-red;
+    font-family: Arial;
+    font-size: 12px;
+    margin: 10px 0 0 0;
+    &:hover {
+      color: $cu-red !important;
+    }
+  }
+  .copy img {
+	  display: none;
+	}
+	p {
+    font-family: Arial;
+    font-size: 13px;
+  }
+  li.active {
+  	display: block !important;
+  }
+  > li {
+    list-style-type: none;
+    // display: none;
+    position: relative;
+  }
+}

@@ -1,0 +1,10 @@
+.rotatorContainer .slide {
+  max-height: 440px;
+  min-height: 240px !important;
+  padding-bottom: 15px;
+  @include bp(wildcard-min, 786px) {
+  	height: auto !important;
+    min-height: 340px !important;
+    padding-bottom: 0;
+  }
+}

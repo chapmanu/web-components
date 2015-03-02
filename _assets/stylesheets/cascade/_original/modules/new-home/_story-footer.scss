@@ -1,0 +1,118 @@
+.story_footer {
+  position: relative;
+  background: $cu-light-grey;
+  overflow: visible;
+  min-height: 40px;
+  font-size: 12px;
+  line-height: 20px;
+  p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  a, .meta a:hover {
+    opacity: 1;
+  }
+  .source {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: $cu-light-grey;
+    &:hover a {
+      z-index: 2;
+      opacity: 1;
+      color: $cu-red;
+    }
+    a {
+      padding: 14px 50px 13px 24px;
+      display: block;
+      color: $black;
+      opacity: 0.6;
+      text-decoration: none;
+      line-height: 11px;
+      overflow: hidden;
+    }
+    &.facebook:before {
+      content: "";
+      display: block;
+      width: 15px;
+      height: 15px;
+      background: url('../img/icons/svg/facebook_red.svg') no-repeat center left;
+      background-size: contain;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      opacity: 0.8;
+      -webkit-filter: grayscale(1);
+    }
+    &.instagram:before {
+      content: "";
+      display: block;
+      width: 15px;
+      height: 15px;
+      background: url('../img/icons/svg/instagram_red.svg') no-repeat center left;
+      background-size: contain;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      opacity: 0.8;
+      -webkit-filter: grayscale(1);
+    }
+    &.twitter:before {
+      content: "";
+      display: block;
+      width: 15px;
+      height: 15px;
+      background: url('../img/icons/svg/twitter_red.svg') no-repeat center left;
+      background-size: contain;
+      position: absolute;
+      top: 12px;
+      left: 11px;
+      opacity: 0.8;
+      -webkit-filter: grayscale(1);
+    }
+    &.blogs:before {
+      content: "";
+      display: block;
+      width: 20px;
+      height: 20px;
+      background: url('../img/cu_monogram_red.svg') no-repeat center left;
+      background-size: contain;
+      position: absolute;
+      top: 10px;
+      left: 8px;
+      opacity: 0.8;
+      -webkit-filter: grayscale(1);
+    }
+    &:hover:before {
+      -webkit-filter: grayscale(0);
+    }
+    &.facebook a, &.instagram a, &.twitter a, &.blogs a {
+      padding-left: 30px !important;
+    }
+  }
+  .meta {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: $cu-light-grey;
+    .icon {
+      display: block;
+      color: $black;
+      opacity: 0.6;
+      text-decoration: none;
+      padding: 13px 20px 13px 10px;
+      float: left;
+    }
+    .action {
+      display: block;
+      color: $black;
+      opacity: 1;
+      text-decoration: none;
+      float: left;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}

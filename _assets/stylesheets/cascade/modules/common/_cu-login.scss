@@ -1,0 +1,97 @@
+#cu_login_container {
+  display: block;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  right: 0;
+  .logged-in & {
+    #cu_login_form {
+      display: none !important;
+    }
+    .cu_dropdown_menu {
+      &.if-logged-in {
+        display: block;
+      }
+      &.if-logged-out {
+        display: none;
+      }
+    }
+  }
+  .logged-out & {
+    .cu_dropdown_menu {
+      &.if-logged-in {
+        display: none;
+      }
+      &.if-logged-out {
+        display: block;
+      }
+    }
+  }
+  #cu_identity {
+    display: block;
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    cursor: pointer;
+    text-align: right;
+    width: 220px;
+    height: 45px;
+    padding: 12.85714px;
+    .cu_name {
+      display: none;
+      @include bp(wildcard-min, 980px) {
+        display: inline-block;
+      }
+    }
+    svg, img {
+      width: 20px;
+      height: 20px;
+      margin-right: 8px;
+      background-size: contain;
+      vertical-align: middle;
+    }
+    svg *, img * {
+      transition: fill 0.1s ease-out;
+      fill: #4d4d4d;
+    }
+    @include bp(wildcard-min, 980px) {
+      padding-right: 30px;
+    }
+  }
+  .cu_avatar {
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    border-radius: 50%;
+  }
+  .cu_dropdown_menu {
+    display: block;
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    width: 220px;
+    background: #faf9f6;
+    color: #404040;
+    &.if-logged-in {
+      display: none;
+    }
+    li {
+      display: block;
+      margin: 0;
+      padding: 0;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+  }
+}

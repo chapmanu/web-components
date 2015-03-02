@@ -1,0 +1,52 @@
+.funnel {
+	.ie7 & {
+		.funnelBlock {
+		  zoom: 1;
+		  display: inline;
+		}
+	}
+	.funnelBlock {
+	  display: inline-block;
+	  vertical-align: top;
+	  width: 300px;
+	  background-color: #f1eedc;
+	  padding: 10px;
+	  margin: 20px 20px 20px 0;
+	  .featureImage {
+      text-align: center;
+      img {
+        border: 3px solid $white;
+        -webkit-box-shadow: 0px 0px 7px #434343;
+        -moz-box-shadow: 0px 0px 7px #434343;
+        box-shadow: 0px 0px 7px #434343;
+      }
+    }
+    h3 {
+      clear: both;
+      color: $cu-red;
+      font-family: "Open Sans";
+      font-weight: normal;
+      font-size: 16px;
+      padding: 10px 0 5px 0;
+      margin: 0;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .linkList {
+      margin: 10px 0 0 0;
+    }
+    li {
+      margin: 0 0 3px 0;
+    }
+	}
+	.more {
+    color: $black;
+    font-weight: bold;
+    font-size: 11px;
+    cursor: hand;
+    cursor: pointer;
+    display: none;
+  }
+}

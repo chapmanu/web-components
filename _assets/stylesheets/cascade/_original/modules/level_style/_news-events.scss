@@ -1,0 +1,31 @@
+.newsEvents {
+	margin: 5px auto 0 auto;
+  width: 100%;
+  max-width: 465px;
+  padding: 0 0 20px 0;
+  clear: both;
+  display: inline-block;
+	h3 {
+	  margin: 0;
+	  a {
+	    font-weight: normal;
+	    color: #4A4949;
+	    font-family: Times New Roman;
+	    font-size: 17px;
+	    &:hover {
+	      color: $cu-red;
+	    }
+	  }
+	}
+	.todayTomorrow {
+	  position: relative;
+	  height: 20px;
+	  font-family: "Open Sans";
+	  font-weight: bold;
+	  font-size: 15px;
+	  span {
+	    position: absolute;
+	    visibility: hidden;
+	  }
+	}
+}

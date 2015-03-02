@@ -1,0 +1,23 @@
+// @import "../img/*.png"; // Change to generated images directory
+// @include all-img-sprites;
+
+// $sprites: 	logo_header;
+
+// @mixin sprite-dimensions($name) {
+// 	width: img-sprite-width($name);
+// 	height: img-sprite-height($name);
+// }
+
+// .sprite {
+
+// 	display: inline-block;	
+// 	background-color: transparent;
+
+// }
+
+// @each $sprite in $sprites {
+// 	.#{$sprite} {
+// 		@include img-sprite($sprite); 
+// 		@include sprite-dimensions($sprite);
+// 	}
+// }

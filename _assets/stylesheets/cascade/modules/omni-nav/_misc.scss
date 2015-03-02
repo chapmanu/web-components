@@ -1,0 +1,18 @@
+// Miscellaneous selectors that don't require their own modules and/or only occur once.
+// Will move these to other modules later if necessary.
+
+#wp-admin-bar-top-secondary {
+  display: none;
+}
+
+.gssb_c[style] {
+  position: fixed !important;
+  top: 35px !important;
+  z-index: 99200;
+  .logged-in.admin-bar & {
+    margin-top: 32px;
+    @include bp(wildcard-max, 782px) {
+      margin-top: 46px;
+    }
+  }
+}

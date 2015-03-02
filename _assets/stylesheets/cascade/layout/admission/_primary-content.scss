@@ -1,0 +1,36 @@
+.primaryContent .main {
+  max-width: none !important;
+  width: 100%;
+  .featureImage {
+    float: left;
+    margin: 0px 10px 10px 0;
+    border: 3px solid white;
+    -webkit-box-shadow: 0px 0px 7px #434343;
+    -moz-box-shadow: 0px 0px 7px #434343;
+    box-shadow: 0px 0px 7px #434343;
+  }
+  section {
+  	.content {
+	    float: left;
+	    width: 100%;
+	    .linkList {
+	      padding: 0;
+	      list-style-type: none;
+	      float: left;
+	      li {
+	        margin: 0 0 5px 0;
+	      }
+	    }
+	  }
+	  h3 {
+	    clear: both;
+	    color: #98002e;
+	    font-family: "Open Sans";
+	    font-weight: normal;
+	    font-size: 16px;
+	    padding: 20px 0 7px 0;
+	    margin: 0;
+	    border-bottom: 1px solid #a58f75;
+	  }
+  }
+}

@@ -1,0 +1,148 @@
+.mainNavLinks {
+	display: none;
+	.open & {
+		display: block;
+	}
+	.csstransitions & {
+		> li:hover .subNavLinks {
+			@include bp(m) {
+				left: 0;
+      opacity: 1;
+			}
+		}
+	}
+	> .active {
+		@include bp(m) {
+			background-color: #555a5e;
+		}
+	}
+	a {
+		text-decoration: none;
+	  &:hover {
+	    text-decoration: none;
+	  }
+	}
+	> li {
+	  background-color: $black;
+	  &:hover {
+	  	> a {
+	  		> span {
+	  			@include bp(m) {
+	  				background-image: url("../img/up_arrow.png");
+	  			}
+	  		}
+	  		@include bp(m) {
+	  			background-color: #555a5e;
+	  		}
+	  	}
+	  	@include bp(m) {
+	  		background-color: #555a5e;
+	  	}
+	  }
+	  &.noSubNav {
+	  	&:hover {
+	      @include bp(m) {
+	      	background-color: $black;
+	      }
+	    }
+	    > a {
+	    	> span {
+	    		@include bp(m) {
+	    			background-image: none !important;
+	    		}
+	    	}
+	    	@include bp(m) {
+	    		padding: 0 0 0 3px;
+	    	}
+	    }
+	  }
+	  > a {
+	    color: $white;
+	    font-weight: 600;
+	    display: block;
+	    background-color: $black;
+	    margin: 0 0 1px 0;
+	    padding: 10px 0 10px 10px;
+	    .bullet {
+	      position: absolute;
+	      right: 10px;
+	      font-weight: normal;
+	      @include bp(m) {
+	      	display: none;
+	      }
+	    }
+	    > span {
+	    	@include bp(m) {
+	    		float: left;
+          display: block;
+          background-color: transparent;
+          background-image: url("../img/down_arrow.png");
+          background-repeat: no-repeat;
+          background-position: right center;
+          padding: 0 17px 0 10px;
+          @include vendorize(transform, skew(15deg));
+	    	}
+	    }
+	    @include bp(m) {
+	    	float: left;
+	    	color: $white;
+        display: block;
+        height: 30px;
+        font-size: 12px;
+        font-family: 'Open Sans', Sans-Serif;
+        position: relative;
+        padding: 0;
+	    	@include vendorize(transform, skew(-15deg));
+	    }
+	  }
+	  @include bp(m) {
+	  	background-color: $black;
+      height: 30px;
+      float: left;
+	  }
+	}
+	.mainNavLinksAfter {
+		&:hover {
+			@include bp(wildcard-min, 1085px) {
+				position: absolute;
+	      background-color: $black;
+	      height: 30px;
+	      width: 1000%;
+	      top: 0;
+	      right: -950%;
+	      z-index: -1;
+			}
+		}
+		@include bp(wildcard-min, 1085px) {
+			position: absolute;
+      background-color: $black;
+      height: 30px;
+      width: 1000%;
+      top: 0;
+      right: -950%;
+      z-index: -1;
+		}
+	}
+	@include bp(m) {
+		height: 30px;
+    line-height: 30px;
+    // background-color: transparent;
+    margin: 25px 0 0 0;
+    // width: 700px;
+    float: left;
+    background-image: url("../img/ribbon_tails.png");
+    background-repeat: no-repeat;
+    background-position: left -42px;
+    padding: 0 0 0 10px;
+    position: relative;
+    z-index: 1000;
+    width: 100%;
+    background-color: $black;
+    list-style: none;
+    display: block;
+	}
+	@include bp(wildcard-min, 1085px) {
+		width: 730px;
+    background-color: transparent;
+	}
+}

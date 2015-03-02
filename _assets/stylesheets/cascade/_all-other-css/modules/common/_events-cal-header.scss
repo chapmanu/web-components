@@ -1,0 +1,33 @@
+// ---------- Level ---------- //
+
+.eventsCalHeader {
+  width: 99%;
+  background-color: $cu-light-grey;
+  border-bottom: 1px solid #C0C0B8;
+  border-right: 1px solid #C0C0B8;
+  padding: 5px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  @include bp(wildcard-max, 780px) {
+  	width: 100%;
+  }
+}
+
+.eventsCalHeaderSect_1, .eventsCalHeaderSect_2, .eventsCalHeaderSect_3 {
+  @include bp(wildcard-max, 780px) {
+  	float: none;
+	  text-align: left;
+	  width: 100%;
+  }
+}
+
+.eventsCalHeaderSect_1, .eventsCalHeaderSect_2 {
+  float: left;
+  width: 35%;
+}
+
+.eventsCalHeaderSect_3 {
+  text-align: right;
+  display: inline-block;
+  width: 220px;
+}

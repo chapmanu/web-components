@@ -1,0 +1,158 @@
+// Miscellaneous selectors that don't require their own modules and/or only occur once.
+// Will move these to other modules later if necessary.
+
+.blockOut {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  // background-color: $white;
+}
+
+div.four-col-float {
+  float: left;
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+}
+
+#search_message {
+  background: #9c998d;
+  height: 40px;
+  margin-bottom: 20px;
+  p {
+    color: $white;
+    text-shadow: 0 1px 0 #4d4c46;
+    line-height: 40px;
+    text-align: center;
+  }
+}
+
+.bottomExtend {
+  position: absolute;
+  bottom: 0;
+  height: 50%;
+  width: 100%;
+  background-color: $cu-warm-light-grey;
+}
+
+.featured {
+  img {
+    max-width: 94%;
+    height: auto;
+  }
+  .title {
+    color: $cu-red;
+    // font-family: arial;
+    margin: 0 0 10px 0;
+  }
+}
+
+.buttonLinks {
+  list-style-type: none;
+  margin: 10px 0 0 0;
+  > li {
+    margin-top: 2px;
+    > a {
+      background-color: $white;
+      font-size: 13px;
+      color: #8f0c30;
+      padding: 8px 10px 8px 10px;
+      margin: 0 auto 0 auto;
+      display: inline-block;
+      &:hover {
+        background-color: #fcfafb;
+      }
+    }
+  }
+}
+
+.middleRightContainer {
+  @include bp(l) {
+  	width: 73%;
+	  position: relative;
+	  float: right;
+	  @include vendorize(box-sizing, border-box);
+  }
+}
+
+.jspDrag {
+  background-color: black !important;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -16px;
+    height: 0;
+    width: 0;
+    border: 8px solid transparent;
+    border-left-color: $black;
+  }
+}
+
+.jspTrack {
+  background-color: #a5a5a5 !important;
+  -webkit-box-shadow: inset 0 0px 8px #7c7c7c;
+  -moz-box-shadow: inset 0 0px 8px #7c7c7c;
+  box-shadow: inset 0 0px 8px #7c7c7c;
+}
+
+.collegeName {
+  font-family: 'proxima-nova', sans-serif;
+  font-weight: 800;
+  font-size: 40px;
+  letter-spacing: -1px;
+  color: $white;
+  padding: 20px 0 3px 0;
+}
+
+.collegeDescription {
+  /*font-family:Times New Roman;*/
+  font-style: italic;
+  font-size: 18px;
+  color: $white;
+  float: left;
+  position: relative;
+  left: 50%;
+  max-width: 90%;
+  margin: 0 0 20px 0;
+  .centeredContent {
+    text-align: center;
+    position: relative;
+    left: -50%;
+    word-break: break-word;
+  }
+}
+
+.readMore {
+  float: right;
+  width: 100px;
+  text-align: right;
+}
+
+.entry-content {
+  img, iframe, object, embed {
+    max-width: 100%;
+  }
+}
+
+.collapsedNav {
+  margin-top: 110px;
+}
+
+#cse .gsc-search-box {
+  display: none;
+}
+
+.footerLinks li a .bullet{
+  position: absolute;
+  right: 10px;   
+  font-weight: normal;
+}
+
+.subFooter ul {
+  @include bp(l) {
+  	margin: 0 10px 0 65px;
+  }
+}

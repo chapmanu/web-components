@@ -1,0 +1,41 @@
+---
+layout: cascade
+title: "Inquiry Form"
+---
+		
+		<div class="callout short-form">
+          <form action="https://webfarm.chapman.edu/mailservice/formmail.aspx" id="form1" method="post" name="form1" onsubmit="return validate(this);">
+            <input name="recipient" type="hidden" value="carter@chapman.edu;dfinley@chapman.edu">
+            <input name="sender" type="hidden" value="carter@chapman.edu">
+            <input name="subject" type="hidden" value="Law School Inquiry from web">
+            <input name="mail_format" type="hidden" value="custom">
+            <!-- value for referrer set in js above -->
+            <input name="page_referred_from" type="hidden" value="na">
+            <input name="custom" type="hidden" value="http://www.chapman.edu/law/_files/email-templates/inquiry-form.html">
+            <input name="table" type="hidden" value="law_inquiry_form">
+            <!-- redirect_url populated using JS from og:url meta field: -->
+            <input name="landing_page" type="hidden" value="">    
+            <input name="redirect_url" type="hidden" value="http://www.chapman.edu/law/lp/fee-waiver-request-form-entertainment-emphasis.aspx">  
+            <div>
+              <h3>Request Information</h3>
+            </div>
+            <div>Complete this form to stay informed about our programs, important deadlines, &amp; news. Please let us know if you have any questions.</div>
+            <div>  
+              <input maxlength="50" name="Name" placeholder="your name" size="20" type="text">
+            </div>
+            <div> 
+              <input maxlength="50" name="Email" placeholder="your email" size="20" type="text">
+            </div>
+            <div> 
+              <input maxlength="50" name="Phone" placeholder="your phone number" size="20" type="text">
+            </div>
+            <div><input name="submit" type="submit" value="Submit">
+            </div>
+            <!-- The following code is invisible to people and
+              contains some trap text fields-->
+            <div style="display:none;">
+              If you can read this, don't touch the following field: <input name="address_bot" type="text" value="">
+            </div>
+          </form>
+        </div>
+    

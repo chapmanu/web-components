@@ -1,0 +1,35 @@
+.form {
+  padding: 10px 45px;
+  background-color: #E5E2CF;
+  border-left: 1px solid $white;
+  border-bottom: 1px solid $cu-border;
+  color: #4A4949;
+  div {
+    margin: 7px 0;
+  }
+  label.inline {
+    display: inline;
+    margin: 10px;
+  }
+  input {
+    &[type=text], &[type=password] {
+      width: 300px;
+    }
+    &[readonly=readonly] {
+      background-color: #ececec;
+      border: 1px solid #bbb;
+    }
+  }
+  textarea[readonly=readonly] {
+    background-color: #ececec;
+    border: 1px solid #bbb;
+  }
+}
+
+.form-label {
+  display: inline-block;
+  width: 150px;
+  text-align: right;
+  margin: 0 10px;
+  vertical-align: middle;
+}

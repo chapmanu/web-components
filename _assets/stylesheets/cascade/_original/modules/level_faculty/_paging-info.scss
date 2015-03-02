@@ -1,0 +1,20 @@
+.pagingInfo {
+  margin: 10px 0 0 0;
+  .pagingNavigation {
+    color: $cu-red;
+    > span {
+      &:first-child {
+        border: none;
+      }
+      padding: 0 4px 0 4px;
+      border-left: 1px solid $black;
+      text-decoration: underline;
+      cursor: hand;
+      cursor: pointer;
+    }
+    @include bp(l) {
+      float: right;
+      margin: 0 25px 0 0;
+    }
+  }
+}

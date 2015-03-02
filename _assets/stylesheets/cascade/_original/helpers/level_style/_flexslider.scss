@@ -1,0 +1,136 @@
+// Flexslider source CSS is in helpers/style/_flexslider.scss.
+// This helper just adds flexslider styles specific to level pages.
+
+.flexslider {
+	@include bp(l) {
+		overflow: visible !important;
+	}
+}
+
+.flex-pauseplay {
+  color: $white;
+  background-color: Blue;
+  position: fixed;
+  left: 0;
+  top: 0;
+  visibility: hidden;
+}
+
+.flex-control-nav {
+  z-index: 9999;
+}
+
+.flex-direction-nav {
+	.oldie & {
+		height: 0;
+	}
+	li a {
+		// background-image: url("../img/gray_arrows.png");
+		@include bp(l) {
+			top: 45% !important;
+		}
+	}
+}
+
+.flex-container {
+	@include bp(m) {
+		overflow: hidden;
+	}
+	@include bp(l) {
+		overflow: visible !important;
+	}
+}
+
+.slide {
+  overflow: hidden;
+  position: relative;
+  bottom: 0;
+  .dataDescription {
+	  padding: 10px;
+	  font-size: 18px;
+	  font-family: Times New Roman;
+	  font-style: italic;
+	  @include bp(m) {
+	  	display: none;
+	  }
+	}
+	@include bp(m) {
+		position: relative;
+    max-height: 500px;
+    border: none;
+	}
+	@include bp(l) {
+		position: relative;
+    height: 468px;
+	}
+}
+
+.slides {
+  @include bp(m) {
+  	border-bottom: none;
+  }
+}
+
+.slideDescription {
+  display: none;
+  .active & {
+  	@include bp(m) {
+  		visibility: visible;
+  	}
+  }
+  .centeredContent {
+  	a {
+  		&:after {
+  			@include bp(m) {
+  				content: '';
+		      position: absolute;
+		      top: 0;
+		      bottom: 0;
+		      left: 100%;
+		      width: 0;
+		      height: 0;
+		      border: 17px solid transparent;
+		      border-left: 10px solid $cu-red;
+  			}
+  		}
+  		@include bp(m) {
+				position: absolute;
+		    top: 0;
+		    bottom: 0;
+		    right: 0;
+		    width: 100px;
+		    background-color: $cu-red;
+		    color: $white;
+		    line-height: 2.8;
+		    padding: 0 10px 0 10px;
+		    text-indent: 0;
+  		}
+  	}
+    @include bp(m) {
+    	position: relative;
+	    background-color: $white;
+	    font-size: 12px;
+	    font-family: 'Open Sans';
+	    padding: 10px 0 10px 0;
+	    text-align: center;
+	    -webkit-box-shadow: 0px 0px 7px 0px #434343;
+	    box-shadow: 0px 0px 7px 0px #434343;
+    }
+  }
+  @include bp(m) {
+  	display: block;
+    visibility: hidden;
+    position: absolute;
+    bottom: 100%;
+    bottom: 65px;
+    padding: 0 0 0 10%;
+    white-space: nowrap;
+    width: 80%;
+  }
+}
+
+.centeredContent.withLink {
+  @include bp(m) {
+  	text-indent: -100px;
+  }
+}

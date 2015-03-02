@@ -1,0 +1,10 @@
+.secondaryNavContainer {
+  line-height: auto;
+  @include bp(m) {
+  	line-height: 42px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #D6D5CF;
+    background-color: $white;
+    height: 42px;
+  }
+}

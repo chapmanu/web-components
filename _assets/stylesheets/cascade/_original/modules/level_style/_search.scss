@@ -1,0 +1,38 @@
+.search {
+  display: none;
+  .searchButton {
+    @include bp(m) {
+    	float: right;
+	    background-image: url("../img/magnifying_glass.png");
+	    background-repeat: no-repeat;
+	    background-position: left 4px;
+	    height: 19px;
+	    width: 19px;
+	    margin: 0 0 0 3px;
+	    vertical-align: text-bottom;
+	    cursor: pointer;
+	    border: none;
+	    text-indent: -999px;
+	    background-color: transparent;
+	    overflow: hidden;
+    }
+  }
+  @include bp(m) {
+  	float: left;
+    display: block;
+    margin: -5px 2px 0 5px;
+    min-width: 185px;
+    height: 20px;
+  }
+}
+
+.searchBox {
+  @include bp(m) {
+  	float: left;
+	  border: 1px solid #a4a4a4;
+	  border-width: 0 1px 1px 1px;
+	  margin: 3px 0 0 0;
+	  padding: 0 0 0 7px;
+	  outline: none;
+  }
+}

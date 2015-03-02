@@ -1,0 +1,89 @@
+// Helpers
+@import "helpers/_variables"; // Common helper
+@import "helpers/_mixins"; // Common helper
+
+.smallMasthead .masthead, .smallMasthead .masthead-old, .bigMasthead .mastheadPlaceholder, .bigMasthead .masthead, .bigMasthead .masthead-old, .nameBar, .rightColumn .styleTwo {
+	background: $theme-yellow; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover, $crean-primary 1%, $crean-secondary 93%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(1%,$crean-primary), color-stop(93%,$crean-secondary)); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover, $crean-primary 1%,$crean-secondary 93%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover, $crean-primary 1%,$crean-secondary 93%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover, $crean-primary 1%,$crean-secondary 93%); /* IE10+ */
+	background: radial-gradient(center, ellipse cover, $crean-primary 1%,$crean-secondary 93%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$crean-primary}', endColorstr='#{$crean-secondary}',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.rightColumn .styleTwo {
+  .border {
+    background-color: $crean-secondary;
+  }
+  .editableContent {
+    p {
+      color: #e2fcfb;
+    }
+    a {
+      color: $white;
+      text-decoration: underline;
+    }
+  }
+}
+
+.nameBarButtons li a {
+  color: $crean-primary;
+}
+
+.expandedNameBarContainer {
+  h2, .copy {
+    color: $theme-light-grey;
+  }
+  a {
+    color: $theme-light-grey;
+    text-decoration: underline;
+  }
+}
+
+#social_follow_us {
+  .banner {
+    background-image: url('[system-asset]/_files/social_accounts/images/crean_follow_us.png[/system-asset]');
+  }
+  li span {
+    &.hover_state, &.inactive_state {
+      background: url('[system-asset]/_files/social_accounts/images/crean_icons.png[/system-asset]');
+    }
+  }
+}
+
+.rounded-slider .info-container .blue {
+  background-color: $crean-primary;
+}
+
+.newbutton a {
+  border: 1px solid $crean-primary;
+  background-color: $crean-primary;
+  background-image: -webkit-gradient(linear, left top, left bottom, from($crean-primary), to($crean-secondary));
+  background-image: -webkit-linear-gradient(top, $crean-primary, $crean-secondary);
+  background-image: -moz-linear-gradient(top, $crean-primary, $crean-secondary);
+  background-image: -o-linear-gradient(top, $crean-primary, $crean-secondary);
+  background-image: linear-gradient(to bottom, $crean-primary, $crean-secondary);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$crean-primary}', endColorstr='#{$crean-secondary}',GradientType=1 );
+  &:hover {
+    border: 1px solid $crean-primary;
+    background-color: $crean-primary;
+    background-image: -webkit-gradient(linear, left top, left bottom, from($crean-primary), to($crean-secondary));
+    background-image: -webkit-linear-gradient(top, $crean-primary, $crean-secondary);
+    background-image: -moz-linear-gradient(top, $crean-primary, $crean-secondary);
+    background-image: -o-linear-gradient(top, $crean-primary, $crean-secondary);
+    background-image: linear-gradient(to bottom, $crean-primary, $crean-secondary);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$crean-primary}', endColorstr='#{$crean-secondary}',GradientType=1 );
+  }
+}
+
+.midPhotoCallouts .photoCallout .caption {
+  background-color: $crean-primary;
+}
+
+.photoCallouts {
+  .caption, .rollover {
+    background-color: $crean-primary;
+  }
+}

@@ -1,0 +1,76 @@
+//----------------------------------------//
+// Sass file for css/style_2013.css
+//----------------------------------------//
+
+// Helpers
+@import "helpers/_variables"; // Common helper
+@import "helpers/_mixins"; // Common helper
+@import "helpers/style/_common";
+@import "helpers/style/_icomoon";
+@import "helpers/style/_flexslider";
+@import "helpers/style/_tipsy";
+@import "helpers/style/_normalize";
+@import "helpers/style/_defaults";
+
+
+// Layout
+@import "layout/style/_layout";
+@import "layout/style/_header";
+@import "layout/style/_footer";
+
+
+// Modules
+@import "modules/style/_bg1";
+@import "modules/style/_bg2";
+@import "modules/style/_bg3";
+@import "modules/style/_bottom-paging";
+@import "modules/style/_circle-icon";
+@import "modules/style/_collapsed-nav";
+@import "modules/style/_collapsed-search";
+@import "modules/style/_cu-feedback";
+@import "modules/style/_cu-nav-bar-masks";
+@import "modules/style/_cu-search-helper";
+@import "modules/style/_footer-info";
+@import "modules/style/_footer-links";
+@import "modules/style/_footer-ribbon";
+@import "modules/style/_homepage-feature";
+@import "modules/style/_info-for";
+@import "modules/style/_main-nav";
+@import "modules/style/_main-nav-links";
+@import "modules/style/_media";
+@import "modules/style/_meta-links";
+@import "modules/style/_news-events";
+@import "modules/style/_news-events-nav";
+@import "modules/style/_news-events-content";
+@import "modules/style/_overlay";
+@import "modules/style/_resources";
+@import "modules/style/_resources-nav";
+@import "modules/style/_resources-sub-nav";
+@import "modules/style/_resources-sub-nav-login";
+@import "modules/style/_resources-sub-nav-search";
+@import "modules/style/_resources-sub-nav-shortcuts";
+@import "modules/style/_rotator-container";
+@import "modules/style/_scattered-blurb";
+@import "modules/style/_scattered-photos";
+@import "modules/style/_secondary-nav";
+@import "modules/style/_social-icons";
+@import "modules/style/_sub-nav";
+@import "modules/style/_sub-rotator";
+@import "modules/style/_video-link";
+@import "modules/style/_weather";
+@import "modules/style/_welcome";
+@import "modules/style/_welcome-open";
+@import "modules/style/_welcome-tabs";
+@import "modules/style/_whats-happening";
+
+@import "modules/style/_misc";
+
+// Theme Modules
+@import "modules/style/_values";
+@import "modules/style/_realize";
+@import "modules/style/_exploration";
+@import "modules/style/_global";
+@import "modules/style/_creativity";
+
+
+// Print

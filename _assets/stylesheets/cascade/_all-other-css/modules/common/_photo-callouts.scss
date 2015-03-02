@@ -1,0 +1,84 @@
+// ---------- Level ---------- //
+
+.photoCallouts {
+  margin: 45px 0 30px 0;
+  &:hover .rollover {
+    visibility: visible;
+  }
+  .rollover {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 10px;
+    background-color: #434343;
+    color: $white;
+    .text {
+      width: 155px;
+      // font-family: Georgia;
+      font-size: 21px;
+    }
+    .copy {
+      height: 75px;
+    }
+    .button {
+      float: left;
+      padding: 3px 10px 3px 10px;
+      margin: 10px 0 10px 0;
+      background-color: $white;
+      color: $cu-red;
+      font-weight: 800;
+      // font-family: 'Open Sans';
+      font-family: "proxima-nova", sans-serif;
+      max-width: 145px;
+    }
+  }
+}
+
+.photoCallout {
+  display: block;
+  float: left;
+  margin: 0 20px 20px 0;
+  border: 7px solid $white;
+  -webkit-box-shadow: 0px 0px 7px #434343;
+  -moz-box-shadow: 0px 0px 7px #434343;
+  box-shadow: 0px 0px 7px #434343;
+  position: relative;
+  word-wrap: normal;
+  &:hover {
+    text-decoration: none;
+    cursor: hand;
+    cursor: pointer;
+  }
+  &.last {
+    @include bp(l) {
+       margin: 0 0 20px 0;
+    }
+  }
+}
+
+.smallPhotoCallouts {
+  margin: 15px 0 20px 0px;
+  .photoCallout {
+    display: block;
+    float: left;
+    margin: 0 5px 0 5px;
+    border: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    position: relative;
+    word-wrap: normal;
+    text-align: center;
+    &:hover {
+      text-decoration: none;
+      cursor: hand;
+      cursor: pointer;
+    }
+    h2 {
+      margin: 0;
+    }
+  }
+}

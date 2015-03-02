@@ -1,0 +1,40 @@
+#printButton {
+  a {
+    &:hover {
+      @include bp(wildcard-min, 767px) {
+        text-decoration: none;
+      }
+    }
+    @include bp(wildcard-min, 767px) {
+      color: $black;
+    }
+  }
+  .icon-print:before {
+    @include bp(wildcard-min, 767px) {
+      display: inline-block;
+      margin: 0 5px 0 0;
+      height: 10px;
+    }
+  }
+  @include bp(wildcard-min, 767px) {
+    overflow: hidden;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-family: Arial, sans-serif;
+    -webkit-user-select: none;
+    font-size: 13px;
+    background-color: rgb(255, 255, 255);
+    padding: 1px 6px;
+    border: 1px solid rgb(113, 123, 135);
+    -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px;
+    min-width: 28px;
+    background-position: initial initial;
+    background-repeat: initial initial;
+    z-index: 1000;
+    position: absolute;
+    top: 5px;
+    right: 120px;
+    cursor: pointer;
+  }
+}

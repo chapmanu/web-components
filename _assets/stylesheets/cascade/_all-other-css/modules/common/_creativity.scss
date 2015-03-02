@@ -1,0 +1,56 @@
+// ---------- Style ---------- //
+
+.creativity {
+	.oldie & {
+		section {
+			@include bp(m) {
+				margin: 25% 0 0 60%;
+			}
+		}
+	}
+	article {
+		display: none;
+		h4 {
+			@include bp(m) {
+				font-family: Times New Roman;
+	      font-size: 18px;
+	      font-weight: normal;
+	      margin: 5px 0 -5px 0;
+	      color: #4A4949;
+			}
+		}
+		a {
+			&:hover {
+				@include bp(m) {
+					color: $cu-red !important;
+				}
+			}
+			@include bp(m) {
+				font-weight: normal;
+	      color: #CB003D;
+	      font-family: Arial !important;
+	      font-size: 12px;
+			}
+		}
+		@include bp(m) {
+			display: block;
+		}
+	}
+	section {
+		position: relative;
+	  z-index: 100;
+	  margin: 0 0 0 40%;
+	  width: 55%;
+	  @include bp(m) {
+	  	position: absolute;
+	    z-index: 100;
+	    margin: 0 0 0 60%;
+	    bottom: 40px;
+	    width: 300px;
+	  }
+	  @include bp(xl) {
+	  	margin: 220px 0 0 60%;
+	    width: 330px;
+	  }
+	}
+}

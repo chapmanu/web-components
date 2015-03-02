@@ -1,0 +1,72 @@
+// Helpers
+@import "helpers/_variables"; // Common helper
+@import "helpers/_mixins"; // Common helper
+
+.smallMasthead .masthead, .smallMasthead .masthead-old, .bigMasthead .mastheadPlaceholder, .bigMasthead .masthead, .bigMasthead .masthead-old, .nameBar, .rightColumn .styleTwo  {
+	background: $copa-primary; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover, $copa-primary 1%, $copa-secondary 93%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(1%,$copa-primary), color-stop(93%,$copa-secondary)); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover, $copa-primary 1%,$copa-secondary 93%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover, $copa-primary 1%,$copa-secondary 93%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover, $copa-primary 1%,$copa-secondary 93%); /* IE10+ */
+	background: radial-gradient(center, ellipse cover, $copa-primary 1%,$copa-secondary 93%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$copa-primary}', endColorstr='#{$copa-secondary}',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.rightColumn .styleTwo .border {
+  background-color: #36232f;
+}
+
+.nameBarButtons li a {
+  color: $copa-primary;
+}
+
+.expandedNameBarContainer h2 {
+  color: #af9fa9;
+}
+
+#social_follow_us {
+  .banner {
+    background-image: url('[system-asset]/_files/social_accounts/images/copa_follow_us.png[/system-asset]');
+  }
+  li span {
+    &.hover_state, &.inactive_state {
+      background: url('[system-asset]/_files/social_accounts/images/copa_icons.png[/system-asset]');
+    }
+  }
+}
+
+.rounded-slider .info-container .blue {
+  background-color: $copa-primary;
+}
+
+.newbutton a {
+  border: 1px solid $copa-primary;
+  background-color: #1f1f1f;
+  background-image: -webkit-gradient(linear, left top, left bottom, from($copa-primary), to($copa-secondary));
+  background-image: -webkit-linear-gradient(top, $copa-primary, $copa-secondary);
+  background-image: -moz-linear-gradient(top, $copa-primary, $copa-secondary);
+  background-image: -o-linear-gradient(top, $copa-primary, $copa-secondary);
+  background-image: linear-gradient(to bottom, $copa-primary, $copa-secondary);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$copa-primary}', endColorstr='#{$copa-secondary}',GradientType=1 );
+  &:hover {
+    border: 1px solid $copa-primary;
+    background-color: #1f1f1f;
+    background-image: -webkit-gradient(linear, left top, left bottom, from($copa-primary), to($copa-secondary));
+    background-image: -webkit-linear-gradient(top, $copa-primary, $copa-secondary);
+    background-image: -moz-linear-gradient(top, $copa-primary, $copa-secondary);
+    background-image: -o-linear-gradient(top, $copa-primary, $copa-secondary);
+    background-image: linear-gradient(to bottom, $copa-primary, $copa-secondary);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$copa-primary}', endColorstr='#{$copa-secondary}',GradientType=1 );
+  }
+}
+
+.midPhotoCallouts .photoCallout .caption {
+  background-color: $copa-primary;
+}
+
+.photoCallouts {
+  .caption, .rollover {
+    background-color: $copa-primary;
+  }
+}

@@ -1,0 +1,51 @@
+html {
+  height: 100%;
+}
+
+body {
+  font-size: 12px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+input[type="checkbox"] {
+  + label.virtualTour-categoryCheckboxLabel {
+    span {
+      @include bp(wildcard-min, 767px) {
+				text-indent: -999px;
+	      display: block;
+      }
+    }
+    &:after {
+      @include bp(wildcard-min, 767px) {
+				color: #585858;
+	      margin: -16px 0 0 2px;
+	      width: 19px;
+	      height: 19px;
+	      display: block;
+      }
+    }
+    @include bp(wildcard-min, 767px) {
+    	display: inline-block;
+	    width: 20px;
+	    height: 20px;
+	    position: absolute;
+	    top: 9px;
+	    left: 10px;
+    }
+  }
+  &:checked + label.virtualTour-categoryCheckboxLabel:after {
+    @include bp(wildcard-min, 767px) {
+			font-size: 16px;
+	    content: "\e010";
+    }
+  }
+  &:indeterminate + label.virtualTour-categoryCheckboxLabel:after {
+    @include bp(wildcard-min, 767px) {
+			font-size: 13px;
+	    margin: -16px 0 0 4px;
+	    content: "\e004";
+    }
+  }
+}

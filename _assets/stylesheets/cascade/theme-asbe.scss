@@ -1,0 +1,74 @@
+// Helpers
+@import "helpers/_variables"; // Common helper
+@import "helpers/_mixins"; // Common helper
+
+.smallMasthead .masthead, .smallMasthead .masthead-old, .bigMasthead .mastheadPlaceholder, .bigMasthead .masthead, .bigMasthead .masthead-old, .nameBar, .rightColumn .styleTwo {
+  background: $asbe-primary; /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover, $asbe-primary 1%, $asbe-secondary 93%); /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(1%,$asbe-primary), color-stop(93%,$asbe-secondary)); /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover, $asbe-primary 1%,$asbe-secondary 93%); /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover, $asbe-primary 1%,$asbe-secondary 93%); /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover, $asbe-primary 1%,$asbe-secondary 93%); /* IE10+ */
+  background: radial-gradient(center, ellipse cover, $theme-blue 1%,$asbe-secondary 93%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$theme-blue}', endColorstr='#{$asbe-secondary}',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.nameBarButtons li a {
+  color: $theme-blue;
+}
+
+div.styleTwo a {
+  color: $white;
+}
+
+.expandedNameBarContainer {
+  h2, a {
+    color: #95d2e8;
+  }
+}
+
+#social_follow_us {
+  .banner {
+    background-image: url('[system-asset]/_files/social_accounts/images/asbe_follow_us.png[/system-asset]');
+  }
+  li span {
+    &.hover_state, &.inactive_state {
+      background: url('[system-asset]/_files/social_accounts/images/asbe_icons.png[/system-asset]');
+    }
+  }
+}
+
+.rounded-slider .info-container .blue {
+  background-color: $asbe-primary;
+}
+
+.newbutton a {
+  border: 1px solid $theme-blue;
+  background-color: $theme-blue;
+  background-image: -webkit-gradient(linear, left top, left bottom, from($asbe-primary), to($asbe-secondary));
+  background-image: -webkit-linear-gradient(top, $asbe-primary, $asbe-secondary);
+  background-image: -moz-linear-gradient(top, $asbe-primary, $asbe-secondary);
+  background-image: -o-linear-gradient(top, $asbe-primary, $asbe-secondary);
+  background-image: linear-gradient(to bottom, $asbe-primary, $asbe-secondary);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$asbe-primary}', endColorstr='#{$asbe-secondary}',GradientType=1 );
+  &:hover {
+    border: 1px solid $theme-blue;
+    background-color: $theme-blue;
+    background-image: -webkit-gradient(linear, left top, left bottom, from($asbe-primary), to($asbe-secondary));
+    background-image: -webkit-linear-gradient(top, $asbe-primary, $asbe-secondary);
+    background-image: -moz-linear-gradient(top, $asbe-primary, $asbe-secondary);
+    background-image: -o-linear-gradient(top, $asbe-primary, $asbe-secondary);
+    background-image: linear-gradient(to bottom, $asbe-primary, $asbe-secondary);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$asbe-primary}', endColorstr='#{$asbe-secondary}',GradientType=1 );
+  }
+}
+
+.midPhotoCallouts .photoCallout .caption {
+  background-color: $asbe-primary;
+}
+
+.photoCallouts {
+  .caption, .rollover {
+    background-color: $asbe-primary;
+  }
+}

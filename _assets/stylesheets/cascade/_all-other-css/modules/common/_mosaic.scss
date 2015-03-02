@@ -1,0 +1,133 @@
+// ---------- Level, Level-Style ---------- //
+
+.mosaic {
+  background-color: $black;
+  .ie7 & {
+  	// max-height: 470px !important;
+  }
+  .oldie & {
+  	.flex-direction-nav li a.disabled {
+			// display: none;
+		}
+  }
+  .flex-direction-nav li a {
+		// outline: none;
+		// top: 50%;
+		// height: 104px;
+		// width: 65px;
+		// margin: -52px 0 0 0;
+		// background-image: url("../img/white_arrows.png");
+		// background-repeat: no-repeat;
+		// background-position: left top;
+		&.next {
+			// background-position: right top;    
+			// right: 40px;
+		}
+		&.previous {
+			// left: 40px;
+		}
+    &.prev {
+      // left: 40px;
+    }
+  }
+  .flexslider .slides img {
+    // max-width: none;
+  }
+  .slide {
+    height: auto !important;
+    position: relative;
+    @include bp(l) {
+    	height: auto;
+    }
+  }
+  .border {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 5px solid $black;
+  }
+  .block1 .border {
+    border-width: 5px 5px 5px 0;
+  }
+  .block2 .border {
+    border-width: 0 5px 5px 0;
+  }
+  .block5 .border {
+    border-width: 0 5px 5px 5px;
+  }
+  .block3 .border {
+    border-width: 5px 0 5px 0;
+  }
+  .block1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 60%;
+  }
+  .block2 {
+    position: absolute;
+    top: 60%;
+    left: 0;
+    width: 30%;
+    height: 40%;
+  }
+  .block3 {
+    position: relative;
+    top: 0;
+    left: 30%;
+    width: 35%;
+    height: 100%;
+    max-height: 442px;
+  }
+  .block4 {
+    position: absolute;
+    top: 0;
+    left: 65%;
+    width: 35%;
+    height: 40%;
+  }
+  .block5 {
+    position: absolute;
+    top: 40%;
+    left: 65%;
+    width: 35%;
+    height: 60%;
+    .column1 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 50%;
+    }
+    .column2 {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      height: 100%;
+      width: 50%;
+    }
+    > .info {
+      right: 50%;
+    }
+  }
+  .info {
+    display: none;
+    position: absolute;
+    height: 43px;
+    width: 43px;
+    top: 10px;
+    right: 10px;
+    // background-image: url("../img/info_icon.png");
+    background-image: url("../level/img/info_icon.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: hand;
+    cursor: pointer;
+    @include bp(m) {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,91 @@
+#cu_login_form {
+  clear: both;
+  input {
+    color: #9a9996;
+    &:focus {
+      color: $grey;
+    }
+  }
+  label {
+    font-size: 11px;
+    opacity: 0.8;
+  }
+  #cu_submit {
+    display: block;
+    height: 27px;
+    width: 100%;
+    background: $cu-red;
+    color: $white;
+    border: none;
+    border-left: none;
+    border-radius: 2px;
+    margin: 9px 0;
+    padding: 0 10px;
+    cursor: pointer;
+    &:hover {
+      background: #C92741;
+    }
+  }
+  #cu_username, #cu_password {
+    width: 100%;
+    padding: 7px;
+    font-family: "RooneySans","proxima-nova-soft", "futura-pt", Arial, Verdana, "Sans Serif";
+    font-size: 12px;
+    border: 1px solid #D8D6D0;
+    border-radius: 2px;
+    box-shadow: none;
+    box-sizing: border-box;
+    color: #9a9996;
+    margin: 4px 0px;
+  }
+  #cu_username:focus, #cu_password:focus {
+    outline: none;
+    border-color: #d3a6ae;
+    color: $grey;
+  }
+  input.persist {
+    &[type="radio"], &[type="checkbox"] {
+      border-color: #D8D6D0;
+      background: #fbfbfb;
+      border-style: solid;
+      border-width: 1px;
+      cursor: pointer;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      box-sizing: border-box;
+      outline: 0;
+      -webkit-appearance: none;
+      display: inline-block;
+      line-height: 0;
+      height: 14px;
+      margin: -1px 3px 0 0;
+      padding: 0 !important;
+      text-align: center;
+      vertical-align: middle;
+      width: 14px;
+      min-width: 14px;
+    }
+  }
+  .persist label {
+    color: #9a9996;
+  }
+  input.persist {
+    border-color: #D8D6D0;
+    color: $cu-red;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    &[type="radio"]:checked:before, &[type="checkbox"]:checked:before {
+      content: '\f147';
+      margin: -3px 0 0 -4px;
+      float: left;
+      display: inline-block;
+      vertical-align: middle;
+      width: 14px;
+      font: 400 19px/1 dashicons;
+      speak: none;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      color: $cu-red;
+    }
+  }
+}

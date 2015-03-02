@@ -1,0 +1,199 @@
+// ---------- Home ---------- //
+
+#hero {
+  clear: both;
+  position: relative;
+  overflow: hidden;
+  min-height: 300px;
+  padding: 15px 0 80px 0;
+  background: #333333 no-repeat center;
+  background-size: cover;
+  color: $white;
+  .backgroundsize & {
+    #mastheadBackground img {
+      display: none;
+    }
+  }
+  &.video-playing[style] {
+    @include bp(wildcard-main, 640px) {
+      // background: #111111 !important;
+    }
+  }
+  .button {
+    margin-right: 10px;
+  }
+  .actions {
+    margin-top: 50px;
+    @include bp(m) {
+      margin-top: 70px;
+    }
+  }
+  #mastheadContent {
+    position: relative;
+    z-index: 20;
+  }
+  &.dark-bg {
+    .heading, .subheading, .excerpt {
+      color: $white;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    }
+  }
+  &.light-bg {
+    .heading, .subheading, .excerpt {
+      color: $grey;
+    }
+  }
+  &.align-left {
+    text-align: left;
+  }
+  &.align-right {
+    text-align: right;
+    .excerpt {
+      margin-left: auto !important;
+      margin-right: 0 !important;
+    }
+  }
+  &.align-center {
+    text-align: center;
+    .excerpt {
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+  }
+  .heading, .subheading, .excerpt {
+    @include bp(wildcard-min, 480px) {
+      display: block;
+    }
+  }
+  .heading, .subheading {
+    &.uppercase {
+      @include bp(wildcard-min, 480px) {
+        text-transform: uppercase;
+      }
+    }
+    &.lowercase {
+      @include bp(wildcard-min, 480px) {
+        text-transform: lowercase;
+      }
+    }
+    &.extended {
+      @include bp(wildcard-min, 480px) {
+        letter-spacing: 4px;
+      }
+    }
+    &.thin {
+      @include bp(wildcard-min, 480px) {
+        font-weight: 100;
+      }
+    }
+    @include bp(wildcard-min, 1140px) {
+      font-size: 52px;
+      line-height: 52px;
+    }
+  }
+  .heading {
+    margin: 0;
+    padding: 40px 0 0 0;
+    font-size: 32px;
+    line-height: 32px;
+    text-transform: none;
+    font-weight: 800;
+    &.thin {
+      @include bp(m) {
+        font-size: 62px;
+        line-height: 62px;
+      }
+      @include bp(wildcard-min, 1140px) {
+        font-size: 62px;
+        line-height: 62px;
+      }
+    }
+    @include bp(m) {
+      font-size: 48px;
+      line-height: 48px;
+      padding-top: 100px;
+    }
+  }
+  .subheading {
+    margin: 0;
+    padding: 0;
+    font-size: 32px;
+    line-height: 32px;
+    text-transform: none;
+    font-weight: 800;
+    @include bp(m) {
+      font-size: 48px;
+      line-height: 48px;
+    }
+  }
+  .excerpt {
+    margin: 20px 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 16px;
+    max-width: 600px;
+    display: none;
+    @include bp(m) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+    @include bp(wildcard-min, 1140px) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+  #mastheadGradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.4);
+    background: url('../img/gray_30.png') repeat;
+    background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(0, 0, 0, 0.6)), color-stop(100%, rgba(0, 0, 0, 0)));
+    background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+    background: -o-linear-gradient(left, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+    background: -ms-linear-gradient(left, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 );
+  }
+  #mastheadBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  #mastheadVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    @include bp(wildcard-max, 639px) {
+      display: none;
+    }
+  }
+  @include bp(m) {
+    min-height: 350px;
+    padding: 15px 0 150px 0;
+  }
+  @include bp(wildcard-min, 1180px) {
+    min-height: 450px;
+  }
+  @include bp(wildcard-min, 1480px) {
+    min-height: 550px;
+  }
+}
+
+#heroWrapper {
+  overflow: auto;
+  background: #111111;
+}

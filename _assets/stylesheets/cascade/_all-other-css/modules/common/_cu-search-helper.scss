@@ -1,0 +1,33 @@
+// ---------- Style ---------- //
+
+#cuSearchHelper {
+  .title {
+    @include bp(m) {
+      display: inline-block;
+      font-size: 24px;
+      font-weight: normal;
+      margin-top: 5px;
+    }
+  }
+  .label {
+    @include bp(m) {
+      display: inline-block;
+      font-size: 14px;
+      font-weight: normal;
+      margin-top: 3px;
+      opacity: 0.65;
+    }
+  }
+  @include bp(m) {
+    display: block;
+    position: relative;
+    top: -7px;
+    width: 100%;
+    height: 50px;
+    padding: 12px;
+    margin: 0 -12px 5px -12px;
+    background: #ab293f url('../img/arrow_up_white_circle.png') no-repeat 458px center;
+    background-size: 38px;
+    color: $white;
+  }
+}

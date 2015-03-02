@@ -1,0 +1,5 @@
+.twoColumns .main .story {
+  @include bp(l) {
+  	width: 182px;
+  }
+}

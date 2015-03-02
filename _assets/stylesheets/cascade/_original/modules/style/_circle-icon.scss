@@ -1,0 +1,35 @@
+.circleIcon {
+	&::after {
+    // background-image: url(img/circleIcon.png);
+    // background-color: #bcbbb7;
+    // background-repeat: no-repeat;
+    // border-radius: 27px;
+    // content: "";
+    // margin-top: -4px;
+    // width: 27px;
+    // height: 27px;
+    // float: right;
+    // display: block;
+	}
+	&.default::after {
+    // background-position: -1000px 0;
+	}
+	&.degrees::after {
+    // background-position: -27px 0;
+	}
+	&.schools::after {
+    // background-position: -54px 0;
+	}
+	&.interdisciplinary::after {
+    // background-position: -81px 0;
+	}
+	&.international::after {
+    // background-position: -108px 0;
+	}
+	&.continuing::after {
+    // background-position: -135px 0;
+	}
+	&.libraries::after {
+    // background-position: 0 0;
+	}
+}

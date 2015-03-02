@@ -1,0 +1,33 @@
+.date {
+  color: #bb1e20;
+  font-weight: 800;
+  font-family: 'Open Sans', Sans-Serif;
+  position: relative;
+  height: 40px;
+  width: 85px;
+  margin: 0;
+  .oldie & {
+  	font-family: 'Arial Black', Sans-Serif;
+  }
+  .day {
+    font-size: 29px;
+    position: absolute;
+    top: -6px;
+    left: -7px;
+    margin: 10px;
+  }
+  .month {
+    font-size: 12px;
+    position: absolute;
+    top: 0;
+    left: 30px;
+    margin: 10px;
+  }
+  .year {
+    font-size: 12px;
+    position: absolute;
+    left: 30px;
+    bottom: -5px;
+    margin: 10px;
+  }
+}

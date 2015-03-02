@@ -1,0 +1,170 @@
+// ---------- Level, Level-Style ---------- //
+
+#welcome.open {
+  display: inline-block;
+  position: static;
+  width: 100%;
+  .content-container {
+    display: inline-block;
+    width: 100%;
+    background: $white;
+  }
+  .sp {
+    display: block;
+    height: 44px;
+  }
+  .control-links {
+    .showme, .save-btn, .unsave-btn, .my-shortcuts {
+      display: none;
+    }
+    .close, .dont-show {
+      display: block;
+    }
+    @include bp(l) {
+    	position: absolute;
+      top: 5px;
+      right: 5px;
+    }
+  }
+  .overlay {
+  	@include bp(m) {
+  		position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: $black;
+      z-index: 99999998;
+      opacity: 0.6;
+      filter: alpha(opacity = 90);
+  	}
+  }
+  .holder {
+  	@include bp(m) {
+  		position: absolute;
+      width: 730px;
+      background: $white;
+      z-index: 99999999;
+      top: 215px;
+      margin-left: 12px;
+      left: 0;
+      -webkit-box-shadow: -3px 3px 5px -2px $black;
+      box-shadow: -3px 3px 5px -2px $black;
+  	}
+  	@include bp(l) {
+  		top: 183px;
+      width: 980px;
+      margin-left: -499px;
+      left: 50%;
+  	}
+  	@include bp(wildcard-min, 1085px) {
+  		top: 115px;
+	    margin-left: -499px;
+	    left: 50%;
+  	}
+  }
+  #b-blog {
+  	.first-col {
+	    .odd {
+	      background-color: #f7f6ef;
+	      @include bp(l) {
+	      	background-color: #f7f6ef;
+	      }
+	    }
+	    .even {
+	      background: $white;
+	      @include bp(l) {
+	      	background: $white;
+	      }
+	    }
+	  }
+	  .second-col {
+	    .odd {
+	      background: $white;
+	      @include bp(l) {
+	      	background-color: #f7f6ef;
+	      }
+	    }
+	    .even {
+	      background-color: #f7f6ef;
+	      @include bp(l) {
+	      	background: $white;
+	      }
+	    }
+	  }
+	  .more-btn {
+	    padding: 4px 6px;
+	    background: #ecead8;
+	    display: inline-block;
+	    float: right;
+	    margin: 6px 9px;
+	    a {
+        // font-family: 'Open Sans', "Times New Roman", Times, serif;
+	      font-family: 'proxima-nova', sans-serif;
+	      font-size: 1em;
+	      color: #797979;
+	      text-transform: uppercase;
+	    }
+	  }
+	  .posts {
+	  	> ul {
+	  		li {
+			    padding: 5px 4px 2px;
+			    margin: 0 6px;
+          // font-family: 'Open Sans', "Times New Roman", Times, serif;
+			    font-family: 'proxima-nova', sans-serif;
+			    time {
+			      color: #4d4d4d;
+			      font-size: 1.1em;
+			    }
+			    p {
+			      padding: 0.2em 0 0.5em 0;
+			      margin: 0;
+			      a {
+			        color: #3399d1;
+			        font-size: 1.3em;
+			      }
+			    }
+			  }
+			  @include bp(l) {
+			  	float: left;
+	        width: 50%;
+	        margin: 0;
+	        padding: 0;
+			  }
+	  	}
+		  @include bp(l) {
+		  	overflow: auto;
+		  }
+	  }
+  }
+  #t-blog {
+  	@include bp(l) {
+  		background: none;
+      color: #81bd69;
+      text-align: center;
+      font-size: 5em;
+      height: 95px;
+      text-transform: uppercase;
+      cursor: default;
+  	}
+  }
+  .desk-blog {
+  	.links {
+			@include bp(l) {
+				width: 100%;
+			}
+	  }
+	  .message {
+	  	@include bp(l) {
+	  		display: none;
+	  	}
+	  }
+  }
+  @include bp(m) {
+  	height: 0px;
+    margin: 0px;
+    display: inline;
+  }
+}

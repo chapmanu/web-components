@@ -1,0 +1,14 @@
+.rotatorContainer {
+  position: relative;
+  z-index: 100;
+  @include bp(l) {
+  	max-width: 960px;
+    margin: 0 auto 0 auto;
+    overflow: visible !important;
+  }
+}
+
+.subRotator {
+  padding: 15px 0 0 0;
+  background-color: $cu-light-grey;
+}

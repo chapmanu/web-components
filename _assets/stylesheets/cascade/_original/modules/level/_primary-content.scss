@@ -1,0 +1,119 @@
+.primaryContent {
+	margin: 0 auto 10px auto;
+  width: 100%;
+  max-width: 1128px;
+  .ie7 & {
+  	position: relative;
+  	.main {
+  		overflow-x: hidden;
+  	}
+  }
+  .oneColumn & {
+  	.main {
+  		h1 {
+		    // font-size: 40px;
+		  }
+		  .tabContent {
+		    background-color: #fbf9f0;
+		    padding: 15px 20px;
+		  }
+		  @include bp(l) {
+				max-width: 100%;
+			}
+  	}
+  }
+  &.twoColumns {
+		.main {
+			@include bp(l) {
+				max-width: 100%;
+        width: 100%;
+        @include vendorize(box-sizing, border-box);
+			}
+		}
+		&.calendar .main {
+      @include bp(l) {
+      	width: 100%;
+      }
+    }
+    &.noLeftNav .main .leftColumn {
+      @include bp(l) {
+      	width: 71%;
+      }
+    }
+  }
+  &.threeColumns {
+		.main {
+			@include bp(l) {
+				// max-width: 465px;
+	      width: 70%;
+	      max-width: 100%;
+			}
+		}
+  }
+  &.mosaicColumns .main {
+  	@include bp(l) {
+			// max-width: 655px;
+			// float: right;
+  	}
+  }
+  > .main .story {
+    @include bp(l) {
+    	width: 182px;
+    }
+  }
+	.main {
+		float: none;
+	  padding: 0 10px 0 10px;
+	  position: relative;
+	  @include vendorize(box-sizing, border-box);
+	  h1 {
+		  line-height: 30px;
+		  padding: 0 0 5px 0;
+		  margin: 0;
+		  .bullet {
+		    display: none;
+		  }
+		}
+	  .newsEventsContent {
+	  	// padding: 0 0 10px 0;
+	  	h3 .bullet {
+			  // font-family: Arial;
+			  font-size: 12px;
+			  position: relative;
+			  // left: 2px;
+			  bottom: 2px;
+			  display: none;
+			}
+	  }
+	  .tabContent {
+	    padding: 0 0 10px 0;
+	  }
+	  .newsEventsContent, .tabContent {
+	    .copy {
+	    	height: 100px;
+		    margin: 10px 0 2px 0;
+		    div {
+		      width: auto !important;
+		    }
+	    }
+	  }
+	  .loading {
+	    position: absolute;
+	    top: 130px;
+	    left: 200px;
+	  }
+	  .centerNewsLoader {
+	    position: absolute;
+	    margin: 20px 0 0 0;
+	    left: 200px;
+	    top: 0;
+	  }
+	  @include bp(l) {
+	  	float: left;
+      // margin: 0 10px 0 10px;
+      // width: 100%;
+      max-width: 465px;   
+      // float: left;
+	  }
+	}
+}

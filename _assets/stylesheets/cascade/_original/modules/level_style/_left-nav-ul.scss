@@ -1,0 +1,129 @@
+// The _left-nav.scss module was getting too lengthy.
+// All ul, li, and a styles are here.
+
+.leftNav {
+	> ul {
+    float: left;
+    width: 100%;
+    background-color: #faf8ef;
+    border: 1px solid #d9d8d2;
+    border-width: 1px 0 1px 1px;
+    position: relative;
+    > li {
+      &.active > ul {
+        display: block;
+        @include bp(l) {
+          display: block;
+        }
+      }
+      > {
+        ul {
+          a {
+            text-indent: -10px;
+          }
+          > li > ul {
+            display: none !important;
+            padding: 0 0 10px 0;
+          }
+          li {
+            padding: 0 0 0 10px;
+          }
+        }
+        a {
+          padding: 7px 35px 7px 20px;
+          border-top: 1px solid #d9d8d2;
+          font-family: "Open Sans";
+          font-size: 14px;
+          color: #595858;
+          position: relative;
+          .plus {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            text-indent: -50px;
+            overflow: hidden;
+            width: 28px;
+            background-image: url('../img/leftNavOpenClose.png');
+            background-repeat: no-repeat;
+            background-position: 7px center;
+            font-family: arial;
+            font-weight: bold;
+            visibility: hidden;
+            display: block;
+            text-decoration: none;
+            text-align: center;
+          }
+          &:hover .plus {
+            background-color: #FAF8EF;
+          }
+          .plus {
+            &:hover {
+              &:before {
+                border-color: #AFADAD;
+              }
+              background-color: #AFADAD;
+            }
+            &:before {
+              content: '';
+              position: absolute;
+              top: 5px;
+              bottom: 5px;
+              left: 0;
+              right: 0;
+              border-left: 1px solid #595858;
+            }
+            &.open {
+              background-position: -17px center;
+            }
+          }
+          &:hover {
+            .plus {
+              text-decoration: none;
+            }
+            background-color: #e0e0dd;
+          }
+        }
+        ul {
+          display: none;
+          padding: 10px 15px 10px 15px;
+          background-color: #f6f1d8;
+        }
+      }
+    }
+  }
+  li {
+    list-style-type: none;
+    &.title > a {
+      font-family: "Open Sans";
+      font-size: 16px;
+      color: #212121;
+      border: none;
+      background-color: #eae1bc !important;
+      padding: 10px 20px 10px 20px;
+      -moz-box-shadow: inset  8px  8px 8px -8px #ccc5a5;
+      -webkit-box-shadow: inset  8px  8px 8px -8px #ccc5a5;
+      box-shadow: inset  8px  8px 8px -8px #ccc5a5;
+    }
+  }
+  a {
+    display: block;
+    // color: #212121;
+    padding: 4px 0 0 0;
+  }
+  .active > {
+    a {
+      font-family: "Open Sans";
+      font-weight: 400;
+      font-size: 15px;
+      background-color: $black;
+      color: $white;
+      &:hover {
+        background-color: $black;
+      }
+    }
+    ul > li > a > .bullet {
+      color: $cu-red;
+    }
+  }
+}

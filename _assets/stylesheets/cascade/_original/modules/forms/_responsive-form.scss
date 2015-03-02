@@ -1,0 +1,52 @@
+.responsiveForm {
+  background-color: $cu-light-grey;
+  border-bottom: 1px solid #4A4949;
+  color: #4A4949;
+  padding: 10px 45px;
+  label {
+    display: block;
+  }
+  input {
+    &[type=text], &[type=password] {
+      max-width: 100%;
+      margin: 5px 0 15px 0;
+    }
+  }
+  textarea, select {
+    max-width: 100%;
+    margin: 5px 0 15px 0;
+  }
+  input {
+    &[type=checkbox], &[type=radio] {
+      margin: 5px 0 3px 25px;
+    }
+    &[type=submit] {
+      display: block;
+    }
+  }
+  a.button {
+    display: block;
+  }
+  fieldset {
+    margin: 10px 0 10px 0;
+    &.showBorder {
+      border: thin solid #D2D1CD;
+      padding: 5px;
+    }
+    legend {
+      margin: 0 0 10px 0;
+    }
+  }
+  input {
+    &[type=radio] + label, &[type=checkbox] + label {
+      // display: inline;
+      display: block;
+      margin-top: -17px;
+      margin-left: 41px;
+      &:after {
+        // content: '';
+        // display: block; 
+      }
+    }
+  }
+}

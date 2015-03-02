@@ -1,0 +1,69 @@
+.expandedNameBar {
+  position: relative;
+  display: none;
+  margin: 15px 0 0 0;
+  background-position: center top;
+  background-repeat: no-repeat;
+  color: $white;
+  h2 {
+	  color: #75e4ee;
+	  font-family: Times New Roman;
+	  font-size: 24px;
+	  position: static;
+	}
+	.content {
+    text-align: left;
+    width: 100%;
+    margin: 0 10px 0 0;
+    float: left;
+    margin: 0 auto;
+    .copy {
+      margin: 0 0 15px 0;
+      @include bp(l) {
+	    	margin: 0 0 15px 0;
+	    }
+    }
+    @include bp(l) {
+			text-align: left;
+      width: 50%;
+      margin: 0 10px 0 0;
+      float: left;
+      margin: 0 auto;
+    }
+  }
+  .video {
+    display: none;
+    @include bp(l) {
+    	display: block;
+      float: right;
+      height: 205px;
+      width: 355px;
+      padding: 0 0 0 20px;
+    }
+  }
+  .watchVideo {
+    color: $white;
+    @include bp(l) {
+    	display: none;
+    }
+  }
+  .toggleExpanded {
+    height: 30px;
+    width: 60px;
+    position: absolute;
+    left: 50%;
+    bottom: -4px;
+    margin: 0 0 0 -25px;
+    cursor: pointer;
+    cursor: hand;
+  }
+}
+
+.expandedNameBarContainer {
+  width: 85%;
+  margin: 0 auto;
+  @include bp(l) {
+  	width: 85%;
+    margin: 0 auto;
+  }
+}

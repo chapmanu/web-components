@@ -1,0 +1,25 @@
+.realize {
+	section {
+		position: relative;
+	  z-index: 100;
+	  margin: 0 0 0 40%;
+	  width: 55%;
+		@include bp(m) {
+			position: relative;
+			z-index: 100;
+			margin: 20px 0 0 35%;
+			width: 280px;
+		}
+		@include bp(xl) {
+			margin: 35px 0 0 32%;
+	    width: 380px;
+			// margin: 20px 0 0 40%;   
+      // width: 300px;
+		}
+	}
+	@include bp(m) {
+		background-image: url("../img/map.png");
+			background-repeat: no-repeat;
+			background-position: 22% top;
+	}
+}

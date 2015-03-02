@@ -1,0 +1,488 @@
+* {
+  word-wrap: break-word;
+  .ie7 & {
+    zoom: 1;
+  }
+}
+
+html {
+	background-repeat: repeat-x;
+	margin: 0;
+  padding: 0;
+  padding-top: 45px !important;
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  background-image: url("img/diamond_pattern.gif");
+  background-color: $cu-light-grey;
+  font-family: "proxima-nova-soft", "proxima-nova-soft-n4", sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  &.cu-companion-bar {
+    padding-top: 75px !important;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  line-height: 1.231;
+  color: $cu-font-color;
+  font-family: "proxima-nova-soft", "proxima-nova-soft-n4", sans-serif;
+  &.personnel .main {
+	  margin-left: 0;
+	}
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
+  display: block;
+}
+
+hgroup h3 {
+  margin: -5px 0 0 0;
+}
+
+section {
+	li {
+    max-width: 70%;
+    @include bp(m) {
+      max-width: 100%;
+    }
+  }
+  p {
+    @include bp(m) {
+      // font-family: Arial;
+		  color: $cu-font-color;
+    }
+  }
+}
+
+audio, canvas, video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+audio:not([controls]), [hidden] {
+  display: none;
+}
+
+button, input, select, textarea {
+  font-family: "proxima-nova-soft", "proxima-nova-soft-n4", sans-serif;
+  color: $cu-font-color;
+}
+
+::-moz-selection, ::selection {
+  background: $cu-red;
+  color: $white;
+  text-shadow: none;
+}
+
+a {
+  // color: #00e;
+  color: $cu-dark-red;
+  text-decoration: none;
+  &:visited {
+    // color: #551a8b;
+    color: $cu-red;
+    border-bottom: none;
+  }
+  &:hover {
+    // color: $cu-red;
+    color: $cu-link-hover;
+    border-bottom: none;
+    // text-decoration: none;
+    text-decoration: underline;
+  }
+  &:focus {
+    outline: thin dotted;
+  }
+  &:hover, &:active {
+    outline: 0;
+  }
+  &:link {
+    color: $cu-dark-red;
+    border-bottom: none;
+  }
+  &.cta {
+    padding: 7px 10px 7px 10px;
+    // background-color: $cu-red;
+    background-color: $cu-dark-red;
+    color: $white;
+    display: inline-block;
+    text-transform: uppercase;
+    // font-family: 'Open Sans';
+    font-family: 'proxima-nova', sans-serif;
+    // font-weight: 800;
+    font-weight: bold;
+    max-width: 100%;
+    &.hover {
+      color: $white;
+      text-decoration: none;
+      background-color: $cu-red;
+    }
+  }
+  &.button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 16px;
+    border-radius: 3px;
+    background: #dad8cf no-repeat center;
+    color: $grey;
+    width: 80%;
+    margin-bottom: 10px;
+    @include vendorize(box-sizing, border-box);
+    &:hover {
+      background-color: #cac9c4;
+      text-decoration: none;
+    }
+    &.red {
+      background: $cu-red no-repeat center;
+      color: $white;
+      &:hover {
+        background-color: #C92741;
+        text-decoration: none;
+      }
+    }
+    @include bp(wildcard-min, 500px) {
+      width: auto;
+      margin-bottom: 0;
+    }
+  }
+}
+
+input[type=submit], a.button { // Forms
+  // font-weight: bold;
+  // font-size: 12px;
+  // background-color: #8F0C30;
+  // cursor: pointer;
+  // color: $white;
+  // padding: 4px;
+  // border: none;
+  // box-shadow: 0px 0px 7px #434343;
+  // display: inline-block;
+  // zoom: 1;
+  // &:hover {
+  //   background-color: #AF2C50;
+  // }
+}
+
+p.source {
+  a {
+    &:link, &:visited {
+      color: $cu-red;
+      border-bottom: none;
+    }
+    &:hover {
+      color: $cu-link-hover;
+      border-bottom: none;
+    }
+  }
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b, strong {
+  // font-weight: bold;
+  font-weight: 800;
+}
+
+blockquote {
+  margin: 1em 40px;
+  display: none;
+}
+
+dfn {
+  font-style: italic;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+ins {
+  background: #ff9;
+  color: $black;
+  text-decoration: none;
+}
+
+mark {
+  background: #ff0;
+  color: $black;
+  font-style: italic;
+  font-weight: bold;
+}
+
+pre, code, kbd, samp {
+  font-family: monospace, monospace;
+  _font-family: 'courier new', monospace;
+  font-size: 1em;
+}
+
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+q {
+  quotes: none;
+  &:before, &:after {
+    content: "";
+    content: none;
+  }
+}
+
+small {
+  font-size: 85%;
+}
+
+sub {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+}
+
+ol {
+  .ie7 & {
+    zoom: normal;
+    li {
+      zoom: normal;
+      list-style-position: outside;
+      margin: 0 0 0 25px;
+    }
+  }
+}
+
+dd {
+  margin: 0 0 0 40px;
+}
+
+nav {
+  ul, ol {
+    list-style: none;
+    list-style-image: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+figure, form {
+  margin: 0;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  border: 0;
+  *margin-left: -7px;
+  padding: 0;
+}
+
+button, input, select, textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle;
+}
+
+button, input {
+  line-height: normal;
+  *overflow: visible;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-color: gray;
+  button, input {
+    *overflow: auto;
+  }
+}
+
+button {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+
+input {
+  &[type="button"], &[type="reset"], &[type="submit"] {
+    cursor: pointer;
+    -webkit-appearance: button;
+  }
+  &[type="checkbox"], &[type="radio"] {
+    box-sizing: border-box;
+    margin: 0 5px;
+  }
+  &[type="search"] {
+    -webkit-appearance: textfield;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    &::-webkit-search-decoration {
+      -webkit-appearance: none;
+    }
+  }
+  &[type='submit'] {
+	  // width: 163px;
+	  // margin-top: 10px;
+	  // border: 1px solid #bdbcb9;
+	  // margin: 10px 0 0 0;
+	  // padding: 5px;
+	}
+}
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+
+input:invalid, textarea:invalid {
+  background-color: #f0dddd;
+}
+
+th, tr {
+  border-color: grey;
+}
+
+td {
+  border-color: grey;
+  vertical-align: top;
+}
+
+p, li {
+  font-family: "proxima-nova-soft", "proxima-nova-soft-n4", sans-serif;
+  font-size: 14px;
+  color: $cu-font-color;
+  line-height: 1.45em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'proxima-nova', arial, verdana, sans-serif;
+  color: $cu-font-color;
+}
+
+h2, h3, h4, h5, h6 {
+  font-weight: 200;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+h1 {
+	font-size: 30px;
+  font-weight: 800;
+  // font-family: Times New Roman;
+  // font-size: 25px;
+  // font-weight: normal;
+  // color: #3a3939;
+  // margin: 0;
+  // position: relative;
+  .bullet {
+    // position: relative;
+    // top: -2px;
+    // left: -10px;
+    // color: #A6B0B7;
+    // font-family: Georgia;
+    // font-weight: bold;
+    // font-size: 25px;
+  }
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 800;
+  position: relative;
+  line-height: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: 0px;
+  margin: 1em 0 0.5em;
+  .bullet {
+    font-family: Georgia;
+    font-size: 25px;
+    color: #666;
+    position: absolute;
+    top: 5px;
+    left: -30px;
+    display: none;
+    @include bp(xl) {
+        display: none;
+    }
+  }
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.4em;
+  letter-spacing: 0px;
+  /*padding: 10px 0;*/
+  /* margin: 1em 0 0.5em;*/
+  /*font-family:"proxima-nova-soft", "proxima-nova-soft-n4", sans-serif;*/
+  margin: 0;
+  padding: 0;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: $cu-font-color;
+}
+
+h4 {
+  font-size: 14px;
+  font-weight: 500;
+  color: $cu-font-color;
+}
+
+h5 {
+  font-size: 14px;
+  font-weight: 500;
+  font-style: italic;
+  color: $cu-font-color;
+}

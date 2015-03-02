@@ -1,0 +1,35 @@
+// ---------- Home ---------- //
+
+#heroQuickView {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: #333333;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 99999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: $white;
+  img, iframe {
+    max-width: 90%;
+    max-height: 90%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+  }
+}
+
+#heroQuickViewTable {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+#heroQuickViewCell {
+  display: inline-block;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}

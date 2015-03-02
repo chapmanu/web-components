@@ -1,0 +1,23 @@
+* {
+  word-wrap: break-word;
+  .ie7 & {
+  	zoom: 1;
+  }
+}
+
+html {
+	background-repeat: repeat-x;
+}
+
+ol {
+	.ie7 & {
+		zoom: normal;
+	}
+	li {
+		.ie7 & {
+			zoom: normal;
+			list-style-position: outside;
+			margin: 0 0 0 25px;
+		}
+	}
+}

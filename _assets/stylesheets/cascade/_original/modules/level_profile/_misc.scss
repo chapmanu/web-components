@@ -1,0 +1,57 @@
+// Miscellaneous selectors that don't require their own modules and/or only occur once.
+// Will move these to other modules later if necessary.
+
+.primaryContent .main {
+  // max-width: 745px !important;
+  min-height: 230px;
+  // margin: 0 0 50px 30px;
+  @include bp(m) {
+  	width: 95%;
+    max-width: 900px;
+  }
+  @include bp(l) {
+  	width: 70%;
+  }
+}
+
+.video {
+  object, embed {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.noFloat {
+  dt, dd {
+    float: none;
+  }
+}
+
+.websites dd {
+  text-decoration: underline;
+  margin: 0 10px 0 0;
+}
+
+.social {
+  margin: 10px 0 0 0;
+}
+
+.large_photo .noFloat {
+  // max-width: 500px;
+}
+
+.contactInfo {
+  max-width: 500px;
+}
+
+.rightColumn .callout {
+  // width: 175px;
+  // margin-left:30px;
+  // padding: 10px 10px 10px 10px;
+  // -moz-box-shadow: inset 8px 8px 8px -8px #999279;
+  // -webkit-box-shadow: inset 8px 8px 8px -8px #999279;
+  // box-shadow: inset 8px 8px 8px -8px #999279;
+}

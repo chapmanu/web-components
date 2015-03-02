@@ -1,0 +1,212 @@
+.carousel {
+  border: 0 solid;
+  -moz-box-sizing: border-box;
+  box-sizing: inherit;
+  color: inherit;
+  font-size: inherit;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  vertical-align: inherit;
+  height: 0;
+  padding-top: 56.25%;
+  padding-bottom: 160px;
+  position: relative;
+  width: 100%;
+  z-index: 0;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 4px -4px #111;
+  background-color: #111;
+  border-radius: 0 0 4px 4px;
+  color: #F9F9F9;
+  &:before, &::after {
+    border: 0 solid;
+    -moz-box-sizing: border-box;
+    box-sizing: inherit;
+    color: inherit;
+    font-size: inherit;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    vertical-align: inherit;
+  }
+  *:first-child {
+    margin-top: 0;
+  }
+  figure {
+    border: 0 solid;
+    -moz-box-sizing: border-box;
+    box-sizing: inherit;
+    color: inherit;
+    font-size: inherit;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    vertical-align: inherit;
+    display: none;
+    &.active {
+      display: block;
+      blockquote {
+        -webkit-animation: carousel-slidein 400ms;
+        animation: carousel-slidein 400ms;
+      }
+    }
+    &::before, &::after {
+      border: 0 solid;
+      -moz-box-sizing: border-box;
+      box-sizing: inherit;
+      color: inherit;
+      font-size: inherit;
+      margin: 0;
+      padding: 0;
+      text-decoration: none;
+      vertical-align: inherit;
+    }
+    blockquote {
+      h2 {
+        margin-top: 20px;
+        margin-top: 1.25rem;
+        font-family: "proxima-nova", "Helvetica Neue", "Microsoft Sans Serif", sans-serif;
+        color: $grey;
+        font-size: 1.5em;
+        line-height: 1.16666666666667;
+        line-height: 1.75rem;
+      }
+      p {
+        font-size: .875em;
+        // line-height: 1.42857142857143;
+        line-height: 1.25rem;
+      }
+    }
+  }
+  figcaption {
+    border: 0 solid;
+    -moz-box-sizing: border-box;
+    box-sizing: inherit;
+    color: inherit;
+    font-size: inherit;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    vertical-align: inherit;
+    display: block;
+    background-color: #111;
+    border-radius: 0 0 4px 4px;
+    bottom: 0;
+    font-size: 14px;
+    left: 0;
+    line-height: 20px;
+    min-height: 160px;
+    padding: 16px;
+    position: absolute;
+    right: 0;
+    z-index: 2;
+    &::before, &::after {
+      border: 0 solid;
+      -moz-box-sizing: border-box;
+      box-sizing: inherit;
+      color: inherit;
+      font-size: inherit;
+      margin: 0;
+      padding: 0;
+      text-decoration: none;
+      vertical-align: inherit;
+    }
+  }
+  blockquote {
+    border: 0 solid;
+    -moz-box-sizing: border-box;
+    box-sizing: inherit;
+    color: inherit;
+    font-size: inherit;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    vertical-align: inherit;
+    display: block;
+    position: absolute;
+    bottom: 160px;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: 0;
+    margin-left: 0;
+    &::before, &::after {
+      border: 0 solid;
+      -moz-box-sizing: border-box;
+      box-sizing: inherit;
+      color: inherit;
+      font-size: inherit;
+      margin: 0;
+      padding: 0;
+      text-decoration: none;
+      vertical-align: inherit;
+    }
+  }
+  h2, p {
+    color: #F9F9F9;
+  }
+  h2 {
+    border: 0 solid;
+    -moz-box-sizing: border-box;
+    box-sizing: inherit;
+    color: inherit;
+    font-size: inherit;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    vertical-align: inherit;
+    &::before, &::after {
+      border: 0 solid;
+      -moz-box-sizing: border-box;
+      box-sizing: inherit;
+      color: inherit;
+      font-size: inherit;
+      margin: 0;
+      padding: 0;
+      text-decoration: none;
+      vertical-align: inherit;
+    }
+  }
+  p {
+    border: 0 solid;
+    -moz-box-sizing: border-box;
+    box-sizing: inherit;
+    color: inherit;
+    font-size: inherit;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    vertical-align: inherit;
+    &::before, &::after .carousel img {
+      border: 0 solid;
+      -moz-box-sizing: border-box;
+      box-sizing: inherit;
+      color: inherit;
+      font-size: inherit;
+      margin: 0;
+      padding: 0;
+      text-decoration: none;
+      vertical-align: inherit;
+    }
+  }
+  img {
+    &::before, &::after {
+      border: 0 solid;
+      -moz-box-sizing: border-box;
+      box-sizing: inherit;
+      color: inherit;
+      font-size: inherit;
+      margin: 0;
+      padding: 0;
+      text-decoration: none;
+      vertical-align: inherit;
+    }
+  }
+}

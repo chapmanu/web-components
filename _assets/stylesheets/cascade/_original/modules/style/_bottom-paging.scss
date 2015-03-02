@@ -1,0 +1,45 @@
+#bottomPaging {
+  position: relative;
+  width: 99%;
+  height: 37px;
+  overflow: auto;
+  margin-top: 5px;
+  .next, .prev {
+    position: absolute;
+    font-family: 'proxima-nova', sans-serif;
+    font-size: 1.5em;
+    padding: 4px 6px;
+    background: #ecead8;
+    color: #797979;
+    text-transform: uppercase;
+    @include bp(m) {
+      font-size: 1em;
+      padding: 2px 4px;
+    }
+  }
+  .next {
+    top: 0px;
+    right: 0;
+  }
+  .prev {
+    top: 0px;
+    left: 0;
+  }
+  .leftSide {
+    position: absolute;
+    top: 7px;
+    left: 50%;
+    margin-left: -11px;
+    font-size: 0.8em;
+  }
+  .pager, .bInd {
+    display: none;
+  }
+  @include bp(m) {
+    position: relative;
+    width: 99%;
+    height: 25px;
+    overflow: auto;
+    padding-top: 5px;
+  }
+}

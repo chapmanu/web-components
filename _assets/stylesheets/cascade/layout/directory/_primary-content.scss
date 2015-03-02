@@ -1,0 +1,17 @@
+.primaryContent .main {
+  width: 100%;
+  max-width: 940px;
+  > .leftColumn {
+    width: 100%;
+    max-width: 680px;
+    float: left;
+    @include bp(m) {
+    	margin: 0 60px 0 0;
+    }
+  }
+  @include bp(m) {
+  	width: 100%;
+    max-width: 940px;
+    margin: 0 0 0 50px;
+  }
+}

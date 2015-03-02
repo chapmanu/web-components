@@ -1,0 +1,40 @@
+.logo {
+  // position: absolute;
+  position: relative;
+  top: 0;
+  display: block;
+  height: 58px;
+  // width: 260px;
+  width: 280px;
+  margin: 10px 0 0 10px;
+  text-indent: -999em;
+  background-image: url("../img/logo.png");
+  background-repeat: no-repeat;
+  .virtualTour & {
+    margin: 0 auto;
+    // width: 247px;
+    position: relative;
+    @include bp(wildcard-min, 767px) {
+      margin: 0 auto;
+      padding: 0;
+      position: relative;
+      float: none;
+    }
+  }
+  @include bp(m) {
+    clear: left;
+    float: left;
+    display: block;
+    position: static;
+    height: 58px;
+    width: 260px;
+    // margin: 10px 0 0 10px;
+    margin: -6px 0 0 10px;
+    text-indent: -999em;
+    background-image: url("../img/logo.png");
+    background-repeat: no-repeat;
+  }
+  @include bp(wildcard-min, 1085px) {
+    // margin-left: 0;
+  }
+}

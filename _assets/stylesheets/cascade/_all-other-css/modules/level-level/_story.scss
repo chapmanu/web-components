@@ -1,0 +1,14 @@
+.story {
+	&.future {
+		@include bp(l) {
+			border: none;
+		}
+	}
+  @include bp(l) {
+  	float: left;
+	  width: 115px;
+	  padding: 0 20px 0 15px;
+	  margin: 10px 0 10px 0;
+	  border-right: 1px solid #dfd3bc;
+  }
+}

@@ -1,0 +1,52 @@
+.rotatorContainer {
+	@include bp(m) {
+		max-height: 600px;
+	}
+	@include bp(xl) {
+		max-width: 1200px;
+    margin: 0 auto;
+    overflow: visible !important;
+	}
+}
+
+.subRotator {
+	&:before {
+		@include bp(m) {
+			content: '';
+      height: 1px;        
+      position: absolute;
+      top: 0;
+      width: 100%;           
+      -webkit-box-shadow: 0px -10px 10px #666D70; 
+      -moz-box-shadow: 0px -10px 10px #666D70; 
+      box-shadow: 0px -10px 10px #666D70;
+		}
+	}
+	.oldie & {
+		@include bp(m) {
+			max-height: 380px;
+	    position: relative;
+	    top: -32px;
+		}
+		@include bp(xl) {
+			position: relative;
+	    top: -10px;
+		}
+	}
+  @include bp(m) {
+  	background-color: #ecebe6;
+	  // background-image:url("../img/big_bar.png");
+	  background-repeat: no-repeat;
+	  background-position: center 0px;
+	  padding: 40px 0 10px 0;
+	  // border-top:5px solid #e9e1c2;
+	  position: relative;
+	  top: 0;
+  }
+}
+
+div.subRotator {
+  @include bp(wildcard-max, 1100px) {
+  	padding-bottom: 0;
+  }
+}

@@ -1,0 +1,88 @@
+.rightColumn {
+  margin: 0 0 10px 0;
+  .border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 7px;
+  }
+  .photo {
+    img {
+      width: 100%;
+      max-width: 206px;
+    }
+    @include bp(wildcard-max, 780px) {
+      margin-left: 10px;
+    }
+  }
+  .styleOne {
+    // background-color: $cu-light-grey;
+    // background: -ms-radial-gradient(circle, #e2dcc0, #e1dbbf);
+    // background: -webkit-radial-gradient(circle, #e2dcc0, #e1dbbf);
+    // background: -moz-radial-gradient(circle, #e2dcc0, #e1dbbf);
+    // background: -ms-radial-gradient(circle, #e2dcc0, #e1dbbf); 
+    // position: relative;
+    // overflow: hidden;
+    h2 {
+      // color: $grey;
+    }
+    .border {
+      // background-color: #e2e1db;
+      background-color: #d2d1cd;
+    }
+  }
+  .styleTwo {
+    background-color: $teal2-hover;
+    background: -ms-radial-gradient(circle, $teal2-hover, $teal2);
+    background: -webkit-radial-gradient(circle, $teal2-hover, $teal2);
+    background: -moz-radial-gradient(circle, $teal2-hover, $teal2);
+    background: -ms-radial-gradient(circle, $teal2-hover, $teal2);
+    color: $white;
+    position: relative;
+    overflow: hidden;
+    h2 {
+      color: $white;
+    }
+    a {
+      color: $cu-red;
+      font-weight: 800;
+      // background-color: $white;
+      // font-size: 13px;
+      // padding: 8px 10px 8px 10px;
+      // margin: 0 auto 0 auto;
+      // display: inline-block;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .border {
+      background-color: #01999f;
+    }
+  }
+  .linkList {
+    list-style-type: none;
+  }
+  .callout .linkList li {
+    a {
+      padding: 10px 0 10px 0;
+      display: block;
+      border-top: 1px solid #ccc0a7;
+    }
+    &:first-child a {
+      border-top: none;
+    }
+  }
+  .newbutton {
+    @include bp(m) {
+      margin-top: 0;
+    }
+  }
+  @include bp(l) {
+    width: 25%;
+    position: relative;
+    float: right;
+    padding-right: 0;
+    margin: 45px 0 0 -195px;
+  }
+}

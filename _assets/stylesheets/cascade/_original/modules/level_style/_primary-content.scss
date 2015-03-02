@@ -1,0 +1,63 @@
+.primaryContent {
+	width: 100%;
+  max-width: 1024px;
+  margin: 0 auto 50px auto;
+  .ie7 & {
+  	position: relative;
+  	.main {
+  		overflow-x: hidden;
+  	}
+  }
+  > .main .story {
+  	@include bp(l) {
+  		width: 182px;
+  	}
+  }
+	.main {
+	  float: none;
+	  margin: 0 10px 0 10px;
+	  position: relative;
+	  h1 {
+		  font-family: Times New Roman;
+		  font-size: 25px;
+		  padding: 0 0 5px 10px;
+		  border-bottom: 1px solid $cu-border;
+		}
+	  .newsEventsContent, .tabContent {
+	    padding: 0 0 10px 0;
+	  }
+	  .loading {
+	    position: absolute;
+	    top: 130px;
+	    left: 200px;
+	  }
+	  .centerNewsLoader {
+	    position: absolute;
+	    margin: 20px 0 0 0;
+	    left: 200px;
+	    top: 0;
+	  }
+	  .newsEventsContent .copy, .tabContent .copy {
+	    height: 100px;
+	    margin: 10px 0 2px 0;
+	    div {
+	      width: auto !important;
+	    }
+	  }
+	  @include bp(l) {
+	  	float: right;
+	    max-width: 655px;
+	    margin: 0 30px 0 0;
+	  }
+	}
+	.newsEventsContent h3 .bullet {
+	  font-family: Arial;
+	  font-size: 12px;
+	  position: relative;
+	  left: 2px;
+	  bottom: 2px;
+  }
+  @include bp(m) {
+  	margin: 0 auto 50px auto;
+  }
+}

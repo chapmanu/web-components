@@ -1,0 +1,131 @@
+// Miscellaneous selectors that don't require their own modules and/or only occur once.
+// Will move these to other modules later if necessary.
+
+.js .noscript, .slideOptions {
+  display: none;
+}
+
+.issues {
+  padding: 20px 0 10px 20px;
+  display: none;
+  @include bp(wildcard-min, 767px) {
+  	display: block;
+  }
+}
+
+#virtualTour-scrollPane {
+  position: relative;
+}
+
+.logo {
+  background-image: url("../../img/logo.png");
+  background-repeat: no-repeat;
+  text-indent: -999em;
+  margin: 10px 0 0 10px;
+  width: 260px;
+  height: 58px;
+  // clear: left;
+  // float: left;
+  display: block;
+  position: static;
+}
+
+#virtualTour-backButton {
+  // font-weight: bold;
+  font-size: 14px;
+  color: $black;
+  position: absolute;
+  top: 25px;
+  right: 18px;
+  z-index: 100;
+  display: none;
+  @include bp(wildcard-min, 767px) {
+  	top: 10px;
+    right: 60px;
+  }
+}
+
+#virtualTour-detail {
+  // position: relative;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  h2 {
+    margin-bottom: 10px;
+  }
+}
+
+#feedbackButton {
+	display: none;
+	@include bp(wildcard-min, 767px) {
+		display: block;
+    background: $cu-red;
+    width: 100px;
+    padding: 5px 10px;
+    color: $white;
+    text-decoration: none;
+    // font-family: "Open Sans", "rooney-sans", Arial, Sans-serif;
+    position: fixed;
+    bottom: 25px;
+    right: 0px;
+    z-index: 1000;
+	}
+}
+
+.virtualTour-scrollShadow {
+  @include bp(wildcard-min, 767px) {
+  	background-image: url(../img/bg_heading1_divider.png);
+	  background-repeat: no-repeat;
+	  background-position: center top;
+	  border-top: none;
+	  border-bottom: none;
+	  -webkit-box-shadow: none;
+	  -moz-box-shadow: none;
+	  box-shadow: none;
+	  position: absolute;
+	  // top: 125px;
+	  top: 115px;
+	  left: 0;
+	  width: 100%;
+	  height: 18px;
+	  z-index: 2000;
+  }
+}
+
+#virtualTour-parkingInfo {
+  .line-item {
+    clear: both;
+  }
+  .left-text, .right-text {
+    display: block;
+    float: left;
+  }
+  .left-text {
+    width: 50%;
+  }
+  .right-text {
+    width: 25%;
+  }
+}
+
+#virtualTour-attractionContent {
+  ul, ol {
+    margin-top: 1em;
+    margin-left: 2em;
+  }
+}
+
+.scroll-pane {
+  @include bp(wildcard-min, 767px) {
+  	width: 100%;
+	  // height: 500px;
+	  overflow-y: auto;
+	  overflow-x: hidden;
+	  outline: none;
+  }
+}
+
+.jspHorizontalBar {
+  @include bp(wildcard-min, 767px) {
+  	display: none !important;
+  }
+}

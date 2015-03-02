@@ -1,0 +1,96 @@
+.scatteredPhotos {
+	display: none;
+	img {
+		@include bp(m) {
+			max-width: 250px !important;
+		}
+	}
+	.ie8 & {
+		.scatteredPhoto.top {
+			@include bp(m) {
+				max-width: 250px;
+			}
+		}
+	}
+	.no-csstransforms & {
+		.scatteredPhoto {
+			&.top {
+				@include bp(m) {
+					border: 11px solid #E9E1C2;
+					display: block;
+					position: relative;
+				}
+			}
+			@include bp(m) {
+				display: none;
+			}
+		}
+	}
+	.scatteredPhoto {
+		&.top {
+			@include bp(m) {
+				position: static;
+			}
+		}
+		&:nth-child(2) {
+			@include bp(m) {
+				@include vendorize(transform, rotate(-5deg));
+			}
+		}
+		&:nth-child(3) {
+			@include bp(m) {
+				@include vendorize(transform, rotate(3deg));
+			}
+		}
+		@include bp(m) {
+			position: absolute;
+			top: 0;
+			border: 11px solid $white;
+			-webkit-box-shadow: 0px 0px 15px $black;
+			-moz-box-shadow: 0px 0px 15px $black;
+			box-shadow: 0px 0px 15px $black;
+		}
+	}
+	.values & {
+		@include bp(m) {
+			left: 70%;
+			top: 20px;
+			height: 100%;
+		}
+	}
+	.realize & {
+		@include bp(m) {
+			left: 72%;
+			top: 20px;
+			height: 100%;
+		}
+	}
+	.exploration & {
+		@include bp(m) {
+			position: absolute;
+      height: 100%;
+      left: 60%;
+      top: 20px;
+		}
+	}
+	.global & {
+		@include bp(m) {
+			left: 72%;
+      top: 20px;
+      height: 100%;
+		}
+	}
+	@include bp(m) {
+		// display: block;
+		position: absolute;
+	}
+	@include bp(xl) {
+		display: block;
+	}
+}
+
+.scatteredPhoto:hover .scatteredBlurb {
+  @include bp(m) {
+  	display: block;
+  }
+}

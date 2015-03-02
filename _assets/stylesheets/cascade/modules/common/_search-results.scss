@@ -1,0 +1,85 @@
+.searchResults {
+  padding: 0 20px 20px 20px;
+  margin: 0 0 20px 0;
+  background-color: $white;
+  .ie7 & {
+    zoom: 1;
+    .pagingInfo .pagingNavigation {
+      color: $cu-red;
+      margin-top: -17px;
+    }
+  }
+  .summary {
+    border-bottom: 1px dotted #565555;
+    padding: 10px 0 10px 0;
+    .results {
+      // font-family: "Open Sans";
+      font-size: 16px;
+    }
+    .resultsFor {
+      // font-family: Arial;
+      font-style: italic;
+      font-size: 14px;
+      border-left: 1px solid $black;
+      margin: 0 0 0 10px;
+      padding: 0 0 0 10px;
+    }
+  }
+  .result {
+    padding: 15px 0 15px 85px;
+    border-bottom: 1px solid $cu-border;
+    min-height: 80px;
+    position: relative;
+    color: #4a4949;
+    font-size: 14px;
+    line-height: 1.2;
+    .link {
+      display: block;
+      float: right;
+      padding: 5px 15px 5px 15px;
+      background-color: #8f0c30;
+      color: $white;
+      // font-family: "Open Sans";
+      font-size: 11px;
+      font-weight: 800;
+    }
+    .profilePicture {
+      position: absolute;
+      top: 2px;
+      left: 5px;
+      height: 103px;
+      width: 74px;
+      overflow: hidden;
+    }
+    .image {
+      position: absolute;
+      top: 15px;
+      left: 0;
+    }
+    .name {
+      font-size: 18px;
+    }
+    .email {
+      text-decoration: underline;
+    }
+  }
+  .pagingInfo {
+    margin: 10px 0 0 0;
+    .pagingNavigation {
+      color: $cu-red;
+      > span {
+        &:first-child {
+          border: none;
+        }
+        padding: 0 4px 0 4px;
+        border-left: 1px solid $black;
+        text-decoration: underline;
+        cursor: hand;
+        cursor: pointer;
+      }
+      @include bp(m) {
+        float: right;
+      }
+    }
+  }
+}

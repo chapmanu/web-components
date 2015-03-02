@@ -1,0 +1,68 @@
+.main {
+  .ie7 & {
+    h2 {
+      zoom: normal;
+    }
+  }
+  .twoColumns & {
+    .story {
+      @include bp(l) {
+        width: 182px;
+      }
+    }
+  }
+  .newsEvents {
+    margin-top: 30px;
+    .story {
+      border: none;
+      border-bottom: 1px solid #ded3bb;
+      float: none;
+      width: 100%;
+      margin: 0;
+      padding: 15px 0px 15px 0px;
+      position: relative;
+      @include bp(l) {
+        display: table-cell;
+        width: 115px;
+        padding: 10px 20px 20px 15px;
+        border: none;
+        border-right: 1px solid #dfd3bc;
+      }
+    }
+  }
+  .newsEventsContent {
+    div {
+      margin: 0;
+    }
+    .news .story h3, .events .story h3 {
+      margin-top: 35px;
+    }
+    .featured {
+      padding: 10px 10px 10px 10px;
+      position: relative;
+      background-color: #FBF9F0;
+      .readMore {
+        margin-top: 10px;
+      }
+      .col1 {
+        display: inline-block;
+        max-width: 46%;
+        border-right: 1px solid #555a5e;
+      }
+      .col2 {
+        display: inline-block;
+        max-width: 49%;
+        vertical-align: top;
+        padding: 0 0 0 10px;
+      }
+      .title {
+        margin-top: 35px;
+        margin-bottom: 5px;
+      }
+    }
+  }
+  .allNews, .allEvents {
+    position: relative;
+    right: 60px;
+  }
+}

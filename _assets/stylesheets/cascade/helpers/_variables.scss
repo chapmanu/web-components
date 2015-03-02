@@ -1,0 +1,95 @@
+// Colors
+
+/* These are colors commonly found on the site.
+Typically, if a color is used more than once or twice,
+it should be added here as a variable. Changing the value
+of these variables will affect the colors sitewide. */
+
+$cu-red: #a82439;
+// $cu-red2: #830c28; // Old red replaced by $cu-red to keep colors standard
+// $cu-red3: #98002E; // Old red replaced by $cu-red to keep colors standard
+$cu-dark-red: #851c2b;
+$cu-off-white: #f7f6f0;
+$cu-light-grey: #ECEBE5;
+$cu-warm-light-grey: #EDEADE;
+
+$white: #FFF;
+$black: #000;
+$brown: #896d49;
+
+$teal: #25b6a5;
+$teal-hover: #24d4bf;
+
+$teal2: #02bac2;
+$teal2-hover: #01cdd4;
+$teal2-light: #a6ddd1;
+
+$red: $cu-red;
+$red-hover: #c42b43;
+
+$grey: #353430;
+$grey-hover: #4c4b45;
+
+$grey2: #6e6e66;
+$grey2-hover: #918e87;
+
+/* These are colors of common elements or states. */
+
+$cu-font-color: $grey;
+$cu-link-hover: #c52b43;
+$cu-link-down: $cu-dark-red;
+$cu-form-shadow: #797564;
+$cu-border: #A58F75;
+
+/* These colors are specifically for the class "newbutton". */
+
+$new-button-primary: $teal2-hover;
+$new-button-secondary: $teal2;
+$new-button-hover-primary: $teal2-light;
+$new-button-hover-secondary: $teal2;
+
+
+// Theme Specific Colors
+
+/* These are theme specific colors. I moved them here
+to make it easier to edit the colors for each theme
+all in one place. Variables prefixed with "theme" are
+colors found in multiple themes. The others are specific
+to a theme. */
+
+$theme-light-grey: #dbdfcf; // Light grey found in multiple themes
+$theme-yellow: #d4e13c; // Yellow found in multiple themes
+$theme-blue: #006080; // Blue found in multiple themes
+
+$asbe-primary: #006185;
+$asbe-secondary: #004f6b;
+
+$ces-primary: #008ec1;
+$ces-secondary: #007299;
+
+$copa-primary: #69465c;
+$copa-secondary: #4f3445;
+
+$crean-primary: #1f8a84;
+$crean-secondary: #125e5a;
+
+$dance-primary: #007165;
+$dance-secondary: #005249;
+
+$dodge-primary: #1f1f1f;
+$dodge-secondary: $black;
+$dodge-tertiary: #42413d;
+
+$pharmacy-primary: #959300;
+$pharmacy-secondary: #636200;
+$pharmacy-tertiary: #dde2d5;
+
+$scst-primary: #4A5E0F;
+$scst-secondary: #36450B;
+$scst-tertiary: #99a12b;
+
+$theatre-primary: #002e5f;
+$theatre-secondary: #001f40;
+
+$wilkinson-primary: #008ec1;
+$wilkinson-secondary: #007299;

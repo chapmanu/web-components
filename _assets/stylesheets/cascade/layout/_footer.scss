@@ -1,0 +1,511 @@
+// ---------- Main Footer Styles ---------- //
+
+.footer {
+  background-color: #e5e4de;
+  // background-image: url(img/footerBg.jpg);
+  // background-repeat: no-repeat;
+  // background-position: left 150px;
+  color: #4A4949;
+  position: relative;
+  padding-bottom: 140px;
+  // height: 300px;
+  height: auto;
+  .home & {
+  	@include bp(m) {
+  		margin-top: -20px;
+  	}
+  }
+  .meta-links, .footer-ribbon {
+	  padding: 20px 10px 20px 10px;
+	}
+	.meta-link {
+	  width: 49%;
+	  float: right;
+	  &.first, &:first-child {
+	    float: left;
+	  }
+	  &:last-child {
+	    float: right;
+	  }
+	}
+	.weather, .address, .copyright {
+		@include bp(m) {
+			float: none;
+		}
+	}
+	.address {
+    font-size: 14px;
+    float: left;
+    @include bp(m) {
+    	margin-top: 15px;
+      line-height: 15px;
+    }
+  }
+  .weather {
+    float: right;
+  }
+  .copyright {
+    clear: both;
+    @include bp(m) {
+    	margin-top: 10px;
+    }
+  }
+  @include bp(m) {
+    // background-color: #e5e4df;
+    background-position: top right;
+    border-top: 1px solid #cecdc8;
+    padding: 20px 0 200px 0;
+  }
+}
+
+// footer {
+//   color: $white;
+//   position: relative;
+//   padding: 0 0 106px 0;
+//   .address {
+//     background-color: $black;
+//     position: absolute;
+//     width: 100%;
+//     bottom: 50px;
+//     padding: 10px 0 10px 10px;
+//     border-top: 3px solid $white;
+//     font-weight: bold;
+//     span {
+//       white-space: nowrap;
+//     }
+//     @include bp(m) {
+//       position: static;
+//       float: left;
+//       // width: 400px;
+//       // height: 30px;
+//       margin: 0 30px 0 10px;
+//       padding: 0;
+//       border: none;
+//       width: auto;
+//       height: 30px;
+//     }
+//     @include bp(wildcard-min, 1085px) {
+//       margin: 0 30px 0 25px;
+//     }
+//   }
+//   .footerBefore {
+//     @include bp(m) {
+//       height: 30px;
+//       background-color: $black;
+//       position: absolute;
+//       top: 0;
+//       left: -1000%;
+//       width: 1000%;
+//     }
+//   }
+//   .footerAfter {
+//     @include bp(m) {
+//       position: absolute;
+//       height: 30px;
+//       width: 15px;
+//       top: 0;
+//       right: -15px;
+//       background-image: url("../img/ribbon_tails.png");
+//       background-repeat: no-repeat;
+//       background-position: right -42px;
+//     }
+//   }
+//   a {
+//     &:visited {
+//       @include bp(m) {
+//         color: $white;
+//       }
+//     }
+//     &:active, &:hover {
+//       @include bp(m) {
+//         color: $white;
+//         text-decoration: underline;
+//       }
+//     }
+//     @include bp(m) {
+//       font-size: 11px;
+//       font-family: 'Open Sans', Sans-Serif;
+//       font-weight: 600;
+//       color: $white;
+//     }
+//   }
+//   @include bp(m) {
+//     background-color: $black;
+//     color: $white;
+//     height: 30px;
+//     line-height: 30px;
+//     margin: 0 auto 0 auto;
+//     top: 0;
+//     padding: 0;
+//     width: 100%;
+//     z-index: 100;
+//     font-size: 11px;
+//     font-family: 'Open Sans', Sans-Serif;
+//     font-weight: 600;
+//   }
+//   @include bp(wildcard-min, 1085px) {
+//     position: relative;
+//     max-width: 990px;
+//   }
+// }
+
+// ---------- Footer Ribbon ---------- //
+
+.footer-ribbon {
+  .footer-ribbon-before, .footer-ribbon-after {
+    @include bp(m) {
+      height: 45px;
+      line-height: 45px;
+    }
+  }
+  .footer-ribbon-after {
+    @include bp(m) {
+      background-image: url(img/ribbon_tails.png);
+      background-repeat: no-repeat;
+      background-position: right 0;
+      position: absolute;
+      width: 15px;
+      top: 0;
+      right: -15px;
+    }
+  }
+  .footer-ribbon-before {
+    @include bp(m) {
+      background-color: $grey;
+      position: absolute;
+      top: 0;
+      left: -1000%;
+      width: 1000%;
+    }
+  }
+  @include bp(m) {
+    height: 45px;
+    line-height: 45px;
+    background-color: $grey;
+    position: relative;
+    padding: 0 0 0 10px;
+    margin: 0;
+    width: 70%;
+    z-index: 100;
+    float: left;
+    @include vendorize(box-sizing, border-box);
+  }
+  @include bp(wildcard-min, 1160px) {
+    padding: 0 0 0 10px;
+  }
+}
+
+// ---------- Other Footer Styles ---------- //
+
+.footer-social-icons {
+  display: none;
+  @include bp(m) {
+    display: block;
+  }
+}
+
+.footer-links {
+  @include bp(wildcard-min, 1085px) {
+    top: 12px;
+  }
+}
+
+.footer-links-group {
+  background-color: $cu-light-grey;
+  margin-bottom: 2px;
+  &.footer-social-icons > ul {
+    @include bp(m) {
+      padding-right: 0;
+      margin-top: 0;
+    }
+  }
+  > h3 {
+    /*font-family: "proxima-nova-soft", "proxima-nova-soft-n4", sans-serif;*/
+    font-family: 'proxima-nova', sans-serif;
+    font-style: normal;
+    font-size: 18px;
+    padding: 20px;
+    margin: 0;
+    cursor: pointer;
+    &:after {
+      background-image: url(img/miscButtons.png);
+      background-position: -23px 0;
+      margin-top: -4px;
+      width: 27px;
+      height: 27px;
+      display: block;
+      content: "";
+      float: right;
+      @include bp(m) {
+        background: none;
+      }
+    }
+    @include bp(m) {
+      font-style: normal;
+      font-size: 16px;
+      font-weight: 100;
+      text-transform: uppercase;
+      color: $cu-warm-light-grey;
+      display: block;
+      cursor: default;
+      padding: 10px 0 10px 0;
+      margin: 0;
+    }
+    @include bp(wildcard-min, 1085px) {
+      font-size: 18px;
+    }
+  }
+  &.is-visible {
+    > h3:after {
+      background-position: -23px -29px;
+    }
+    > ul {
+      display: block;
+    }
+  }
+  > ul {
+    list-style-type: none;
+    padding: 0 20px 20px 20px;
+    line-height: 20px;
+    display: none;
+    > li {
+      @include bp(m) {
+        font-size: 14px;
+        line-height: 16px;
+        margin: 8px 0 8px 0;
+      }
+    }
+    @include bp(m) {
+      line-height: 22px;
+      padding: 0 10px 0 0;
+      margin-top: 12px;
+      display: block;
+    }
+  }
+  > li {
+    @include bp(m) {
+      padding: 0;
+      margin: 0;
+    }
+  }
+  a {
+    color: $grey;
+    &:hover {
+      color: $cu-red;
+    }
+  }
+  @include bp(m) {
+    background: transparent;
+    padding: 0;
+    width: 25%;
+    float: left;
+  }
+}
+
+// .footerLinks {
+//   margin: 60px 0 0 0;
+//   li {
+//     &.maps, &.contact {
+//       @include bp(m) {
+//         display: none;
+//       }
+//       @include bp(wildcard-min, 1085px) {
+//         display: none;
+//       }
+//     }
+//     a {
+//       color: $white;
+//       background-color: $black;
+//       display: block;
+//       padding: 10px 0 10px 10px;
+//       margin: 0 0 1px 0;
+//       background-color: $black;
+//       font-weight: bold;
+//       .bullet {
+//         position: absolute;
+//         right: 10px;
+//         font-weight: normal;
+//         @include bp(m) {
+//           display: none;
+//         }
+//       }
+//       @include bp(m) {
+//         padding: 0;
+//         margin: 0 5px 0 0;
+//       }
+//     }
+//     @include bp(m) {
+//       float: left;
+//       padding: 0 5px 0 0;
+//       list-style-type: none;
+//     }
+//   }
+//   a {
+//     @include bp(m) {
+//       display: inline;
+//       padding: 0;
+//     }
+//   }
+//   @include bp(m) {
+//     float: right;
+//     min-width: 400px;
+//     background-color: $black;
+//     padding: 0 32px 0 0;
+//     margin: 0;
+//     width: 100%;
+//   }
+//   @include bp(wildcard-min, 1085px) {
+//     width: auto;
+//     height: 30px;
+//   }
+// }
+
+.footer-info {
+  background-color: $cu-light-grey;
+  border-bottom: 1px solid #cecdc7;
+  padding: 20px 10px 20px 10px;
+  @include bp(m) {
+    position: relative;
+    background-color: transparent;
+    border-bottom: none;
+    margin-top: 0;
+    padding-top: 0;
+    padding-left: 65px;
+    width: 30%;
+    float: right;
+    clear: none;
+    @include vendorize(box-sizing, border-box);
+  }
+}
+
+.subFooter {
+  .ie7 & {
+    .socialIcons {
+      top: 20px;
+    }
+  }
+  ul {
+    display: none;
+    li {
+      a {
+        @include bp(m) {
+          color: #4A4949;
+        }
+      }
+      @include bp(m) {
+        list-style-type: none;
+        float: left;
+        margin: 14px 10px 0 0;
+      }
+    }
+    @include bp(m) {
+      display: block;
+      float: left;
+      min-width: 200px;
+      margin: 0 10px 0 0;
+    }
+    @include bp(l) {
+      margin: 0 10px 0 65px;
+    }
+    @include bp(xl) {
+      margin: 0 10px 0 65px;
+    }
+  }
+  .weather {
+    float: none;
+    height: 50px;
+    width: 130px;
+    position: absolute;
+    bottom: 0;
+    display: block;
+    img {
+      float: left;
+      @include bp(m) {
+        float: left;
+        margin: 0 0 0 10px;
+      }
+    }
+    .temp {
+      float: right;
+      color: #4A4949;
+      line-height: 50px;
+      @include bp(m) {
+        float: left;
+        color: #4A4949;
+        line-height: 50px;
+      }
+    }
+    @include bp(m) {
+      position: static;
+      float: left;
+      width: 145px;
+      display: block;
+    }
+  }
+  .copyright {
+    color: #4A4949;
+    position: absolute;
+    bottom: 15px;
+    right: 10px;
+    width: 170px;
+    @include bp(m) {
+      top: 50px;
+      right: 20px !important;
+      clear: both;
+      float: right;
+      bottom: 0;
+      margin: 0;
+      color: #4A4949;
+      font-size: 8px;
+      width: auto;
+    }
+    @include bp(wildcard-min, 1085px) {
+      right: 145px;
+    }
+  }
+  .socialIcons {
+    position: absolute;
+    width: 100%;
+    top: -35px;
+    left: 10px;
+    .twitter:hover {
+      background-position: -2px -28px;
+    }
+    .facebook:hover {
+      background-position: -28px -28px;
+    }
+    .pinterest:hover {
+      background-position: -54px -28px;
+    }
+    .iTunes:hover {
+      background-position: -80px -28px;
+    }
+    .youTube:hover {
+      background-position: -106px -28px;
+    }
+    .linkedIn:hover {
+      background-position: -132px -28px;
+    }
+    .googlePlus:hover {
+      background-position: -158px -28px;
+    }
+    @include bp(m) {
+      position: static;
+      float: left;
+      width: auto;
+      height: 40px;
+      margin: 8px 0 0 0;
+    }
+  }
+  @include bp(m) {
+    height: 100px;
+    width: auto;
+    float: left;
+    position: relative;
+    margin: 0 0 0 10px;
+  }
+  @include bp(wildcard-min, 1085px) {
+    float: right;
+    margin: 8px -20px 0 0;
+  }
+}

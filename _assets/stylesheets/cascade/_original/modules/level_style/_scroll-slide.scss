@@ -1,0 +1,41 @@
+.scrollSlide {
+  width: 320px;
+  height: 450px;
+  display: inline-block;
+  vertical-align: top;
+  white-space: normal;
+  margin: 0 2px 0 0;
+  .ie7 & {
+    display: block;
+    clear: right;
+    float: left;
+    zoom: 1;
+    margin: 0 10px 0 0;
+  }
+  .description {
+    padding: 0 20px 0 20px;
+  }
+  .description {
+    padding: 0 20px 0 20px;
+    .headline {
+      display: block;
+      font-family: Georgia;
+      font-size: 20px;
+      color: $cu-red;
+      padding: 10px 0 15px 0;
+      height: 50px;
+    }
+    .copy {
+      height: 50px;
+      width: 275px;
+      margin: 0;
+    }
+  }
+  .more {
+    background-color: $cu-red;
+    color: $white;
+    padding: 5px;
+    position: relative;
+    top: 15px;
+  }
+}

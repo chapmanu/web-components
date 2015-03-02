@@ -1,0 +1,35 @@
+.social {
+  a {
+    float: left;
+    margin: 0 10px 0 0;
+    text-indent: -999em;
+    height: 26px;
+    width: 26px;
+    background-image: url("../level/img/left_nav_social_icons.png");
+    background-repeat: no-repeat;
+  }
+  .facebook {
+    background-position: left top;
+  }
+  .twitter {
+    background-position: -30px top;
+  }
+  .linkedIn {
+    background-position: -60px top;
+  }
+  .rss {
+    background-position: -90px top;
+  }
+  .flickr {
+    background-position: -120px top;
+  }
+  .youTube {
+    background-position: -150px top;
+  }
+  .vimeo {
+    background-position: -180px top;
+  }
+  .googlePlus {
+    background-position: -210px top;
+  }
+}

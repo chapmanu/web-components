@@ -1,0 +1,16 @@
+.miniRotatorContainer {
+  position: relative;
+  height: 285px;
+  max-width: 320px;
+  margin: 0 auto 0 auto;
+  overflow: hidden;
+  @include bp(m) {
+  	max-width: 648px;
+  }
+  @include bp(l) {
+  	max-width: 972px;
+    // left: 22px;
+    // margin: -220px auto 0 auto;
+    margin: 0 auto 0 auto;
+  }
+}

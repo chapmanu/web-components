@@ -1,0 +1,130 @@
+.js .noscript {
+  display: none;
+}
+
+.noscript p {
+  position: static;
+  color: $black;
+  border-bottom: 1px solid $black;
+  text-align: left;
+  padding: 8px 12px 8px 50px;
+  margin: -8px 0 0 0;
+  font-size: 1.2em;
+  line-height: 1.4em;
+  background: #FFFFBD;
+}
+
+.alert {
+  margin: 75px 0 -100px 0;
+  font-size: large;
+  line-height: 40px;
+  background-color: Red;
+  color: $white;
+  text-align: center;
+  a {
+    color: $white;
+    text-decoration: underline;
+  }
+}
+
+.twitter {
+  background-position: -2px -1px;
+  margin-left: 8px !important;
+  @include bp(m) {
+    background-position: -2px -1px;
+    margin-left: 8px !important;
+  }
+}
+.facebook {
+  background-position: -28px -1px;
+  @include bp(m) {
+    background-position: -28px -1px;
+  }
+}
+.pinterest {
+  background-position: -54px -1px;
+  @include bp(m) {
+    background-position: -54px -1px;
+  }
+}
+.iTunes {
+  background-position: -80px -1px;
+  @include bp(m) {
+    background-position: -80px -1px;
+  }
+}
+.youTube {
+  background-position: -106px -1px;
+  @include bp(m) {
+    background-position: -106px -1px;
+  }
+}
+.linkedIn {
+  background-position: -132px -1px;
+  @include bp(m) {
+    background-position: -132px -1px;
+  }
+}
+.googlePlus {
+  background-position: -158px -1px;
+  @include bp(m) {
+    background-position: -158px -1px;
+  }
+}
+
+.ir {
+  display: block;
+  border: 0;
+  text-indent: -999em;
+  overflow: hidden;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  text-align: left;
+  direction: ltr;
+  br {
+    display: none;
+  }
+}
+
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  &.focusable {
+    &:active, &:focus {
+      clip: auto;
+      height: auto;
+      margin: 0;
+      overflow: visible;
+      position: static;
+      width: auto;
+    }
+  }
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.clearfix {
+  &:before {
+    content: "";
+    display: table;
+  }
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  zoom: 1;
+}

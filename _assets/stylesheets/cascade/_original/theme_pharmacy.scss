@@ -1,0 +1,85 @@
+// Helpers
+@import "helpers/_variables"; // Common helper
+@import "helpers/_mixins"; // Common helper
+
+@charset "utf-8";
+
+.smallMasthead .masthead, .smallMasthead .masthead-old, .bigMasthead .mastheadPlaceholder, .bigMasthead .masthead, .bigMasthead .masthead-old, .nameBar, .rightColumn .styleTwo {
+	background: $pharmacy-primary; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover, $pharmacy-primary 1%, $pharmacy-secondary 93%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(1%,$pharmacy-primary), color-stop(93%,$pharmacy-secondary)); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover, $pharmacy-primary 1%,$pharmacy-secondary 93%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover, $pharmacy-primary 1%,$pharmacy-secondary 93%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover, $pharmacy-primary 1%,$pharmacy-secondary 93%); /* IE10+ */
+	background: radial-gradient(center, ellipse cover, $pharmacy-primary 1%,$pharmacy-secondary 93%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$pharmacy-primary}', endColorstr='#{$pharmacy-secondary}',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.rightColumn .styleTwo {
+  .border {
+    background-color: #bebd69;
+  }
+  a {
+    color: #fafadf;
+  }
+}
+
+.nameBarButtons li a {
+  color: $pharmacy-primary;
+}
+
+.expandedNameBarContainer {
+  h2, .copy {
+    color: $pharmacy-tertiary;
+  }
+  a {
+    color: $pharmacy-tertiary;
+    text-decoration: underline;
+  }
+}
+
+#social_follow_us {
+  .banner {
+    background-image: url('/_files/social_accounts/images/pharmacy_follow_us.png');
+  }
+  li span {
+    &.hover_state, &.inactive_state {
+      background: url('/_files/social_accounts/images/pharmacy_icons.png');
+    }
+  }
+}
+
+.rounded-slider .info-container .blue {
+  background-color: $pharmacy-primary;
+}
+
+.newbutton a {
+  border: 1px solid $pharmacy-primary;
+  background-color: $pharmacy-primary;
+  background-image: -webkit-gradient(linear, left top, left bottom, from($pharmacy-primary), to($pharmacy-secondary));
+  background-image: -webkit-linear-gradient(top, $pharmacy-primary, $pharmacy-secondary);
+  background-image: -moz-linear-gradient(top, $pharmacy-primary, $pharmacy-secondary);
+  background-image: -o-linear-gradient(top, $pharmacy-primary, $pharmacy-secondary);
+  background-image: linear-gradient(to bottom, $pharmacy-primary, $pharmacy-secondary);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$pharmacy-primary}', endColorstr='#{$pharmacy-secondary}',GradientType=1 );
+  &:hover {
+    border: 1px solid $pharmacy-primary;
+    background-color: $pharmacy-primary;
+    background-image: -webkit-gradient(linear, left top, left bottom, from($pharmacy-primary), to($pharmacy-secondary));
+    background-image: -webkit-linear-gradient(top, $pharmacy-primary, $pharmacy-secondary);
+    background-image: -moz-linear-gradient(top, $pharmacy-primary, $pharmacy-secondary);
+    background-image: -o-linear-gradient(top, $pharmacy-primary, $pharmacy-secondary);
+    background-image: linear-gradient(to bottom, $pharmacy-primary, $pharmacy-secondary);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$pharmacy-primary}', endColorstr='#{$pharmacy-secondary}',GradientType=1 );
+  }
+}
+
+.midPhotoCallouts .photoCallout .caption {
+  background-color: $pharmacy-primary;
+}
+
+.photoCallouts {
+  .caption, .rollover {
+    background-color: $pharmacy-primary;
+  }
+}

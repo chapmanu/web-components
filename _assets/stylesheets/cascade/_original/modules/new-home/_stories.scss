@@ -1,0 +1,107 @@
+.stories {
+  .no-svg & {
+    .icon {
+      &.comments {
+        background-image: url('../img/icons/png/bubble-dots3_white_14.png');
+      }
+      &.shares {
+        background-image: url('../img/icons/png/share_white_14.png');
+      }
+      &.views {
+        background-image: url('../img/icons/png/eye2_white_14.png');
+      }
+    }
+    .story .icon {
+      &.comments {
+        background-image: url('../img/icons/png/bubble-dots3_14.png');
+      }
+      &.shares {
+        background-image: url('../img/icons/png/share_14.png');
+      }
+      &.views {
+        background-image: url('../img/icons/png/eye2_14.png');
+      }
+    }
+  }
+  .blogname a {
+    background-repeat: no-repeat !important;
+    background-position: 10px center !important;
+    background-size: 20px !important;
+    display: block;
+    padding-left: 35px !important;
+  }
+  .story-bg {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: $cu-light-grey;
+    min-height: 200px;
+    img {
+      display: none;
+    }
+  }
+  a.icon {
+    color: $white;
+    text-decoration: none;
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+  .icon {
+    color: $white;
+    text-decoration: none;
+    background-size: 14px;
+    background-repeat: no-repeat;
+    background-position: center right;
+    padding-right: 20px;
+    min-height: 14px;
+    margin-right: 10px;
+    &.comments {
+      background-image: url('../img/icons/svg/bubble-dots3_white.svg');
+    }
+    &.shares {
+      background-image: url('../img/icons/svg/share_white.svg');
+    }
+    &.views {
+      background-image: url('../img/icons/svg/eye2_white.svg');
+    }
+  }
+  .action {
+    display: inline-block;
+    background-size: 14px;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 40px;
+    text-indent: -9999px;
+    width: 0;
+    position: relative;
+    -webkit-transition: all 0.1s ease-out;
+    -moz-transition: all 0.1s ease-out;
+    -o-transition: all 0.1s ease-out;
+    transition: all 0.1s ease-out;
+    &.facebook {
+      background-image: url('../img/icons/svg/facebook_white.svg');
+      background-color: #38659f;
+      background-position: center !important;
+    }
+    &.twitter {
+      background-image: url('../img/icons/svg/twitter_white.svg');
+      background-color: #3aa8dd;
+      background-position: center !important;
+    }
+  }
+  .meta.share_action {
+    .action {
+      width: 40px;
+    }
+    .icon {
+      &.comments, &.views {
+        display: none;
+      }
+      &.shares {
+        opacity: 0.2 !important;
+        cursor: default;
+      }
+    }
+  }
+}

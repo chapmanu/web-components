@@ -1,0 +1,41 @@
+.main {
+  .primaryContent & {
+    max-width: none !important;
+    width: 100%;
+  }
+  .newsEvents {
+    min-height: 0;
+    max-width: 100%;
+    float: none;
+  }
+  .newsEventsNav {
+    display: block;
+    background-image: none;
+    height: auto;
+    padding: 0 0 10px 0;
+    li {
+      margin: 0 30px 0 0;
+      float: none;
+      &.active {
+        bottom: -5px;
+        @include bp(l) {
+          bottom: 0;
+        }
+      }
+      @include bp(l) {
+        margin: -1px 2px 0 0;
+        float: left;
+      }
+    }
+    @include bp(l) {
+      // background-image: url("../img/tab_shadow_long.png");  
+      // background-position: left bottom;
+      // height: auto;
+      height: 35px;
+      padding: 0;
+    }
+  }
+  .newsEventsContent > li {
+    padding: 0 10px 0 10px;
+  }
+}

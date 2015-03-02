@@ -1,0 +1,102 @@
+.newsEventsNav {
+	// display: block;
+ //  background-image: url("../img/tab_shadow.png");
+ //  background-repeat: no-repeat;
+ //  background-position: left 4px;
+ //  height: 37px;
+	display: none;
+  z-index: 100;
+  position: relative;
+  .main & {
+  	display: block;
+    background-image: none;
+    height: auto;
+    padding: 0 0 10px 0;
+    li {
+      margin: 0 30px 0 0;
+      float: none;
+      &.active {
+        bottom: -5px;
+        @include bp(l) {
+          bottom: 0;
+        }
+      }
+      @include bp(l) {
+        margin: -1px 2px 0 0;
+        float: left;
+      }
+    }
+    @include bp(l) {
+      // background-image: url("../img/tab_shadow_long.png");  
+      // background-position: left bottom;
+      // height: auto;
+      height: 35px;
+      padding: 0;
+    }
+  }
+	.leftNav & {
+		clear: both;
+    background-position: -250px 4px;
+    height: 36px;
+    display: block;
+	}
+	.leftNavSubContent & {
+		li.active {
+	    padding-left: 20px;
+	    padding-right: 20px;
+	  }
+	}
+	li {
+	 //  padding: 0 10px 0 10px;
+	 //  height: 30px;
+	 //  line-height: 30px;
+	 //  background-color: $white;
+	 //  background-image: url("../img/tab_bg.png");
+	 //  background-repeat: repeat-x;
+	 //  background-position: left top;
+	 //  border: 1px solid #c4c2b7;
+	 //  border-width: 1px 1px 0 1px;
+    background-color: #e3e2de;
+    font-size: 1.1em;
+    font-style: normal;
+    color: #64605f;
+    float: left;
+    position: relative;
+    bottom: -5px;
+    list-style-type: none;
+    padding: 0 17px 0 17px;
+    margin: 0 2px 0 0;
+    height: 30px;
+    line-height: 30px;
+    color: #a2a0a0;
+    cursor: pointer;
+    &:hover {
+      background-color: #e0e0dd;
+      color: $cu-red;
+    }
+    &.active {
+			// color: $white;
+			// background-color: $cu-red;
+			// background-image: url("../img/active_tab_bg.png");
+			// background-repeat: repeat-x;
+			// background-position: left top;
+			// font-weight: bold;
+      background-color: #f3f2ee;
+      font-weight: 800;
+      color: $cu-red;
+      bottom: 0;
+      padding: 0 40px 0 40px;
+      height: 35px;
+      line-height: 35px;
+      border-top: 2px solid #a82338;
+      border-right: 1px solid #cdccc7;
+      border-left: 1px solid #cdccc7;
+      border-bottom: none;
+    }
+  }
+  @include bp(m) {
+    margin: 0 0 0 0;
+    height: 36px;
+    display: block;
+  }
+}

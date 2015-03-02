@@ -1,0 +1,90 @@
+footer {
+  color: $white;
+  position: relative;
+  padding: 0 0 106px 0;
+  .address {
+	  background-color: $black;
+	  position: absolute;
+	  width: 100%;
+	  bottom: 50px;
+	  padding: 10px 0 10px 10px;
+	  border-top: 3px solid $white;
+	  font-weight: bold;
+	  span {
+	    white-space: nowrap;
+	  }
+	  @include bp(m) {
+	  	position: static;
+      float: left;
+      // width: 400px;
+      // height: 30px;
+      margin: 0 30px 0 10px;
+      padding: 0;
+      border: none;
+      width: auto;
+	    height: 30px;
+	  }
+	  @include bp(wildcard-min, 1085px) {
+			margin: 0 30px 0 25px;
+		}
+	}
+	.footerBefore {
+		@include bp(m) {
+			height: 30px;
+      background-color: $black;
+      position: absolute;
+      top: 0;
+      left: -1000%;
+      width: 1000%;
+		}
+	}
+	.footerAfter {
+		@include bp(m) {
+			position: absolute;
+      height: 30px;
+      width: 15px;
+      top: 0;
+      right: -15px;
+      background-image: url("../img/ribbon_tails.png");
+      background-repeat: no-repeat;
+      background-position: right -42px;
+		}
+	}
+	a {
+		&:visited {
+			@include bp(m) {
+				color: $white;
+			}
+		}
+		&:active, &:hover {
+			@include bp(m) {
+				color: $white;
+        text-decoration: underline;
+			}
+		}
+		@include bp(m) {
+			font-size: 11px;
+      font-family: 'Open Sans', Sans-Serif;
+      font-weight: 600;
+      color: $white;
+		}
+	}
+	@include bp(m) {
+		background-color: $black;
+    color: $white;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 auto 0 auto;
+    top: 0;
+    padding: 0;
+    width: 100%;
+    z-index: 100;
+    font-size: 11px;
+    font-family: 'Open Sans', Sans-Serif;
+    font-weight: 600;
+	}
+	@include bp(wildcard-min, 1085px) {
+		position: relative;
+    max-width: 990px;
+	}
+}

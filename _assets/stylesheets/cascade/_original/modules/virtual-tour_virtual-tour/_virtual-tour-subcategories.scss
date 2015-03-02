@@ -1,0 +1,41 @@
+.virtualTour-subCategories {
+  background-color: #ebebeb;
+  background: rgb(255, 255, 255);
+  background: -moz-linear-gradient(90deg, rgb(223, 223, 223) 10%, rgb(255, 255, 255) 70%);
+  background: -webkit-linear-gradient(90deg, rgb(223, 223, 223) 10%, rgb(255, 255, 255) 70%);
+  background: -o-linear-gradient(90deg, rgb(223, 223, 223) 10%, rgb(255, 255, 255) 70%);
+  background: -ms-linear-gradient(90deg, rgb(223, 223, 223) 10%, rgb(255, 255, 255) 70%);
+  background: linear-gradient(0, rgb(223, 223, 223) 10%, rgb(255, 255, 255) 70%);
+  padding: 10px 10px 10px 20px;
+  display: none;
+  &.active {
+    display: block;
+  }
+}
+
+.virtualTour-subCategory {
+  margin-bottom: 12px;
+  position: relative;
+  body.oldie & {
+    .virtualTour-categoryCheckbox {
+      @include bp(wildcard-min, 767px) {
+        top: 5px;
+        left: 20px;
+      }
+    }
+  }
+  a:link {
+    text-decoration: none;
+  }
+  input[type="checkbox"] + label.virtualTour-categoryCheckboxLabel {
+    @include bp(wildcard-min, 767px) {
+      top: 0px;
+      left: 23px;
+    }
+  }
+  @include bp(wildcard-min, 767px) {
+    padding-top: 3px;
+    padding-left: 53px;
+    margin-bottom: 8px;
+  }
+}

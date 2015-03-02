@@ -1,0 +1,72 @@
+// Helpers
+@import "helpers/_variables"; // Common helper
+@import "helpers/_mixins"; // Common helper
+
+.smallMasthead .masthead, .smallMasthead .masthead-old, .bigMasthead .mastheadPlaceholder, .bigMasthead .masthead, .bigMasthead .masthead-old, .nameBar, .rightColumn .styleTwo {
+	background: $wilkinson-primary; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover, $wilkinson-primary 1%, $wilkinson-secondary 93%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(1%,$wilkinson-primary), color-stop(93%,$wilkinson-secondary)); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover, $wilkinson-primary 1%,$wilkinson-secondary 93%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover, $wilkinson-primary 1%,$wilkinson-secondary 93%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover, $wilkinson-primary 1%,$wilkinson-secondary 93%); /* IE10+ */
+	background: radial-gradient(center, ellipse cover, $wilkinson-primary 1%,$wilkinson-secondary 93%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$wilkinson-primary}', endColorstr='#{$wilkinson-secondary}',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.rightColumn .styleTwo .border {
+  background-color: $theme-blue;
+}
+
+.nameBarButtons li a {
+  color: $wilkinson-primary;
+}
+
+.expandedNameBarContainer h2 {
+  color: #a8cce1;
+}
+
+#social_follow_us {
+  .banner {
+    background-image: url('[system-asset]/_files/social_accounts/images/wilkinson_follow_us.png[/system-asset]');
+  }
+  li span {
+    &.hover_state, &.inactive_state {
+      background: url('[system-asset]/_files/social_accounts/images/wilkinson_icons.png[/system-asset]');
+    }
+  }
+}
+
+.rounded-slider .info-container .blue {
+  background-color: $wilkinson-primary;
+}
+
+.newbutton a {
+  border: 1px solid $wilkinson-primary;
+  background-color: $wilkinson-primary;
+  background-image: -webkit-gradient(linear, left top, left bottom, from($wilkinson-primary), to($wilkinson-secondary));
+  background-image: -webkit-linear-gradient(top, $wilkinson-primary, $wilkinson-secondary);
+  background-image: -moz-linear-gradient(top, $wilkinson-primary, $wilkinson-secondary);
+  background-image: -o-linear-gradient(top, $wilkinson-primary, $wilkinson-secondary);
+  background-image: linear-gradient(to bottom, $wilkinson-primary, $wilkinson-secondary);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$wilkinson-primary}', endColorstr='#{$wilkinson-secondary}',GradientType=1 );
+  &:hover {
+    border: 1px solid $wilkinson-primary;
+    background-color: $wilkinson-primary;
+    background-image: -webkit-gradient(linear, left top, left bottom, from($wilkinson-primary), to($wilkinson-secondary));
+    background-image: -webkit-linear-gradient(top, $wilkinson-primary, $wilkinson-secondary);
+    background-image: -moz-linear-gradient(top, $wilkinson-primary, $wilkinson-secondary);
+    background-image: -o-linear-gradient(top, $wilkinson-primary, $wilkinson-secondary);
+    background-image: linear-gradient(to bottom, $wilkinson-primary, $wilkinson-secondary);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$wilkinson-primary}', endColorstr='#{$wilkinson-secondary}',GradientType=1 );
+  }
+}
+
+.midPhotoCallouts .photoCallout .caption {
+  background-color: $wilkinson-primary;
+}
+
+.photoCallouts {
+  .caption, .rollover {
+    background-color: $wilkinson-primary;
+  }
+}

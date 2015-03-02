@@ -1,0 +1,45 @@
+// ---------- Style ---------- //
+
+.resources {
+  // display: none;
+	&.active {
+		display: block;
+	}
+	a {
+	  display: block;
+	  padding: 10px 0 10px 10px;
+	  border-bottom: 1px solid $black;
+	  @include bp(m) {
+	  	padding: 0;
+      border: none;
+	  }
+	}
+	li {
+		> a {
+		  color: #686666;
+		}
+		a .bullet {
+		  color: #C70909;
+		  position: absolute;
+		  right: 10px;
+		}
+	}
+	@include bp(m) {
+		margin-right: 12px;
+    float: right;
+    display: block;
+	}
+}
+
+.resourcesLinks {
+  clear: both;
+  li .separator {
+    display: none;
+  }
+}
+
+.resources-nav-btn {
+  @include bp(m) {
+  	color: $grey;
+  }
+}

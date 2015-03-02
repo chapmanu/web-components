@@ -1,0 +1,12 @@
+.primaryContent .main {
+  // max-width: 745px !important;
+  min-height: 230px;
+  // margin: 0 0 50px 30px;
+  @include bp(m) {
+  	width: 95%;
+    max-width: 900px;
+  }
+  @include bp(l) {
+  	width: 70%;
+  }
+}

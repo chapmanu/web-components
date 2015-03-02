@@ -1,0 +1,11 @@
+// Flexslider source CSS is in helpers/style/_flexslider.scss.
+// This helper just adds flexslider styles specific to level pages.
+
+.flex-direction-nav li a.flex-next {
+  position: absolute;
+  right: 0;
+}
+
+.flexslider .flex-viewport {
+  overflow: hidden !important;
+}

@@ -1,0 +1,12 @@
+.personnel-listing {
+  .person {
+    height: auto;
+    min-height: 150px;
+  }
+  .name, .title, .location, .phone, .email, .bio, .bio-url {
+    margin-left: 60px;
+  }
+  .bio, .bio-url {
+    margin-top: 10px;
+  }
+}

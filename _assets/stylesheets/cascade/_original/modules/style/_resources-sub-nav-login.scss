@@ -1,0 +1,54 @@
+.resources-subNav-login {
+	&.active {
+	  display: block;
+	}
+	&:before {
+		@include bp(m) {
+			position: absolute;
+	    display: inline-block;
+	    border-left: 7px solid transparent;
+	    border-right: 7px solid transparent;
+	    border-bottom: 7px solid #faf9f6;
+	    border-bottom-color: rgba(0, 0, 0, 0.2);
+	    // left: 0;
+	    // top: -7px;
+	    // content: '';
+	    left: 156px;
+      top: -7px;
+      content: '';
+		}
+	}
+	&:after {
+		@include bp(m) {
+			left: 156px;
+      top: -7px;
+		}
+	}
+	li {
+		> a {
+			&:hover {
+				@include bp(m) {
+					color: $cu-red;
+		      background: $white;
+				}
+			}
+			@include bp(m) {
+				font-size: 14px;
+		    font-weight: normal;
+		    display: block;
+		    padding: 12px 50px 12px 23px;
+		    border-bottom: solid 1px $cu-light-grey;
+			}
+		}
+		@include bp(m) {
+			// padding: 9px 10px 9px 12px;
+      // width: 150px;
+		}
+	}
+	@include bp(m) {
+		// padding-right: 45px;
+    left: -155px;
+    padding: 0px;
+    background-color: #faf9f6;
+	}
+}

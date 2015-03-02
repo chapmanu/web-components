@@ -1,0 +1,170 @@
+.mainNavLinks {
+  display: none;
+  .open & {
+    display: block;
+  }
+  > .active {
+    @include bp(m) {
+      background-color: #555a5e;
+    }
+  }
+  &.active {
+    @include bp(m) {
+      background-position: -2px -45px;
+    }
+  }
+  .has-dropdown {
+    &.is-visible > a {
+      > span {
+        .ie8 & {
+          @include bp(m) {
+            border-left: 1px solid $grey;
+          }
+        }
+        @include bp(m) {
+          background-color: #faf9f6;
+        }
+      }
+      @include bp(m) {
+        color: $cu-red;
+      }
+    }
+    .subNavLinks.is-visible {
+      @include bp(m) {
+        visibility: visible;
+      }
+    }
+  }
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  > li {
+    background-color: $grey;
+    &:hover {
+      .subNavLinks {
+        &.last {
+          @include bp(m) {
+            left: auto;
+            right: 0;
+          }
+        }
+        @include bp(m) {
+          left: 0;
+          opacity: 1;
+        }
+      }
+      > a {
+        > span {
+          .ie8 & {
+            @include bp(m) {
+              border-left: 1px solid $grey;
+            }
+          }
+          @include bp(m) {
+            background-color: #faf9f6;
+          }
+        }
+        @include bp(m) {
+          color: $cu-red;
+        }
+      }
+    }
+    > a {
+      color: $white;
+      font-weight: 100;
+      display: block;
+      background-color: $grey;
+      padding: 10px 0 10px 10px;
+      margin: 0 0 1px 0;
+      .bullet {
+        @include bp(m) {
+          display: none;
+        }
+      }
+      > span {
+        @include bp(m) {
+          float: left;
+          display: block;
+          background-repeat: no-repeat;
+          background-position: right center;
+          padding: 12px 18px 0 18px;
+          margin-top: 0;
+          height: 33px;
+        }
+        @include bp(wildcard-min, 1120px) {
+          padding: 8px 18px 0 18px;
+        }
+        @include bp(wildcard-min, 1140px) {
+          padding: 12px 20px 0 20px;
+        }
+      }
+      @include bp(m) {
+        float: left;
+        color: $white;
+        display: block;
+        height: 45px;
+        font-size: 17px;
+        font-family: 'futura-pt', Sans-Serif;
+        position: relative;
+        padding: 0;
+      }
+      @include bp(wildcard-min, 1120px) {
+        font-size: 20px;
+      }
+    }
+    @include bp(m) {
+      background-color: $grey;
+      text-transform: uppercase;
+      height: 45px;
+      float: left;
+      position: relative;
+    }
+  }
+  .mainNavLinksAfter {
+    &:hover {
+      @include bp(wildcard-min, 1120px) {
+        position: absolute;
+        background-color: $grey;
+        height: 45px;
+        width: 1000%;
+        top: 0;
+        right: -950%;
+        z-index: -1;
+      }
+    }
+    @include bp(wildcard-min, 1120px) {
+      position: absolute;
+      background-color: $grey;
+      height: 45px;
+      width: 1000%;
+      top: 0;
+      right: -950%;
+      z-index: -1;
+    }
+  }
+  // .subNavLinks li:hover .icon:before {
+  //   background-color: $cu-red;
+  // }
+  @include bp(m) {
+    display: block;
+    background-color: $grey;
+    background-image: url("img/ribbon_tails.png");
+    background-repeat: no-repeat;
+    background-position: -2px 0;
+    width: 100%;
+    height: 45px;
+    padding: 0 0 0 10px;
+    margin: 10px 0 0 0;
+    float: left;
+    position: relative;
+    list-style: none;
+  }
+  @include bp(wildcard-min, 1120px) {
+    background-color: transparent;
+    margin: 0 0 0 0;
+    width: auto;
+  }
+}

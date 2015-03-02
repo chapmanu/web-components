@@ -1,0 +1,21 @@
+// Miscellaneous selectors that don't require their own modules and/or only occur once.
+// Will move these to other modules later if necessary.
+
+.generic {
+  padding: 0 15px 0 15px;
+  margin: auto;
+}
+
+.anchorLinks {
+  margin: 0 20px 20px 20px;
+  > a {
+    padding: 0 10px 0 10px;
+    text-decoration: underline;
+    border-left: 1px solid $black;
+    &:first-child {
+      padding: 0 10px 0 0;
+      text-decoration: underline;
+      border-left: none;
+    }
+  }
+}

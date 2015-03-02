@@ -1,0 +1,86 @@
+.nameBar {
+  .oldie & {
+    > .toggleExpanded {
+      background-position: center 6px;
+    }
+  }
+  > .toggleExpanded {
+    height: 30px;
+    width: 100%;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    margin: 30px 0 0 0;
+    background-image: url("../img/button_mask.png");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    z-index: 110;
+    overflow: hidden;
+    > .button {
+      height: 60px;
+      // width: 60px;
+      position: absolute;
+      left: 50%;
+      top: -30px;
+      margin: 0 0 0 -25px;
+      cursor: pointer;
+      cursor: hand;
+      background-color: transparent;
+      border-radius: 60px;
+      margin: 0 auto 10px auto;
+      min-height: 182px;
+      width: 100%;
+      max-width: 960px;
+      position: relative;
+      z-index: 120;
+      text-align: center;
+      background-color: #0e8fc5;
+      background: -webkit-radial-gradient(circle, #44a8d2, #0e8fc5);
+      background: -moz-radial-gradient(circle, #44a8d2, #0e8fc5);
+      background: -ms-radial-gradient(circle, #44a8d2, #0e8fc5);
+      background: radial-gradient(circle, #44a8d2, #0e8fc5);
+      > {
+        .show, .hide {
+          height: 60px;
+          width: 60px;
+          font-size: 40px;
+          line-height: 80px;
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          margin: 0 0 0 -30px;
+          color: $white;
+          text-align: center;
+        }
+        .show {
+          font-size: 30px;
+        }
+        .hide {
+          display: none;
+        }
+      }
+    }
+  }
+  &.active {
+    .expandedNameBar {
+      display: block;
+    }
+    > .toggleExpanded > .button > {
+      .show {
+        display: none;
+      }
+      .hide {
+        display: block;
+      }
+    }
+  }
+  @include bp(m) {
+    margin: 0 auto -40px auto;
+    position: relative;
+    top: -50px;
+  }
+}
+
+.longNameBar {
+  min-height: 206px;
+}

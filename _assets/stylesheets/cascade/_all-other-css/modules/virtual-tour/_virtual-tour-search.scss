@@ -1,0 +1,53 @@
+#virtualTour-search {
+  z-index: 1000;
+  h2 {
+    margin-top: 20px;
+  }
+}
+
+#virtualTour-searchField {
+  border: 1px solid #d8d4cf;
+  -webkit-box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.65);
+  -moz-box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.65);
+  box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.65);
+  background-image: url(../img/searchFieldIcon.gif);
+  background-position: left 5px;
+  background-repeat: no-repeat;
+  font-style: italic;
+  -webkit-appearance: none;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px 15px 8px 30px;
+  width: 100%;
+}
+
+.virtualTour-searchResultsStats {
+  color: #595858;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.virtualTour-searchResults {
+  list-style: none;
+  li {
+    border-top: 1px solid #dedede;
+    padding-top: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+#virtualTour-searchResults {
+  display: none;
+}
+
+.virtualTour-searchResult {
+  padding-left: 10px;
+  margin-top: 10px;
+  a {
+    // font-family: "Open Sans";
+    // font-weight: 600;
+    // font-size: 15px;
+    text-decoration: none;
+  }
+}

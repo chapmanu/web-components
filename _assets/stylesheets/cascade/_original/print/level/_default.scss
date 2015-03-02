@@ -1,0 +1,8 @@
+@include bp(print) {
+	html:before {
+    content: url("../level/img/logo.png");
+  }
+  header, .rotatorContainer, .toggleExpanded, .leftNav, footer {
+    display: none;
+  }
+}

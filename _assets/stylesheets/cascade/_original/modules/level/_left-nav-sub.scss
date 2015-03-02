@@ -1,0 +1,16 @@
+.leftNav-sub {
+	&.is-open {
+		background: $white;
+	}
+	a {
+	  font-style: normal;
+	  color: #62605a;
+	  margin-left: 0;
+	  &:hover {
+	    color: $cu-red;
+	  }
+	  .bullet {
+	    display: none;
+	  }
+	}
+}

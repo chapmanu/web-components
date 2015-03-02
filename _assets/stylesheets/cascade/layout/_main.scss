@@ -1,0 +1,120 @@
+#main {
+  @include bp(m) {
+    overflow: hidden;
+  }
+}
+
+.main {
+	body.personnel & {
+		margin-left: 0;
+	}
+	a {
+	  &:link, &:visited {
+	    border-bottom: 1px dotted #C0C0C0;
+	  }
+	}
+	.ie7 & {
+    h2 {
+      zoom: normal;
+    }
+  }
+  .twoColumns & {
+    .story {
+      @include bp(l) {
+        width: 182px;
+      }
+    }
+  }
+  .newsEvents {
+    margin-top: 30px;
+    .story {
+      border: none;
+      border-bottom: 1px solid #ded3bb;
+      float: none;
+      width: 100%;
+      margin: 0;
+      padding: 15px 0px 15px 0px;
+      position: relative;
+      @include bp(l) {
+        display: table-cell;
+        width: 115px;
+        padding: 10px 20px 20px 15px;
+        border: none;
+        border-right: 1px solid #dfd3bc;
+      }
+    }
+  }
+  .newsEventsContent {
+    div {
+      margin: 0;
+    }
+    .news .story h3, .events .story h3 {
+      margin-top: 35px;
+    }
+    .featured {
+      padding: 10px 10px 10px 10px;
+      position: relative;
+      background-color: #FBF9F0;
+      .readMore {
+        margin-top: 10px;
+      }
+      .col1 {
+        display: inline-block;
+        max-width: 46%;
+        border-right: 1px solid #555a5e;
+      }
+      .col2 {
+        display: inline-block;
+        max-width: 49%;
+        vertical-align: top;
+        padding: 0 0 0 10px;
+      }
+      .title {
+        margin-top: 35px;
+        margin-bottom: 5px;
+      }
+    }
+  }
+  .allNews, .allEvents {
+    position: relative;
+    right: 60px;
+  }
+  .tabGroup {
+    min-height: 0;
+    max-width: 100%;
+    float: none;
+    padding: 0 0 0 0;
+  }
+  .tabNav {
+    background-image: none;
+    height: auto;
+    padding: 0 0 0 0;
+    li {
+      margin: 0 30px 0 0;
+      float: none;
+      &.active {
+        bottom: -5px;
+        @include bp(l) {
+          bottom: 0;
+        }
+      }
+      @include bp(l) {
+        margin: -1px 2px 0 0;
+        float: left;
+      }
+    }
+    @include bp(l) {
+      background-image: url("../img/tab_shadow.png");
+      background-position: left 3px;
+      height: auto;
+      height: 35px;
+      padding: 0;
+    }
+  }
+  .tabContent > li {
+    padding: 5px 10px 0 10px;
+    @include bp(l) {
+      padding: 5px 0 0 0;
+    }
+  }
+}

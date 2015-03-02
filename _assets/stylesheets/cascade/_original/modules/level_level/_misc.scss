@@ -1,0 +1,50 @@
+// Miscellaneous selectors that don't require their own modules and/or only occur once.
+// Will move these to other modules later if necessary.
+
+.subRotator {
+  padding: 15px 0 0 0;
+}
+
+.middleRightContainer {
+  @include bp(l) {
+  	float: right;
+	  width: 70%;
+	  position: relative;
+  }
+}
+
+.primaryContent {
+  .main {
+    @include bp(l) {
+    	width: 100%;
+	    max-width: 465px;
+	    float: left;
+    }
+  }
+  &.twoColumns .main {
+    @include bp(l) {
+    	max-width: 100%;
+    }
+  }
+}
+
+.story {
+	&.future {
+		@include bp(l) {
+			border: none;
+		}
+	}
+  @include bp(l) {
+  	float: left;
+	  width: 115px;
+	  padding: 0 20px 0 15px;
+	  margin: 10px 0 10px 0;
+	  border-right: 1px solid #dfd3bc;
+  }
+}
+
+.twoColumns .main .story {
+  @include bp(l) {
+  	width: 182px;
+  }
+}

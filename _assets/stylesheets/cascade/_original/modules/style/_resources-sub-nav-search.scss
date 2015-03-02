@@ -1,0 +1,54 @@
+.resources-subNav-search {
+  &:before, &:after {
+    @include bp(m) {
+      left: 287px;
+    }
+  }
+  &.active {
+    display: block;
+  }
+  &.show-helper {
+  	#smallSearch {
+  		@include bp(m) {
+  			width: 321px;
+  		}
+  	}
+  	@include bp(m) {
+  		width: 510px;
+  	}
+  }
+  .searchBox {
+    @include bp(m) {
+      background: $cu-light-grey;
+      border: none;
+      font-size: 14px;
+      font-style: italic;
+      color: #62605a;
+      padding: 5px;
+      margin: 0;
+      width: 100%;
+      height: auto;
+      @include vendorize(box-sizing, border-box);
+    }
+  }
+  img {
+    display: none;
+    @include bp(m) {
+    	display: block;
+      float: right;
+      padding-top: 8px;
+    }
+  }
+  #smallSearch {
+    @include bp(m) {
+    	z-index: 10;
+    }
+  }
+  @include bp(m) {
+    padding: 7px 12px 10px 12px;
+    width: 345px;
+    left: -284px;
+  	visibility: visible;
+  	@include vendorize(transition, width 0.3s ease-out);
+  }
+}

@@ -1,0 +1,51 @@
+.smallMasthead {
+  .masthead {
+    max-width: 1024px;
+    min-height: 83px;
+    background-color: #0e8fc5;
+    background: -ms-radial-gradient(circle, #44a8d2, #0e8fc5);
+    background: -webkit-radial-gradient(circle, #44a8d2, #0e8fc5);
+    background: -moz-radial-gradient(circle, #44a8d2, #0e8fc5);
+    background: radial-gradient(circle, #44a8d2, #0e8fc5);
+    &:before {
+      @include bp(l) {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: transparent;
+        background-image: url("../img/masthead_bg_small.png");
+        background-repeat: no-repeat;
+        background-position: left top;
+      }
+    }
+    > div {
+      font-family: "Open Sans";
+      font-weight: 600px;
+      font-size: 19px;
+      color: $white;
+      text-align: center;
+      padding: 15px 15% 15px 15%;
+      max-width: 70%;
+      width: 100%;
+      &.oneLine {
+        padding-top: 27px;
+      }
+      @include bp(l) {
+        position: absolute;
+      }
+    }
+    @include bp(l) {
+      position: relative;
+      top: -15px;
+      margin: 0 auto -15px auto;
+    }
+  }
+  header {
+    @include bp(l) {
+      padding: 0 0 30px 0;
+    }
+  }
+}

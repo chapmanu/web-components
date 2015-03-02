@@ -1,0 +1,59 @@
+.infoFor {
+  width: 100%;
+  float: left;
+  display: none;
+  &.active {
+  	display: block;
+  }
+  @include bp(m) {
+  	display: block;
+  	width: 560px;
+    height: 20px;
+    float: left;
+    margin: 12px 10px 10px 10px;
+    font-size: 11px;
+    font-family: Arial;
+    font-weight: bold;
+  }
+  @include bp(wildcard-min, 1085px) {
+  	margin-left: 0;
+  }
+}
+
+.infoForLinks {
+	a {
+		display: block;
+	  padding: 10px 0 10px 10px;
+	  border-bottom: 1px solid $black;
+	  @include bp(m) {
+	  	display: inline;
+	    padding: 0;
+	    border: none;
+	  }
+	}
+	li {
+		a {
+			color: #686666;
+			.bullet {
+				color: #C70909;
+			  position: absolute;
+			  right: 10px;
+			  @include bp(m) {
+					position: static;
+	        color: #c70909;
+	        margin: 0 2px 0 3px;
+				}
+			}
+		}
+		@include bp(m) {
+			float: left;
+      list-style-type: none;
+      margin: 0 5px 0 0;
+      padding: 0;
+      border: none;
+		}
+	}
+	@include bp(m) {
+		background-color: transparent;
+	}
+}

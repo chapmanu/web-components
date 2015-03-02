@@ -1,0 +1,85 @@
+.mainNav {
+  clear: both;
+  // width: 100%;
+  .icon {
+    &:before {
+      // background-color: #bcbbb7;
+      font-size: 1.0em;
+      text-align: center;
+      line-height: 1.4em;
+      color: $grey;
+      // border-radius: 24px;
+      padding: 0.1em;
+      margin-top: -4px;
+      // margin-right: 0.5em;
+      // margin-left: -30px;
+      width: 24px;
+      height: 24px;
+      float: left;
+      display: block;
+    }
+    &:hover:before {
+      color: $cu-red;
+      background-color: $white;
+    }
+    .ie8 & {
+      margin-left: 0;
+      &:before {
+        // font-size: 1.2em;
+        // margin-top: -2px;
+        display: none;
+      }
+    }
+  }
+}
+
+.mainNavExpand {
+  text-transform: uppercase;
+  position: relative;
+  // background-color: $black;
+  background-color: $grey;
+  margin-top: 5px;
+  .open & {
+    a {
+      .arrow {
+        top: 50%;
+        margin-top: -16px;
+        background: url(/_files/img/up-arrow.png) no-repeat;
+        text-indent: -999px;
+        overflow: hidden;
+      }
+    }
+    @include bp(m) {
+      display: none;
+    }
+  }
+  a {
+    color: $white;
+    display: block;
+    font-weight: 600;
+    margin: 0 0 1px 0;
+    padding: 10px 0 10px 10px;
+    // background-color: $black;
+    background-color: $grey;
+    text-decoration: none;
+    .arrow {
+      position: absolute;
+      display: block;
+      width: 32px;
+      height: 32px;
+      right: 0;
+      top: 50%;
+      margin-top: -16px;
+      background: url(/_files/img/down-arrow.png) no-repeat;
+      text-indent: -999px;
+      overflow: hidden;
+      // background-color: $black;
+    }
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  @include bp(m) {
+    display: none;
+  }
+}

@@ -1,0 +1,17 @@
+.footer-info {
+  background-color: $cu-light-grey;
+  border-bottom: 1px solid #cecdc7;
+  padding: 20px 10px 20px 10px;
+  @include bp(m) {
+    position: relative;
+    background-color: transparent;
+    border-bottom: none;
+    margin-top: 0;
+    padding-top: 0;
+    padding-left: 65px;
+    width: 30%;
+    float: right;
+    clear: none;
+    @include vendorize(box-sizing, border-box);
+  }
+}

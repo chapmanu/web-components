@@ -1,0 +1,49 @@
+#main {
+  @include bp(m) {
+  	overflow: hidden;
+  }
+}
+
+.main {
+	.ie7 & {
+		h2 {
+			zoom: normal;
+		}
+	}
+	.newsEvents .story {
+	  border: none;
+	  border-bottom: 1px solid #ded3bb;
+	  float: none;
+	  width: 100%;
+	  margin: 0;
+	  padding: 10px 10px 10px 10px;
+	  position: relative;
+	  @include bp(l) {
+	  	display: table-cell;
+	    width: 115px;
+	    padding: 10px 20px 20px 15px;
+	    border: none;
+	    border-right: 1px solid #dfd3bc;
+	  }
+	}
+	.newsEventsContent .featured {
+	  padding: 10px 10px 10px 10px;
+	  position: relative;
+	  background-color: #FBF9F0;
+	  .col1 {
+	    display: inline-block;
+	    max-width: 46%;
+	    border-right: 1px solid #555a5e;
+	  }
+	  .col2 {
+		  display: inline-block;
+		  max-width: 49%;
+		  vertical-align: top;
+		  padding: 0 0 0 10px;
+		}
+	}
+	.allNews, .allEvents {
+    position: relative;
+    right: 60px;
+  }
+}

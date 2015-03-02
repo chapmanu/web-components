@@ -1,0 +1,11 @@
+.gssb_c[style] {
+  position: fixed !important;
+  top: 35px !important;
+  z-index: 99200;
+  .logged-in.admin-bar & {
+  	margin-top: 32px;
+  	@include bp(wildcard-max, 782px) {
+  		margin-top: 46px;
+  	}
+  }
+}

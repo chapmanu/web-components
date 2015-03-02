@@ -1,0 +1,65 @@
+#cu_nav_domain {
+	&.cu_nav_selectable {
+	  .selected > a.cu_nav_button {
+	    background-color: $white;
+	    background-repeat: no-repeat;
+	    background-position: 13px 13px;
+	    background-size: 20px;
+	    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjQsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMjkuNDg4cHgiIGhlaWdodD0iMjkuNTg0cHgiIHZpZXdCb3g9IjAgMCAyOS40ODggMjkuNTg0IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAyOS40ODggMjkuNTg0IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxwb2x5Z29uIGZpbGw9IiM4QjIzMzIiIHBvaW50cz0iMTMuNjg4LDE1LjI4MSAwLDI4Ljk2NSAwLDE1LjI4MSAJIi8+DQoJPHBvbHlnb24gZmlsbD0iIzhCMjMzMiIgcG9pbnRzPSIwLDE0LjQwNCAwLDAuNzE3IDEzLjY4OCwxNC40MDQgCSIvPg0KCTxwb2x5Z29uIGZpbGw9IiM4QjIzMzIiIHBvaW50cz0iMjguODY5LDAuMSAxNS4xODMsMTMuNzgzIDE1LjE4MywwLjEgCSIvPg0KCTxwb2x5Z29uIGZpbGw9IiM4QjIzMzIiIHBvaW50cz0iMTQuMzA3LDEzLjc4MyAwLjYyLDAuMSAxNC4zMDcsMC4xIAkiLz4NCgk8cG9seWdvbiBmaWxsPSIjOEIyMzMyIiBwb2ludHM9IjE1LjgwMywxNC40MDQgMjkuNDg4LDAuNzE3IDI5LjQ4OCwxNC40MDQgCSIvPg0KCTxwb2x5Z29uIGZpbGw9IiM4QjIzMzIiIHBvaW50cz0iMjkuNDg4LDE1LjI4MSAyOS40ODgsMjguOTY1IDE1LjgwMywxNS4yODEgCSIvPg0KCTxwb2x5Z29uIGZpbGw9IiM4QjIzMzIiIHBvaW50cz0iMTQuMzA3LDE1Ljg5OCAwLjYyLDI5LjU4NCAxNC4zMDcsMjkuNTg0IAkiLz4NCgk8cG9seWdvbiBmaWxsPSIjOEIyMzMyIiBwb2ludHM9IjE1LjE4MywxNS44OTggMTUuMTgzLDI5LjU4NCAyOC44NjcsMjkuNTg0IAkiLz4NCjwvZz4NCjwvc3ZnPg0K);
+	    svg * {
+	      display: none;
+	    }
+	  }
+	  &.expanded .selected > a.cu_nav_button {
+	    background-image: none;
+	    svg * {
+	      display: block;
+	    }
+	  }
+	}
+	&.expanded {
+		li {
+			&.selected a {
+				@include bp(wildcard-max, 980px) {
+					width: 175px;
+          color: #404040;
+				}
+			}
+			a {
+				@include bp(wildcard-max, 980px) {
+					width: 100% !important;
+				}
+			}
+			@include bp(wildcard-max, 980px) {
+				width: 100% !important;
+			}
+		}
+		@include bp(wildcard-max, 980px) {
+			overflow: visible;
+      max-width: 999px;
+      width: 100% !important;
+      position: absolute !important;
+      top: 0;
+      left: 0;
+      z-index: 99500 !important;
+		}
+	}
+	li {
+		&.selected a {
+			@include bp(wildcard-max, 980px) {
+				width: 45px;
+        color: $white;
+			}
+		}
+		a {
+			@include bp(wildcard-max, 980px) {
+				width: 175px;
+        color: #404040;
+			}
+		}
+	}
+	@include bp(wildcard-max, 980px) {
+		max-width: 45px;
+    overflow: hidden;
+	}
+}

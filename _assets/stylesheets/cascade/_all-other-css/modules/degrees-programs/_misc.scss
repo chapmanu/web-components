@@ -1,0 +1,13 @@
+// Miscellaneous selectors that don't require their own modules and/or only occur once.
+// Will move these to other modules later if necessary.
+
+.anchorLinks {
+  margin: 0 20px 0 20px;
+  > a {
+    margin: 0 5px 0 0;
+  }
+}
+
+.degreesPrograms {
+  margin: 20px 0 0 0;
+}

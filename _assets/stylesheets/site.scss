@@ -187,12 +187,12 @@
     cursor: pointer;
     position: relative;
 }
-/* We apply the background hover color when user hover the mouse over of the li component */
+
  #navbar ul li a:hover {
     background: #fff;
     color: #A82439;
 }
-/* We apply the link style */
+
  #navbar ul li a {
     padding:20px 15px;
     width: 100%;
@@ -203,28 +203,27 @@
 }
 /**** SECOND LEVEL MENU ****/
 
-/* We make the position to absolute for flyout menu and hidden the ul until the user hover the parent li item */
  #navbar ul li ul {
     position:fixed;
     display:none;
 }
-/* When user has hovered the li item, we show the ul list by applying display:block, note: 150px is the individual menu width.  */
+
  #navbar ul li:hover ul {
     left:153px;
     top: 0;
     position: absolute;
     display:block;
 }
-/* we apply different background color to 2nd level menu items*/
+
  #navbar ul li ul li {
     background: #333;
 }
-/* We change the background color for the level 2 submenu when hovering the menu */
+
  #navbar ul li:hover ul li a:hover {
     background: #fff;
     color: #A82439;
 }
-/* We style the color of level 2 links */
+
  #navbar ul li ul li a {
     padding:20px 15px;
     width: 100%;
@@ -233,7 +232,7 @@
     display:inline-block;
     text-decoration:none;
 }
-/* Clear float */
+
  .clear {
     clear:both;
 }

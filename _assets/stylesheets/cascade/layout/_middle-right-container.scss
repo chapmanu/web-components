@@ -1,0 +1,8 @@
+.middleRightContainer {
+  @include bp(l) {
+  	width: 73%;
+	  position: relative;
+	  float: right;
+	  @include vendorize(box-sizing, border-box);
+  }
+}

@@ -1,0 +1,50 @@
+---
+layout: cascade
+title: "Form"
+---
+		
+		<div class="responsiveForm">
+          <form action="http://webfarm.chapman.edu/mailservice/formmail.aspx" id="form1" method="post" name="form1" onsubmit="return validate(this);">
+            <!--Required Fields-->
+            <input name="recipient" type="hidden" value=""/>
+            <input name="mail_format" type="hidden" value="html"/>
+            <input name="sender" type="hidden" value="webmaster@chapman.edu"/>
+            <input name="subject" type="hidden" value="Chapman University Online Request for Info"/>
+            <input name="table" type="hidden" value="contact_us_inquiries"/>
+            <input name="redirect_url" type="hidden" value="http://V_HTTP_HOST/about/contact-us-thank-you.aspx"/>    
+            <label for="cname">* Name:</label>
+            <input aria-required="true" id="cname" maxlength="50" name="Contact_Name" size="30" type="text"/>
+            <label for="email">* E-mail:</label>
+            <input aria-required="true" id="email" name="Email" size="30" type="text"/>
+            <fieldset>
+              <legend>My Question Pertains To:</legend>
+              <input id="admission" name="department" type="radio" value="Admission"/> 
+              <label for="admission"><strong>Admission</strong> <em>(for admission information, admissions status, campus tours)</em></label> 
+              <input id="finaid" name="department" type="radio" value="Financial Aid"/> 
+              <label for="finaid"><strong>Financial Aid </strong><em>(for scholarships, grants, loans, work study, and school codes)</em></label>
+              <input id="hr" name="department" type="radio" value="Human Resources"/> 
+              <label for="hr"><strong>Human Resources </strong><em>(for hiring, benefits, student employment, employment verification)</em></label>
+              <input id="media" name="department" type="radio" value="Media Contact"/> 
+              <label for="media"><strong>Media Contact </strong><em>(For press, public relations, happenings, magazine)</em></label>
+              <input id="registrar" name="department" type="radio" value="Office of the Registrar"/> 
+              <label for="registrar"><strong>Registrar </strong><em>(For registration, enrollment, transcripts, degrees conferral, records)</em></label>
+              <input id="sbs" name="department" type="radio" value="Student Business Services"/> 
+              <label for="sbs"><strong>Student Business Services </strong><em>(for tuition and fees, room and board, refunds)</em></label>
+              <input checked="checked" id="general" name="department" type="radio" value="General Question"/> 
+              <label for="general"><strong>General Question</strong></label>
+            </fieldset>
+            <br/>
+            <label for="content_subject">Subject:</label>
+            <input id="content_subject" name="Subject_of_Inquiry" size="30" type="text"/>
+            <label for="message">Message or Question:</label>
+            <textarea cols="70" id="message" name="Message_or_Question" rows="4"></textarea>
+            <input name="submit" type="submit" value="Submit"/>
+            <!-- The following code is invisible to people and
+              contains some trap text fields-->
+            <div style="display:none;">
+              If you can read this, don't touch the following field: <input name="address_bot" type="text" value=""/>
+            </div>
+          </form>
+        </div>
+        
+       

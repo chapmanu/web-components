@@ -1,0 +1,81 @@
+// ---------- Style ---------- //
+
+.resources-subNav {
+  display: none;
+  z-index: 2000;
+  &:after {
+  	@include bp(m) {
+  		position: absolute;
+			display: inline-block;
+			border-left: 8px solid transparent;
+			border-right: 8px solid transparent;
+			border-bottom: 8px solid $white;
+			left: 0;
+			top: -7px;
+			content: '';
+  	}
+  }
+  &:before {
+  	@include bp(m) {
+  		position: absolute;
+      display: inline-block;
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-bottom: 7px solid $white;
+      border-bottom-color: rgba(0, 0, 0, 0.2);
+      left: 0;
+      top: -7px;
+      content: '';
+  	}
+  }
+  &.is-visible {
+  	@include bp(m) {
+  		visibility: visible;
+  	}
+  }
+  &.show-helper {
+  	&:before, &:after {
+      @include bp(m) {
+      	display: none;
+      }
+    }
+  }
+  li {
+  	> a {
+  		&:hover {
+  			@include bp(m) {
+  				color: $cu-red;
+  			}
+  		}
+  		@include bp(m) {
+  			font-size: 13px;
+        font-weight: normal;
+  		}
+  	}
+    > .shortcut {
+      @include bp(m) {
+        padding-right: 20px;
+      }
+    }
+  	@include bp(m) {
+  		padding: 0;
+      margin: 0;
+      display: block;
+      line-height: 13px;
+  	}
+  }
+  @include bp(m) {
+  	background-color: #faf9f6;
+    -webkit-box-shadow: 0px 10px 10px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 10px 1px rgba(0, 0, 0, 0.2);
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px 0 10px 0;
+    display: block;
+    position: absolute;
+    top: 37px;
+    /*z-index: 100;*/
+    visibility: hidden;
+  }
+}

@@ -1,0 +1,55 @@
+.values {
+	article {
+		display: none;
+		h4 {
+			@include bp(m) {
+				font-family: Times New Roman;
+				font-size: 16px;
+				font-weight: normal;
+				color: #4A4949;
+			}
+		}
+		p {
+			@include bp(m) {
+				font-family: Arial;
+				font-size: 12px;
+			}
+		}
+		a {
+			&:hover {
+				@include bp(m) {
+					color: $cu-red !important;
+				}
+			}
+			@include bp(m) {
+				font-family: Arial;
+				color: #CB003D;
+			}
+		}
+		@include bp(m) {
+			display: block;
+			margin: 5px 0 0 0;
+		}
+		@include bp(xl) {
+			display: block;
+			margin: 5px 0 0 0;
+		}
+	}
+	section {
+		position: relative;
+		z-index: 100;
+		margin: 0 0 0 40%;
+		width: 55%;
+		@include bp(m) {
+			position: relative;
+			z-index: 100;
+			margin: 10px 0 0 30%;
+			width: 380px;
+		}
+	}
+	@include bp(m) {
+		background-image: url("../img/sky.png");
+		background-repeat: no-repeat;
+		background-position: 10% top;
+	}
+}

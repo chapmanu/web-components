@@ -1,0 +1,21 @@
+//----------------------------------------//
+// Sass file for css/widgets/primary-content/carousel.css
+//----------------------------------------//
+
+// Helpers
+@import "helpers/_variables"; // Common helper
+@import "helpers/_mixins"; // Common helper
+@import "helpers/widgets_carousel/_defaults";
+@import "helpers/widgets_carousel/_common";
+
+
+// Layout
+
+
+// Modules
+@import "modules/widgets_carousel/_carousel";
+@import "modules/widgets_carousel/_carousel-prev-next";
+@import "modules/widgets_carousel/_keyframes";
+
+
+// Print

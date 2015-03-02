@@ -1,0 +1,30 @@
+.date {
+  font-family: 'Arial Black', sans-serif;
+  font-weight: 800;
+  color: $cu-red;
+  margin: 0;
+  height: 40px;
+  width: 85px;
+  position: absolute;
+  > div {
+    margin: 0;
+  }
+  .day {
+    font-size: 29px;
+    position: absolute;
+    top: 5px;
+    left: 0;
+  }
+  .month {
+    font-size: 12px;
+    position: absolute;
+    top: 0;
+    left: 40px;
+  }
+  .year {
+    font-size: 12px;
+    position: absolute;
+    top: 12px;
+    left: 40px;
+  }
+}
