@@ -10,7 +10,8 @@
   "main": [
     "_assets/stylesheets/cu_components.scss",
     "dist/cu_components.js",
-    "dist/cu_components.css"
+    "dist/cu_components.css",
+    "dist/icons"
   ],
   "ignore": [
     ".sass-cache",
