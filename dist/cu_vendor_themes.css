@@ -969,15 +969,15 @@ h1, h2, h3, h4, h5, h6 {
   color: #353430; }
 
 h1 {
-  font-size: 1.875em;
-  /* 30px */
+  font-size: 2.25em;
+  /* 36px */
   line-height: 1.06666666666667;
   line-height: 2rem;
   /* 32px */ }
 
 h2, h3 {
-  font-size: 1.5em;
-  /* 24px */
+  font-size: 1.75em;
+  /* 28px */
   line-height: 1.16666666666667;
   line-height: 1.75rem;
   /* 28px */ }

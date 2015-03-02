@@ -1,65 +1,142 @@
+/* Standard Colors
+---------------------------------------- */
+/* Accent Colors
+---------------------------------------- */
+/* Social Network Colors
+---------------------------------------- */
+/* Status Colors
+---------------------------------------- */
+/* Layout Colors
+---------------------------------------- */
+/* Typography Colors
+---------------------------------------- */
+/* Form Colors
+---------------------------------------- */
+/* TODO: Rename component colors below to be
+   more meaningful and to only use the standard
+   and accent colors at the top of this page.
+   Also, remove duplicate colors (we will just
+   need to do a find a replace to make sure we
+   don't miss any places it is being referenced)
+---------------------------------------- */
+html {
+  background-color: #ecebe5; }
+
 .page-content {
   margin-left: 185px;
   margin-top: 35px;
   margin-right: 40px;
   overflow: hidden; }
 
-.component-heading {
-  color: #BBB;
-  font-size: 36px;
-  margin-top: 100px;
+.sub-heading {
+  font-weight: 100;
+  color: #353430;
+  line-height: 1.16666666666667;
+  line-height: 1.75rem;
+  /* 28px */
+  margin-top: 60px;
   margin-bottom: 50px;
   padding-bottom: 20px;
   border-bottom: 1px dashed #BBB;
-  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8); }
+  font: "proxima-nova-soft","Helvetica Neue","Microsoft Sans Serif",sans-serif; }
 
-/* Navigation Sidebar */
-#cssmenu {
-  background: #333;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  width: 9em;
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  z-index: 99999; }
+/* *** Color Palette **** */
+.palette {
+  padding: 10px; }
 
-#cssmenu ul {
-  padding: 0; }
+.standard {
+  margin-top: 0.5em;
+  border: solid #353430 0.8px;
+  border-radius: 3px;
+  display: inline-block;
+  width: 220px;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 15px;
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.1), 0px 2px 1px 0px rgba(0, 0, 0, 0.12); }
 
-#cssmenu li {
-  font: 80% "futura-pt",sans-serif;
-  margin: 10;
-  padding: 0;
-  list-style: none;
-  text-transform: uppercase; }
+.accents {
+  margin-top: 0.5em;
+  border: solid #353430 0.8px;
+  border-radius: 3px;
+  display: inline-block;
+  width: 180px;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 15px;
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.1), 0px 2px 1px 0px rgba(0, 0, 0, 0.12); }
 
-#cssmenu a {
-  background: #333;
-  border-bottom: 1px solid #393939;
-  color: #ccc;
-  display: block;
-  margin: 0;
-  padding: 16px 20px;
-  text-decoration: none;
+.standard p, .accents p {
+  color: #fff; }
+
+#warm-gray p, #cool-gray p, #gray-mist p, #gray-cement p, #light-green p, #yellow p, #gray-smoke p, #gold p {
+  color: #333; }
+
+#red {
+  background-color: #a82439; }
+
+#black {
+  background-color: #353430; }
+
+#warm-gray {
+  background-color: #edeade; }
+
+#cool-gray {
+  background-color: #ecebe5; }
+
+#blue {
+  background-color: #407892; }
+
+#light-blue {
+  background-color: #02bac1; }
+
+#green {
+  background-color: #25b6a4; }
+
+#light-green {
+  background-color: #c6dbd2; }
+
+#yellow {
+  background-color: #fed03d; }
+
+#gold {
+  background-color: #f39c12; }
+
+#orange {
+  background-color: #e35c4a; }
+
+#purple {
+  background-color: #9b2672; }
+
+#gray-slate {
+  background-color: #62605a; }
+
+#gray-smoke {
+  background-color: #9a9996; }
+
+#gray-mist {
+  background-color: #cbcac5; }
+
+#gray-cement {
+  background-color: #e2e2e1; }
+
+/* *************** */
+/* ***Typography**** */
+#pn100 {
   font-weight: 100; }
 
-#cssmenu a:hover {
-  background: #fff;
-  color: #A82439;
-  padding-bottom: 16px; }
-
-#cssmenu img {
-  padding-top: 15px;
-  padding-left: 6px; }
-
-/* ---------- */
-#index {
-  color: #A82439;
+/* ************ */
+#title {
   font-size: 45px;
-  text-shadow: 2px 2px 1px #000000;
-  padding-bottom: 0.75em; }
+  padding-bottom: 0.75em;
+  padding-top: 38px;
+  border-bottom: 2px dashed #000000; }
+
+.home img {
+  height: auto;
+  width: 30%;
+  float: left;
+  margin-right: 50px; }
 
 #icons, #organisms, #molecules, #layout {
   padding-top: 1em; }
@@ -67,5 +144,84 @@
 #layout {
   padding-top: 3em; }
 
-#atoms, #molecules, #organisms, #js, #layout, #forms, #error, #icons, #vendor, #omni-nav {
-  font-size: 40px; }
+#style {
+  padding-top: 20px; }
+
+/********* NAV BAR ***********/
+/* Define the body style */
+#navbar {
+  font-family: "futura-pt", sans-serif;
+  font-size: 80%;
+  text-transform: uppercase;
+  position: fixed;
+  z-index: 99999;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: #333; }
+
+/* We remove the margin, padding, and list style of UL and LI components */
+#navbar ul, #navbar ul li {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+/* We apply background color and border bottom white and width to 150px */
+#navbar ul li {
+  background: #333;
+  border-bottom: 1px solid #393939;
+  color: #ccc;
+  display: block;
+  margin: 0;
+  text-decoration: none;
+  font-weight: 100;
+  width: 12em;
+  cursor: pointer;
+  position: relative; }
+
+#navbar ul li a:hover {
+  background: #fff;
+  color: #A82439; }
+
+#navbar ul li a {
+  padding: 20px 15px;
+  width: 100%;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: inline-block;
+  text-decoration: none; }
+
+/**** SECOND LEVEL MENU ****/
+#navbar ul li ul {
+  position: fixed;
+  display: none; }
+
+#navbar ul li:hover ul {
+  left: 153px;
+  top: 0;
+  position: absolute;
+  display: block; }
+
+#navbar ul li ul li {
+  background: #333; }
+
+#navbar ul li:hover ul li a:hover {
+  background: #fff;
+  color: #A82439; }
+
+#navbar ul li ul li a {
+  padding: 20px 15px;
+  width: 100%;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: inline-block;
+  text-decoration: none; }
+
+.clear {
+  clear: both; }
+
+.new_icons {
+  display: inline-block;
+  width: 15%;
+  height: 80px;
+  padding-bottom: 50px; }
