@@ -9,8 +9,8 @@
   ],
   "main": [
     "_assets/stylesheets/cu_components.scss",
-    "_site/assets/cu_components.css",
-    "_site/assets/cu_components.js"
+    "dist/cu_components.js",
+    "dist/cu_components.css"
   ],
   "ignore": [
     ".sass-cache",
