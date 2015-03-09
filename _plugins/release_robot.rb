@@ -42,7 +42,6 @@ class ReleaseRobot
 
     # Confirm and execute
     if you_sure?
-      cmd "jekyll build"
       update_dist
       update_bower_file
       cmd "git add ."

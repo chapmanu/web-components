@@ -24,7 +24,7 @@ task :publish => [:generate] do
 end
 
 desc "Release a new bower version of the assets"
-task :release do
+task :release => [:generate] do
   begin
   ReleaseRobot.new.release!
   rescue Interrupt => e
