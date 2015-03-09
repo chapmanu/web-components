@@ -24,10 +24,19 @@ task :publish => [:generate] do
 end
 
 desc "Release a new bower version of the assets"
-task :release => [:generate] do
+task :release do
   begin
+
+  # Publish new release
   ReleaseRobot.new.release!
+
+  # Update Github Pages
+  Jekyll::Site.new(Jekyll.configuration({
+    "source"      => ".",
+    "destination" => "_site"
+  })).process
   ReleaseRobot.new.publish!
+
   rescue Interrupt => e
     puts "\nRelease Cancelled"
   end
