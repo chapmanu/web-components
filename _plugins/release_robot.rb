@@ -61,6 +61,14 @@ class ReleaseRobot
   # by github at http://chapmanu.github.io/web-components
   def publish!
     inform "Publishing local version to http://chapmanu.github.io/web-components"
+    
+    # Production Configuration
+    inform "Building site with production configuration"
+    Jekyll::Site.new(Jekyll.configuration({
+      "source"      => ".",
+      "destination" => "_site"
+    })).process
+
     Dir.mktmpdir do |tmp|
       FileUtils.cp_r "_site/.", tmp
       

@@ -10,33 +10,16 @@ task :serve do
   exec("bundle exec guard")
 end
 
-desc "Generate the website with jekyll"
-task :generate do
-  Jekyll::Site.new(Jekyll.configuration({
-    "source"      => ".",
-    "destination" => "_site"
-  })).process
-end
-
 desc "Publish this local version of the site to github pages"
-task :publish => [:generate] do
+task :publish do
   ReleaseRobot.new.publish!
 end
 
 desc "Release a new bower version of the assets"
 task :release do
   begin
-
-  # Publish new release
   ReleaseRobot.new.release!
-
-  # Update Github Pages
-  Jekyll::Site.new(Jekyll.configuration({
-    "source"      => ".",
-    "destination" => "_site"
-  })).process
   ReleaseRobot.new.publish!
-
   rescue Interrupt => e
     puts "\nRelease Cancelled"
   end
