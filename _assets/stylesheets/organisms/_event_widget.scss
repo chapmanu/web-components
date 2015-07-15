@@ -1,0 +1,150 @@
+$cu-event-card-image: 130px;
+$cu-event-card-spacing: 15px;
+$cu-event-scale-factor: 1.5;
+
+.more-cu-events {
+	text-align: right;
+}
+
+.cu-event-card {
+	display: block;
+	clear: both;
+	position: relative;
+
+	overflow: hidden;
+
+	border-radius: 3px;
+	margin: 15px auto;
+
+	a {
+		display: block;
+		overflow: auto;
+
+		background-color: #FFF;
+	}
+
+	.title {
+		color: $black;
+		margin: 0 0 8px 0;
+
+		font-size: 24px;
+		@media only screen and (max-width: $s) { 
+			font-size: 16px;
+			line-height: 18px;
+		}
+	}
+
+	.date,
+	.time {
+		position: relative;
+		margin: 3px 0;
+		font-size: 18px;
+
+		@media only screen and (max-width: $s) { 
+			font-size: 12px;
+			line-height: 12px;
+		}
+
+		// Icon
+		padding-left: 20px;
+		&:before {
+			display: block;
+			content: '';
+			width: 16px;
+			height: 16px;
+			position: absolute;
+			left: 0;
+			top: 0;
+
+			opacity: 0.65;
+		}
+	}
+
+	.date:before {
+		background: inline-image('icons/calendar4.svg') no-repeat center left;
+		background-size: 14px;
+
+	}
+
+	.time:before {
+		background: inline-image('icons/clock3.svg') no-repeat center left;
+		background-size: 14px;
+
+	}
+
+	// Layout
+	.content {
+		position: relative;
+		box-sizing: border-box;
+		width: 100%;
+		float: right;
+		margin-left: - ($cu-event-card-image);
+		padding-left: $cu-event-card-image + $cu-event-card-spacing;
+		padding-top:    $cu-event-card-spacing;
+		padding-right:  $cu-event-card-spacing;
+		padding-bottom: $cu-event-card-spacing;
+
+		@media only screen and (max-width: $s) {
+			margin-left: - ($cu-event-card-image) / $cu-event-scale-factor;
+			padding-left: ($cu-event-card-image + $cu-event-card-spacing) / $cu-event-scale-factor;
+
+			padding-top:    $cu-event-card-spacing / $cu-event-scale-factor;
+			padding-right:  $cu-event-card-spacing / $cu-event-scale-factor;
+			padding-bottom: $cu-event-card-spacing / $cu-event-scale-factor;
+		}
+
+		right: 0;
+		transition: 0.2s all ease;
+	}
+
+	// Layout
+	.thumbnail {
+		position: relative;
+		display: block;
+		float: left;
+
+		width: $cu-event-card-image;
+		height: $cu-event-card-image * 1.2;
+
+		@media only screen and (max-width: $s) {
+			width: $cu-event-card-image / $cu-event-scale-factor;
+			height: $cu-event-card-image * 1.2 / $cu-event-scale-factor;
+		}
+
+		background-color: #AAA;
+		background-size: cover;
+
+		right: 0;
+		transition: 0.2s all ease;
+	}
+
+	&:after {
+		content: "Event Details »";
+		position: absolute;
+		bottom: $cu-event-card-spacing;
+		right: $cu-event-card-spacing + 5px;
+
+		font-size: 12px;
+		color: lighten($gray-slate, 10%);
+
+		opacity: 0;
+		transition: 0.2s all ease;
+	}
+
+	&:hover {
+
+		.content {
+			right: 5px;
+		}
+
+		.thumbnail {
+			right: 5px;
+		}
+
+		&:after {
+			opacity: 1;
+			right: $cu-event-card-spacing;
+		}
+	}
+
+}

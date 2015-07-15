@@ -2,6 +2,30 @@
 	<h1 id="organisms">Organisms</h1>
 	<p>These objects make sense when displayed all by themselves, and tell a complete story to the viewer. They are complex, and are often made up of many smaller parts.</p>
 
+
+	<h2 class="sub-heading" id="banners">Events Widget</h2>
+
+	<p>An example of an events widget initialized via HTML attributes:</p>
+
+	<h3>Upcoming Events for Group A</h3>
+	<div id="first-event-widget" data-group-id="28"></div>
+	<script>
+	$( document ).ready(function() { 
+		$('#first-event-widget').cuEventWidget(); 
+	});
+	</script>
+
+	<p>An example of an events widget initialized via jQuery parameters:</p>
+
+	<h3>Upcoming Events for Group B</h3>
+	<div id="second-event-widget"></div>
+	<script>
+	$( document ).ready(function() { 
+		$('#second-event-widget').cuEventWidget({'group_id':104}); 
+	});
+	</script>
+
+
 	<h2 class="sub-heading" id="banners">Navigation Banner</h2>
 	{% include organisms/banner.html %}
 
