@@ -16,10 +16,12 @@ $cu-event-scale-factor: 1.5;
 	border-radius: 3px;
 	margin: 15px auto;
 
-	a {
+	a,
+	a:link {
 		display: block;
 		overflow: auto;
 
+		color: $black;
 		background-color: #FFF;
 	}
 
@@ -113,6 +115,7 @@ $cu-event-scale-factor: 1.5;
 
 		background-color: #AAA;
 		background-size: cover;
+		background-position: center;
 
 		right: 0;
 		transition: 0.2s all ease;

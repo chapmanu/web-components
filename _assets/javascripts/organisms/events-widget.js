@@ -73,6 +73,12 @@
     }
 
     var getData = function( self ) {
+
+      // Remove empty parameters
+      if (query_params['group_id'] === '' || query_params['group_id'] == 0) {
+        delete query_params['group_id'];
+      }
+
       return $.ajax({
         cache: true,
         dataType: 'json',
