@@ -48,6 +48,15 @@ When developing a component, it will usually fall into one of these three catego
 2. **Molecules** - Simple elements like buttons, date pickers, or tables.
 3. **Organisms** - Specific, complete objects such as a story tile, event preview, or tweet.
 
+### Style Guide
+
+All css classes use dashes as seperators.
+```
+.feed-event // GOOD
+.feedEvent  // BAD
+.feed_event // BAD
+```
+
 ### Releasing a New Bower Version
 
 Run `rake release` to publish a new bower version and update the demo site. The release robot will help walk you through these steps.
