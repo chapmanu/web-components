@@ -50,11 +50,12 @@ When developing a component, it will usually fall into one of these three catego
 
 ### Style Guide
 
-All css classes use dashes as seperators.
+All css classes and ids use dashes as seperators.
 ```
-.feed-event // GOOD
-.feedEvent  // BAD
-.feed_event // BAD
+.feed-event   // GOOD
+.feedEvent    // BAD
+#main-content // GOOD
+#main_content // BAD
 ```
 
 ### Releasing a New Bower Version
