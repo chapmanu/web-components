@@ -1,20 +1,17 @@
 .button,
 a.button {
-	background-color: #dad8cf;
+	background-color: $color-chapman-gray;
 	border: none;
 	border-radius: 3px;
-	color: #353430;
+	color: $color-dark-gray;
 	display: block;
 	width: 100%;
 	box-sizing: border-box;
-	font-size: 14px;
-	font-weight:500;
+	font-size: 16px;
 	text-align: center;
 	line-height: 16px;
-	padding: 12px 20px;
+	padding: 15px 25px;
 	margin: 6px 0;
- 	box-shadow:0px 1px 0px 0px rgba(0,0,0,0.1),0px 2px 1px 0px rgba(0,0,0,0.12);
-	
 
 	@include breakpoint(s) {
 		display: inline-block;
@@ -24,35 +21,71 @@ a.button {
 	}
 
 	&:hover {
-		color: #353430;
-		background: #9a9996;
-		transition: background 0.4s ease;
+		color: $black;
+		opacity: 0.9;
 		text-decoration: none;
 	}
 
 	&.red,
 	&.primary {
 		background-color: $color-chapman-red;
-		color: #FFF;
-	  	box-shadow:0px 1px 0px 0px rgba(75,0,12,0.8), 0px 2px 1px 0px rgba(75,0,12,0.3);
+		color: $white;
 
 		&:hover {
-			color: #FFF;
-			background: #741524;
-			transition: background 0.4s ease;
+			color: $white;
 		}
 	}
 
 	&.blue,
 	&.secondary {
 		background-color: $color-chapman-blue;
-		color: #FFF;
-		box-shadow:0px 1px 0px 0px rgba(11,39,52,0.7), 0px 2px 1px 0px rgba(11,39,52,0.3);
+		color: $white;
 
 		&:hover {
-			color: #FFF;
-			background: #14253f;
-			transition: background 0.4s ease;
+			color: $white;
+		}
+	}
+
+	&.pointer {
+		&:before {
+			content: "«";
+			margin-right: 2px;
+			display: none;
+		}
+		&:after {
+			content: "»";
+			margin-left: 2px;
+			display: inline-block;
+		}
+
+		&:after,
+		&:before {
+			font-size: 32px;
+			vertical-align: sub;
+		}
+
+		&.back {
+			&:before {
+				display: inline-block;
+			}
+			&:after {
+				display: none;
+			}
+		}
+	}
+
+	&.default {
+		background-color: $white;
+	}
+
+	&.small {
+		font-size: 14px;
+		padding: 10px 20px;
+		&.pointer {
+			&:after,
+			&:before {
+				font-size: 28px;
+			}
 		}
 	}
 }
