@@ -2,6 +2,8 @@
 ---------------------------------------- */
 /* Accent Colors
 ---------------------------------------- */
+/* Background Colors
+---------------------------------------- */
 /* Social Network Colors
 ---------------------------------------- */
 /* Status Colors
@@ -19,15 +21,20 @@
    need to do a find a replace to make sure we
    don't miss any places it is being referenced)
 ---------------------------------------- */
+/* line 109, /Users/congel/Sites/web-components/_assets/stylesheets/shared/_colors.scss */
 html {
-  background-color: #ecebe5; }
+  background-color: #ecebe5;
+}
 
+/* line 3, /Users/congel/Sites/web-components/_assets/stylesheets/site.scss */
 .page-content {
   margin-left: 185px;
   margin-top: 35px;
   margin-right: 40px;
-  overflow: hidden; }
+  overflow: hidden;
+}
 
+/* line 10, /Users/congel/Sites/web-components/_assets/stylesheets/site.scss */
 .sub-heading {
   font-weight: 100;
   color: #353430;
@@ -38,12 +45,16 @@ html {
   margin-bottom: 50px;
   padding-bottom: 20px;
   border-bottom: 1px dashed #BBB;
-  font: "proxima-nova-soft","Helvetica Neue","Microsoft Sans Serif",sans-serif; }
+  font: "proxima-nova-soft","Helvetica Neue","Microsoft Sans Serif",sans-serif;
+}
 
 /* *** Color Palette **** */
+/* line 23, /Users/congel/Sites/web-components/_assets/stylesheets/site.scss */
 .palette {
-  padding: 10px; }
+  padding: 10px;
+}
 
+/* line 27, /Users/congel/Sites/web-components/_assets/stylesheets/site.scss */
 .standard, .backgrounds {
   margin-top: 0.5em;
   border: solid #353430 0.8px;
@@ -53,8 +64,10 @@ html {
   box-sizing: border-box;
   text-align: center;
   padding: 15px;
-  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.1), 0px 2px 1px 0px rgba(0, 0, 0, 0.12); }
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.1), 0px 2px 1px 0px rgba(0, 0, 0, 0.12);
+}
 
+/* line 39, /Users/congel/Sites/web-components/_assets/stylesheets/site.scss */
 .accents {
   margin-top: 0.5em;
   border: solid #353430 0.8px;
@@ -64,103 +77,161 @@ html {
   box-sizing: border-box;
   text-align: center;
   padding: 15px;
-  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.1), 0px 2px 1px 0px rgba(0, 0, 0, 0.12); }
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.1), 0px 2px 1px 0px rgba(0, 0, 0, 0.12);
+}
 
+/* line 51, /Users/congel/Sites/web-components/_assets/stylesheets/site.scss */
 .standard p, .accents p, .backgrounds p {
-  color: #fff; }
+  color: #fff;
+}
 
+/* line 55, /Users/congel/Sites/web-components/_assets/stylesheets/site.scss */
 #warm-gray p, #cool-gray p, #gray-mist p, #gray-cement p, #light-green p, #yellow p, #gray-smoke p, #gold p, #bg-light-gray p, #bg-silver-gray p, #bg-off-white p {
-  color: #333; }
+  color: #333;
+}
 
+/* line 59, /Users/congel/Sites/web-components/_assets/stylesheets/site.scss */
 #red {
-  background-color: #a82439; }
+  background-color: #a82439;
+}
 
+/* line 63, /Users/congel/Sites/web-components/_assets/stylesheets/site.scss */
 #black {
-  background-color: #353430; }
+  background-color: #353430;
+}
 
+/* line 67, /Users/congel/Sites/web-components/_assets/stylesheets/site.scss */
 #warm-gray {
-  background-color: #edeade; }
+  background-color: #edeade;
+}
 
+/* line 71, /Users/congel/Sites/web-components/_assets/stylesheets/site.scss */
 #cool-gray {
-  background-color: #ecebe5; }
+  background-color: #ecebe5;
+}
 
+/* line 75, /Users/congel/Sites/web-components/_assets/stylesheets/site.scss */
 #blue {
-  background-color: #407892; }
+  background-color: #407892;
+}
 
+/* line 79, /Users/congel/Sites/web-components/_assets/stylesheets/site.scss */
 #light-blue {
-  background-color: #02bac1; }
+  background-color: #02bac1;
+}
 
+/* line 83, /Users/congel/Sites/web-components/_assets/stylesheets/site.scss */
 #green {
-  background-color: #25b6a4; }
+  background-color: #25b6a4;
+}
 
+/* line 87, /Users/congel/Sites/web-components/_assets/stylesheets/site.scss */
 #light-green {
-  background-color: #c6dbd2; }
+  background-color: #c6dbd2;
+}
 
+/* line 91, /Users/congel/Sites/web-components/_assets/stylesheets/site.scss */
 #yellow {
-  background-color: #fed03d; }
+  background-color: #fed03d;
+}
 
+/* line 95, /Users/congel/Sites/web-components/_assets/stylesheets/site.scss */
 #gold {
-  background-color: #f39c12; }
+  background-color: #f39c12;
+}
 
+/* line 99, /Users/congel/Sites/web-components/_assets/stylesheets/site.scss */
 #orange {
-  background-color: #e35c4a; }
+  background-color: #e35c4a;
+}
 
+/* line 103, /Users/congel/Sites/web-components/_assets/stylesheets/site.scss */
 #purple {
-  background-color: #9b2672; }
+  background-color: #9b2672;
+}
 
+/* line 107, /Users/congel/Sites/web-components/_assets/stylesheets/site.scss */
 #gray-slate {
-  background-color: #62605a; }
+  background-color: #62605a;
+}
 
+/* line 111, /Users/congel/Sites/web-components/_assets/stylesheets/site.scss */
 #gray-smoke {
-  background-color: #9a9996; }
+  background-color: #9a9996;
+}
 
+/* line 115, /Users/congel/Sites/web-components/_assets/stylesheets/site.scss */
 #gray-mist {
-  background-color: #cbcac5; }
+  background-color: #cbcac5;
+}
 
+/* line 119, /Users/congel/Sites/web-components/_assets/stylesheets/site.scss */
 #gray-cement {
-  background-color: #e2e2e1; }
+  background-color: #e2e2e1;
+}
 
+/* line 123, /Users/congel/Sites/web-components/_assets/stylesheets/site.scss */
 #bg-light-gray {
-  background-color: #ecebe5; }
+  background-color: #ecebe5;
+}
 
+/* line 127, /Users/congel/Sites/web-components/_assets/stylesheets/site.scss */
 #bg-silver-gray {
-	background-color: #e5e5e5; }
+  background-color: #e5e5e5;
+}
 
+/* line 131, /Users/congel/Sites/web-components/_assets/stylesheets/site.scss */
 #bg-off-white {
-	background-color: #f2f2f0; }
+  background-color: #f2f2f0;
+}
 
+/* line 135, /Users/congel/Sites/web-components/_assets/stylesheets/site.scss */
 #bg-red {
-	background-color: #a82439; }
+  background-color: #a82439;
+}
 
 /* *************** */
 /* ***Typography**** */
+/* line 143, /Users/congel/Sites/web-components/_assets/stylesheets/site.scss */
 #pn100 {
-  font-weight: 100; }
+  font-weight: 100;
+}
 
 /* ************ */
+/* line 148, /Users/congel/Sites/web-components/_assets/stylesheets/site.scss */
 #title {
   font-size: 45px;
   padding-bottom: 0.75em;
   padding-top: 38px;
-  border-bottom: 2px dashed #000000; }
+  border-bottom: 2px dashed #000000;
+}
 
+/* line 155, /Users/congel/Sites/web-components/_assets/stylesheets/site.scss */
 .home img {
   height: auto;
   width: 30%;
   float: left;
-  margin-right: 50px; }
+  margin-right: 50px;
+}
 
+/* line 163, /Users/congel/Sites/web-components/_assets/stylesheets/site.scss */
 #icons, #organisms, #molecules, #layout {
-  padding-top: 1em; }
+  padding-top: 1em;
+}
 
+/* line 167, /Users/congel/Sites/web-components/_assets/stylesheets/site.scss */
 #layout {
-  padding-top: 3em; }
+  padding-top: 3em;
+}
 
+/* line 171, /Users/congel/Sites/web-components/_assets/stylesheets/site.scss */
 #style {
-  padding-top: 20px; }
+  padding-top: 20px;
+}
 
 /********* NAV BAR ***********/
 /* Define the body style */
+/* line 177, /Users/congel/Sites/web-components/_assets/stylesheets/site.scss */
 #navbar {
   font-family: "futura-pt", sans-serif;
   font-size: 80%;
@@ -170,15 +241,19 @@ html {
   left: 0;
   top: 0;
   height: 100%;
-  background: #333; }
+  background: #333;
+}
 
 /* We remove the margin, padding, and list style of UL and LI components */
+/* line 189, /Users/congel/Sites/web-components/_assets/stylesheets/site.scss */
 #navbar ul, #navbar ul li {
   margin: 0;
   padding: 0;
-  list-style: none; }
+  list-style: none;
+}
 
 /* We apply background color and border bottom white and width to 150px */
+/* line 195, /Users/congel/Sites/web-components/_assets/stylesheets/site.scss */
 #navbar ul li {
   background: #333;
   border-bottom: 1px solid #393939;
@@ -189,51 +264,70 @@ html {
   font-weight: 100;
   width: 12em;
   cursor: pointer;
-  position: relative; }
+  position: relative;
+}
 
+/* line 208, /Users/congel/Sites/web-components/_assets/stylesheets/site.scss */
 #navbar ul li a:hover {
   background: #fff;
-  color: #A82439; }
+  color: #A82439;
+}
 
+/* line 213, /Users/congel/Sites/web-components/_assets/stylesheets/site.scss */
 #navbar ul li a {
   padding: 20px 15px;
   width: 100%;
   box-sizing: border-box;
   color: #ffffff;
   display: inline-block;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 /**** SECOND LEVEL MENU ****/
+/* line 223, /Users/congel/Sites/web-components/_assets/stylesheets/site.scss */
 #navbar ul li ul {
   position: fixed;
-  display: none; }
+  display: none;
+}
 
+/* line 228, /Users/congel/Sites/web-components/_assets/stylesheets/site.scss */
 #navbar ul li:hover ul {
   left: 153px;
   top: 0;
   position: absolute;
-  display: block; }
+  display: block;
+}
 
+/* line 235, /Users/congel/Sites/web-components/_assets/stylesheets/site.scss */
 #navbar ul li ul li {
-  background: #333; }
+  background: #333;
+}
 
+/* line 239, /Users/congel/Sites/web-components/_assets/stylesheets/site.scss */
 #navbar ul li:hover ul li a:hover {
   background: #fff;
-  color: #A82439; }
+  color: #A82439;
+}
 
+/* line 244, /Users/congel/Sites/web-components/_assets/stylesheets/site.scss */
 #navbar ul li ul li a {
   padding: 20px 15px;
   width: 100%;
   box-sizing: border-box;
   color: #ffffff;
   display: inline-block;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
+/* line 253, /Users/congel/Sites/web-components/_assets/stylesheets/site.scss */
 .clear {
-  clear: both; }
+  clear: both;
+}
 
+/* line 257, /Users/congel/Sites/web-components/_assets/stylesheets/site.scss */
 .new_icons {
   display: inline-block;
   width: 15%;
   height: 80px;
-  padding-bottom: 50px; }
+  padding-bottom: 50px;
+}

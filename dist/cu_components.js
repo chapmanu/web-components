@@ -225,104 +225,106 @@ if (typeof quickView === 'undefined') {
 	});
 
 })(jQuery);
-// This code will not run if jQuery is not loaded
-this.jQuery && (function ($) {
-
-	var CU_Meltwater = {
-
-		show : 3,
-		url : 'https://inside.chapman.edu/callback/meltwater',
-
-		initialize : function(num_to_show) {
-
-			CU_Meltwater.$container = $('#meltwater');
-			if (! CU_Meltwater.$container.length) return false;
-
-			if (num_to_show) CU_Meltwater.show = num_to_show;
-
-			CU_Meltwater.$moreButton = $('<button>Load more...</button>').hide();
-			CU_Meltwater.$moreButton.on('click', CU_Meltwater.more);
-
-			CU_Meltwater.$container.append('<ul></ul>');
-			CU_Meltwater.$container.append(CU_Meltwater.$moreButton);
-
-			CU_Meltwater.getData();
-
-		},
-
-		getData : function() {
-			$.ajax({
-				url: CU_Meltwater.url,
-				success: function(data) {
-					CU_Meltwater.current = 0;
-					CU_Meltwater.data = data.feeds.feed.documents.document;
-					CU_Meltwater.processData();
-
-					console.log("There are "+ CU_Meltwater.data.length);
-				},
-				error: function(request, error) {
-					CU_Meltwater.$container.append('<p>Sorry, news items could not be loaded.</p>');
-
-					console.log("An error occured fetching Meltwater news stories.");
-					console.log(error);
-				},
-				dataType: 'jsonp'
-			});
-		},
-
-		processData : function(transition) {
-
-			while (this.current < this.show && this.current < this.data.length) {
-				this.addItem(this.current, transition);
-				this.current = this.current+1;
-			}
-
-			if (this.data.length > this.current) {
-				CU_Meltwater.$moreButton.show();
-			} else {
-				CU_Meltwater.$moreButton.fadeOut();
-			}
-
-		},
-
-		addItem : function(i, transition) {
-
-			var
-			data = CU_Meltwater.data[i],
-			published_date = data.createDate_mon2+'/'+data.createDate_day+'/'+data.createDate_year,
-			$link = $('<a href="'+data.url+'"></a>');
+(function ( $ ) {
 
 
-			$link.append('<span class="date">'+published_date+'</span>');
-			$link.append('<span class="title">'+data.title+'</span>');
-
-			if (data.sourcename) $link.append('<span class="sourcename">'+data.sourcename+'</span>');
-			if (data.subregion)  $link.append('<span class="region">'+data.subregion+'</span>');
-
-			var $elem = $('<li></li>').append($link);
-
-			if (transition > 0) {
-				$elem.hide(function() {
-					$elem.fadeIn(transition);
-				});
-			}
-
-			CU_Meltwater.$container.find('ul').append($elem);
+  /***** ::: Static Configuration ::: *****/
+  var base_url     = 'https://events.chapman.edu/'
+  var api_endpoint = 'https://events.chapman.edu/events.json';
 
 
-		},
+  /***** ::: HTML TEMPLATE ::: *****/
+  var template = '\
+    <div class="cu-event-card"> \
+      <a href="'+base_url+'{{permalink}}"> \
+        <div class="thumbnail" style="background-image:url({{cover_photo}})"></div> \
+        <div class="content"> \
+          <h3 class="title">{{title}}</h3> \
+          <p class="date">{{formatted_date}}</p> \
+          <p class="time">{{formatted_time}}</p> \
+        </div> \
+      </a> \
+    </div>';
+  // End of the lines must be escaped for correct javsacript syntax. 
+ 
 
-		more : function() {
-			CU_Meltwater.show += 5;
-			CU_Meltwater.processData(500);
-		}
-	}
+  /***** ::: jQuery Object Instance ::: *****/
+  $.fn.cuEventWidget = function( options ) {
+    var $self = this;
 
-	$(document).ready( function() {
-		CU_Meltwater.initialize();
-	});
 
-})(jQuery);
+    /* ::: Instance Variables ::: */
+    var settings = $.extend({
+      group_id: this.data('group-id'),
+    }, options );
+
+    var query_params = {
+      group_id : settings.group_id,
+    };
+
+
+    /* ::: Instance Methods ::: */
+
+    // Maps fields from 'data' to the template vars in 'template'
+    var buildHTML = function( data ) {
+      return template.replace(/\{\{(.*?)\}\}/g, function(match, token) {
+          return data[token];
+      });
+    };
+
+    var renderEvents = function( data ) {
+      var elems = '';
+
+      for (i=0; i < data.events.length; i++) {
+        elems += buildHTML(data.events[i]);
+      }
+
+      $self.html(elems);
+
+      // Append an appropriate link
+      if ( 0 === data.events.length ) {
+        showNoResultMessage();
+      } else {
+        appendMoreInfoLink();
+      }
+
+    };
+
+    var showNoResultMessage = function( ) {
+      $self.append('<p>Sorry, there are no matching events to display. <a href="'+base_url+'">View all Chapman University events &raquo;</a></p>');
+    };
+
+    var appendMoreInfoLink = function( ) {
+      var url = base_url + '?' + $.param(query_params);
+      $self.append('<p class="more-cu-events"><a href="'+url+'">View more upcoming events &raquo;</a></p>');
+    }
+
+    var getData = function( self ) {
+
+      // Remove empty parameters
+      if (query_params['group_id'] === '' || query_params['group_id'] == 0) {
+        delete query_params['group_id'];
+      }
+
+      return $.ajax({
+        cache: true,
+        dataType: 'json',
+        url: api_endpoint,
+        data: query_params
+      });
+    };
+
+
+    /* ::: Main Method ::: */
+    getData().success(renderEvents).fail(showNoResultMessage);
+
+
+    // It's the jQuery way! (Allows further command chaining)
+    return this;
+
+  };
+ 
+}( jQuery ));
 $(document).ready(function() {
 
 	$('a[href^="#"]').on('click',function (e) {
