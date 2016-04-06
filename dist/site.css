@@ -44,7 +44,7 @@ html {
 .palette {
   padding: 10px; }
 
-.standard {
+.standard, .backgrounds {
   margin-top: 0.5em;
   border: solid #353430 0.8px;
   border-radius: 3px;
@@ -66,10 +66,10 @@ html {
   padding: 15px;
   box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.1), 0px 2px 1px 0px rgba(0, 0, 0, 0.12); }
 
-.standard p, .accents p {
+.standard p, .accents p, .backgrounds p {
   color: #fff; }
 
-#warm-gray p, #cool-gray p, #gray-mist p, #gray-cement p, #light-green p, #yellow p, #gray-smoke p, #gold p {
+#warm-gray p, #cool-gray p, #gray-mist p, #gray-cement p, #light-green p, #yellow p, #gray-smoke p, #gold p, #bg-light-gray p, #bg-silver-gray p, #bg-off-white p {
   color: #333; }
 
 #red {
@@ -119,6 +119,18 @@ html {
 
 #gray-cement {
   background-color: #e2e2e1; }
+
+#bg-light-gray {
+  background-color: #ecebe5; }
+
+#bg-silver-gray {
+	background-color: #e5e5e5; }
+
+#bg-off-white {
+	background-color: #f2f2f0; }
+
+#bg-red {
+	background-color: #a82439; }
 
 /* *************** */
 /* ***Typography**** */

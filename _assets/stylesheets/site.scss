@@ -24,7 +24,7 @@
   padding: 10px;
 }
 
-.standard {
+.standard, .backgrounds {
   margin-top: 0.5em;
   border: solid $black 0.8px;
   border-radius: 3px;
@@ -48,11 +48,11 @@
   box-shadow:0px 1px 0px 0px rgba(0,0,0,0.1),0px 2px 1px 0px rgba(0,0,0,0.12);
 }
 
-.standard p, .accents p {
+.standard p, .accents p, .backgrounds p {
   color: #fff;
 }
 
-#warm-gray p, #cool-gray p , #gray-mist p, #gray-cement p, #light-green p, #yellow p, #gray-smoke p, #gold p {
+#warm-gray p, #cool-gray p , #gray-mist p, #gray-cement p, #light-green p, #yellow p, #gray-smoke p, #gold p, #bg-light-gray p, #bg-silver-gray p, #bg-off-white p {
   color: #333;
 }
 
@@ -78,47 +78,64 @@
 
 #light-blue {
   background-color: $light-blue;
-}   
+}
 
 #green {
   background-color: $green;
-}  
+}
 
 #light-green {
   background-color: $light-green;
-}   
+}
 
 #yellow {
   background-color: $yellow;
-}   
+}
 
 #gold {
   background-color: $gold;
-}   
+}
 
 #orange {
   background-color: $orange;
-}   
+}
 
 #purple {
   background-color: $purple;
-}   
+}
 
 #gray-slate {
   background-color: $gray-slate;
-}   
+}
 
 #gray-smoke {
   background-color: $gray-smoke;
-}   
+}
 
 #gray-mist {
   background-color: $gray-mist;
-}   
+}
 
 #gray-cement {
   background-color: $gray-cement;
-}         
+}
+
+#bg-light-gray {
+  background-color: $bg-light-gray;
+}
+
+#bg-silver-gray {
+	background-color: $bg-silver-gray;
+}
+
+#bg-off-white {
+	background-color: $bg-off-white;
+}
+
+#bg-red {
+	background-color: $bg-red;
+}
+
 /* *************** */
 
 /* ***Typography**** */
@@ -140,7 +157,7 @@
   width: 30%;
   float: left;
   margin-right: 50px;
-  
+
 }
 
 #icons, #organisms, #molecules, #layout {
