@@ -1,6 +1,8 @@
 # Chapman University Web Components
 > Common front-end assets used throughout Chapman products
 
+**IMPORTANT: _This repository has been superseded by [smc-style-guide](https://github.com/chapmanu/smc-style-guide) as the new default_**.
+
 This project is three things:  
 1. A build system for organizing and processing assets  
 2. A Bower package repository for distributing the finished assets  
