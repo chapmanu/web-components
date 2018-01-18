@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  	<head>
+	  <meta charset="utf-8">
+	  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <title>Form</title>
+
+	  <!-- STYLE -->
+	  <link rel="stylesheet" type="text/css" href ="/web-components/assets/cu_cascade.css">
+	  <!-- <link rel="stylesheet" type="text/css" href ="/web-components/assets/site.css"> -->
+	
+
+	  <!-- SCRIPTS -->
+	  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
+	  <script type="text/javascript" src="//use.typekit.net/nqy1aog.js"></script>
+	  <script>try{Typekit.load();}catch(e){}</script>
+	  <script type="text/javascript" src="/web-components/assets/cu_cascade.js"></script>
+	  <!-- <script type="text/javascript" src="/web-components/assets/site.js"></script> -->
+	  
+	</head>
+
+	<body>
+	<div class="page-content">
+	  <div class="wrapper">
+	    		<div class="responsiveForm">
+          <form action="http://webfarm.chapman.edu/mailservice/formmail.aspx" id="form1" method="post" name="form1" onsubmit="return validate(this);">
+            <!--Required Fields-->
+            <input name="recipient" type="hidden" value=""/>
+            <input name="mail_format" type="hidden" value="html"/>
+            <input name="sender" type="hidden" value="webmaster@chapman.edu"/>
+            <input name="subject" type="hidden" value="Chapman University Online Request for Info"/>
+            <input name="table" type="hidden" value="contact_us_inquiries"/>
+            <input name="redirect_url" type="hidden" value="http://V_HTTP_HOST/about/contact-us-thank-you.aspx"/>    
+            <label for="cname">* Name:</label>
+            <input aria-required="true" id="cname" maxlength="50" name="Contact_Name" size="30" type="text"/>
+            <label for="email">* E-mail:</label>
+            <input aria-required="true" id="email" name="Email" size="30" type="text"/>
+            <fieldset>
+              <legend>My Question Pertains To:</legend>
+              <input id="admission" name="department" type="radio" value="Admission"/> 
+              <label for="admission"><strong>Admission</strong> <em>(for admission information, admissions status, campus tours)</em></label> 
+              <input id="finaid" name="department" type="radio" value="Financial Aid"/> 
+              <label for="finaid"><strong>Financial Aid </strong><em>(for scholarships, grants, loans, work study, and school codes)</em></label>
+              <input id="hr" name="department" type="radio" value="Human Resources"/> 
+              <label for="hr"><strong>Human Resources </strong><em>(for hiring, benefits, student employment, employment verification)</em></label>
+              <input id="media" name="department" type="radio" value="Media Contact"/> 
+              <label for="media"><strong>Media Contact </strong><em>(For press, public relations, happenings, magazine)</em></label>
+              <input id="registrar" name="department" type="radio" value="Office of the Registrar"/> 
+              <label for="registrar"><strong>Registrar </strong><em>(For registration, enrollment, transcripts, degrees conferral, records)</em></label>
+              <input id="sbs" name="department" type="radio" value="Student Business Services"/> 
+              <label for="sbs"><strong>Student Business Services </strong><em>(for tuition and fees, room and board, refunds)</em></label>
+              <input checked="checked" id="general" name="department" type="radio" value="General Question"/> 
+              <label for="general"><strong>General Question</strong></label>
+            </fieldset>
+            <br/>
+            <label for="content_subject">Subject:</label>
+            <input id="content_subject" name="Subject_of_Inquiry" size="30" type="text"/>
+            <label for="message">Message or Question:</label>
+            <textarea cols="70" id="message" name="Message_or_Question" rows="4"></textarea>
+            <input name="submit" type="submit" value="Submit"/>
+            <!-- The following code is invisible to people and
+              contains some trap text fields-->
+            <div style="display:none;">
+              If you can read this, don't touch the following field: <input name="address_bot" type="text" value=""/>
+            </div>
+          </form>
+        </div>
+        
+       
+	  </div>
+	</div>
+
+	
+<!-- <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Chapman Web Components</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Chapman Web Components</li>
+          <li><a href="mailto:Email">Email</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+       
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text"></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer> -->
+
+
+	</body>
+
+</html>

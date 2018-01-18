@@ -1,0 +1,333 @@
+/* Standard Colors
+---------------------------------------- */
+/* Accent Colors
+---------------------------------------- */
+/* Background Colors
+---------------------------------------- */
+/* Social Network Colors
+---------------------------------------- */
+/* Status Colors
+---------------------------------------- */
+/* Layout Colors
+---------------------------------------- */
+/* Typography Colors
+---------------------------------------- */
+/* Form Colors
+---------------------------------------- */
+/* TODO: Rename component colors below to be
+   more meaningful and to only use the standard
+   and accent colors at the top of this page.
+   Also, remove duplicate colors (we will just
+   need to do a find a replace to make sure we
+   don't miss any places it is being referenced)
+---------------------------------------- */
+/* line 109, /Users/khafa100/Projects/web-components/_assets/stylesheets/shared/_colors.scss */
+html {
+  background-color: #ecebe5;
+}
+
+/* line 3, /Users/khafa100/Projects/web-components/_assets/stylesheets/site.scss */
+.page-content {
+  margin-left: 185px;
+  margin-top: 35px;
+  margin-right: 40px;
+  overflow: hidden;
+}
+
+/* line 10, /Users/khafa100/Projects/web-components/_assets/stylesheets/site.scss */
+.sub-heading {
+  font-weight: 100;
+  color: #353430;
+  line-height: 1.16666666666667;
+  line-height: 1.75rem;
+  /* 28px */
+  margin-top: 60px;
+  margin-bottom: 50px;
+  padding-bottom: 20px;
+  border-bottom: 1px dashed #BBB;
+  font: "proxima-nova-soft","Helvetica Neue","Microsoft Sans Serif",sans-serif;
+}
+
+/* *** Color Palette **** */
+/* line 23, /Users/khafa100/Projects/web-components/_assets/stylesheets/site.scss */
+.palette {
+  padding: 10px;
+}
+
+/* line 27, /Users/khafa100/Projects/web-components/_assets/stylesheets/site.scss */
+.standard, .backgrounds {
+  margin-top: 0.5em;
+  border: solid #353430 0.8px;
+  border-radius: 3px;
+  display: inline-block;
+  width: 220px;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 15px;
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.1), 0px 2px 1px 0px rgba(0, 0, 0, 0.12);
+}
+
+/* line 39, /Users/khafa100/Projects/web-components/_assets/stylesheets/site.scss */
+.accents {
+  margin-top: 0.5em;
+  border: solid #353430 0.8px;
+  border-radius: 3px;
+  display: inline-block;
+  width: 180px;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 15px;
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.1), 0px 2px 1px 0px rgba(0, 0, 0, 0.12);
+}
+
+/* line 51, /Users/khafa100/Projects/web-components/_assets/stylesheets/site.scss */
+.standard p, .accents p, .backgrounds p {
+  color: #fff;
+}
+
+/* line 55, /Users/khafa100/Projects/web-components/_assets/stylesheets/site.scss */
+#warm-gray p, #cool-gray p, #gray-mist p, #gray-cement p, #light-green p, #yellow p, #gray-smoke p, #gold p, #bg-light-gray p, #bg-silver-gray p, #bg-off-white p {
+  color: #333;
+}
+
+/* line 59, /Users/khafa100/Projects/web-components/_assets/stylesheets/site.scss */
+#red {
+  background-color: #a82439;
+}
+
+/* line 63, /Users/khafa100/Projects/web-components/_assets/stylesheets/site.scss */
+#black {
+  background-color: #353430;
+}
+
+/* line 67, /Users/khafa100/Projects/web-components/_assets/stylesheets/site.scss */
+#warm-gray {
+  background-color: #edeade;
+}
+
+/* line 71, /Users/khafa100/Projects/web-components/_assets/stylesheets/site.scss */
+#cool-gray {
+  background-color: #ecebe5;
+}
+
+/* line 75, /Users/khafa100/Projects/web-components/_assets/stylesheets/site.scss */
+#blue {
+  background-color: #407892;
+}
+
+/* line 79, /Users/khafa100/Projects/web-components/_assets/stylesheets/site.scss */
+#light-blue {
+  background-color: #02bac1;
+}
+
+/* line 83, /Users/khafa100/Projects/web-components/_assets/stylesheets/site.scss */
+#green {
+  background-color: #25b6a4;
+}
+
+/* line 87, /Users/khafa100/Projects/web-components/_assets/stylesheets/site.scss */
+#light-green {
+  background-color: #c6dbd2;
+}
+
+/* line 91, /Users/khafa100/Projects/web-components/_assets/stylesheets/site.scss */
+#yellow {
+  background-color: #fed03d;
+}
+
+/* line 95, /Users/khafa100/Projects/web-components/_assets/stylesheets/site.scss */
+#gold {
+  background-color: #f39c12;
+}
+
+/* line 99, /Users/khafa100/Projects/web-components/_assets/stylesheets/site.scss */
+#orange {
+  background-color: #e35c4a;
+}
+
+/* line 103, /Users/khafa100/Projects/web-components/_assets/stylesheets/site.scss */
+#purple {
+  background-color: #9b2672;
+}
+
+/* line 107, /Users/khafa100/Projects/web-components/_assets/stylesheets/site.scss */
+#gray-slate {
+  background-color: #62605a;
+}
+
+/* line 111, /Users/khafa100/Projects/web-components/_assets/stylesheets/site.scss */
+#gray-smoke {
+  background-color: #9a9996;
+}
+
+/* line 115, /Users/khafa100/Projects/web-components/_assets/stylesheets/site.scss */
+#gray-mist {
+  background-color: #cbcac5;
+}
+
+/* line 119, /Users/khafa100/Projects/web-components/_assets/stylesheets/site.scss */
+#gray-cement {
+  background-color: #e2e2e1;
+}
+
+/* line 123, /Users/khafa100/Projects/web-components/_assets/stylesheets/site.scss */
+#bg-light-gray {
+  background-color: #ecebe5;
+}
+
+/* line 127, /Users/khafa100/Projects/web-components/_assets/stylesheets/site.scss */
+#bg-silver-gray {
+  background-color: #e5e5e5;
+}
+
+/* line 131, /Users/khafa100/Projects/web-components/_assets/stylesheets/site.scss */
+#bg-off-white {
+  background-color: #f2f2f0;
+}
+
+/* line 135, /Users/khafa100/Projects/web-components/_assets/stylesheets/site.scss */
+#bg-red {
+  background-color: #a82439;
+}
+
+/* *************** */
+/* ***Typography**** */
+/* line 143, /Users/khafa100/Projects/web-components/_assets/stylesheets/site.scss */
+#pn100 {
+  font-weight: 100;
+}
+
+/* ************ */
+/* line 148, /Users/khafa100/Projects/web-components/_assets/stylesheets/site.scss */
+#title {
+  font-size: 45px;
+  padding-bottom: 0.75em;
+  padding-top: 38px;
+  border-bottom: 2px dashed #000000;
+}
+
+/* line 155, /Users/khafa100/Projects/web-components/_assets/stylesheets/site.scss */
+.home img {
+  height: auto;
+  width: 30%;
+  float: left;
+  margin-right: 50px;
+}
+
+/* line 163, /Users/khafa100/Projects/web-components/_assets/stylesheets/site.scss */
+#icons, #organisms, #molecules, #layout {
+  padding-top: 1em;
+}
+
+/* line 167, /Users/khafa100/Projects/web-components/_assets/stylesheets/site.scss */
+#layout {
+  padding-top: 3em;
+}
+
+/* line 171, /Users/khafa100/Projects/web-components/_assets/stylesheets/site.scss */
+#style {
+  padding-top: 20px;
+}
+
+/********* NAV BAR ***********/
+/* Define the body style */
+/* line 177, /Users/khafa100/Projects/web-components/_assets/stylesheets/site.scss */
+#navbar {
+  font-family: "futura-pt", sans-serif;
+  font-size: 80%;
+  text-transform: uppercase;
+  position: fixed;
+  z-index: 99999;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: #333;
+}
+
+/* We remove the margin, padding, and list style of UL and LI components */
+/* line 189, /Users/khafa100/Projects/web-components/_assets/stylesheets/site.scss */
+#navbar ul, #navbar ul li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* We apply background color and border bottom white and width to 150px */
+/* line 195, /Users/khafa100/Projects/web-components/_assets/stylesheets/site.scss */
+#navbar ul li {
+  background: #333;
+  border-bottom: 1px solid #393939;
+  color: #ccc;
+  display: block;
+  margin: 0;
+  text-decoration: none;
+  font-weight: 100;
+  width: 12em;
+  cursor: pointer;
+  position: relative;
+}
+
+/* line 208, /Users/khafa100/Projects/web-components/_assets/stylesheets/site.scss */
+#navbar ul li a:hover {
+  background: #fff;
+  color: #A82439;
+}
+
+/* line 213, /Users/khafa100/Projects/web-components/_assets/stylesheets/site.scss */
+#navbar ul li a {
+  padding: 20px 15px;
+  width: 100%;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: inline-block;
+  text-decoration: none;
+}
+
+/**** SECOND LEVEL MENU ****/
+/* line 223, /Users/khafa100/Projects/web-components/_assets/stylesheets/site.scss */
+#navbar ul li ul {
+  position: fixed;
+  display: none;
+}
+
+/* line 228, /Users/khafa100/Projects/web-components/_assets/stylesheets/site.scss */
+#navbar ul li:hover ul {
+  left: 153px;
+  top: 0;
+  position: absolute;
+  display: block;
+}
+
+/* line 235, /Users/khafa100/Projects/web-components/_assets/stylesheets/site.scss */
+#navbar ul li ul li {
+  background: #333;
+}
+
+/* line 239, /Users/khafa100/Projects/web-components/_assets/stylesheets/site.scss */
+#navbar ul li:hover ul li a:hover {
+  background: #fff;
+  color: #A82439;
+}
+
+/* line 244, /Users/khafa100/Projects/web-components/_assets/stylesheets/site.scss */
+#navbar ul li ul li a {
+  padding: 20px 15px;
+  width: 100%;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* line 253, /Users/khafa100/Projects/web-components/_assets/stylesheets/site.scss */
+.clear {
+  clear: both;
+}
+
+/* line 257, /Users/khafa100/Projects/web-components/_assets/stylesheets/site.scss */
+.new_icons {
+  display: inline-block;
+  width: 15%;
+  height: 80px;
+  padding-bottom: 50px;
+}

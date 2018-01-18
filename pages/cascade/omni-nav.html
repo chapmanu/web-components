@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  	<head>
+	  <meta charset="utf-8">
+	  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <title>Omni-nav</title>
+
+	  <!-- STYLE -->
+	  <link rel="stylesheet" type="text/css" href ="/web-components/assets/cu_cascade.css">
+	  <!-- <link rel="stylesheet" type="text/css" href ="/web-components/assets/site.css"> -->
+	
+
+	  <!-- SCRIPTS -->
+	  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
+	  <script type="text/javascript" src="//use.typekit.net/nqy1aog.js"></script>
+	  <script>try{Typekit.load();}catch(e){}</script>
+	  <script type="text/javascript" src="/web-components/assets/cu_cascade.js"></script>
+	  <!-- <script type="text/javascript" src="/web-components/assets/site.js"></script> -->
+	  
+	</head>
+
+	<body>
+	<div class="page-content">
+	  <div class="wrapper">
+	    		<div id="cu_nav">
+
+		    <ul id="cu_nav_domain" class="cu_nav_menu cu_nav_selectable">
+				<li class="selected"><a class="cu_nav_button" href="http://www.chapman.edu"><svg viewbox="0 0 512 512"><use xlink:href="/_files/img/omni-nav.svg#cu_window" /></svg>Chapman.edu</a></li>
+				<li><a class="cu_nav_button" href="http://blogs.chapman.edu"><svg viewbox="0 0 512 512"><use xlink:href="/_files/img/omni-nav.svg#newspaper" /></svg>Blogs.Chapman</a></li>
+				<li><a class="cu_nav_button" href="http://social.chapman.edu"><svg viewbox="0 0 512 512"><use xlink:href="/_files/img/omni-nav.svg#chat" /></svg>Social.Chapman</a></li>
+				<li><a class="cu_nav_button" href="http://inside.chapman.edu"><svg viewbox="0 0 512 512"><use xlink:href="/_files/img/omni-nav.svg#cu_monogram" /></svg>Inside.Chapman</a></li>
+			</ul>
+
+			<ul class="cu_nav_secondary cu_nav_menu cu_nav_selectable" style="display: none;" data-show-domain="blogs.chapman.edu">
+				<li><a class="cu_nav_button" href="/business"><svg viewbox="0 0 512 512"><use xlink:href="/_files/img/omni-nav.svg#cu_business" /></svg>Argyros School of Business and Economics</a></li>
+				<li><a class="cu_nav_button" href="/ces"><svg viewbox="0 0 512 512"><use xlink:href="/_files/img/omni-nav.svg#cu_ces" /></svg>College of Educational Studies</a></li>
+				<li><a class="cu_nav_button" href="/copa"><svg viewbox="0 0 512 512"><use xlink:href="/_files/img/omni-nav.svg#cu_copa" /></svg>College of Performing Arts</a></li>
+				<li><a class="cu_nav_button" href="/crean"><svg viewbox="0 0 512 512"><use xlink:href="/_files/img/omni-nav.svg#cu_crean" /></svg>Crean College of Health and Behavioral Sciences</a></li>
+				<li><a class="cu_nav_button" href="/dodge"><svg viewbox="0 0 512 512"><use xlink:href="/_files/img/omni-nav.svg#cu_dodge" /></svg>Dodge College of Film and Media Arts</a></li>
+				<li><a class="cu_nav_button" href="/scst"><svg viewbox="0 0 512 512"><use xlink:href="/_files/img/omni-nav.svg#cu_scst" /></svg>Schmid College of Science and Technology</a></li>
+				<li><a class="cu_nav_button" href="/law"><svg viewbox="0 0 512 512"><use xlink:href="/_files/img/omni-nav.svg#cu_law" /></svg>Fowler School of Law</a></li>
+				<li><a class="cu_nav_button" href="/wilkinson"><svg viewbox="0 0 512 512"><use xlink:href="/_files/img/omni-nav.svg#cu_wilkinson" /></svg>Wilkinson College of Humanities and Social Sciences</a></li>
+				<li><a class="cu_nav_button" href="/happenings"><svg viewbox="0 0 512 512"><use xlink:href="/_files/img/omni-nav.svg#cu_monogram" /></svg>Happenings</a></li>
+				<li><a class="cu_nav_button" href="/magazine"><svg viewbox="0 0 512 512"><use xlink:href="/_files/img/omni-nav.svg#cu_monogram" /></svg>Chapman Magazine</a></li>
+				<li><a class="cu_nav_button" href="/students"><svg viewbox="0 0 512 512"><use xlink:href="/_files/img/omni-nav.svg#cu_monogram" /></svg>One University Student Blog</a></li>
+				<li><a class="cu_nav_button" href="/alumni"><svg viewbox="0 0 512 512"><use xlink:href="/_files/img/omni-nav.svg#cu_monogram" /></svg>Alumni</a></li>
+				<li class="selected"><a class="cu_nav_button" href="/"><svg viewbox="0 0 512 512"><use xlink:href="/_files/img/omni-nav.svg#cu_monogram" /></svg>Browse all blogs</a></li>
+			</ul>
+
+			<ul class="cu_nav_secondary cu_nav_menu cu_nav_selectable" data-show-domain="www.chapman.edu">
+		        <li data-hide-path="/law"><a class="cu_nav_button" href="/future-students">Prospective Students</a></li>
+				<li data-hide-path="/law"><a class="cu_nav_button" href="/students">Current Students</a></li>
+				<li data-hide-path="/law"><a class="cu_nav_button" href="/alumni">Alumni</a></li>
+				<li data-hide-path="/law"><a class="cu_nav_button" href="/faculty-staff">Faculty &amp; Staff</a></li>
+				<li data-hide-path="/law"><a class="cu_nav_button" href="/families">Parents &amp; Families</a></li>
+
+				<li data-show-path="/law"><a class="cu_nav_button" href="/law/admission">Future Law Students</a></li>
+				<li data-show-path="/law"><a class="cu_nav_button" href="/law/admission/newly-admitted">New Students</a></li>
+				<li data-show-path="/law"><a class="cu_nav_button" href="/law/student-resources">Current Students</a></li>
+				<li data-show-path="/law"><a class="cu_nav_button" href="/law/law-faculty">Faculty &amp; Staff</a></li>
+				<li data-show-path="/law"><a class="cu_nav_button" href="/law/alumni">Alumni</a></li>
+				<li data-show-path="/law"><a class="cu_nav_button" href="/law/employers">Employers</a></li>
+
+				<li class="selected hidden-unless-default"><a class="cu_nav_button" href="#">Find information for...</a></li>
+			</ul>
+
+			<div id="cu_login_container" class="cu_nav_menu">
+
+				<div id="cu_identity">
+					<svg viewbox="0 0 512 512"><use xlink:href="/_files/img/omni-nav.svg#user" /></svg>
+					<span class="cu_name">Log In</span>
+				</div>
+
+				<div id="cu_login_form" class="cu_dropdown_menu" style="display: none;" data-show-domain="blogs.chapman.edu">
+					<form action="https://blogs.chapman.edu/wp-login.php" method="post">
+
+						<label for="cu_username" style="display:none;">ChapmanU User ID</label>
+						<input name="log" class="username" id="cu_username" type="text" value="ChapmanU User ID" onfocus="if (this.value == 'ChapmanU User ID') {this.value = '';}" onblur="if (this.value == '') {this.value = 'ChapmanU User ID';}" />
+
+						<label for="cu_password" style="display:none;">Password</label>
+						<input name="pwd" class="password" id="cu_password" type="password" value="Password" onfocus="if (this.value == 'Password') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Password';}" />
+
+						<input name="submit" type="submit" id="cu_submit" value="Log In" />
+
+					    <input name="rememberme" class="persist" id="cu_persist" type="checkbox" value="forever" /> 
+					    <label for="cu_persist">Remember Me </label>
+
+					</form>
+				</div>
+
+				<ul class="cu_dropdown_menu">
+					<li><a class="cu_nav_button" href="https://blackboard.chapman.edu/"><svg viewbox="0 0 512 512"><use xlink:href="/_files/img/omni-nav.svg#blackboard" /></svg>Blackboard</a></li>
+					<li><a class="cu_nav_button" href="https://ariel.chapman.edu/WebAdvisor/WebAdvisor"><svg viewbox="0 0 512 512"><use xlink:href="/_files/img/omni-nav.svg#cu_monogram" /></svg>WebAdvisor</a></li>
+					<li><a class="cu_nav_button" href="http://panthermail.chapman.edu/"><svg viewbox="0 0 512 512"><use xlink:href="/_files/img/omni-nav.svg#email" /></svg>PantherMail</a></li>
+					<li><a class="cu_nav_button" href="https://exchange.chapman.edu/"><svg viewbox="0 0 512 512"><use xlink:href="/_files/img/omni-nav.svg#email" /></svg>Staff &amp; Faculty Email</a></li>
+					<li><a class="cu_nav_button" href="https://mywindow.chapman.edu/"><svg viewbox="0 0 512 512"><use xlink:href="/_files/img/omni-nav.svg#cu_window" /></svg>MyWindow</a></li>
+					<li><a class="cu_nav_button" href="https://cas.chapman.edu/login?service=https://orgsync.com/cas/chapman-university"><svg viewbox="0 0 512 512"><use xlink:href="/_files/img/omni-nav.svg#orgsync" /></svg>OrgSync</a></li>
+				</ul>
+
+			</div>
+
+			<div id="cu_search">
+
+				<div id="cu_search_box">
+					<form action="//www.chapman.edu/search-results/index.aspx">
+					<table cellspacing="0" cellpadding="0" class="gsc-search-box">
+						<tbody>
+							<tr>
+								<td class="gsc-input">
+									<input id="cu_search_no_js" autocomplete="off" type="text" size="10" class="gsc-input no-js" name="q" title="search" spellcheck="false" style="outline: none;">
+								</td>
+								<td class="gsc-search-button">
+									<input type="button" value="Search" class="gsc-search-button" title="search">
+								</td>
+								<td class="gsc-clear-button"><div class="gsc-clear-button" title="clear results">&nbsp;</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					</form>
+				</div>
+
+				<div id="cu_search_results">
+					<div id="cu_search_results_cell">
+						<div id="cu_search_results_ui">
+				
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		
+		
+	  </div>
+	</div>
+
+	
+<!-- <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Chapman Web Components</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Chapman Web Components</li>
+          <li><a href="mailto:Email">Email</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+       
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text"></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer> -->
+
+
+	</body>
+
+</html>
